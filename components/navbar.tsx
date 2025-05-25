@@ -39,7 +39,7 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 260, damping: 20 }}
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled ? "bg-black/90 backdrop-blur-md border-b border-gray-800 shadow-sm" : "bg-black"
+        isScrolled ? "bg-background/90 backdrop-blur-md border-b border-border shadow-sm" : "bg-background"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -59,7 +59,7 @@ export default function Navbar() {
               >
                 <Link
                   href={item.href}
-                  className="text-sm font-medium transition-colors hover:text-primary relative group"
+                  className="text-sm font-medium text-foreground transition-colors hover:text-primary relative group"
                 >
                   {item.label}
                   <motion.span
@@ -98,7 +98,7 @@ export default function Navbar() {
             <Button
               variant="ghost"
               size="icon"
-              className="md:hidden"
+              className="md:hidden text-foreground"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -116,7 +116,7 @@ export default function Navbar() {
           height: isMobileMenuOpen ? "auto" : 0,
         }}
         transition={{ duration: 0.3 }}
-        className="md:hidden border-t overflow-hidden"
+        className="md:hidden border-t border-border overflow-hidden bg-background"
       >
         <div className="container mx-auto px-4 py-4 flex flex-col space-y-3">
           {navItems.map((item, index) => (
@@ -128,7 +128,7 @@ export default function Navbar() {
             >
               <Link
                 href={item.href}
-                className="text-sm font-medium py-2 transition-colors hover:text-primary block"
+                className="text-sm font-medium py-2 text-foreground transition-colors hover:text-primary block"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.label}
