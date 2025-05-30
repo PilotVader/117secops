@@ -40,7 +40,7 @@ export default function HomeClientPage({ initialProjects }: { initialProjects: P
     <PageTransition>
       <div className="flex flex-col min-h-screen dark-gradient-bg">
         {/* Hero Section */}
-        <section className="py-20 md:py-32 text-white">
+        <section className="py-20 md:py-32 text-foreground dark:text-white">
           <div className="container mx-auto px-4 md:px-6">
             <motion.div
               className="flex flex-col items-center text-center space-y-6"
@@ -49,7 +49,7 @@ export default function HomeClientPage({ initialProjects }: { initialProjects: P
               animate="animate"
             >
               <motion.h1
-                className="text-4xl md:text-6xl font-bold tracking-tighter"
+                className="text-4xl md:text-6xl font-bold tracking-tighter text-gradient dark:text-white"
                 variants={fadeIn}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -62,7 +62,7 @@ export default function HomeClientPage({ initialProjects }: { initialProjects: P
                 117 Security Operations
               </motion.h1>
               <motion.p
-                className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-100"
+                className="text-xl md:text-2xl max-w-3xl mx-auto text-muted-foreground dark:text-gray-100"
                 variants={fadeIn}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -102,8 +102,8 @@ export default function HomeClientPage({ initialProjects }: { initialProjects: P
               transition={{ duration: 0.4 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white">Featured Projects</h2>
-              <p className="mt-4 text-lg text-gray-300 max-w-3xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground dark:text-white">Featured Projects</h2>
+              <p className="mt-4 text-lg text-muted-foreground dark:text-gray-300 max-w-3xl mx-auto">
                 Hands-on experiments and documented learning
               </p>
             </motion.div>
@@ -158,7 +158,7 @@ export default function HomeClientPage({ initialProjects }: { initialProjects: P
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 text-white">
+        <section className="py-20 text-foreground dark:text-white">
           <div className="container mx-auto px-4 md:px-6 text-center">
             <motion.h2
               className="text-3xl md:text-4xl font-bold tracking-tight mb-6"
@@ -202,7 +202,7 @@ export default function HomeClientPage({ initialProjects }: { initialProjects: P
   )
 }
 
-function FeaturedProjectCard({ project, delay = 0 }) {
+function FeaturedProjectCard({ project, delay = 0 }: { project: Project; delay?: number }) {
   const isRed = project.category === "red"
   const cardColor = isRed ? "text-red-500" : "text-blue-500"
 
@@ -217,14 +217,14 @@ function FeaturedProjectCard({ project, delay = 0 }) {
         <div className="aspect-video relative cursor-pointer bg-gray-100">
           <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
         </div>
-        <CardHeader className="pb-2 bg-black">
+        <CardHeader className="pb-2 bg-background dark:bg-black">
           <CardTitle className={`text-xl ${cardColor}`}>{project.title}</CardTitle>
         </CardHeader>
-        <CardContent className="pb-4 bg-black text-gray-300">
+        <CardContent className="pb-4 bg-background dark:bg-black text-muted-foreground dark:text-gray-300">
           <p>{project.description}</p>
         </CardContent>
-        <CardFooter className="bg-black">
-          <Button variant="black" size="sm" className="w-full border border-gray-800" asChild>
+        <CardFooter className="bg-background dark:bg-black">
+          <Button variant="black" size="sm" className="w-full border border-input dark:border-gray-800" asChild>
             <Link href={`/projects/${project.slug}/`}>Read More</Link>
           </Button>
         </CardFooter>

@@ -249,6 +249,10 @@ html {
 
 /* Dark gradient background for homepage */
 .dark-gradient-bg {
+  background: white;
+}
+
+.dark .dark-gradient-bg {
   background: linear-gradient(to bottom, #000000 0%, #1a0933 20%, #2a0d4a 40%, #2a0d4a 60%, #1a0933 80%, #000000 100%);
 }
 
