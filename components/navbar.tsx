@@ -87,10 +87,15 @@ export default function Navbar() {
               transition={{ delay: 0.6 }}
               whileHover={{ scale: 1.05 }}
             >
-              <Button className="hidden md:inline-flex bg-[#7B34DD] hover:bg-[#6929C4] text-white rounded-md" asChild>
-                <a href="https://www.linkedin.com/posts/otori-samson" target="_blank" rel="noopener noreferrer">
+              <Button asChild>
+                <Link
+                  href="https://www.linkedin.com/in/otori-samson/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hidden lg:flex"
+                >
                   Contact Me
-                </a>
+                </Link>
               </Button>
             </motion.div>
 

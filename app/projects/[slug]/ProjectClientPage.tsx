@@ -8,36 +8,41 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft, Calendar, User, Tag, Building } from "lucide-react"
 import { BlogContentRenderer } from "@/components/blog-content-renderer"
-import { ProjectLightbox } from "@/components/project-lightbox"
+import { ImageGallery } from "@/components/ui/image-gallery"
 
-export default function ProjectClientPage({ projectData }: { projectData: any }) {
+interface Project {
+  slug: string
+  title: string
+  description: string
+  date?: string
+  author?: string
+  client?: string
+  category: string
+  challenge?: string
+  solution?: string
+  results?: string[]
+  image: string
+  technologies?: string[]
+  tags?: string[]
+  content: string
+  images?: {
+    src: string
+    alt: string
+  }[]
+}
+
+export default function ProjectClientPage({ projectData }: { projectData: Project }) {
   const params = useParams()
   const slug = params?.slug
 
   const [project, setProject] = useState(projectData)
-  const [loading, setLoading] = useState(false) // Set to false since we have the data
+  const [loading, setLoading] = useState(false)
 
-  // Lightbox state
-  const [isLightboxOpen, setIsLightboxOpen] = useState(false)
-  const [lightboxImages, setLightboxImages] = useState([])
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
-
-  // We don't need to fetch again since we already have the data
-  // But keep a simplified useEffect in case we need to handle any client-side logic
   useEffect(() => {
     if (!project && slug) {
       setLoading(true)
       console.error("Project data not available for slug:", slug)
       notFound()
-    }
-
-    // Prepare lightbox images
-    if (project) {
-      const images =
-        project.images && project.images.length > 0
-          ? project.images
-          : [{ src: project.image || "/placeholder.svg", alt: project.title }]
-      setLightboxImages(images)
     }
   }, [slug, project])
 
@@ -49,16 +54,9 @@ export default function ProjectClientPage({ projectData }: { projectData: any })
     notFound()
   }
 
-  // Function to open lightbox
-  const openLightbox = (index = 0) => {
-    setCurrentImageIndex(index)
-    setIsLightboxOpen(true)
-  }
-
   // Determine color scheme based on project category
   const colorScheme = project.category === "red" ? "red" : "blue"
 
-  // Update the component to handle optional fields
   return (
     <PageTransition>
       <div className="container mx-auto px-4 md:px-6 py-12">
@@ -107,19 +105,8 @@ export default function ProjectClientPage({ projectData }: { projectData: any })
               </Badge>
             </div>
 
-            <div
-              className="aspect-video relative rounded-lg overflow-hidden mb-8 cursor-pointer"
-              onClick={() => openLightbox(0)}
-            >
+            <div className="aspect-video relative rounded-lg overflow-hidden mb-8">
               <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
-              <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-colors duration-400"></div>
-
-              {/* Lightbox indicator */}
-              {lightboxImages.length > 0 && (
-                <div className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded-md">
-                  {lightboxImages.length} {lightboxImages.length === 1 ? "image" : "images"}
-                </div>
-              )}
             </div>
           </div>
 
@@ -148,7 +135,7 @@ export default function ProjectClientPage({ projectData }: { projectData: any })
                   Results
                 </h2>
                 <ul className="list-disc pl-5 text-muted-foreground space-y-1">
-                  {project.results.map((result, index) => (
+                  {project.results.map((result: string, index: number) => (
                     <li key={index}>{result}</li>
                   ))}
                 </ul>
@@ -160,16 +147,25 @@ export default function ProjectClientPage({ projectData }: { projectData: any })
             <BlogContentRenderer
               content={project.content}
               groupId={`project-${project.slug}`}
-              onImageClick={(index) => openLightbox(index)}
             />
           </div>
+
+          {/* Project Gallery */}
+          {project.images && project.images.length > 0 && (
+            <div className="mt-12 mb-8">
+              <h2 className={`text-2xl font-bold mb-6 ${colorScheme === "red" ? "text-red-600" : "text-blue-600"}`}>
+                Project Gallery
+              </h2>
+              <ImageGallery images={project.images} />
+            </div>
+          )}
 
           {/* Display tags if available */}
           {project.tags && project.tags.length > 0 && (
             <div className="mt-8 pt-6 border-t">
               <div className="flex items-center flex-wrap gap-2">
                 <Tag className={`h-4 w-4 ${colorScheme === "red" ? "text-red-600" : "text-blue-600"} mr-2`} />
-                {project.tags.map((tag, index) => (
+                {project.tags.map((tag: string, index: number) => (
                   <Badge
                     key={index}
                     variant="secondary"
@@ -187,7 +183,7 @@ export default function ProjectClientPage({ projectData }: { projectData: any })
             <div className="mt-8 pt-6 border-t">
               <div className="flex items-center flex-wrap gap-2">
                 <Tag className={`h-4 w-4 ${colorScheme === "red" ? "text-red-600" : "text-blue-600"} mr-2`} />
-                {project.technologies.map((tech, index) => (
+                {project.technologies.map((tech: string, index: number) => (
                   <Badge
                     key={index}
                     variant="secondary"
@@ -200,16 +196,6 @@ export default function ProjectClientPage({ projectData }: { projectData: any })
             </div>
           )}
         </div>
-
-        {/* Project Lightbox */}
-        <ProjectLightbox
-          isOpen={isLightboxOpen}
-          images={lightboxImages}
-          currentIndex={currentImageIndex}
-          onClose={() => setIsLightboxOpen(false)}
-          onNext={() => setCurrentImageIndex((prev) => (prev + 1) % lightboxImages.length)}
-          onPrev={() => setCurrentImageIndex((prev) => (prev - 1 + lightboxImages.length) % lightboxImages.length)}
-        />
       </div>
     </PageTransition>
   )

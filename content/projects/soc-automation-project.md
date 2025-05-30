@@ -17,9 +17,9 @@ technologies: ["Wazuh", "The Hive", "Shuffle", "Windows 10", "Draw.io"]
 category: "blue"
 tags: ["Blue Team", "Infrastructure", "SIEM", "SOAR"]
 images: [
-  { "src": "/placeholder.svg?height=400&width=600&text=SOC+Automation+Logical+Flow", "alt": "SOC Automation Logical Flow" },
-  { "src": "/placeholder.svg?height=400&width=600&text=SOC+Automation+Detailed+Workflow", "alt": "SOC Automation Detailed Workflow" },
-  { "src": "/placeholder.svg?height=400&width=600&text=SOC+Architecture", "alt": "SOC Architecture" }
+  { "src": "/images/soc-automation/shuffle-workflow.png", "alt": "SOC Automation Project Workflow in Shuffle showing the Wazuh-Alerts trigger and automation setup" },
+  { "src": "/images/soc-automation/wazuh-config.png", "alt": "Wazuh Configuration showing integration with Shuffle webhook" },
+  { "src": "/images/soc-automation/shuffle-webhook.png", "alt": "Shuffle Webhook Configuration Interface for Alert Processing" }
 ]
 ---
 
@@ -30,8 +30,6 @@ This project documents my journey building a Security Operations Center (SOC) au
 ## Project Overview
 
 As I continue my journey into cybersecurity, I've embarked on a SOC Automation Project aimed at building a home lab environment from scratch. The ultimate goal is to create a fully functional Security Orchestration, Automation, and Response (SOAR) setup, with tools like Wazuh, The Hive, and Shuffle for case management and automation. This project will enable hands-on experience critical for Security Operations Center (SOC) tasks, providing a foundation for alert management, response actions, and data enrichment.
-
-![SOC Automation Logical Flow](/placeholder.svg?height=400&width=600&text=SOC+Automation+Logical+Flow)
 
 ## Project Parts
 
@@ -51,8 +49,6 @@ The primary challenge was to build a functional SOC environment from the ground 
 - Enriching alerts with OSINT data automatically
 - Managing incidents effectively using a case management system
 
-![SOC Automation Detailed Workflow](/placeholder.svg?height=400&width=600&text=SOC+Automation+Detailed+Workflow)
-
 #### My Approach
 
 The initial approach focused on planning and visualization before deployment.
@@ -60,8 +56,6 @@ The initial approach focused on planning and visualization before deployment.
 ##### Step 1: Diagramming the Lab Environment
 
 I began by visualizing the lab's architecture, which will guide deploying various SOC components. Using Draw.io, I created a logical flow diagram, depicting the interaction of key elements like a Windows 10 client with Wazuh and SOAR tools (The Hive and Shuffle) across different network layers. This visual roadmap is crucial for understanding the setup.
-
-![SOC Automation Architecture](/placeholder.svg?height=400&width=600&text=SOC+Architecture)
 
 ##### Step 2: Defining the Workflow
 
@@ -130,6 +124,4 @@ This part will detail:
 In my upcoming posts, I'll move into deploying these tools on virtual machines, configuring Wazuh and The Hive, and connecting them with my local workstation. This setup will allow me to simulate common security alerts, test case management processes, and refine my incident response workflows. Stay tuned as I document each stage, including implementation challenges, configurations, and SOC analysis techniques.
 
 #MYDFIR #CyberSecurity #SOCAnalyst #HomeLab #Automation #HandsOnExperience
-\`\`\`
-
-Let's also update the other project files to include tags:
+\`

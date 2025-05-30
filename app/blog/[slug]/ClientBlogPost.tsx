@@ -7,8 +7,25 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft, Calendar, User, Tag } from "lucide-react"
 import { BlogContentRenderer } from "@/components/blog-content-renderer"
+import { ImageGallery } from "@/components/ui/image-gallery"
 
-export function ClientBlogPost({ postData }: { postData: any }) {
+interface BlogPost {
+  slug: string
+  title: string
+  description: string
+  date: string
+  author: string
+  category: string
+  tags: string[]
+  content: string
+  image: string
+  gallery?: {
+    src: string
+    alt: string
+  }[]
+}
+
+export function ClientBlogPost({ postData }: { postData: BlogPost }) {
   // If no post data is provided, show 404
   if (!postData) {
     notFound()
@@ -48,7 +65,17 @@ export function ClientBlogPost({ postData }: { postData: any }) {
             </div>
           </div>
 
-          <BlogContentRenderer content={postData.content} groupId={`blog-${postData.slug}`} />
+          <div className="prose prose-purple max-w-none dark:prose-invert">
+            <BlogContentRenderer content={postData.content} groupId={`blog-${postData.slug}`} />
+          </div>
+
+          {/* Image Gallery Section */}
+          {postData.gallery && (
+            <div className="mt-12 mb-8">
+              <h2 className="text-2xl font-bold mb-6">Project Gallery</h2>
+              <ImageGallery images={postData.gallery} />
+            </div>
+          )}
 
           <div className="mt-8 pt-6 border-t">
             <div className="flex items-center flex-wrap gap-2">

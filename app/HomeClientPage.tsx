@@ -187,10 +187,14 @@ export default function HomeClientPage({ initialProjects }: { initialProjects: P
             >
               <Button
                 size="lg"
-                className="bg-[#7B34DD] hover:bg-[#6929C4] transition-all duration-400 rounded-md"
                 asChild
+                className="shadow-lg shadow-primary/20 transition-all duration-400"
               >
-                <a href="https://www.linkedin.com/posts/otori-samson" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.linkedin.com/in/otori-samson/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Get Started
                 </a>
               </Button>

@@ -169,7 +169,7 @@ export default function AboutPage() {
             >
               <h2 className="text-3xl font-bold tracking-tight text-gradient">Educational Background</h2>
               <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                My academic journey and professional certifications
+                My academic journey
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 gap-8">
@@ -181,20 +181,14 @@ export default function AboutPage() {
               >
                 <Card className="card-transition border-primary/10 h-full">
                   <CardHeader>
-                    <CardTitle className="text-2xl text-primary">Academic Education</CardTitle>
+                    <CardTitle className="text-2xl text-primary">MSc Cybersecurity</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <div>
-                      <h3 className="text-xl font-bold">MSc Cybersecurity</h3>
                       <p className="text-primary font-medium">Edge Hill University, UK | 2024 - Present</p>
                       <p className="text-muted-foreground mt-2">
-                        Focus: Malware Analysis, Infrastructure Security, Penetration Testing
+                        Focus: Advanced Professional Practice, Biometric Security, Forensic Computing and Malware Analysis, Information Security and Management, Infrastructure Security, Penetration, Testing and Ethics, Research and Development Project, Research Methods, Systems and Platform Security.
                       </p>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold">BSc Computer Science</h3>
-                      <p className="text-primary font-medium">Veritas University, Abuja | 2015 - 2020</p>
-                      <p className="text-muted-foreground mt-2">Focus: Networks, Security, Software Engineering</p>
                     </div>
                   </CardContent>
                 </Card>
@@ -207,56 +201,14 @@ export default function AboutPage() {
               >
                 <Card className="card-transition border-primary/10 h-full">
                   <CardHeader>
-                    <CardTitle className="text-2xl text-primary">Continuing Education</CardTitle>
+                    <CardTitle className="text-2xl text-primary">BSc Computer Science</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <div>
-                      <h3 className="text-xl font-bold">Professional Development</h3>
-                      <ul className="mt-2 space-y-2">
-                        <li className="flex items-start">
-                          <div className="bg-primary/10 p-1 rounded-full mr-2 mt-1">
-                            <div className="w-2 h-2 bg-primary rounded-full"></div>
-                          </div>
-                          <p className="text-muted-foreground">
-                            Advanced Incident Response Training, SANS Institute, 2023
-                          </p>
-                        </li>
-                        <li className="flex items-start">
-                          <div className="bg-primary/10 p-1 rounded-full mr-2 mt-1">
-                            <div className="w-2 h-2 bg-primary rounded-full"></div>
-                          </div>
-                          <p className="text-muted-foreground">Cloud Security Architecture Workshop, AWS, 2022</p>
-                        </li>
-                        <li className="flex items-start">
-                          <div className="bg-primary/10 p-1 rounded-full mr-2 mt-1">
-                            <div className="w-2 h-2 bg-primary rounded-full"></div>
-                          </div>
-                          <p className="text-muted-foreground">Offensive Security Training Program, 2021</p>
-                        </li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold">Online Courses</h3>
-                      <ul className="mt-2 space-y-2">
-                        <li className="flex items-start">
-                          <div className="bg-primary/10 p-1 rounded-full mr-2 mt-1">
-                            <div className="w-2 h-2 bg-primary rounded-full"></div>
-                          </div>
-                          <p className="text-muted-foreground">Advanced Penetration Testing, Udemy, 2023</p>
-                        </li>
-                        <li className="flex items-start">
-                          <div className="bg-primary/10 p-1 rounded-full mr-2 mt-1">
-                            <div className="w-2 h-2 bg-primary rounded-full"></div>
-                          </div>
-                          <p className="text-muted-foreground">Secure Coding Practices, Coursera, 2022</p>
-                        </li>
-                        <li className="flex items-start">
-                          <div className="bg-primary/10 p-1 rounded-full mr-2 mt-1">
-                            <div className="w-2 h-2 bg-primary rounded-full"></div>
-                          </div>
-                          <p className="text-muted-foreground">Ethical Hacking Masterclass, Pluralsight, 2021</p>
-                        </li>
-                      </ul>
+                      <p className="text-primary font-medium">Veritas University, Abuja | 2015 - 2020</p>
+                      <p className="text-muted-foreground mt-2">
+                        Focus: Data Structures and Algorithms, Operating Systems, Databases, Software Engineering, Programming Languages, Computer Networks, Artificial Intelligence, Web Development, Cybersecurity, Data Science and Big Data, Human-Computer Interaction (HCI) and Database Management Systems (Advanced).
+                      </p>
                     </div>
                   </CardContent>
                 </Card>
@@ -277,7 +229,7 @@ export default function AboutPage() {
             >
               <h2 className="text-3xl font-bold tracking-tight text-gradient">Professional Profile</h2>
               <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                My skills, expertise, and professional experience
+                My professional experience, skills, and expertise
               </p>
             </motion.div>
 
@@ -334,59 +286,61 @@ export default function AboutPage() {
             >
               <motion.h2 className="text-3xl font-bold tracking-tight text-gradient">Contact Me</motion.h2>
               <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                Get in touch with our team to discuss your cybersecurity needs
+                Check me on Github or reach out to me on linkedin
               </p>
             </motion.div>
-            <div className="grid md:grid-cols-3 gap-8">
-              <ContactCard
-                icon={<Mail className="h-6 w-6 text-primary" />}
-                title="Email"
-                description="For general inquiries and support"
-                contact="info@117secops.com"
-                href="mailto:info@117secops.com"
-                index={0}
-              />
-              <ContactCard
-                icon={<Phone className="h-6 w-6 text-primary" />}
-                title="Phone"
-                description="Monday to Friday, 9am to 6pm EST"
-                contact="+1 (800) 555-1234"
-                href="tel:+18005551234"
-                index={1}
-              />
-              <ContactCard
-                icon={<MapPin className="h-6 w-6 text-primary" />}
-                title="Office"
-                description="Visit our headquarters"
-                contact={
-                  <>
-                    1234 Cyber Street
-                    <br />
-                    Suite 500
-                    <br />
-                    Boston, MA 02110
-                  </>
-                }
-                index={2}
-              />
+            <div className="grid md:grid-cols-2 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <Card className="card-transition border-primary/10">
+                  <CardContent className="flex flex-col items-center text-center p-6">
+                    <div className="bg-primary/10 p-3 rounded-full mb-4 group-hover:bg-primary/20 transition-colors duration-400">
+                      <Github className="h-6 w-6 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-2 text-primary">GitHub</h3>
+                    <p className="text-muted-foreground mb-4">Check out my projects and contributions</p>
+                    <Button asChild className="shadow-lg shadow-primary/20 transition-all duration-400">
+                      <a href="https://github.com/PilotVader" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                        <Github className="h-4 w-4" />
+                        Visit Profile
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <Card className="card-transition border-primary/10">
+                  <CardContent className="flex flex-col items-center text-center p-6">
+                    <div className="bg-primary/10 p-3 rounded-full mb-4 group-hover:bg-primary/20 transition-colors duration-400">
+                      <svg className="h-6 w-6 text-primary" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-bold mb-2 text-primary">LinkedIn</h3>
+                    <p className="text-muted-foreground mb-4">Connect with me professionally</p>
+                    <Button asChild className="shadow-lg shadow-primary/20 transition-all duration-400">
+                      <a href="https://www.linkedin.com/in/otori-samson/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                        <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                        </svg>
+                        Connect
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </motion.div>
             </div>
-            <div className="flex items-start space-x-4">
-              <div className="bg-primary/10 p-3 rounded-full">
-                <Github className="h-6 w-6 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-medium">GitHub</h3>
-                <a
-                  href="https://github.com/PilotVader"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:underline transition-colors duration-400"
-                >
-                  github.com/PilotVader
-                </a>
-                <p className="text-sm text-muted-foreground mt-1">Check out my code repositories and projects</p>
-              </div>
-            </div>
+
             <motion.div
               className="flex justify-center mt-12"
               initial={{ opacity: 0, y: 20 }}
@@ -394,11 +348,6 @@ export default function AboutPage() {
               transition={{ duration: 0.4, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <Button size="lg" asChild className="shadow-lg shadow-primary/20 transition-all duration-400">
-                <a href="https://www.linkedin.com/in/otori-samson/" target="_blank" rel="noopener noreferrer">
-                  Get in Touch
-                </a>
-              </Button>
             </motion.div>
           </div>
         </section>
@@ -625,41 +574,59 @@ const expertise: Expertise[] = [
 
 const experience: Job[] = [
   {
-    title: "System Operator",
-    company: "Transmission Company of Nigeria",
-    period: "June 2021 - April 2022",
-    description:
-      "Provided 24/7 system monitoring and IT support during 12-hour shifts, ensuring uninterrupted operations and timely issue resolution.",
+    title: "Cybersecurity Engineer (Part-Time)",
+    company: "Softdroom HQ",
+    period: "May 2022 - Oct 2023",
+    description: "Nigeria (Remote)",
     achievements: [
-      "Managed IT helpdesk operations, tracking and resolving technical support requests for operational continuity",
-      "Maintained database integrity and performed regular system data collection and verification",
-      "Coordinated IT procurement and implemented cost-effective technical solutions",
-      "Conducted technical training sessions and created documentation for knowledge transfer",
+      "Joined the security and backend team shortly after Versuspay's acquisition, supporting minor tasks related to infrastructure and service security.",
+      "Assisted in conducting vulnerability scans using tools such as Nessus and OpenVAS, and documented common findings under supervision.",
+      "Observed and supported security implementations in CI/CD pipelines using GitLab CI and Jenkins, gaining hands-on exposure to DevSecOps workflows and practices.",
+      "Participated in internal meetings focused on improving system security posture and compliance, with exposure to OWASP Top 10, access control models, and secure coding principles.",
+      "The role sparked a deep curiosity in cybersecurity, motivating a transition into full-time academic pursuit of an MSc in Cyber Security.",
+      "Concluded internship responsibilities before enrolling in the program, using insights from the role to shape academic focus areas like network security, security operations, and threat modelling."
     ],
   },
   {
-    title: "Blog Manager",
-    company: "Goody PC",
-    period: "March 2020 - April 2021",
-    description:
-      "Led content strategy development and managed a team of content creators for the company blog platform.",
+    title: "System Operator",
+    company: "Transmission Company of Nigeria (TCN)",
+    period: "June 2021 - April 2022",
+    description: "Nigeria (On-site)",
     achievements: [
-      "Implemented audience engagement strategies to increase reader interaction",
-      "Established and monitored key performance metrics for traffic and engagement",
-      "Utilised data analytics tools to drive content optimisation and decision-making",
-      "Maintained quality control and editorial standards across all blog content",
+      "Operated in a 24/7 rotating shift pattern to monitor critical electrical infrastructure systems, applying foundational SCADA security awareness to ensure operational continuity and secure data logging across transmission assets.",
+      "Logged, validated, and analyzed real-time infrastructure telemetry using internal monitoring systems to support integrity checks, trend analysis, and compliance audits.",
+      "Assisted in identifying anomalies in system readings, contributing to the early detection of potential faults or cyber-physical incidents in alignment with ICS/OT cybersecurity principles.",
+      "Maintained detailed shift reports and handover documentation to support traceability and ongoing risk assessments.",
+      "Developed foundational skills in infrastructure monitoring, log analysis, and situational awareness—aligning with key elements of SOC (Security Operations Center) analyst workflows and cybersecurity event monitoring."
+    ],
+  },
+  {
+    title: "Backend & Infrastructure Engineer",
+    company: "Versuspay",
+    period: "Mar 2020 - May 2021",
+    description: "US (Remote-Hybrid)",
+    achievements: [
+      "Started as a web development intern, assisting in updating website features and fixing minor backend issues.",
+      "After exploring cybersecurity independently, I earned a 6-month internship in infrastructure security.",
+      "Supported backend engineers by testing APIs, documenting endpoints, and learning about server-side development.",
+      "Gained exposure to infrastructure and security practices.",
+      "Retained as a full-time staff member focusing on infrastructure security and scalable payment services.",
+      "Assisted the team in deploying \"scan to pay\" payment features by working on backend components and reviewing integration steps.",
+      "Participated in DevOps routines by observing pipeline deployments, managing automation scripts, and learning about CI/CD tools.",
+      "Helped with general backend maintenance, running performance checks, and troubleshooting under the guidance of senior developers."
     ],
   },
   {
     title: "Internship",
     company: "HiiT plc",
-    period: "March 2018 - September 2018",
-    description: "Developed a comprehensive Hospital Management System using Java and OOP principles.",
+    period: "Mar 2018 - Sept 2018",
+    description: "Nigeria (On-site)",
     achievements: [
+      "Developed a comprehensive Hospital Management System using Java and OOP principles",
       "Created and maintained database schemas using MySQL/Oracle for patient records",
       "Designed user-friendly interfaces using Java GUI frameworks (Swing/JavaFX)",
       "Implemented database connectivity and system integration features",
-      "Conducted system testing and delivered project progress presentations",
+      "Conducted system testing and delivered project progress presentations"
     ],
-  },
+  }
 ]
