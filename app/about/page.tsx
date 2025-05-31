@@ -83,20 +83,25 @@ export default function AboutPage() {
                 <h2 className="text-3xl font-bold tracking-tight mb-6 text-gradient">My Story</h2>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    With over 8 years in the cybersecurity industry, I began my journey with a simple mission: to make
-                    enterprise-grade cybersecurity accessible to organizations of all sizes. As a veteran of the
-                    cybersecurity industry, I recognized that many businesses lacked the resources and expertise to
-                    properly defend themselves against increasingly sophisticated cyber threats.
+                    My journey into cybersecurity wasn't planned; it evolved from curiosity, determination, and a deep desire to solve real-world problems.
                   </p>
                   <p>
-                    What started as a passion for information security has evolved into a comprehensive approach to
-                    cybersecurity with expertise in multiple domains. Throughout my career, I've maintained core values
-                    of integrity, excellence, and client partnership.
+                    I started out working behind the scenes, fixing backend issues at Reelin formerly Versuspay, learning how systems run, and helping to keep things working smoothly. Over time, I found myself drawn to the deeper layers, how things could break, what made them vulnerable, and how to protect them.
                   </p>
                   <p>
-                    Today, I serve clients across multiple industries, from financial services and healthcare to
-                    government and manufacturing, combining deep technical expertise with a practical, business-focused
-                    approach to security.
+                    During my time at the Transmission Company of Nigeria, I worked rotating shifts, monitoring critical systems around the clock. It taught me discipline, attention to detail, and what it means to keep things running under pressure. That experience showed me the importance of security, even in places where it may not always be apparent.
+                  </p>
+                  <p>
+                    From there, I stepped into more technical roles, diving into security-focused work at Softdroom HQ. I didn't have all the answers, but I was always willing to learn, ask questions, and take on what others didn't want to.
+                  </p>
+                  <p>
+                    That drive eventually led me to pursue a master's degree in cybersecurity, where I'm deepening my knowledge and building on everything I've learned so far.
+                  </p>
+                  <p>
+                    Today, I'm still that same curious person, always learning, building, and looking for ways to make systems more secure. I believe in doing work that matters, staying grounded in values like integrity and excellence, so as to help people feel confident in the technology they use every day.
+                  </p>
+                  <p>
+                    This is more than a career for me, it's a purpose.
                   </p>
                 </div>
               </motion.div>
@@ -145,7 +150,7 @@ export default function AboutPage() {
                 <Card className="card-transition border-primary/10">
                   <CardContent className="pt-6">
                     <p className="text-muted-foreground">
-                      To develop the hands-on security expertise that protects modern businesses—while documenting my
+                      To develop the hands-on security expertise that protects modern businesses, while documenting my
                       journey openly at 117SecOps. I believe effective cybersecurity isn't just about tools, but
                       practical risk management that enables growth. Every lab, tutorial, and project brings me closer
                       to becoming the defender organizations need.
@@ -574,10 +579,10 @@ const expertise: Expertise[] = [
 
 const experience: Job[] = [
   {
-    title: "Cybersecurity Engineer (Part-Time)",
+    title: "Cybersecurity Engineer",
     company: "Softdroom HQ",
     period: "May 2022 - Oct 2023",
-    description: "Nigeria (Remote)",
+    description: "Nigeria (Remote/Entry Level)",
     achievements: [
       "Joined the security and backend team shortly after Versuspay's acquisition, supporting minor tasks related to infrastructure and service security.",
       "Assisted in conducting vulnerability scans using tools such as Nessus and OpenVAS, and documented common findings under supervision.",
@@ -597,7 +602,7 @@ const experience: Job[] = [
       "Logged, validated, and analyzed real-time infrastructure telemetry using internal monitoring systems to support integrity checks, trend analysis, and compliance audits.",
       "Assisted in identifying anomalies in system readings, contributing to the early detection of potential faults or cyber-physical incidents in alignment with ICS/OT cybersecurity principles.",
       "Maintained detailed shift reports and handover documentation to support traceability and ongoing risk assessments.",
-      "Developed foundational skills in infrastructure monitoring, log analysis, and situational awareness—aligning with key elements of SOC (Security Operations Center) analyst workflows and cybersecurity event monitoring."
+      "Developed foundational skills in infrastructure monitoring, log analysis, and situational awareness, aligning with key elements of SOC (Security Operations Center) analyst workflows and cybersecurity event monitoring."
     ],
   },
   {

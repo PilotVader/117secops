@@ -195,7 +195,7 @@ export default function HomeClientPage({ initialProjects }: { initialProjects: P
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Get Started
+                  Contact Me
                 </a>
               </Button>
             </motion.div>

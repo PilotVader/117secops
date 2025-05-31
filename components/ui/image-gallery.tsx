@@ -4,7 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
-import { Expand, X, ChevronLeft, ChevronRight } from "lucide-react"
+import { Expand, X, ChevronLeft, ChevronRight, ZoomIn, ZoomOut } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 interface ImageGalleryProps {
@@ -17,6 +17,7 @@ interface ImageGalleryProps {
 export function ImageGallery({ images }: ImageGalleryProps) {
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [isFullscreen, setIsFullscreen] = useState(false)
+  const [zoomLevel, setZoomLevel] = useState(1)
 
   const handlePrevious = () => {
     setSelectedIndex((current) => (current === 0 ? images.length - 1 : current - 1))
@@ -28,36 +29,77 @@ export function ImageGallery({ images }: ImageGalleryProps) {
 
   const toggleFullscreen = () => {
     setIsFullscreen((current) => !current)
+    setZoomLevel(1) // Reset zoom when toggling fullscreen
+  }
+
+  const handleZoomIn = () => {
+    setZoomLevel((current) => Math.min(current + 0.2, 2))
+  }
+
+  const handleZoomOut = () => {
+    setZoomLevel((current) => Math.max(current - 0.2, 0.5))
   }
 
   return (
     <div className="w-full space-y-4">
       {/* Main Image Container */}
       <div className="relative aspect-video w-full overflow-hidden rounded-lg bg-background/50 dark:bg-background/10">
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={selectedIndex}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
+            transition={{ duration: 0.2, ease: "easeInOut" }}
             className={cn(
               "relative h-full w-full",
-              isFullscreen && "fixed inset-0 z-50 h-screen w-screen bg-background/95"
+              isFullscreen && "fixed inset-0 z-50 h-screen w-screen bg-background/95 flex items-center justify-center"
             )}
           >
-            <Image
-              src={images[selectedIndex].src}
-              alt={images[selectedIndex].alt}
-              fill
-              className="object-contain"
-              priority
-            />
+            <motion.div 
+              className={cn(
+                "relative w-full h-full",
+                isFullscreen && "w-[75%] h-[75%] max-w-6xl max-h-[75vh]"
+              )}
+              animate={{ scale: zoomLevel }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+            >
+              <AnimatePresence mode="wait" initial={false}>
+                <motion.div
+                  key={selectedIndex}
+                  initial={{ 
+                    opacity: 0,
+                    x: 50 * (isFullscreen ? 1 : 0)  // Only slide when fullscreen
+                  }}
+                  animate={{ 
+                    opacity: 1,
+                    x: 0
+                  }}
+                  exit={{ 
+                    opacity: 0,
+                    x: -50 * (isFullscreen ? 1 : 0)  // Only slide when fullscreen
+                  }}
+                  transition={{
+                    duration: 0.2,
+                    ease: "easeInOut"
+                  }}
+                  className="relative w-full h-full"
+                >
+                  <Image
+                    src={images[selectedIndex].src}
+                    alt={images[selectedIndex].alt}
+                    fill
+                    className="object-contain"
+                    priority
+                  />
+                </motion.div>
+              </AnimatePresence>
+            </motion.div>
 
             {/* Navigation Controls Container */}
             <div className={cn(
               "absolute bottom-4 w-full px-4 flex justify-between items-center",
-              isFullscreen && "bottom-[120px]" // Move up when thumbnails are shown in fullscreen
+              isFullscreen && "bottom-[120px]"
             )}>
               {/* Left Controls */}
               <div className="flex items-center gap-2">
@@ -69,6 +111,26 @@ export function ImageGallery({ images }: ImageGalleryProps) {
                 >
                   {isFullscreen ? <X className="h-6 w-6" /> : <Expand className="h-6 w-6" />}
                 </Button>
+                {isFullscreen && (
+                  <>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="h-10 w-10 rounded-full bg-background/50 backdrop-blur-sm hover:bg-background/80"
+                      onClick={handleZoomIn}
+                    >
+                      <ZoomIn className="h-6 w-6" />
+                    </Button>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      className="h-10 w-10 rounded-full bg-background/50 backdrop-blur-sm hover:bg-background/80"
+                      onClick={handleZoomOut}
+                    >
+                      <ZoomOut className="h-6 w-6" />
+                    </Button>
+                  </>
+                )}
               </div>
 
               {/* Right Controls */}
