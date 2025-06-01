@@ -1,5 +1,5 @@
 ---
-title: "Project 1: Building a Cybersecurity Home Lab"
+title: "Part 1: Setting Up My Virtual Home Lab Environment"
 client: "Personal Project"
 description: "Establishing a home lab to gain hands-on experience in cybersecurity."
 date: "2025-05-08"
@@ -11,20 +11,23 @@ results: [
   "Enabled telemetry generation and analysis",
   "Built foundational skills in monitoring and detection"
 ]
-image: "/placeholder.svg?height=300&width=600"
+image: "/images/projects/homelab-coding.jpg"
 technologies: ["VirtualBox", "Parrot Security OS", "Sysmon", "Splunk"]
 category: "blue"
 tags: ["Blue Team", "Infrastructure", "Home Lab", "SIEM"]
+series:
+  name: "Project 1: Building a Cybersecurity Home Lab"
+  part: 1
+  totalParts: 2
 images: [
-  { "src": "/images/ibm-it-support-cert.png?height=400&width=600&text=Home+Lab+Setup", "alt": "Home Lab Setup" },
   { "src": "/placeholder.svg?height=400&width=600&text=Sysmon+Configuration", "alt": "Sysmon Configuration" },
   { "src": "/placeholder.svg?height=400&width=600&text=Splunk+Dashboard", "alt": "Splunk Dashboard" }
 ]
 ---
 
-# Project 1: Building a Cybersecurity Home Lab
+# Part 1: Setting Up My Virtual Home Lab Environment
 
-## Part 1: Home Lab Setup
+## Home Lab Setup
 
 I embarked on an exciting journey to establish a cybersecurity home lab aimed at creating a controlled environment for hands-on experimentation and skill development.
 

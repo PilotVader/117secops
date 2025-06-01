@@ -252,16 +252,11 @@ function SeriesCard({ seriesName, projects, index, openLightbox, openSeriesModal
                   {totalParts} {totalParts === 1 ? 'Part' : 'Parts'}
                 </p>
                 <ul className="space-y-1">
-                  {projects.slice(0, 2).map((project) => (
+                  {projects.map((project) => (
                     <li key={project.slug} className="text-xs text-muted-foreground">
-                      Part {project.series?.part}: {project.title}
+                      Project 1: Part {project.series?.part}: {project.title.split(": ").pop()}
                     </li>
                   ))}
-                  {projects.length > 2 && (
-                    <li className="text-xs text-muted-foreground">
-                      + {projects.length - 2} more parts...
-                    </li>
-                  )}
                 </ul>
               </div>
             </CardContent>
