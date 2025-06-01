@@ -248,13 +248,13 @@ function SeriesCard({ seriesName, projects, index, openLightbox, openSeriesModal
                 )}
               </div>
               <div className="space-y-2">
-                <p className="text-xs text-muted-foreground">
+                <p className="text-sm text-muted-foreground">
                   {totalParts} {totalParts === 1 ? 'Part' : 'Parts'}
                 </p>
                 <ul className="space-y-1">
                   {projects.map((project) => (
                     <li key={project.slug} className="text-xs text-muted-foreground">
-                      Project 1: Part {project.series?.part}: {project.title.split(": ").pop()}
+                      Part {project.series?.part}: {project.title.split(": ").pop()}
                     </li>
                   ))}
                 </ul>
