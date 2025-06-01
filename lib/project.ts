@@ -19,11 +19,16 @@ export interface Project {
   solution?: string
   results?: string[]
   category?: "red" | "blue"
-  tags?: string[] // Added tags field
+  tags?: string[]
   content: string
   image?: string
   technologies?: string[]
-  images?: { src: string; alt: string }[] // Added images array for lightbox
+  images?: { src: string; alt: string }[]
+  series?: {
+    name: string
+    part: number
+    totalParts?: number
+  }
 }
 
 // Make this function handle directory not existing
@@ -174,6 +179,7 @@ export const getSortedProjectsData = cache(async (): Promise<Project[]> => {
           image: data.image || "/placeholder.svg?height=300&width=600",
           technologies,
           images,
+          series: data.series,
         }
       }),
     )
@@ -290,6 +296,7 @@ export async function getProjectData(slug: string): Promise<Project | null> {
       image: data.image || "/placeholder.svg?height=300&width=600",
       technologies,
       images,
+      series: data.series,
     }
   } catch (error) {
     console.error(`Error getting project data for slug ${slug}:`, error)
@@ -312,4 +319,31 @@ export async function getProjectsMap(): Promise<Record<string, Project>> {
   }
 
   return projectsMap
+}
+
+// Helper function to group projects by series
+export function groupProjectsBySeries(projects: Project[]): {
+  series: Record<string, Project[]>;
+  standalone: Project[];
+} {
+  const seriesMap: Record<string, Project[]> = {};
+  const standalone: Project[] = [];
+
+  projects.forEach(project => {
+    if (project.series?.name) {
+      if (!seriesMap[project.series.name]) {
+        seriesMap[project.series.name] = [];
+      }
+      seriesMap[project.series.name].push(project);
+    } else {
+      standalone.push(project);
+    }
+  });
+
+  // Sort projects within each series by part number
+  Object.values(seriesMap).forEach(seriesProjects => {
+    seriesProjects.sort((a, b) => (a.series?.part || 0) - (b.series?.part || 0));
+  });
+
+  return { series: seriesMap, standalone };
 }
