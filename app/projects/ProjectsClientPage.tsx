@@ -218,7 +218,7 @@ function SeriesCard({ seriesName, projects, index, openLightbox, openSeriesModal
           <div className="p-4 flex flex-col flex-1">
             <CardHeader className="p-0">
               <CardTitle 
-                className={`text-lg mb-2 transition-colors duration-300
+                className={`text-lg mb-2 transition-colors duration-300 whitespace-nowrap overflow-hidden text-ellipsis
                   ${isRed 
                     ? "text-red-500 group-hover:text-red-600" 
                     : "text-blue-500 group-hover:text-blue-600"}`}
