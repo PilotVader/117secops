@@ -32,7 +32,8 @@ export function ProjectSeriesModal({ isOpen, onClose, series, seriesName }: Proj
               <div className="flex items-start justify-between">
                 <div>
                   <h3 className="text-lg font-semibold">
-                    Part {project.series?.part}: {project.title}
+                    {/* Display clean title without duplicating "Part X:" */}
+                    {project.title.includes("Part ") ? project.title : `Part ${project.series?.part}: ${project.title}`}
                   </h3>
                   <p className="text-muted-foreground">{project.description}</p>
                 </div>

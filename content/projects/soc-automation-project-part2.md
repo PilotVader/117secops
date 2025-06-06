@@ -1,5 +1,5 @@
 ---
-title: "Generating and Ingesting Telemetry"
+title: "Part 3: Generating and Ingesting Telemetry"
 description: "Setting up telemetry generation and ingestion in our SOC environment using Mimikatz and configuring Wazuh for detection"
 date: "2024-03-21"
 author: "Samson Otori"

@@ -1,5 +1,5 @@
 ---
-title: "SOC Automation Project"
+title: "Part 1: Planning the Infrastructure"
 client: "Personal Project"
 description: "Building a home lab SOC environment for hands-on experience with SOAR tools like Wazuh, The Hive, and Shuffle."
 date: "2025-05-12"

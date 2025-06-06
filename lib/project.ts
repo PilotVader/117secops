@@ -152,7 +152,7 @@ export const getSortedProjectsData = cache(async (): Promise<Project[]> => {
         // Extract images from content if not explicitly defined
         if (images.length === 0) {
           // Simple regex to find markdown image syntax
-          const imageRegex = /!\[(.*?)\]$$(.*?)$$/g
+          const imageRegex = /!\[(.*?)\]\((.*?)\)/g
           let match
           while ((match = imageRegex.exec(matterResult.content)) !== null) {
             images.push({

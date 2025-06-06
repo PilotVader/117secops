@@ -247,18 +247,22 @@ function SeriesCard({ seriesName, projects, index, openLightbox, openSeriesModal
                   <Badge variant="outline" className="text-xs">+{firstProject.tags.length - 3} more</Badge>
                 )}
               </div>
-              <div className="space-y-2">
-                <p className="text-sm text-muted-foreground">
-                  {totalParts} {totalParts === 1 ? 'Part' : 'Parts'}
-                </p>
-                <ul className="space-y-1">
-                  {projects.map((project) => (
-                    <li key={project.slug} className="text-xs text-muted-foreground">
-                      Part {project.series?.part}: {project.title.split(": ").pop()}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              
+              <p className="text-sm text-muted-foreground">
+                {totalParts} {totalParts === 1 ? 'Part' : 'Parts'}
+              </p>
+              <ul className="space-y-1">
+                {projects.slice(0, 2).map((project) => (
+                  <li key={project.slug} className="text-xs text-muted-foreground">
+                    {project.title.includes("Part ") ? project.title : `Part ${project.series?.part}: ${project.title}`}
+                  </li>
+                ))}
+                {totalParts > 2 && (
+                  <li className="text-xs text-muted-foreground font-medium">
+                    +{totalParts - 2} more {totalParts - 2 === 1 ? 'part' : 'parts'}
+                  </li>
+                )}
+              </ul>
             </CardContent>
             <CardFooter className="p-0 mt-3">
               <Button
