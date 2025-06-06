@@ -1,5 +1,5 @@
 ---
-title: "Introduction: Embarking on the 30-Days MYDFIR SOC Analyst Challenge"
+title: "Introduction to the MYDFIR SOC Analyst Challenge"
 client: "Personal Project"
 description: "An introduction to the comprehensive 30-day challenge for aspiring SOC analysts."
 date: "2024-03-15"
@@ -22,4 +22,4 @@ series:
   totalParts: 30
 ---
 
-# Introduction: Embarking on the 30-Days MYDFIR SOC Analyst Challenge 
+# Introduction to the 30-Days MYDFIR SOC Analyst Challenge 
