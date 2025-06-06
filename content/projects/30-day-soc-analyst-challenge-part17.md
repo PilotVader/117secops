@@ -8,7 +8,7 @@ tags:
   - "RDP Monitoring"
   - "SSH Monitoring"
   - "Visualization"
-image: "/images/projects/rdp-ssh-dashboard.png"
+image: "/images/projects/30-day-soc-analyst-challenge.png"
 series:
   name: "Project 3: 30-Day MYDFIR SOC Analyst Challenge"
   part: 17

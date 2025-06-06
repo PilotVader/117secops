@@ -8,7 +8,7 @@ tags:
   - "Attack Techniques"
   - "Defense"
   - "Security Tools"
-image: "/images/projects/brute-force.png"
+image: "/images/projects/30-day-soc-analyst-challenge.png"
 series:
   name: "Project 3: 30-Day MYDFIR SOC Analyst Challenge"
   part: 11

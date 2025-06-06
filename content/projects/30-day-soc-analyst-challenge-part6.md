@@ -8,7 +8,7 @@ tags:
   - "Elastic Agent"
   - "Centralized Management"
   - "Security Monitoring"
-image: "/images/projects/fleet-server.png"
+image: "/images/projects/30-day-soc-analyst-challenge.png"
 series:
   name: "Project 3: 30-Day MYDFIR SOC Analyst Challenge"
   part: 6

@@ -8,7 +8,7 @@ tags:
   - "C2"
   - "Threat Detection"
   - "Network Security"
-image: "/images/projects/c2-infrastructure.png"
+image: "/images/projects/30-day-soc-analyst-challenge.png"
 series:
   name: "Project 3: 30-Day MYDFIR SOC Analyst Challenge"
   part: 18

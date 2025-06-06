@@ -8,7 +8,7 @@ tags:
   - "Cloud"
   - "Azure"
   - "Infrastructure"
-image: "/images/projects/windows-server-cloud.png"
+image: "/images/projects/30-day-soc-analyst-challenge.png"
 series:
   name: "Project 3: 30-Day MYDFIR SOC Analyst Challenge"
   part: 5

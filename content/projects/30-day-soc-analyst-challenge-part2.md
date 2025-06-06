@@ -8,7 +8,7 @@ tags:
   - "SIEM"
   - "Log Management"
   - "Security Monitoring"
-image: "/images/projects/elk-stack.png"
+image: "/images/projects/30-day-soc-analyst-challenge.png"
 series:
   name: "Project 3: 30-Day MYDFIR SOC Analyst Challenge"
   part: 2

@@ -8,7 +8,7 @@ tags:
   - "Windows Security"
   - "Protocol Analysis"
   - "Threat Detection"
-image: "/images/projects/rdp-intro.png"
+image: "/images/projects/30-day-soc-analyst-challenge.png"
 series:
   name: "Project 3: 30-Day MYDFIR SOC Analyst Challenge"
   part: 15

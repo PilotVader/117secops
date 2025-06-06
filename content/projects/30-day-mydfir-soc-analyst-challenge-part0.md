@@ -12,7 +12,7 @@ results: [
   "Real-world scenarios",
   "Practical skills development"
 ]
-image: "/images/projects/30-day-challenge/introduction.png"
+image: "/images/projects/30-day-soc-analyst-challenge.png"
 technologies: ["ELK Stack", "SIEM", "Security Tools", "Monitoring"]
 category: "blue"
 tags: ["Blue Team", "SOC", "Security Monitoring", "Training"]

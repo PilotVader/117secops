@@ -8,7 +8,7 @@ tags:
   - "Sysmon"
   - "Microsoft Defender"
   - "ELK Stack"
-image: "/images/projects/log-ingestion.png"
+image: "/images/projects/30-day-soc-analyst-challenge.png"
 series:
   name: "Project 3: 30-Day MYDFIR SOC Analyst Challenge"
   part: 10
