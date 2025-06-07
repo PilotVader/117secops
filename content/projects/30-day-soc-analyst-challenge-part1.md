@@ -9,61 +9,21 @@ tags:
   - "Architecture"
   - "Documentation"
 image: "/images/projects/30-day-soc-analyst-challenge.png"
+images: [
+  { "src": "/images/projects/30-day-challenge/network-diagram.png", "alt": "Logical Network Diagram for SOC Environment" }
+]
 series:
   name: "Project 3: 30-Day MYDFIR SOC Analyst Challenge"
   part: 1
   totalParts: 30
 ---
 
-## Introduction
+Today, I kicked off the 30-Day MYDFIR SOC Analyst Challenge by building the foundation of my environment—a logical network diagram. Using draw.io, I mapped out six key servers, including Elastic and Kibana for monitoring, a Fleet server, and a C2 server. These components will allow me to simulate real-world SOC activities, from log forwarding to alert management.
 
-In this first part of our 30-day SOC Analyst Challenge, we'll focus on creating a logical network diagram that will serve as the foundation for our security monitoring environment. A well-designed network diagram is crucial for understanding data flow, identifying potential security gaps, and planning effective monitoring strategies.
+The process involved selecting and arranging server icons, defining a private network, and setting up connections representing how data flows across the system. One key takeaway is the importance of understanding how these components interact—this setup mirrors what happens in a real security operations environment.
+Through this exercise, I've reinforced my understanding of architecting a secure, functional SOC environment. As I move forward, I'll dive deeper into configuring and utilizing these tools. The diagram might seem basic, but it's the blueprint that will guide everything I'll be doing over the next month.
+This setup not only gives structure to my learning but also ensures I can monitor, detect, and respond to threats just like a SOC analyst would. It's a critical step in turning theory into hands-on experience.
 
-## What We'll Cover
-
-- Understanding the components of a SOC environment
-- Creating a logical network diagram using industry-standard tools
-- Documenting network segments and security zones
-- Planning log collection points and monitoring coverage
-
-## Key Components
-
-Our network diagram will include:
-
-1. Network Segments
-   - DMZ
-   - Internal Network
-   - Management Network
-   - Security Tools Network
-
-2. Security Components
-   - Firewalls
-   - IDS/IPS Systems
-   - Log Collectors
-   - SIEM Platform (ELK Stack)
-
-3. Endpoints and Servers
-   - Windows Servers
-   - Linux Servers
-   - Workstations
-   - Security Tools
-
-## Tools We'll Use
-
-- Draw.io (or Diagrams.net) for network diagramming
-- Microsoft Visio (alternative)
-- Industry-standard network icons and symbols
-
-## Best Practices
-
-1. Use clear and consistent labeling
-2. Include IP addressing schemes
-3. Document security zones and boundaries
-4. Show data flow directions
-5. Include monitoring points
-
-## Next Steps
-
-In Part 2, we'll build upon this foundation by diving into the ELK Stack, which will serve as our central security monitoring platform. The network diagram we create here will help us understand where to place our log collectors and how to structure our monitoring architecture.
-
-Stay tuned as we continue our journey to build a comprehensive security monitoring environment! 
+Stay tuned for more updates as I continue this journey, and if you're following along, get ready to take your cybersecurity skills to the next level!
+Here's the link to follow along: https://lnkd.in/dJJn9BJw
+#CyberSecurity #SOCAnalyst #MYDFIRChallenge #HandsOnExperience #MYDFIRChallenge #Day1 
