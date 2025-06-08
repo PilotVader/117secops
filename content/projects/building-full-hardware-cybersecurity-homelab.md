@@ -95,7 +95,7 @@ Here's how I did it:
    - My server's NIC connects to port 2
    - The remaining ports were available for VMs or any other device I want to simulate
 
-## Virtual Machines — The OS Stack
+## Virtual Machines
 
 On Proxmox, I spun up multiple VMs, each serving a different purpose:
 - Windows 10 & 11: For endpoint security testing, malware analysis, and AD simulations
@@ -115,7 +115,7 @@ With this lab, I can:
 
 The plan is to keep building on this, maybe add Active Directory, integrate SOAR tools like Shuffle(which I'm already working on currently), and even try deploying a Kubernetes cluster on Ubuntu.
 
-## Final Thoughts
+## Conclusion
 
 Setting up this lab wasn't just about putting hardware together, it was about creating an environment where I could think like an attacker, build like an engineer, and defend like a blue teamer. Every time I boot up a VM, I'm building muscle memory for real-world problem solving.
 
