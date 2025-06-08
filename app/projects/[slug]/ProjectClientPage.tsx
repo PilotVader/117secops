@@ -55,7 +55,7 @@ export default function ProjectClientPage({ projectData }: { projectData: Projec
   }
 
   // Determine color scheme based on project category
-  const colorScheme = project.category === "red" ? "red" : "blue"
+  const colorScheme = project.category === "red" ? "red" : project.category === "Infrastructure" ? "green" : "blue"
 
   return (
     <PageTransition>
@@ -64,7 +64,11 @@ export default function ProjectClientPage({ projectData }: { projectData: Projec
           <Link
             href="/projects/"
             className={`inline-flex items-center ${
-              colorScheme === "red" ? "text-red-600 hover:text-red-700" : "text-blue-600 hover:text-blue-700"
+              colorScheme === "red" 
+                ? "text-red-600 hover:text-red-700" 
+                : colorScheme === "green"
+                  ? "text-green-600 hover:text-green-700"
+                  : "text-blue-600 hover:text-blue-700"
             } mb-8 transition-colors duration-400`}
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
@@ -98,10 +102,16 @@ export default function ProjectClientPage({ projectData }: { projectData: Projec
                 className={`${
                   colorScheme === "red"
                     ? "bg-red-500/5 border-red-500/20 text-red-600"
-                    : "bg-blue-500/5 border-blue-500/20 text-blue-600"
+                    : colorScheme === "green"
+                      ? "bg-green-500/5 border-green-500/20 text-green-600"
+                      : "bg-blue-500/5 border-blue-500/20 text-blue-600"
                 }`}
               >
-                {project.category === "red" ? "PROJECT RED" : "PROJECT BLUE"}
+                {project.category === "red" 
+                  ? "PROJECT RED" 
+                  : project.category === "Infrastructure"
+                    ? "INFRASTRUCTURE"
+                    : "PROJECT BLUE"}
               </Badge>
             </div>
 
@@ -113,7 +123,13 @@ export default function ProjectClientPage({ projectData }: { projectData: Projec
           <div className="mb-8 space-y-6">
             {project.challenge && (
               <div>
-                <h2 className={`text-xl font-bold mb-2 ${colorScheme === "red" ? "text-red-600" : "text-blue-600"}`}>
+                <h2 className={`text-xl font-bold mb-2 ${
+                  colorScheme === "red" 
+                    ? "text-red-600" 
+                    : colorScheme === "green"
+                      ? "text-green-600"
+                      : "text-blue-600"
+                }`}>
                   Challenge
                 </h2>
                 <p className="text-muted-foreground">{project.challenge}</p>
@@ -122,7 +138,13 @@ export default function ProjectClientPage({ projectData }: { projectData: Projec
 
             {project.solution && (
               <div>
-                <h2 className={`text-xl font-bold mb-2 ${colorScheme === "red" ? "text-red-600" : "text-blue-600"}`}>
+                <h2 className={`text-xl font-bold mb-2 ${
+                  colorScheme === "red" 
+                    ? "text-red-600" 
+                    : colorScheme === "green"
+                      ? "text-green-600"
+                      : "text-blue-600"
+                }`}>
                   Solution
                 </h2>
                 <p className="text-muted-foreground">{project.solution}</p>
@@ -131,7 +153,13 @@ export default function ProjectClientPage({ projectData }: { projectData: Projec
 
             {project.results && project.results.length > 0 && (
               <div>
-                <h2 className={`text-xl font-bold mb-2 ${colorScheme === "red" ? "text-red-600" : "text-blue-600"}`}>
+                <h2 className={`text-xl font-bold mb-2 ${
+                  colorScheme === "red" 
+                    ? "text-red-600" 
+                    : colorScheme === "green"
+                      ? "text-green-600"
+                      : "text-blue-600"
+                }`}>
                   Results
                 </h2>
                 <ul className="list-disc pl-5 text-muted-foreground space-y-1">
@@ -153,7 +181,13 @@ export default function ProjectClientPage({ projectData }: { projectData: Projec
           {/* Project Gallery */}
           {project.images && project.images.length > 0 && (
             <div className="mt-12 mb-8">
-              <h2 className={`text-2xl font-bold mb-6 ${colorScheme === "red" ? "text-red-600" : "text-blue-600"}`}>
+              <h2 className={`text-2xl font-bold mb-6 ${
+                colorScheme === "red" 
+                  ? "text-red-600" 
+                  : colorScheme === "green"
+                    ? "text-green-600"
+                    : "text-blue-600"
+              }`}>
                 Project Gallery
               </h2>
               <ImageGallery images={project.images} />
@@ -164,12 +198,24 @@ export default function ProjectClientPage({ projectData }: { projectData: Projec
           {project.tags && project.tags.length > 0 && (
             <div className="mt-8 pt-6 border-t">
               <div className="flex items-center flex-wrap gap-2">
-                <Tag className={`h-4 w-4 ${colorScheme === "red" ? "text-red-600" : "text-blue-600"} mr-2`} />
+                <Tag className={`h-4 w-4 ${
+                  colorScheme === "red" 
+                    ? "text-red-600" 
+                    : colorScheme === "green"
+                      ? "text-green-600"
+                      : "text-blue-600"
+                } mr-2`} />
                 {project.tags.map((tag: string, index: number) => (
                   <Badge
                     key={index}
                     variant="secondary"
-                    className={`${colorScheme === "red" ? "bg-red-500/5 text-red-600" : "bg-blue-500/5 text-blue-600"}`}
+                    className={`${
+                      colorScheme === "red" 
+                        ? "bg-red-500/5 text-red-600" 
+                        : colorScheme === "green"
+                          ? "bg-green-500/5 text-green-600"
+                          : "bg-blue-500/5 text-blue-600"
+                    }`}
                   >
                     {tag}
                   </Badge>
@@ -182,12 +228,24 @@ export default function ProjectClientPage({ projectData }: { projectData: Projec
           {project.technologies && project.technologies.length > 0 && (
             <div className="mt-8 pt-6 border-t">
               <div className="flex items-center flex-wrap gap-2">
-                <Tag className={`h-4 w-4 ${colorScheme === "red" ? "text-red-600" : "text-blue-600"} mr-2`} />
+                <Tag className={`h-4 w-4 ${
+                  colorScheme === "red" 
+                    ? "text-red-600" 
+                    : colorScheme === "green"
+                      ? "text-green-600"
+                      : "text-blue-600"
+                } mr-2`} />
                 {project.technologies.map((tech: string, index: number) => (
                   <Badge
                     key={index}
                     variant="secondary"
-                    className={`${colorScheme === "red" ? "bg-red-500/5 text-red-600" : "bg-blue-500/5 text-blue-600"}`}
+                    className={`${
+                      colorScheme === "red" 
+                        ? "bg-red-500/5 text-red-600" 
+                        : colorScheme === "green"
+                          ? "bg-green-500/5 text-green-600"
+                          : "bg-blue-500/5 text-blue-600"
+                    }`}
                   >
                     {tech}
                   </Badge>

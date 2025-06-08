@@ -182,7 +182,8 @@ interface SeriesCardProps {
 function SeriesCard({ seriesName, projects, index, openLightbox, openSeriesModal }: SeriesCardProps) {
   const firstProject = projects[0]
   const isRed = firstProject.category === "red"
-  const accentColor = isRed ? "red" : "blue"
+  const isInfrastructure = firstProject.category === "Infrastructure"
+  const accentColor = isRed ? "red" : isInfrastructure ? "green" : "blue"
   const totalParts = projects.length
 
   return (
@@ -195,7 +196,9 @@ function SeriesCard({ seriesName, projects, index, openLightbox, openSeriesModal
         className={`overflow-hidden transition-all duration-300 group w-full
           ${isRed 
             ? "hover:shadow-red-500/20 hover:border-red-500/30" 
-            : "hover:shadow-blue-500/20 hover:border-blue-500/30"}`}
+            : isInfrastructure
+              ? "hover:shadow-green-500/20 hover:border-green-500/30"
+              : "hover:shadow-blue-500/20 hover:border-blue-500/30"}`}
       >
         <div className="flex flex-col h-full">
           <div 
@@ -211,23 +214,29 @@ function SeriesCard({ seriesName, projects, index, openLightbox, openSeriesModal
             />
             <div 
               className={`absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300
-                ${isRed ? "group-hover:from-red-900/50" : "group-hover:from-blue-900/50"}`}
+                ${isRed 
+                  ? "group-hover:from-red-900/50" 
+                  : isInfrastructure
+                    ? "group-hover:from-green-900/50"
+                    : "group-hover:from-blue-900/50"}`}
             />
           </div>
           
-          <div className="p-6">
+          <CardHeader className="p-6">
             <CardTitle 
               className={`text-base font-semibold mb-2 transition-colors duration-300
                 ${isRed 
                   ? "text-red-500 group-hover:text-red-600" 
-                  : "text-blue-500 group-hover:text-blue-600"}`}
+                  : isInfrastructure
+                    ? "text-green-500 group-hover:text-green-600"
+                    : "text-blue-500 group-hover:text-blue-600"}`}
             >
               {seriesName}
             </CardTitle>
             <CardDescription className="text-sm line-clamp-2">
               {firstProject.description}
             </CardDescription>
-          </div>
+          </CardHeader>
           <CardContent className="px-6 pb-6 mt-3 flex-1">
             <div className="flex flex-wrap gap-1.5 mb-3">
               {firstProject.tags?.slice(0, 3).map((tag) => (
@@ -237,7 +246,9 @@ function SeriesCard({ seriesName, projects, index, openLightbox, openSeriesModal
                   className={`text-xs
                     ${isRed 
                       ? "bg-red-500/5 border-red-500/20" 
-                      : "bg-blue-500/5 border-blue-500/20"}`}
+                      : isInfrastructure
+                        ? "bg-green-500/5 border-green-500/20"
+                        : "bg-blue-500/5 border-blue-500/20"}`}
                 >
                   {tag}
                 </Badge>
@@ -269,7 +280,9 @@ function SeriesCard({ seriesName, projects, index, openLightbox, openSeriesModal
               className={`w-full text-xs shadow-lg transition-all duration-300
                 ${isRed 
                   ? "bg-red-600 hover:bg-red-700 shadow-red-500/10" 
-                  : "bg-blue-600 hover:bg-blue-700 shadow-blue-500/10"}`}
+                  : isInfrastructure
+                    ? "bg-green-600 hover:bg-green-700 shadow-green-500/10"
+                    : "bg-blue-600 hover:bg-blue-700 shadow-blue-500/10"}`}
               size="sm"
               onClick={() => openSeriesModal(seriesName, projects)}
             >
