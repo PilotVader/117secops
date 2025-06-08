@@ -15,7 +15,7 @@ results: [
 image: "/images/projects/soc-automation/soc-automation-project.png"
 technologies: ["Wazuh", "The Hive", "Shuffle", "Windows 10", "Draw.io"]
 category: "blue"
-tags: ["Blue Team", "Infrastructure", "SIEM", "SOAR"]
+tags: ["Blue Team", "SIEM", "SOAR"]
 images: [
   { "src": "/images/projects/soc-automation/detailed-workflow.png", "alt": "Detailed SOC Automation Workflow showing connections between Wazuh, Shuffle, TheHive and other components" },
   { "src": "/images/projects/soc-automation/simple-workflow.png", "alt": "Simplified SOC Automation Workflow diagram showing the basic data flow between components" }

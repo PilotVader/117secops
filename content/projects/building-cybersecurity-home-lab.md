@@ -14,7 +14,7 @@ results: [
 image: "/images/projects/homelab-coding.jpg"
 technologies: ["VirtualBox", "Parrot Security OS", "Sysmon", "Splunk"]
 category: "blue"
-tags: ["Blue Team", "Infrastructure", "Home Lab", "SIEM"]
+tags: ["Blue Team", "Home Lab", "SIEM"]
 series:
   name: "Project 1: Building a Cybersecurity Home Lab"
   part: 1

@@ -90,8 +90,7 @@ export default function ProjectsClientPage({ initialProjects }: { initialProject
     // Filter series projects
     Object.entries(seriesMap).forEach(([seriesName, seriesProjects]) => {
       const filtered = seriesProjects.filter(project => 
-        project.category === category || 
-        (project.tags && project.tags.includes(category))
+        category === "Infrastructure" ? project.category === "Infrastructure" : project.category === category
       )
       if (filtered.length > 0) {
         filteredSeries[seriesName] = filtered

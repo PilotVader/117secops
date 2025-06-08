@@ -18,7 +18,7 @@ export interface Project {
   challenge?: string
   solution?: string
   results?: string[]
-  category?: "red" | "blue"
+  category?: "red" | "blue" | "Infrastructure"
   tags?: string[]
   content: string
   image?: string
@@ -173,7 +173,7 @@ export const getSortedProjectsData = cache(async (): Promise<Project[]> => {
           challenge: data.challenge || "",
           solution: data.solution || "",
           results,
-          category: data.category === "red" || data.category === "blue" ? data.category : "blue",
+          category: data.category === "Infrastructure" ? "Infrastructure" as const : (data.category === "red" ? "red" as const : "blue" as const),
           tags,
           content: contentHtml,
           image: data.image || "/placeholder.svg?height=300&width=600",
@@ -290,7 +290,7 @@ export async function getProjectData(slug: string): Promise<Project | null> {
       challenge: data.challenge || "",
       solution: data.solution || "",
       results,
-      category: data.category === "red" || data.category === "blue" ? data.category : "blue",
+      category: data.category === "Infrastructure" ? "Infrastructure" as const : (data.category === "red" ? "red" as const : "blue" as const),
       tags,
       content: contentHtml,
       image: data.image || "/placeholder.svg?height=300&width=600",

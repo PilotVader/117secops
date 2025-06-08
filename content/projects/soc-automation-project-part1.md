@@ -4,7 +4,7 @@ description: "Setting up the core infrastructure components for our SOC automati
 date: "2024-03-20"
 author: "Samson Otori"
 category: "blue"
-tags: ["Blue Team", "SOC", "Automation", "SIEM", "Infrastructure"]
+tags: ["Blue Team", "SOC", "Automation", "SIEM"]
 image: "/images/projects/soc-automation/soc-automation-project.png"
 images: [
   { "src": "/images/projects/soc-automation/part2/1 Windows 10 virtual machine properties.png", "alt": "Windows 10 Virtual Machine Setup Properties" },
