@@ -1,110 +1,52 @@
 ---
 title: "Part 10: Ingesting Sysmon and Microsoft Defender Logs"
-description: "Learn how to collect, process, and analyze Sysmon and Microsoft Defender logs using the ELK Stack for comprehensive security monitoring."
-date: "2024-03-29"
+description: "Day 10 of the 30-Day MYDFIR SOC Analyst Challenge: Setting up log ingestion from Windows Server to Elasticsearch for enhanced security monitoring."
+date: "2024-03-23"
 author: "Samson Otori"
 tags:
-  - "Log Ingestion"
   - "Sysmon"
-  - "Microsoft Defender"
-  - "ELK Stack"
+  - "Windows Defender"
+  - "Log Ingestion"
+  - "SOC"
+  - "Security Monitoring"
 image: "/images/projects/30-day-soc-analyst-challenge.png"
+images: [
+  { "src": "/images/projects/30-day-challenge/30-days-day-10.png", "alt": "30 Days MYDFIR SOC Analyst Challenge Day 10" },
+  { "src": "/images/projects/30-day-challenge/Elasticsearch-Ingest-Data-Image.png", "alt": "Elasticsearch Data Ingestion Process" }
+]
 series:
   name: "Project 3: 30-Day MYDFIR SOC Analyst Challenge"
   part: 10
   totalParts: 30
 ---
 
-## Introduction
+## Day 10 of the 30-Day MYDFIR SOC Analyst Challenge: Ingesting Sysmon and Microsoft Defender Logs
 
-In Part 10 of our SOC Analyst Challenge, we'll configure log ingestion for Sysmon and Microsoft Defender into our ELK Stack. This integration is crucial for comprehensive security monitoring and threat detection.
+On Day 10 of the 30-Day MYDFIR SOC Analyst Challenge, I focused on ingesting both Sysmon and Microsoft Defender event logs from the Windows Server into my Elasticsearch instance. This step is crucial for centralizing log data and enhancing my ability to detect and analyze potential security threats.
 
-## Log Source Configuration
+## Setting Up Custom Windows Event Log Integrations
 
-1. Sysmon Logs
-   - Event channel configuration
-   - Log format understanding
-   - Field mapping
-   - Collection strategy
+I began by logging into the Elasticsearch instance and navigating to the Integrations page. I searched for and selected the "Custom Windows Event log" integration, which allows ingesting events from any Windows Event log channel.
 
-2. Microsoft Defender Logs
-   - Security event types
-   - Log locations
-   - Collection methods
-   - Retention settings
+For Sysmon, I created an integration named "my-dfir-win-sysmon" with the channel name "Microsoft-Windows-Sysmon/Operational". For Windows Defender, I set up another integration named "my-dfir-win-defender" with the channel "Microsoft-Windows-Windows Defender/Operational". In the Defender integration, I specified event IDs 1116, 1117, and 5001 to focus on malware detection and real-time protection status.
 
-## Data Pipeline Setup
+## Troubleshooting Connectivity Issues
 
-1. Logstash Configuration
-   - Input plugins
-   - Filter configuration
-   - Output settings
-   - Pipeline optimization
+Initially, no logs appeared in Elasticsearch. Upon investigating, I discovered that the Elastic agent on the Windows Server couldn't communicate with the Elasticsearch instance. The solution was to add a firewall rule allowing incoming connections to port 9200 on the Elasticsearch server. After implementing this change and restarting the Elastic agent service, logs began flowing into Elasticsearch.
 
-2. Data Transformation
-   - Field normalization
-   - Event enrichment
-   - Data correlation
-   - Format standardization
+## Verifying Log Ingestion
 
-## Elasticsearch Integration
+To confirm successful log ingestion, I used Elasticsearch's Discover page. I searched for Sysmon events with the query "winlog.event_id: 1" and for Windows Defender events with "winlog.event_id: 5001". Both queries returned results, confirming that the logs were being correctly ingested and indexed.
 
-1. Index Management
-   - Index templates
-   - Mapping configuration
-   - Lifecycle policies
-   - Rollover settings
+## Conclusion
 
-2. Data Storage
-   - Sharding strategy
-   - Replication setup
-   - Retention policies
-   - Backup procedures
+With Sysmon and Microsoft Defender logs now being successfully ingested into Elasticsearch, I have significantly improved my ability to monitor and analyze security events on my Windows Server. This centralized log collection will be instrumental in detecting and investigating potential security incidents in the future.
 
-## Kibana Visualization
+In the next part of this challenge, I'll explore how to effectively query and analyze these logs within Elasticsearch, further enhancing my SOC analysis capabilities.
 
-1. Dashboard Creation
-   - Overview panels
-   - Detailed views
-   - Drill-down capabilities
-   - Real-time monitoring
+Here's the link to follow along: [30-Day MYDFIR SOC Analyst Challenge](https://www.youtube.com/watch?v=eOie0SDMuGA&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=37)
 
-2. Alert Configuration
-   - Detection rules
-   - Threshold settings
-   - Notification setup
-   - Alert prioritization
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)* 
 
-## Use Cases Implementation
+#CyberSecurity #SOCAnalyst #MYDFIRChallenge #HandsOnExperience #Day10
 
-1. Security Monitoring
-   - Process execution tracking
-   - Network connection analysis
-   - File system monitoring
-   - Registry change detection
-
-2. Threat Detection
-   - Malware identification
-   - Suspicious behavior detection
-   - Attack pattern recognition
-   - Incident response triggers
-
-## Performance Optimization
-
-1. Resource Management
-   - Pipeline efficiency
-   - Query optimization
-   - Cache utilization
-   - System resources
-
-2. Troubleshooting
-   - Common issues
-   - Performance bottlenecks
-   - Error handling
-   - Recovery procedures
-
-## Next Steps
-
-In Part 11, we'll explore brute force attacks, including techniques, tools, and defense strategies, building upon our log monitoring capabilities.
-
-Stay tuned as we continue developing our security monitoring and incident response capabilities! 

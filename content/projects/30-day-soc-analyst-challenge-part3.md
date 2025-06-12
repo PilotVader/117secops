@@ -1,97 +1,53 @@
 ---
 title: "Part 3: Setting up Elastic Search"
-description: "Learn how to install, configure, and secure Elasticsearch for optimal performance in a security monitoring environment."
+description: "Day 3 of the 30-Day MYDFIR SOC Analyst Challenge: Setting up your own Elastic Search instance for foundational security analysis."
 date: "2024-03-22"
 author: "Samson Otori"
 tags:
-  - "Elasticsearch"
-  - "SIEM"
-  - "Configuration"
-  - "Security"
+  - "Elastic Search"
+  - "Vultr"
+  - "Cloud"
+  - "SOC"
+  - "Security Analysis"
 image: "/images/projects/30-day-soc-analyst-challenge.png"
+images: [
+  { "src": "/images/projects/30-day-challenge/30-days-day-3.png", "alt": "30 Days MYDFIR SOC Analyst Challenge Day 3" },
+  { "src": "/images/projects/30-day-challenge/Elasticsearch-Installation.png", "alt": "Elasticsearch Installation" }
+]
 series:
   name: "Project 3: 30-Day MYDFIR SOC Analyst Challenge"
   part: 3
   totalParts: 30
 ---
 
-## Introduction
+# Day 3 of the 30-Day MYDFIR SOC Analyst Challenge: Setting up Elastic Search
 
-In Part 3 of our SOC Analyst Challenge, we'll focus on setting up Elasticsearch, the powerful search and analytics engine at the core of our security monitoring solution. We'll cover installation, configuration, and security best practices.
+## Overview
 
-## Prerequisites
+The focus for today was on setting up my own Elastic Search instance, following practical steps to build a foundational environment for security analysis.
 
-Before we begin, ensure you have:
-- A Linux server (Ubuntu 22.04 LTS recommended)
-- Minimum 8GB RAM
-- 4 CPU cores
-- 50GB storage
-- Root or sudo access
+## Cloud Environment Setup
 
-## Installation Steps
+First, I signed up on Vultr, a cloud service provider, which was used to create a Virtual Private Cloud (VPC) network. To avoid connectivity issues, I ensured that all resources, including virtual machines (VMs), were in the same location as my VPC. For instance, I created the VPC in Manchester, so I deployed my VM in the same region.
 
-1. System Preparation
-   - Update system packages
-   - Install Java requirements
-   - Configure system limits
+After configuring my VPC, I deployed a server on Vultr with Ubuntu as the operating system. The server had 4 virtual CPUs and 16 GB of RAM to run Elastic Search. I opted out of unnecessary features like auto-backups and IPv6, keeping the setup streamlined, I then associated the VM with my VPC network to ensure it could communicate internally.
 
-2. Elasticsearch Installation
-   - Add Elasticsearch repository
-   - Install Elasticsearch package
-   - Configure service settings
+## Elastic Search Installation
 
-3. Basic Configuration
-   - Network settings
-   - Node configuration
-   - Memory allocation
-   - Path settings
+Next, I accessed the server via SSH, using PowerShell to connect to my VM through its public IP address. Inside the VM, I updated the repositories and installed Elastic Search. During the installation, I was provided with critical security information, including a password for the built-in superuser account. I stored this information securely for future reference.
 
 ## Security Configuration
 
-1. Security Features
-   - Enable X-Pack security
-   - SSL/TLS configuration
-   - User authentication setup
-   - Role-based access control
+One essential step was configuring Elastic Search to be accessible beyond the local host. By modifying the network settings in the elasticsearch.yml configuration file, I allowed remote access from my SOC analyst laptop, making sure it was securely configured.
 
-2. Network Security
-   - Firewall configuration
-   - Network binding
-   - Transport layer security
+To tighten security, I created a firewall group in Vultr, limiting access to only trusted IP addresses, in this case, I gave access to my IP alone. This ensured that only authorized connections could reach the Elastic Search instance.
 
-## Performance Tuning
+## Final Steps
 
-1. Memory Settings
-   - JVM heap size
-   - Memory lock configuration
-   - Garbage collection settings
+Finally, I started the Elastic Search service and confirmed it was running smoothly. This marked the completion of setting up the Elastic Search instance, laying the groundwork for the next step—configuring Kibana, the visualization tool for Elastic Search.
 
-2. Index Settings
-   - Sharding strategy
-   - Replication configuration
-   - Index lifecycle management
+Here's the link to follow along: [30-Day MYDFIR SOC Analyst Challenge](https://www.youtube.com/watch?v=ypXARA5Uk4I&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=30)
 
-## Monitoring and Maintenance
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)*
 
-1. Health Checks
-   - Cluster health monitoring
-   - Node status checks
-   - Index health verification
-
-2. Backup Strategy
-   - Snapshot configuration
-   - Backup scheduling
-   - Recovery testing
-
-## Validation and Testing
-
-- Cluster health verification
-- Basic CRUD operations
-- Search functionality testing
-- Security control validation
-
-## Next Steps
-
-In Part 4, we'll set up Kibana and connect it to our Elasticsearch instance, creating our first security dashboards and visualizations. We'll also explore how to effectively use Kibana for security monitoring and analysis.
-
-Stay tuned as we continue building our security monitoring infrastructure! 
+#CyberSecurity #SOCAnalyst #MYDFIRChallenge #HandsOnExperience #Day3 

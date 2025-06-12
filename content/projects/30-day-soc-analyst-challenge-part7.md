@@ -1,110 +1,52 @@
 ---
 title: "Part 7: Installing Elastic Agent and Setting Up Fleet Server"
-description: "A hands-on guide to installing and configuring Elastic Agent with Fleet Server for comprehensive security monitoring."
-date: "2024-03-26"
+description: "Day 7 of the 30-Day MYDFIR SOC Analyst Challenge: Setting up Elastic Agent and Fleet Server for centralized log management."
+date: "2024-03-23"
 author: "Samson Otori"
 tags:
   - "Elastic Agent"
   - "Fleet Server"
-  - "Installation"
-  - "Configuration"
+  - "Log Management"
+  - "SOC"
+  - "Security Monitoring"
 image: "/images/projects/30-day-soc-analyst-challenge.png"
+images: [
+  { "src": "/images/projects/30-day-challenge/30-days-day-7.png", "alt": "30 Days MYDFIR SOC Analyst Challenge Day 7" },
+  { "src": "/images/projects/30-day-challenge/Elastic-agent-Installation-on-fleet-server.png", "alt": "Elastic Agent Installation on Fleet Server" },
+  { "src": "/images/projects/30-day-challenge/Elastic-agent-installation-on-windows-server.png", "alt": "Elastic Agent Installation on Windows Server" },
+  { "src": "/images/projects/30-day-challenge/Fleet-Installed-Image-on-elastic-gui.png", "alt": "Fleet Installation on Elastic GUI" },
+  { "src": "/images/projects/30-day-challenge/Logs-Captured-from-Elastic-GUI.png", "alt": "Logs Captured from Elastic GUI" }
+]
 series:
   name: "Project 3: 30-Day MYDFIR SOC Analyst Challenge"
   part: 7
   totalParts: 30
 ---
 
-## Introduction
+## Day 7 of the 30-Day MYDFIR SOC Analyst Challenge: Installing Elastic Agent and Setting Up Fleet Server
 
-In Part 7 of our SOC Analyst Challenge, we'll implement the concepts learned in Part 6 by installing and configuring Elastic Agent and Fleet Server. This hands-on session will establish our centralized monitoring infrastructure.
+Welcome to Day 7 of the 30-Day My DFIR SOC Analyst Challenge, I took critical steps toward building a robust monitoring system by installing the Elastic Agent on a Windows Server and setting up a Fleet server for centralized management. This process is vital for SOC analysts to efficiently manage logs across multiple endpoints.
 
-## Fleet Server Installation
+## Deploying the Fleet Server
 
-1. Environment Preparation
-   - System updates
-   - Dependencies installation
-   - Network configuration
-   - Security prerequisites
+I began with deploying an Ubuntu server to act as the Fleet server. This server plays a pivotal role by allowing me to manage multiple Elastic Agents from a single location. By centralizing the management of these agents, I can easily push updates, modify policies, and ensure all endpoints are correctly configured without needing to access each one individually.
 
-2. Installation Steps
-   - Download Fleet Server
-   - Initial configuration
-   - Service setup
-   - Integration testing
+## Setting Up in Kibana
 
-## Elastic Agent Deployment
+Next, I moved into Kibana's interface, where I configured the Fleet server. This step involved generating enrollment tokens and policies that would allow the Elastic Agents to communicate securely with the Fleet server and Elasticsearch. In a real-world SOC environment, getting these configurations right is crucial, as they dictate how data flows between my endpoints and my central log management system.
 
-1. Agent Installation
-   - Download procedures
-   - Installation methods
-   - System integration
-   - Service configuration
+## Overcoming Connectivity Challenges
 
-2. Agent Enrollment
-   - Token generation
-   - Enrollment process
-   - Verification steps
-   - Troubleshooting
+A key part of this process was troubleshooting connectivity issues. The initial setup ran into problems due to restrictive firewall rules that blocked the necessary communication between the Fleet server and the Elasticsearch instance. Adjusting both the VPC and server-level firewall rules allowed for the proper connections to be established. This scenario underscored the delicate balance I must strike between securing my systems and maintaining operational functionality.
 
-## Integration Configuration
+## Installing the Elastic Agent on Windows Server
 
-1. Fleet Server Connection
-   - Connection settings
-   - SSL/TLS setup
-   - Authentication configuration
-   - Health checks
+Once the Fleet server was configured, the next task was to install the Elastic Agent on my Windows Server. This agent is essential for collecting logs and metrics, and forwarding them to my Elasticsearch instance via the Fleet server. During this step, I encountered a few errors related to certificate validation and network connectivity. However, by utilizing the --insecure flag and ensuring the correct firewall ports were open, I successfully enrolled the Windows Server into the Fleet.
 
-2. Policy Assignment
-   - Default policy setup
-   - Custom policy creation
-   - Policy deployment
-   - Validation testing
+## Conclusion
 
-## Monitoring Setup
+Day 7 was all about setting up the infrastructure needed for effective log management. By successfully installing the Elastic Agent and configuring a Fleet server, I laid the groundwork for a scalable, manageable, and secure logging environment. In the next session, I'll dive deeper into system activity monitoring by installing Sysmon on my Windows Server, further enhancing my ability to detect and respond to threats.
 
-1. Data Collection
-   - System metrics
-   - Log collection
-   - Performance monitoring
-   - Security events
+Here's the link to follow along: [30-Day MYDFIR SOC Analyst Challenge](https://www.youtube.com/watch?v=P2SFC6Kwae0&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=34)
 
-2. Alert Configuration
-   - Basic alerts setup
-   - Custom alert rules
-   - Notification channels
-   - Alert testing
-
-## Validation and Testing
-
-1. System Checks
-   - Connection testing
-   - Data flow verification
-   - Policy enforcement
-   - Alert triggering
-
-2. Performance Testing
-   - Resource usage
-   - Network impact
-   - Scalability testing
-   - Optimization
-
-## Troubleshooting Guide
-
-1. Common Issues
-   - Connection problems
-   - Enrollment failures
-   - Policy conflicts
-   - Data collection issues
-
-2. Resolution Steps
-   - Diagnostic procedures
-   - Log analysis
-   - Configuration fixes
-   - Performance tuning
-
-## Next Steps
-
-In Part 8, we'll explore Sysmon, a powerful system monitoring tool that we'll integrate with our Elastic Agent setup to enhance our security monitoring capabilities.
-
-Stay tuned as we continue building our comprehensive security monitoring solution! 
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)* 

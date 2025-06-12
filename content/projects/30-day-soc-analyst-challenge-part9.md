@@ -1,110 +1,54 @@
 ---
 title: "Part 9: Installing and Configuring Sysmon on Windows Server"
-description: "Step-by-step guide to installing, configuring, and optimizing Sysmon for enhanced security monitoring on Windows Server."
-date: "2024-03-28"
+description: "Day 9 of the 30-Day MYDFIR SOC Analyst Challenge: Setting up Sysmon for enhanced endpoint monitoring and security logging."
+date: "2024-03-23"
 author: "Samson Otori"
 tags:
   - "Sysmon"
   - "Windows Server"
-  - "Configuration"
+  - "Endpoint Security"
+  - "SOC"
   - "Security Monitoring"
 image: "/images/projects/30-day-soc-analyst-challenge.png"
+images: [
+  { "src": "/images/projects/30-day-challenge/30-days-day-9.png", "alt": "30 Days MYDFIR SOC Analyst Challenge Day 9" },
+  { "src": "/images/projects/30-day-challenge/Sysmon-Installation.png", "alt": "Sysmon Installation Process" }
+]
 series:
   name: "Project 3: 30-Day MYDFIR SOC Analyst Challenge"
   part: 9
   totalParts: 30
 ---
 
-## Introduction
+## Day 9 of the 30-Day MYDFIR SOC Analyst Challenge: Installing and Configuring Sysmon on Windows Server
 
-In Part 9 of our SOC Analyst Challenge, we'll implement Sysmon on our Windows Server. This hands-on session will cover installation, configuration, and integration with our existing monitoring infrastructure.
+On Day 9 of the 30-Day MyDFIR SOC Analyst Challenge, I focused on setting up Sysmon on the Windows Server created on Day 5. Sysmon is a powerful tool from Microsoft's Sysinternals suite that enhances endpoint visibility by logging key activities such as process creation, network connections, and more. Here's how I did it.
 
-## Installation Process
+## Downloading and Installing Sysmon
 
-1. Prerequisites
-   - Download Sysmon
-   - Prepare configuration file
-   - Administrative access
-   - System requirements check
+First, I connected to the Windows Server via Remote Desktop Protocol (RDP). Once connected, I opened Microsoft Edge and searched for Sysmon on the Microsoft Learn site. I then downloaded the latest version of Sysmon (version 15.15 as of this writing) and extracted the contents to a directory on the server.
 
-2. Installation Steps
-   - Command-line installation
-   - Service verification
-   - Initial testing
-   - Log verification
+With the files extracted, I turned my attention to configuring Sysmon. I opted to use Olaf Hartong's popular Sysmon configuration file, which can be found on GitHub. This configuration file is widely used and highly customizable, allowing me to specify which events Sysmon should monitor.
 
-## Configuration Setup
+## Configuring Sysmon
 
-1. Basic Configuration
-   - Default settings
-   - Event ID mapping
-   - Logging options
-   - Output formatting
+After downloading the configuration file (sysmonconfig.xml), I saved it in the Sysmon directory. I then opened PowerShell as an administrator and navigated to the directory where Sysmon was installed.
 
-2. Advanced Configuration
-   - Custom rules creation
-   - Filter optimization
-   - Exclusion rules
-   - Performance tuning
+To install Sysmon with the configuration file, I used the following command in PowerShell:
+```
+sysmon64.exe -i sysmonconfig.xml
+```
 
-## Integration with Event Logging
+This command installs Sysmon and applies the configuration file. Once installed, Sysmon immediately begins logging events as per the configuration.
 
-1. Event Log Setup
-   - Log size configuration
-   - Retention policies
-   - Archive settings
-   - Log rotation
+## Verifying Installation
 
-2. Event Forwarding
-   - WEF configuration
-   - Subscription setup
-   - Collection targets
-   - Bandwidth considerations
+To confirm that Sysmon was successfully installed, I checked both the Windows Services and Event Viewer. Sysmon appeared as a running service in the Services application. In Event Viewer, under Applications and Services Logs > Microsoft > Windows > Sysmon, I verified that Sysmon was actively generating logs, starting with Event ID 3, which logs network connections.
 
-## Custom Rules Development
+## Conclusion
 
-1. Rule Categories
-   - Process monitoring
-   - Network detection
-   - File tracking
-   - Registry monitoring
+With Sysmon now installed and logging critical events, the Windows Server is better equipped for monitoring and detecting malicious activities. In the next step of this challenge, I will learn how to push both Sysmon and Microsoft Defender logs to my Elasticsearch instance, enhancing my visibility and analysis capabilities.
 
-2. Rule Implementation
-   - Syntax guidelines
-   - Testing procedures
-   - Documentation
-   - Version control
+Here's the link to follow along: [30-Day MYDFIR SOC Analyst Challenge](https://www.youtube.com/watch?v=nzZY9OSfkeg&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=36)
 
-## Performance Optimization
-
-1. Resource Management
-   - CPU usage
-   - Memory allocation
-   - Disk I/O
-   - Network impact
-
-2. Fine-tuning
-   - Rule optimization
-   - Filter refinement
-   - Exclusion management
-   - Logging levels
-
-## Validation and Testing
-
-1. Functionality Testing
-   - Event generation
-   - Rule triggering
-   - Log collection
-   - Performance impact
-
-2. Security Testing
-   - Detection capabilities
-   - False positive analysis
-   - Coverage assessment
-   - Rule effectiveness
-
-## Next Steps
-
-In Part 10, we'll focus on ingesting Sysmon and Microsoft Defender logs into our ELK Stack, creating a comprehensive security monitoring solution.
-
-Stay tuned as we continue enhancing our security monitoring capabilities! 
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)* 
