@@ -83,4 +83,8 @@ By correlating telemetry data with events from the attack simulation, I gained i
 
 Through these exercises, I've deepened my understanding of the attack lifecycle and the importance of telemetry in incident response. Generating and analyzing telemetry data is fundamental for any aspiring SOC analyst. In the coming days, I plan to refine my detection capabilities further and explore additional avenues for generating and analyzing telemetry.
 
+Here's the link to follow along: [Building A Basic Home Lab](https://www.youtube.com/watch?v=-8X7Ay4YCoA&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=3)
+
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)*
+
 _#CyberSecurity #SOCAnalyst #MYDFIR #HandsOnExperience_ 

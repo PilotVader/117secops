@@ -69,4 +69,8 @@ Through these exercises, I've established a robust foundation for security monit
 
 Stay tuned.
 
+Here's the link to follow along: [SOC Automation Project](https://www.youtube.com/watch?v=VuSKMPRXN1M&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=8)
+
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)*
+
 #CyberSecurity #SOCAnalyst #MYDFIR #HandsOnExperience #SecurityMonitoring #IncidentResponse 

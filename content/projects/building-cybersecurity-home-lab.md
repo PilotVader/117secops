@@ -19,10 +19,6 @@ series:
   name: "Project 1: Building a Cybersecurity Home Lab"
   part: 1
   totalParts: 2
-images: [
-  { "src": "/placeholder.svg?height=400&width=600&text=Sysmon+Configuration", "alt": "Sysmon Configuration" },
-  { "src": "/placeholder.svg?height=400&width=600&text=Splunk+Dashboard", "alt": "Splunk Dashboard" }
-]
 ---
 
 # Part 1: Setting Up My Virtual Home Lab Environment
@@ -57,4 +53,8 @@ With the initial setup complete, I now have a solid foundation for my cybersecur
 
 Stay Tuned!
 
-_hashtag#CyberSecurity hashtag#SOCAnalyst hashtag#MYDFIR hashtag#HandsOnExperience_
+Here's the link to follow along: [Building A Basic Home Lab](https://www.youtube.com/watch?v=5iafC6vj7kM&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=2)
+
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)*
+
+_#CyberSecurity #SOCAnalyst #MYDFIR #HandsOnExperience_

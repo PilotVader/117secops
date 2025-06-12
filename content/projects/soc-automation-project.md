@@ -50,5 +50,9 @@ In my upcoming posts, I'll move into deploying these tools on virtual machines, 
 
 Stay tuned as I document each stage, including implementation challenges, configurations, and SOC analysis techniques.
 
+Here's the link to follow along: [SOC Automation Project](https://www.youtube.com/watch?v=XR3eamn8ydQ&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=6)
+
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)*
+
 #MYDFIR #CyberSecurity #SOCAnalyst #HomeLab #Automation #HandsOnExperience
 \`

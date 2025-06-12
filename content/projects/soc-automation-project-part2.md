@@ -28,38 +28,42 @@ series:
 
 ## Introduction
 
-In this third part of the MYDFIR SOC Automation Project home lab series, we dive into the critical process of generating telemetry from a Windows 10 machine and ensuring it is correctly ingested into Wazuh. By the end of this session, we would have successfully configured our system to log events, including activity from Mimikatz, and triggered a custom alert. This hands-on process not only enhances our understanding of SIEM operations but also strengthens our ability to detect and analyze security incidents effectively.
+In this third part of the MYDFIR SOC Automation Project home lab series, I dive into the critical process of generating telemetry from a Windows 10 machine and ensuring it is correctly ingested into Wazuh. By the end of this session, I would have successfully configured my system to log events, including activity from Mimikatz, and triggered a custom alert. This hands-on process not only enhances my understanding of SIEM operations but also strengthens my ability to detect and analyze security incidents effectively.
 
 ## Configuring Wazuh to Ingest Sysmon Logs
 
-To begin, we access the Wazuh configuration settings on our Windows 10 machine. When Wazuh is installed, its configuration files are located under Program Files (x86), specifically within the ek-agent folder. The key file we need to modify is ossec.conf. This file governs how logs are processed and which events are included or excluded from analysis. By default, certain event IDs are excluded using the != operator. However, for our purpose, we need to monitor processes related to Mimikatz, which requires Sysmon to be installed or Windows Security Event ID 4688 to be enabled. Since Sysmon was installed in part two of this series, we opt for that method.
+To begin, I access the Wazuh configuration settings on my Windows 10 machine. When Wazuh is installed, its configuration files are located under Program Files (x86), specifically within the ek-agent folder. The key file I need to modify is ossec.conf. This file governs how logs are processed and which events are included or excluded from analysis. By default, certain event IDs are excluded using the != operator. However, for my purpose, I need to monitor processes related to Mimikatz, which requires Sysmon to be installed or Windows Security Event ID 4688 to be enabled. Since Sysmon was installed in part two of this series, I opt for that method.
 
-Before making changes, we first create a backup of ossec.conf to safeguard against errors. This allows us to revert back if needed. We then modify the configuration to ingest Sysmon logs by adding a new entry under the localfile section. To locate the correct Sysmon channel name, we open the Windows Event Viewer, navigate to Applications and Services > Microsoft > Windows > Sysmon, and retrieve the operational log name from the properties section. This name is then inserted into our ossec.conf file in place of the existing application log configuration.
+Before making changes, I first create a backup of ossec.conf to safeguard against errors. This allows me to revert back if needed. I then modify the configuration to ingest Sysmon logs by adding a new entry under the localfile section. To locate the correct Sysmon channel name, I open the Windows Event Viewer, navigate to Applications and Services > Microsoft > Windows > Sysmon, and retrieve the operational log name from the properties section. This name is then inserted into my ossec.conf file in place of the existing application log configuration.
 
 ## Adjusting Log Categories and Restarting Services
 
-Next, we remove other log categories such as Application, Security, and System, ensuring that only Sysmon logs are forwarded to the Wazuh manager. Once the changes are saved, administrative privileges are required to replace the existing configuration file. After this, we restart the Wazuh service, as any configuration changes must be followed by a service restart to take effect.
+Next, I remove other log categories such as Application, Security, and System, ensuring that only Sysmon logs are forwarded to the Wazuh manager. Once the changes are saved, administrative privileges are required to replace the existing configuration file. After this, I restart the Wazuh service, as any configuration changes must be followed by a service restart to take effect.
 
 ## Testing Telemetry with Mimikatz
 
-With the updated configuration in place, we verify the ingestion of Sysmon logs in the Wazuh dashboard. Searching for "Sysmon" in the Alerts index may take some time before logs appear. To test this setup, we download and execute Mimikatz. Since Windows Defender would block this file, we must first exclude the Downloads folder from virus scanning. This is done through Windows Security settings by adding an exclusion for the Downloads directory. Also, Google Chrome may prevent the download, so we disable Safe Browsing under Privacy and Security settings in Chrome before proceeding.
+With the updated configuration in place, I verify the ingestion of Sysmon logs in the Wazuh dashboard. Searching for "Sysmon" in the Alerts index may take some time before logs appear. To test this setup, I download and execute Mimikatz. Since Windows Defender would block this file, I must first exclude the Downloads folder from virus scanning. This is done through Windows Security settings by adding an exclusion for the Downloads directory. Also, Google Chrome may prevent the download, so I disable Safe Browsing under Privacy and Security settings in Chrome before proceeding.
 
-Once Mimikatz is downloaded and extracted, we run it via an administrative PowerShell session and monitor Wazuh for related alerts. If no alerts appear, it is likely because Wazuh only logs events when a predefined rule is triggered. To address this, we modify the ossec.conf file on the Wazuh manager to log all events by default. This is done by enabling the logall and logall_json options in the configuration file. After saving these changes, we restart the Wazuh manager service.
+Once Mimikatz is downloaded and extracted, I run it via an administrative PowerShell session and monitor Wazuh for related alerts. If no alerts appear, it is likely because Wazuh only logs events when a predefined rule is triggered. To address this, I modify the ossec.conf file on the Wazuh manager to log all events by default. This is done by enabling the logall and logall_json options in the configuration file. After saving these changes, I restart the Wazuh manager service.
 
 ## Enhancing Log Archiving and Indexing
 
-To ensure that all logs are archived and ingested into Wazuh, we also update Filebeat's configuration. This involves navigating to the Filebeat YAML configuration file and changing the archives_enabled setting from false to true. As always, after modifying configurations, we restart the Filebeat service to apply the changes.
+To ensure that all logs are archived and ingested into Wazuh, I also update Filebeat's configuration. This involves navigating to the Filebeat YAML configuration file and changing the archives_enabled setting from false to true. As always, after modifying configurations, I restart the Filebeat service to apply the changes.
 
-Once the configurations are updated, we proceed to create a new index in the Wazuh dashboard for archived logs. This is done through the Stack Management section, where we define a new index pattern named wazuh-archives-*. After setting the timestamp field, we finalize the index creation. Now, when navigating to the Discover section of Wazuh, we can select our newly created index and search for logs related to Mimikatz.
+Once the configurations are updated, I proceed to create a new index in the Wazuh dashboard for archived logs. This is done through the Stack Management section, where I define a new index pattern named wazuh-archives-*. After setting the timestamp field, I finalize the index creation. Now, when navigating to the Discover section of Wazuh, I can select my newly created index and search for logs related to Mimikatz.
 
 ## Troubleshooting Log Ingestion Issues
 
-If events are still not visible, we perform troubleshooting by inspecting the archived log files in the Wazuh manager's CLI. By navigating to /var/ossec/logs/archives/, we list the available log files and use cat and grep commands to search for Mimikatz activity. If the logs are present in the archive but not appearing in the dashboard, it indicates a delay in ingestion, which resolves over time.
+If events are still not visible, I perform troubleshooting by inspecting the archived log files in the Wazuh manager's CLI. By navigating to /var/ossec/logs/archives/, I list the available log files and use cat and grep commands to search for Mimikatz activity. If the logs are present in the archive but not appearing in the dashboard, it indicates a delay in ingestion, which resolves over time.
 
 ## Conclusion
 
-This session underscores the importance of proper log configuration and SIEM tuning. By ensuring that all relevant events are captured and making necessary adjustments, we enhance our detection capabilities. With our telemetry now successfully feeding into Wazuh, we are well-prepared for the final part of the series, where we will further refine our detection rules and automation workflows.
+This session underscores the importance of proper log configuration and SIEM tuning. By ensuring that all relevant events are captured and making necessary adjustments, I enhance my detection capabilities. With my telemetry now successfully feeding into Wazuh, I am well-prepared for the final part of the series, where I will further refine my detection rules and automation workflows.
 
 Stay Tuned.
+
+Here's the link to follow along: [SOC Automation Project](https://www.youtube.com/watch?v=amTtlN3uvFU&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=9)
+
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)*
 
 #CyberSecurity #SOCAnalyst #MYDFIR #HandsOnExperience #SecurityMonitoring #IncidentResponse 

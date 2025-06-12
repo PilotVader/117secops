@@ -122,3 +122,5 @@ Setting up this lab wasn't just about putting hardware together, it was about cr
 If you're thinking of building your own lab, start small but think big. And don't wait for the perfect setup. I started out running labs in VirtualBox, just trying to get a feel for the tools and workflows. But eventually, I knew I needed to experience real hardware and full network environments. So I made this work, with shared internet and repurposed gear. It's not about perfection; it's about progress.
 
 Got questions or thinking of building your own lab? I'd be happy to chat or help, just click on the "Contact Me" button anywhere on this site to reach out to me on LinkedIn. 
+
+*NOTE: This project was independently researched, designed, and implemented by me, Samson Otori, as part of my hands-on journey in cybersecurity.* 
