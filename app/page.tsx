@@ -1,11 +1,16 @@
+import { HeroSection } from "@/components/hero-section"
+import { FeaturedProjects } from "@/components/featured-projects"
 import { getSortedProjectsData } from "@/lib/project"
 
-import HomeClientPage from "./HomeClientPage"
-
-export default async function HomePage() {
-  const projects = await getSortedProjectsData()
+export default async function Home() {
   // Get the 3 most recent projects
+  const projects = await getSortedProjectsData()
   const featuredProjects = projects.slice(0, 3)
 
-  return <HomeClientPage initialProjects={featuredProjects} />
+  return (
+    <main>
+      <HeroSection />
+      <FeaturedProjects projects={featuredProjects} />
+    </main>
+  )
 }

@@ -104,7 +104,7 @@ export default function ProjectClientPage({ projectData }: { projectData: Projec
                     ? "bg-red-500/5 border-red-500/20 text-red-600"
                     : colorScheme === "green"
                       ? "bg-green-500/5 border-green-500/20 text-green-600"
-                      : "bg-blue-500/5 border-blue-500/20 text-blue-600"
+                    : "bg-blue-500/5 border-blue-500/20 text-blue-600"
                 }`}
               >
                 {project.category === "red" 
