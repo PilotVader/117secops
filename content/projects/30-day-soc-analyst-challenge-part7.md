@@ -35,7 +35,7 @@ I began with deploying an Ubuntu server to act as the Fleet server. This server 
 
 Next, I moved into Kibana's interface, where I configured the Fleet server. This step involved generating enrollment tokens and policies that would allow the Elastic Agents to communicate securely with the Fleet server and Elasticsearch. In a real-world SOC environment, getting these configurations right is crucial, as they dictate how data flows between my endpoints and my central log management system.
 
-## Overcoming Connectivity Challenges
+## Overcoming Connectivity Challenges.
 
 A key part of this process was troubleshooting connectivity issues. The initial setup ran into problems due to restrictive firewall rules that blocked the necessary communication between the Fleet server and the Elasticsearch instance. Adjusting both the VPC and server-level firewall rules allowed for the proper connections to be established. This scenario underscored the delicate balance I must strike between securing my systems and maintaining operational functionality.
 
