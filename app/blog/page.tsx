@@ -1,5 +1,10 @@
 "use client"
 
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Construction } from "lucide-react"
+
+/* Original Blog Page Implementation - To be restored when blog is ready
 import ClientBlogPage from "@/components/client-blog-page"
 
 // Define the blog posts at the module level
@@ -59,4 +64,29 @@ const mockBlogPosts = [
 
 export default function BlogPage() {
   return <ClientBlogPage blogPosts={mockBlogPosts} />
+}
+*/
+
+export default function BlogPage() {
+  return (
+    <div className="container mx-auto px-4 py-16">
+      <div className="max-w-2xl mx-auto text-center">
+        <div className="flex justify-center mb-6">
+          <Construction className="h-16 w-16 text-yellow-500" />
+        </div>
+        <h1 className="text-4xl font-bold mb-4">Blog Coming Soon</h1>
+        <p className="text-xl text-gray-600 mb-8">
+          I'm working hard to bring you engaging content, but my blog section isn't quite ready yet.
+        </p>
+        <p className="text-lg text-gray-600 mb-12">
+          In the meantime, why not check out the exciting projects I've been working on? From SOC analysis to security monitoring, I've got plenty of interesting content to share.
+        </p>
+        <Link href="/projects">
+          <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+            View My Projects
+          </Button>
+        </Link>
+      </div>
+    </div>
+  )
 }

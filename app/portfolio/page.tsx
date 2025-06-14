@@ -283,48 +283,10 @@ const certifications = [
     year: "2025",
     description: "Mastered fundamentals of security, compliance, and identity across Microsoft services and platforms.",
   },
-  {
-    name: "COMING SOON",
-    organization: "Future Certification",
-    image: "/placeholder.svg?height=150&width=150&text=COMING+SOON",
-    year: "Future",
-    description: "COMING SOON",
-  },
-  {
-    name: "COMING SOON",
-    organization: "Future Certification",
-    image: "/placeholder.svg?height=150&width=150&text=COMING+SOON",
-    year: "Future",
-    description: "COMING SOON",
-  },
-  {
-    name: "COMING SOON",
-    organization: "Future Certification",
-    image: "/placeholder.svg?height=150&width=150&text=COMING+SOON",
-    year: "Future",
-    description: "COMING SOON",
-  },
+  
 ]
 
 const achievements = [
-  {
-    title: "COMING SOON",
-    date: "Future",
-    description: "COMING SOON",
-    image: "/placeholder.svg?height=200&width=300&text=COMING+SOON",
-  },
-  {
-    title: "COMING SOON",
-    date: "Future",
-    description: "COMING SOON",
-    image: "/placeholder.svg?height=200&width=300&text=COMING+SOON",
-  },
-  {
-    title: "COMING SOON",
-    date: "Future",
-    description: "COMING SOON",
-    image: "/placeholder.svg?height=200&width=300&text=COMING+SOON",
-  },
   {
     title: "COMING SOON",
     date: "Future",
@@ -341,18 +303,5 @@ const awards = [
     description: "COMING SOON",
     image: "/placeholder.svg?height=150&width=150&text=COMING+SOON",
   },
-  {
-    title: "COMING SOON",
-    organization: "Future Award",
-    year: "Future",
-    description: "COMING SOON",
-    image: "/placeholder.svg?height=150&width=150&text=COMING+SOON",
-  },
-  {
-    title: "COMING SOON",
-    organization: "Future Award",
-    year: "Future",
-    description: "COMING SOON",
-    image: "/placeholder.svg?height=150&width=150&text=COMING+SOON",
-  },
+ 
 ]
