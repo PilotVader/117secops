@@ -1,7 +1,7 @@
 ---
 title: "Part 25: Integrating OS Ticket with Elastic Stack"
 description: "Day 25 of the 30-Day MYDFIR SOC Analyst Challenge: Setting up integration between OS Ticket and Elastic Stack for automated alert ticketing."
-date: "2024-03-23"
+date: "2024-11-25"
 author: "Samson Otori"
 tags:
   - "OS Ticket"

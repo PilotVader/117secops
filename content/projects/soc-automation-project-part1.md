@@ -1,7 +1,7 @@
 ---
 title: "Part 2: Infrastructure Setup"
 description: "Setting up the core infrastructure components for our SOC automation environment including Wazuh, Windows client, and TheHive"
-date: "2024-03-20"
+date: "2025-03-05"
 author: "Samson Otori"
 category: "blue"
 tags: ["Blue Team", "SOC", "Automation", "SIEM"]

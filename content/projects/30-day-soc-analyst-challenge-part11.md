@@ -1,7 +1,7 @@
 ---
 title: "Part 11: Brute Force Attacks – Techniques, Tools, and Defense Strategies"
 description: "Day 11 of the 30-Day MYDFIR SOC Analyst Challenge: Understanding brute force attacks and implementing effective defense strategies."
-date: "2024-03-23"
+date: "2024-11-11"
 author: "Samson Otori"
 tags:
   - "Brute Force"

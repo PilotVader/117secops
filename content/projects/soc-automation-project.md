@@ -2,7 +2,7 @@
 title: "Part 1: Planning the Infrastructure"
 client: "Personal Project"
 description: "Building a home lab SOC environment for hands-on experience with SOAR tools like Wazuh, The Hive, and Shuffle."
-date: "2025-05-12"
+date: "2024-11-30"
 author: "Samson Otori"
 challenge: "Gaining practical experience in SOC tasks like alert management, response actions, and data enrichment using a functional SOAR setup."
 solution: "Building a home lab environment from scratch, diagramming the architecture, and planning the deployment of Wazuh, The Hive, and Shuffle for event logging, alert triggering/enrichment, and case management."

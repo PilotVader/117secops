@@ -1,7 +1,7 @@
 ---
 title: "Part 4: Setting Up Kibana"
 description: "Day 4 of the 30-Day MYDFIR SOC Analyst Challenge: Setting up Kibana for powerful data visualization and analysis."
-date: "2024-03-23"
+date: "2024-11-04"
 author: "Samson Otori"
 tags:
   - "Kibana"

@@ -1,7 +1,7 @@
 ---
 title: "Part 8: Sysmon"
 description: "Day 8 of the 30-Day MYDFIR SOC Analyst Challenge: Enhancing endpoint visibility with Microsoft's System Monitor (Sysmon)."
-date: "2024-03-23"
+date: "2024-11-08"
 author: "Samson Otori"
 tags:
   - "Sysmon"

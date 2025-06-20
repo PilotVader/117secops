@@ -1,7 +1,7 @@
 ---
 title: "Part 28: Investigating the Mythic C2 Framework"
 description: "Day 28 of the 30-Day MYDFIR SOC Analyst Challenge: Analyzing and investigating Command and Control (C2) framework activities using network telemetry and process logs."
-date: "2024-03-23"
+date: "2024-11-28"
 author: "Samson Otori"
 tags:
   - "C2"

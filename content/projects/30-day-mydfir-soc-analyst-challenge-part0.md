@@ -2,7 +2,7 @@
 title: "Introduction to the MYDFIR SOC Analyst Challenge"
 client: "Personal Project"
 description: "An introduction to the comprehensive 30-day challenge for aspiring SOC analysts."
-date: "2024-03-15"
+date: "2024-10-31"
 author: "Samson Otori"
 image: "/images/projects/30-day-soc-analyst-challenge.png"
 technologies: ["ELK Stack", "SIEM", "Security Tools", "Monitoring"]

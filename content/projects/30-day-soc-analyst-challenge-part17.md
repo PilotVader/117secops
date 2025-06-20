@@ -1,7 +1,7 @@
 ---
 title: "Part 17: Building a Dashboard for RDP And SSH Activity"
 description: "Day 17 of the 30-Day MYDFIR SOC Analyst Challenge: Creating comprehensive dashboards to monitor and analyze RDP and SSH authentication attempts."
-date: "2024-03-23"
+date: "2024-11-17"
 author: "Samson Otori"
 tags:
   - "RDP"

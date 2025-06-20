@@ -1,7 +1,7 @@
 ---
 title: "Part 9: Installing and Configuring Sysmon on Windows Server"
 description: "Day 9 of the 30-Day MYDFIR SOC Analyst Challenge: Setting up Sysmon for enhanced endpoint monitoring and security logging."
-date: "2024-03-23"
+date: "2024-11-09"
 author: "Samson Otori"
 tags:
   - "Sysmon"

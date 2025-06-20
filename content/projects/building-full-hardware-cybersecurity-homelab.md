@@ -1,7 +1,7 @@
 ---
 title: "Building a Full Hardware Cybersecurity Home Lab"
 description: "A comprehensive guide on transitioning from VirtualBox to building a fully equipped hardware cybersecurity home lab, complete with network design, hardware choices, and virtual machine configurations."
-date: "2024-03-21"
+date: "2025-05-15"
 author: "Samson Otori"
 tags:
   - "Home Lab"

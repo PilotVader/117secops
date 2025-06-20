@@ -1,7 +1,7 @@
 ---
 title: "Part 16: Windows Authentication Logs and RDP/SSH Brute Force Alerts"
 description: "Day 16 of the 30-Day MYDFIR SOC Analyst Challenge: Analyzing Windows authentication logs and creating sophisticated alerts for brute force detection."
-date: "2024-03-23"
+date: "2024-11-16"
 author: "Samson Otori"
 tags:
   - "Windows"

@@ -1,7 +1,7 @@
 ---
 title: "Part 29: Installing and Exploring Elastic Defend on Windows Server"
 description: "Day 29 of the 30-Day MYDFIR SOC Analyst Challenge: Setting up and testing Elastic Defend EDR solution for comprehensive endpoint protection."
-date: "2024-03-23"
+date: "2024-11-29"
 author: "Samson Otori"
 tags:
   - "Elastic Defend"

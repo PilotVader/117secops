@@ -2,7 +2,7 @@
 title: "Part 1: Setting Up My Virtual Home Lab Environment"
 client: "Personal Project"
 description: "Establishing a home lab to gain hands-on experience in cybersecurity."
-date: "2025-05-08"
+date: "2024-11-08"
 author: "Samson Otori"
 challenge: "Create a safe, controlled environment to explore cybersecurity tools and techniques."
 solution: "Set up virtual machines, implemented telemetry with Sysmon, and integrated Splunk for log analysis."

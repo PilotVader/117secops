@@ -1,7 +1,7 @@
 ---
 title: "Part 6: Centralized Management with Fleet Server and Elastic Agent"
 description: "Day 6 of the 30-Day MYDFIR SOC Analyst Challenge: Exploring centralized management solutions for security agents across multiple endpoints."
-date: "2024-03-23"
+date: "2024-11-06"
 author: "Samson Otori"
 tags:
   - "Fleet Server"

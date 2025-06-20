@@ -1,7 +1,7 @@
 ---
 title: "Part 27: Investigating an RDP Brute Force Attack"
 description: "Day 27 of the 30-Day MYDFIR SOC Analyst Challenge: Analyzing and investigating RDP brute force attacks using security tools and automated ticketing."
-date: "2024-03-23"
+date: "2024-11-27"
 author: "Samson Otori"
 tags:
   - "RDP"

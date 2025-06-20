@@ -1,7 +1,7 @@
 ---
 title: "Part 19: Creating an Attack Diagram"
 description: "Day 19 of the 30-Day MYDFIR SOC Analyst Challenge: Mapping out a comprehensive attack plan using Draw.io, from initial access to data exfiltration."
-date: "2024-03-23"
+date: "2024-11-19"
 author: "Samson Otori"
 tags:
   - "Attack Diagram"

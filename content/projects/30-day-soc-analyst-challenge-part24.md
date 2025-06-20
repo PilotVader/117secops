@@ -1,7 +1,7 @@
 ---
 title: "Part 24: Setting Up and Configuring OS Ticket"
 description: "Day 24 of the 30-Day MYDFIR SOC Analyst Challenge: Deploying and configuring OS Ticket on a Windows Server for efficient SOC alert management."
-date: "2024-03-23"
+date: "2024-11-24"
 author: "Samson Otori"
 tags:
   - "OS Ticket"

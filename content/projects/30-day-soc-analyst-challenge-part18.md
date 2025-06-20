@@ -1,7 +1,7 @@
 ---
 title: "Part 18: Understanding Command and Control (C2)"
 description: "Day 18 of the 30-Day MYDFIR SOC Analyst Challenge: Exploring C2 frameworks, their importance in cyberattacks, and preparing for Mythic implementation."
-date: "2024-03-23"
+date: "2024-11-18"
 author: "Samson Otori"
 tags:
   - "C2"

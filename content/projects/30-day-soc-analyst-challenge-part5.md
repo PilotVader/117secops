@@ -1,7 +1,7 @@
 ---
 title: "Part 5: Deploying Windows Server in the Cloud"
 description: "Day 5 of the 30-Day MYDFIR SOC Analyst Challenge: Setting up a Windows Server instance in the cloud for security analysis."
-date: "2024-03-23"
+date: "2024-11-05"
 author: "Samson Otori"
 tags:
   - "Windows Server"

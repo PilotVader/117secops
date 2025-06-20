@@ -1,7 +1,7 @@
 ---
 title: "Part 3: Setting up Elastic Search"
 description: "Day 3 of the 30-Day MYDFIR SOC Analyst Challenge: Setting up your own Elastic Search instance for foundational security analysis."
-date: "2024-03-22"
+date: "2024-11-03"
 author: "Samson Otori"
 tags:
   - "Elastic Search"

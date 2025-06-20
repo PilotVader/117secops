@@ -1,7 +1,7 @@
 ---
 title: "Part 1: Foundation, A Logical Network Diagram"
 description: "Learn how to create a comprehensive logical network diagram for your SOC environment, establishing the foundation for my 30-day security monitoring journey."
-date: "2024-03-20"
+date: "2024-11-01"
 author: "Samson Otori"
 tags:
   - "Network Diagram"

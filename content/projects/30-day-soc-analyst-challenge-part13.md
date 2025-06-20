@@ -1,7 +1,7 @@
 ---
 title: "Part 13: Installing Elastic Agent On Ubuntu"
 description: "Day 13 of the 30-Day MYDFIR SOC Analyst Challenge: Setting up Elastic Agent for centralized log collection and analysis from our SSH server."
-date: "2024-03-23"
+date: "2024-11-13"
 author: "Samson Otori"
 tags:
   - "Elastic Agent"

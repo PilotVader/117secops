@@ -2,7 +2,7 @@
 title: "Part 2: Generating Telemetry and Analyzing Attacks"
 client: "Personal Project"
 description: "Generating telemetry and analyzing attacks in our cybersecurity home lab."
-date: "2025-06-1"
+date: "2024-11-23"
 author: "Samson Otori"
 challenge: "Generate and analyze telemetry data to detect malicious activities."
 solution: "Used Nmap for reconnaissance, Metasploit for attack simulation, and Splunk for log analysis."

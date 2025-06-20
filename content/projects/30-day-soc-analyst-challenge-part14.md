@@ -1,7 +1,7 @@
 ---
 title: "Part 14: Creating an SSH Brute Force Alert and Dashboard"
 description: "Day 14 of the 30-Day MYDFIR SOC Analyst Challenge: Setting up real-time alerts and dashboards to monitor and visualize SSH brute-force attacks."
-date: "2024-03-23"
+date: "2024-11-14"
 author: "Samson Otori"
 tags:
   - "SSH"

@@ -1,7 +1,7 @@
 ---
 title: "Part 26: Investigating an SSH Brute Force Alert"
 description: "Day 26 of the 30-Day MYDFIR SOC Analyst Challenge: Analyzing and investigating SSH brute force attacks using security tools and threat intelligence."
-date: "2024-03-23"
+date: "2024-11-26"
 author: "Samson Otori"
 tags:
   - "SSH"

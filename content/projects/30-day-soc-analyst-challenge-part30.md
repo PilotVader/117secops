@@ -1,7 +1,7 @@
 ---
 title: "Part 30: Conclusion of the 30-Day MyDFIR SOC Analyst Challenge"
 description: "Day 30 of the 30-Day MYDFIR SOC Analyst Challenge: Reflecting on the journey and key learnings in SOC operations and cybersecurity."
-date: "2024-03-23"
+date: "2024-11-30"
 author: "Samson Otori"
 tags:
   - "Conclusion"

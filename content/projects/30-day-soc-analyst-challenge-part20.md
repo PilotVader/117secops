@@ -1,7 +1,7 @@
 ---
 title: "Part 20: Setting Up Mythic C2"
 description: "Day 20 of the 30-Day MYDFIR SOC Analyst Challenge: Deploying and configuring Mythic C2 framework on a cloud server with enhanced security settings."
-date: "2024-03-23"
+date: "2024-11-20"
 author: "Samson Otori"
 tags:
   - "Mythic"

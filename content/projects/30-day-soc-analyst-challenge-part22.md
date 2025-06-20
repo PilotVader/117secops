@@ -1,7 +1,7 @@
 ---
 title: "Part 22: Creating Alerts and Dashboards for Mythic C2 Detection"
 description: "Day 22 of the 30-Day MYDFIR SOC Analyst Challenge: Building alerts and dashboards to detect and monitor Mythic C2 activity in the SOC environment."
-date: "2024-03-23"
+date: "2024-11-22"
 author: "Samson Otori"
 tags:
   - "Alerts"

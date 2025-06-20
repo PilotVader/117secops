@@ -1,7 +1,7 @@
 ---
 title: "Part 2: Diving into the ELK Stack"
 description: "Explore the powerful ELK stack—Elasticsearch, Logstash, and Kibana—and understand their crucial roles in security operations and log management."
-date: "2024-03-21"
+date: "2024-11-02"
 author: "Samson Otori"
 tags:
   - "ELK Stack"

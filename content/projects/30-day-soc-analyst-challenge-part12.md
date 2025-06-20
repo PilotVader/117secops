@@ -1,7 +1,7 @@
 ---
 title: "Part 12: Setting Up an SSH Server and Monitoring Authentication Logs in Real-Time"
 description: "Day 12 of the 30-Day MYDFIR SOC Analyst Challenge: Deploying a cloud server and analyzing real-time authentication logs to detect brute force attempts."
-date: "2024-03-23"
+date: "2024-11-12"
 author: "Samson Otori"
 tags:
   - "SSH"

@@ -1,7 +1,7 @@
 ---
 title: "Part 7: Installing Elastic Agent and Setting Up Fleet Server"
 description: "Day 7 of the 30-Day MYDFIR SOC Analyst Challenge: Setting up Elastic Agent and Fleet Server for centralized log management."
-date: "2024-03-23"
+date: "2024-11-07"
 author: "Samson Otori"
 tags:
   - "Elastic Agent"

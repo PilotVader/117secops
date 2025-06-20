@@ -1,7 +1,7 @@
 ---
 title: "Part 15: Remote Desktop Protocol Introduction"
 description: "Day 15 of the 30-Day MYDFIR SOC Analyst Challenge: Understanding RDP vulnerabilities, detection tools, and security best practices."
-date: "2024-03-23"
+date: "2024-11-15"
 author: "Samson Otori"
 tags:
   - "RDP"

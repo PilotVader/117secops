@@ -1,7 +1,7 @@
 ---
 title: "Part 21: Brute Force Attack & Establishing a C2 Session"
 description: "Day 21 of the 30-Day MYDFIR SOC Analyst Challenge: Executing a brute force attack, generating a Mythic agent, and establishing a Command and Control session on a Windows Server."
-date: "2024-03-23"
+date: "2024-11-21"
 author: "Samson Otori"
 tags:
   - "Brute Force"

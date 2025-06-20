@@ -1,7 +1,7 @@
 ---
 title: "Part 10: Ingesting Sysmon and Microsoft Defender Logs"
 description: "Day 10 of the 30-Day MYDFIR SOC Analyst Challenge: Setting up log ingestion from Windows Server to Elasticsearch for enhanced security monitoring."
-date: "2024-03-23"
+date: "2024-11-10"
 author: "Samson Otori"
 tags:
   - "Sysmon"

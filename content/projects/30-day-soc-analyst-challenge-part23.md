@@ -1,7 +1,7 @@
 ---
 title: "Part 23: Understanding and Implementing a Ticketing System"
 description: "Day 23 of the 30-Day MYDFIR SOC Analyst Challenge: Exploring ticketing systems and their crucial role in tracking security alerts and managing SOC operations."
-date: "2024-03-23"
+date: "2024-11-23"
 author: "Samson Otori"
 tags:
   - "Ticketing"
