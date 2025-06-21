@@ -124,6 +124,7 @@ interface Certification {
   image: string
   year: string
   description: string
+  certificateUrl?: string
 }
 
 function CertificationCard({
@@ -166,6 +167,16 @@ function CertificationCard({
         </CardHeader>
         <CardContent>
           <p className="text-muted-foreground text-sm">{certification.description}</p>
+          {certification.certificateUrl && (
+            <a
+              href={certification.certificateUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-sm text-primary hover:text-primary/80 transition-colors duration-200 mt-2"
+            >
+              🔗 View Certificate
+            </a>
+          )}
         </CardContent>
       </Card3D>
     </motion.div>
@@ -283,7 +294,14 @@ const certifications = [
     year: "2025",
     description: "Mastered fundamentals of security, compliance, and identity across Microsoft services and platforms.",
   },
-  
+  {
+    name: "ISO/IEC 27001:2022 Lead Auditor Certification",
+    organization: "Mastermind Assurance & Certification Ltd",
+    image: "/images/ISO-IEC-27001-Cert.png",
+    year: "2025",
+    description: "Completed intensive training covering ISMS principles, audit planning, evidence gathering, reporting, risk assessment, Annex A controls, and ISO 19011 auditing guidelines.",
+    certificateUrl: "https://learn.mastermindassurance.com/certificates/ezndpc9m98",
+  },
 ]
 
 const achievements = [
