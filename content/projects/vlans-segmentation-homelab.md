@@ -13,7 +13,30 @@ tags:
   - "Homelab"
 image: "/images/projects/hardware-lab/home-lab-image.jpeg"
 images: [
-  { "src": "/images/projects/hardware-lab/home-lab-image.jpeg", "alt": "Homelab Overview" }
+  { "src": "/images/projects/hardware-lab/Homelab Project V117.png", "alt": "Homelab Project V117 Overview" },
+  { "src": "/images/projects/hardware-lab/Navigating to VLAN Management and VLAN Setting in Cisco Switch.png", "alt": "Navigating to VLAN Management and VLAN Setting in Cisco Switch" },
+  { "src": "/images/projects/hardware-lab/Adding new VLAN rule in cisco switch.png", "alt": "Adding new VLAN rule in cisco switch" },
+  { "src": "/images/projects/hardware-lab/Trying to set up Port VLAN Membership.png", "alt": "Trying to set up Port VLAN Membership" },
+  { "src": "/images/projects/hardware-lab/Assigning Trunk and access VLANs to Infrastructure and physical ports or system.png", "alt": "Assigning Trunk and access VLANs to Infrastructure and physical ports or system" },
+  { "src": "/images/projects/hardware-lab/Setting PVID Primary VLAN ID of Physical Parrot OS and Windows OS to ensure Untagged traffic is treated as part of that VLAN.png", "alt": "Setting PVID Primary VLAN ID of Physical Parrot OS and Windows OS to ensure Untagged traffic is treated as part of that VLAN" },
+  { "src": "/images/projects/hardware-lab/Navigating to create VLAN Interface on OPNSense.png", "alt": "Navigating to create VLAN Interface on OPNSense" },
+  { "src": "/images/projects/hardware-lab/Creating VLAN Interface on OPNSense.png", "alt": "Creating VLAN Interface on OPNSense" },
+  { "src": "/images/projects/hardware-lab/Assigning Interface on OPNSense.png", "alt": "Assigning Interface on OPNSense" },
+  { "src": "/images/projects/hardware-lab/Interface Assigned on OPNSense firewall.png", "alt": "Interface Assigned on OPNSense firewall" },
+  { "src": "/images/projects/hardware-lab/chatgpt.png", "alt": "ChatGPT assistance" },
+  { "src": "/images/projects/hardware-lab/Setting up Static IPs and DHCP For all Interface.png", "alt": "Setting up Static IPs and DHCP For all Interface" },
+  { "src": "/images/projects/hardware-lab/Enabling DHCP Server for static IP.png", "alt": "Enabling DHCP Server for static IP" },
+  { "src": "/images/projects/hardware-lab/DHCP Set for all Static IPs.png", "alt": "DHCP Set for all Static IPs" },
+  { "src": "/images/projects/hardware-lab/Creating Firewall rules for Each Interface.png", "alt": "Creating Firewall rules for Each Interface" },
+  { "src": "/images/projects/hardware-lab/Adding Firewall rules for first Interface.png", "alt": "Adding Firewall rules for first Interface" },
+  { "src": "/images/projects/hardware-lab/Firewall rules Added for all Interface.png", "alt": "Firewall rules Added for all Interface" },
+  { "src": "/images/projects/hardware-lab/Creating new linux bridge.png", "alt": "Creating new linux bridge" },
+  { "src": "/images/projects/hardware-lab/Configuring VLAN In Proxmox to Make it VLAN Aware.png", "alt": "Configuring VLAN In Proxmox to Make it VLAN Aware" },
+  { "src": "/images/projects/hardware-lab/Configuring VM interface with VLAN Tags on Proxmox.png", "alt": "Configuring VM interface with VLAN Tags on Proxmox" },
+  { "src": "/images/projects/hardware-lab/Kali on proxmox now having internet.png", "alt": "Kali on proxmox now having internet" },
+  { "src": "/images/projects/hardware-lab/Windows 10 on proxmox having internet access.png", "alt": "Windows 10 on proxmox having internet access" },
+  { "src": "/images/projects/hardware-lab/running ip show link on proxmox to know how to go about creating linux bridge.png", "alt": "Running ip show link on proxmox to know how to go about creating linux bridge" },
+  { "src": "/images/projects/hardware-lab/CHATGPTSHELL.png", "alt": "ChatGPT shell assistance" }
 ]
 series:
   name: "Project 4.1: VLANs Segmentation In My Homelab"
