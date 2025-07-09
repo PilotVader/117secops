@@ -18,10 +18,10 @@ export function HeroSection() {
   const isDarkMode = mounted ? (resolvedTheme === "dark" || theme === "dark") : false
 
   return (
-    <div className="relative min-h-screen flex items-center">
+    <div className="relative min-h-screen">
       {/* Background Image */}
       <Image
-        src={isDarkMode ? "/images/hero/hero-section.png" : "/images/hero/hero-section-white.png"}
+        src={isDarkMode ? "/images/hero/hero-section.jpeg" : "/images/hero/hero-section-white.jpeg"}
         alt="Hero background"
         fill
         className="object-cover transition-all duration-300"
@@ -37,18 +37,8 @@ export function HeroSection() {
       }`} />
 
       {/* Content */}
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
+      <div className="container mx-auto px-4 md:px-6 relative z-10 flex items-center min-h-screen">
         <div className="max-w-3xl">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className={`text-5xl md:text-7xl font-bold mb-8 whitespace-nowrap ${
-              isDarkMode ? "text-white" : "text-gray-900"
-            }`}
-          >
-            117 Security Operations
-          </motion.h1>
 
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -56,7 +46,7 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="border-l-4 border-purple-500 pl-6 mb-8"
           >
-            <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${
+            <h2 className={`text-3xl md:text-4xl font-bold mb-4 -mt-[35%] ${
               isDarkMode ? "text-white" : "text-gray-900"
             }`}>
               Hi, I'm Samson Otori
