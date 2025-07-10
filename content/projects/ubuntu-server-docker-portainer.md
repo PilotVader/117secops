@@ -40,7 +40,7 @@ series:
   name: "Project 4.2: Ubuntu Server, Docker and Portainer Installation"
   part: 1
   totalParts: 1
-category: "Infrastructure"
+category: "blue"
 ---
 
 ## Ubuntu Server, Docker and Portainer Installation in My Homelab
@@ -107,7 +107,7 @@ With Portainer deployed on top of Docker, I now have a streamlined interface to 
 
 Credits: This project was independently implemented by Samson Otori, drawing conceptual inspiration from Gerard O'Brien's Ultimate Cybersecurity Lab series.
 
-Here's a link to their YouTube channels:
+Here's a link to his YouTube channels:
 - [Gerard O'Brien's Channel](https://www.youtube.com/@techwithgerard)
 
 ---

@@ -62,10 +62,10 @@ images: [
   { "src": "/images/projects/hardware-lab/39 webgoat loging page accessed.png", "alt": "39 webgoat loging page accessed" }
 ]
 series:
-  name: "Project 4.3: Vulnerable Machines Installation(Metasploitable2, DVWA, bWAPP, WebGoat)"
+  name: "Project 4.3: Vulnerable Machines Installation (Metasploitable2, DVWA, bWAPP, WebGoat)"
   part: 1
   totalParts: 1
-category: "Infrastructure"
+category: "red"
 ---
 
 ## Project 4.3: Vulnerable Machines Installation (Metasploitable2, DVWA, bWAPP, WebGoat)
