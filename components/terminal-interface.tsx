@@ -221,7 +221,7 @@ and documenting my learning journey through practical experience.`
    Technologies: Virtual Machines, Security Testing, Penetration Testing
    Link: [CLICK:/projects/vulnerable-machines-installation]
 
-Type 'open <keyword>' to view a specific project or 'contact' to discuss collaborations!`
+Type 'help' to see available commands, or 'contact' to discuss collaborations!`
       }
     },
     {
@@ -314,15 +314,15 @@ Focus: Networks, Security, Software Engineering.`
        }
      },
 
-    {
-      name: "sudo su",
-      description: "Try it and see what happens",
-      action: () => {
-        return `Nice try! You can never be root.
-Only Samson can be root.
-But I like how you think — you're thinking like a security professional.`
-      }
-    },
+         {
+       name: "sudo su",
+       description: "Gain root access",
+       action: () => {
+         return `Nice try! You can never be root.
+ Only Samson can be root.
+ But I like how you think — you're thinking like a security professional.`
+       }
+     },
     {
       name: "open",
       description: "Open a specific project or section",
@@ -426,8 +426,8 @@ Or use 'projects' to see all available projects.`
       return
     }
 
-         let typedText = ""
-     const speed = 13 // milliseconds per character (70% faster - 40% + 30%)
+    let typedText = ""
+    const speed = 13 // milliseconds per character (70% faster - 40% + 30%)
 
     for (let i = 0; i < output.length; i++) {
       typedText += output[i]
@@ -437,6 +437,11 @@ Or use 'projects' to see all available projects.`
           ? { ...entry, typedOutput: typedText }
           : entry
       ))
+      
+      // Force scroll to bottom every few characters for smooth scrolling
+      if (i % 3 === 0 && terminalRef.current) {
+        terminalRef.current.scrollTop = terminalRef.current.scrollHeight
+      }
       
       await new Promise(resolve => setTimeout(resolve, speed))
     }
@@ -516,6 +521,19 @@ Or use 'projects' to see all available projects.`
     }
   }
 
+  // Handle input focus for mobile keyboard visibility
+  const handleInputFocus = () => {
+    if (isMobile && inputRef.current) {
+      // Small delay to ensure keyboard is visible
+      setTimeout(() => {
+        inputRef.current?.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'center' 
+        })
+      }, 300)
+    }
+  }
+
   const handleMenuClick = (command: string) => {
     if (isTyping) return
     setInput(command)
@@ -525,6 +543,36 @@ Or use 'projects' to see all available projects.`
   useEffect(() => {
     if (terminalRef.current) {
       terminalRef.current.scrollTop = terminalRef.current.scrollHeight
+    }
+  }, [history])
+
+  // Auto-scroll during typing animation
+  useEffect(() => {
+    if (terminalRef.current && isTyping) {
+      const scrollToBottom = () => {
+        if (terminalRef.current) {
+          terminalRef.current.scrollTop = terminalRef.current.scrollHeight
+        }
+      }
+      
+      // Scroll every 50ms during typing to keep up with the animation
+      const scrollInterval = setInterval(scrollToBottom, 50)
+      
+      return () => clearInterval(scrollInterval)
+    }
+  }, [isTyping])
+
+  // Auto-scroll when history changes (for new commands)
+  useEffect(() => {
+    if (terminalRef.current) {
+      const scrollToBottom = () => {
+        if (terminalRef.current) {
+          terminalRef.current.scrollTop = terminalRef.current.scrollHeight
+        }
+      }
+      
+      // Small delay to ensure DOM is updated
+      setTimeout(scrollToBottom, 10)
     }
   }, [history])
 
@@ -560,91 +608,92 @@ Or use 'projects' to see all available projects.`
              </button>
            </div>
 
-           {/* Mobile Terminal Content */}
-           <div className="flex-1 flex flex-col justify-start px-4 py-4 overflow-y-auto">
-             {/* Terminal Output */}
-             <div 
-               ref={terminalRef}
-               className="w-full text-sm"
-             >
-               {/* Command History */}
-               {history.map((entry, index) => (
-                 <div key={index} className="mb-2">
-                   <div className="flex items-center space-x-2">
-                     <span className="text-blue-400">
-                       samson@117secops:~$
-                     </span>
-                     <span className="text-white">{entry.command}</span>
-                   </div>
-                   {entry.output && (
-                     <div className="mt-1 ml-4 whitespace-pre-wrap text-white overflow-x-auto">
-                       <span className="font-mono">
-                         {(entry.typedOutput || '').split('[CLICK:').map((part, index) => {
-                           if (index === 0) return part;
-                           const [url, ...rest] = part.split(']');
-                           const remainingText = rest.join(']');
-                           return (
-                             <span key={index}>
-                               <button
-                                 onClick={() => window.open(url, '_blank')}
-                                 className="text-blue-400 hover:text-blue-300 underline cursor-pointer"
-                               >
-                                 {url}
-                               </button>
-                               {remainingText}
-                             </span>
-                           );
-                         })}
-                         {entry.isTyping && (
-                           <span className={`inline-block w-3 h-5 bg-red-500 ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}></span>
-                         )}
-                       </span>
-                     </div>
-                   )}
-                 </div>
-               ))}
+                                   {/* Mobile Terminal Content */}
+            <div className="flex-1 flex flex-col justify-start px-4 py-4 overflow-y-auto">
+              {/* Terminal Output */}
+              <div 
+                ref={terminalRef}
+                className="w-full text-sm"
+              >
+                {/* Command History */}
+                {history.map((entry, index) => (
+                  <div key={index} className="mb-2">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-blue-400">
+                        samson@117secops:~$
+                      </span>
+                      <span className="text-white">{entry.command}</span>
+                    </div>
+                    {entry.output && (
+                      <div className="mt-1 ml-4 whitespace-pre-wrap text-white overflow-x-auto">
+                        <span className="font-mono">
+                          {(entry.typedOutput || '').split('[CLICK:').map((part, index) => {
+                            if (index === 0) return part;
+                            const [url, ...rest] = part.split(']');
+                            const remainingText = rest.join(']');
+                            return (
+                              <span key={index}>
+                                <button
+                                  onClick={() => window.open(url, '_blank')}
+                                  className="text-blue-400 hover:text-blue-300 underline cursor-pointer"
+                                >
+                                  {url}
+                                </button>
+                                {remainingText}
+                              </span>
+                            );
+                          })}
+                          {entry.isTyping && (
+                            <span className={`inline-block w-3 h-5 bg-red-500 ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}></span>
+                          )}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                ))}
 
-               {/* Mobile Input Line */}
-               <form onSubmit={handleSubmit} className="flex items-center space-x-2 w-full relative mt-4">
-                 <span className="text-blue-400 text-sm">
-                   samson@117secops:~$
-                 </span>
-                 <input
-                   ref={inputRef}
-                   type="text"
-                   value={input}
-                   onChange={(e) => setInput(e.target.value)}
-                   onKeyDown={handleKeyDown}
-                   className="flex-1 bg-transparent outline-none text-white text-sm"
-                   style={{
-                     caretColor: 'transparent'
-                   }}
-                   placeholder=""
-                   disabled={isTyping}
-                 />
-                 <div 
-                   className={`w-3 h-5 bg-red-500 ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}
-                   style={{
-                     position: 'absolute',
-                     left: `${(input.length * 6) + 150}px`,
-                     top: '50%',
-                     transform: 'translateY(-50%)'
-                   }}
-                 ></div>
-               </form>
-             </div>
-           </div>
+                {/* Mobile Input Line */}
+                <form onSubmit={handleSubmit} className="flex items-center space-x-2 w-full relative mt-4">
+                  <span className="text-blue-400 text-sm">
+                    samson@117secops:~$
+                  </span>
+                  <input
+                    ref={inputRef}
+                    type="text"
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                    onKeyDown={handleKeyDown}
+                    onFocus={handleInputFocus}
+                    className="flex-1 bg-transparent outline-none text-white text-sm"
+                    style={{
+                      caretColor: 'transparent'
+                    }}
+                    placeholder=""
+                    disabled={isTyping}
+                  />
+                  <div 
+                    className={`w-3 h-5 bg-red-500 ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}
+                    style={{
+                      position: 'absolute',
+                      left: `${(input.length * 6) + 170}px`,
+                      top: '50%',
+                      transform: 'translateY(-50%)'
+                    }}
+                  ></div>
+                </form>
+              </div>
+            </div>
 
-           {/* Mobile Bottom Status Bar */}
-           <div className="flex justify-between items-center text-xs text-red-400/70 border-t-2 border-red-500 p-4">
-             <div>
-               samson@117secops:~$
-             </div>
-             <div className="flex items-center space-x-4">
-               <span>{currentTime.toLocaleTimeString()}</span>
-               <span>{currentTime.toLocaleDateString()}</span>
-             </div>
-           </div>
+            {/* Mobile Bottom Status Bar */}
+            <div className="flex justify-between items-center text-xs text-red-400/70 border-t-2 border-red-500 p-4">
+              <div>
+                samson@117secops:~$
+              </div>
+              <div className="flex items-center space-x-4">
+                <span>{currentTime.toLocaleTimeString()}</span>
+                <span>{currentTime.toLocaleDateString()}</span>
+              </div>
+            </div>
          </div>
       ) : (
         // Desktop Layout - Original Split Screen
