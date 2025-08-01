@@ -6,10 +6,13 @@ import Link from "next/link"
 import Image from "next/image"
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
+import { TerminalInterface } from "./terminal-interface"
+import { Terminal } from "lucide-react"
 
 export function HeroSection() {
   const { theme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
+  const [showTerminal, setShowTerminal] = useState(false)
 
   useEffect(() => {
     setMounted(true)
@@ -77,10 +80,29 @@ export function HeroSection() {
                   Explore My Work
                 </Button>
               </Link>
+              
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={() => setShowTerminal(true)}
+                className={`px-8 border-2 ${
+                  isDarkMode 
+                    ? "border-red-500 text-red-500 hover:bg-red-500 hover:text-white" 
+                    : "border-red-500 text-red-500 hover:bg-red-500 hover:text-white"
+                } transition-all duration-300`}
+              >
+                <Terminal className="w-5 h-5 mr-2" />
+                Terminal Mode
+              </Button>
             </div>
           </motion.div>
         </div>
       </div>
+      
+      {/* Terminal Interface */}
+      {showTerminal && (
+        <TerminalInterface onClose={() => setShowTerminal(false)} />
+      )}
     </div>
   )
 } 
