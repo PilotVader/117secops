@@ -546,95 +546,106 @@ Or use 'projects' to see all available projects.`
       exit={{ opacity: 0 }}
       className="fixed inset-0 z-50 bg-black text-red-500 font-mono flex flex-col"
     >
-      {isMobile ? (
-        // Mobile Layout - Full Screen Terminal
-        <div className="flex flex-col h-full">
-          {/* Mobile Header */}
-          <div className="flex justify-between items-center p-4">
-            <h1 className="text-xl font-bold text-red-500">Otori Samson</h1>
-            <button
-              onClick={onClose}
-              className="text-red-500 hover:text-red-400 font-bold text-sm px-3 py-1 border border-red-500 rounded"
-            >
-              EXIT
-            </button>
-          </div>
+             {isMobile ? (
+         // Mobile Layout - Full Screen Terminal
+         <div className="flex flex-col h-full">
+           {/* Mobile Header */}
+           <div className="flex justify-between items-center p-4 border-b-2 border-red-500">
+             <h1 className="text-xl font-bold text-red-500">Otori Samson</h1>
+             <button
+               onClick={onClose}
+               className="text-red-500 hover:text-red-400 font-bold text-sm px-3 py-1 border border-red-500 rounded"
+             >
+               EXIT
+             </button>
+           </div>
 
-          {/* Mobile Terminal Content */}
-          <div className="flex-1 flex flex-col justify-center items-center px-4">
-            {/* Terminal Output */}
-            <div 
-              ref={terminalRef}
-              className="w-full max-w-md mb-8 text-sm"
-            >
-              {/* Command History */}
-              {history.map((entry, index) => (
-                <div key={index} className="mb-2">
-                  <div className="flex items-center space-x-2">
-                    <span className="text-blue-400">
-                      samson@117secops:~$
-                    </span>
-                    <span className="text-white">{entry.command}</span>
-                  </div>
-                  {entry.output && (
-                    <div className="mt-1 ml-4 whitespace-pre-wrap text-white">
-                      <span>
-                        {(entry.typedOutput || '').split('[CLICK:').map((part, index) => {
-                          if (index === 0) return part;
-                          const [url, ...rest] = part.split(']');
-                          const remainingText = rest.join(']');
-                          return (
-                            <span key={index}>
-                              <button
-                                onClick={() => window.open(url, '_blank')}
-                                className="text-blue-400 hover:text-blue-300 underline cursor-pointer"
-                              >
-                                {url}
-                              </button>
-                              {remainingText}
-                            </span>
-                          );
-                        })}
-                        {entry.isTyping && (
-                          <span className={`inline-block w-3 h-5 bg-red-500 ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}></span>
-                        )}
-                      </span>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
+           {/* Mobile Terminal Content */}
+           <div className="flex-1 flex flex-col justify-start px-4 py-4 overflow-y-auto">
+             {/* Terminal Output */}
+             <div 
+               ref={terminalRef}
+               className="w-full text-sm"
+             >
+               {/* Command History */}
+               {history.map((entry, index) => (
+                 <div key={index} className="mb-2">
+                   <div className="flex items-center space-x-2">
+                     <span className="text-blue-400">
+                       samson@117secops:~$
+                     </span>
+                     <span className="text-white">{entry.command}</span>
+                   </div>
+                   {entry.output && (
+                     <div className="mt-1 ml-4 whitespace-pre-wrap text-white overflow-x-auto">
+                       <span className="font-mono">
+                         {(entry.typedOutput || '').split('[CLICK:').map((part, index) => {
+                           if (index === 0) return part;
+                           const [url, ...rest] = part.split(']');
+                           const remainingText = rest.join(']');
+                           return (
+                             <span key={index}>
+                               <button
+                                 onClick={() => window.open(url, '_blank')}
+                                 className="text-blue-400 hover:text-blue-300 underline cursor-pointer"
+                               >
+                                 {url}
+                               </button>
+                               {remainingText}
+                             </span>
+                           );
+                         })}
+                         {entry.isTyping && (
+                           <span className={`inline-block w-3 h-5 bg-red-500 ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}></span>
+                         )}
+                       </span>
+                     </div>
+                   )}
+                 </div>
+               ))}
 
-                         {/* Mobile Input Line */}
-             <form onSubmit={handleSubmit} className="flex items-center space-x-2 w-full max-w-md relative">
-              <span className="text-blue-400 text-sm">
-                samson@117secops:~$
-              </span>
-                             <input
-                 ref={inputRef}
-                 type="text"
-                 value={input}
-                 onChange={(e) => setInput(e.target.value)}
-                 onKeyDown={handleKeyDown}
-                 className="flex-1 bg-transparent outline-none text-white text-sm"
-                 style={{
-                   caretColor: 'transparent'
-                 }}
-                 placeholder=""
-                 disabled={isTyping}
-               />
-               <div 
-                 className={`w-3 h-5 bg-red-500 ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}
-                 style={{
-                   position: 'absolute',
-                   left: `${(input.length * 6) + 130}px`,
-                   top: '50%',
-                   transform: 'translateY(-50%)'
-                 }}
-               ></div>
-            </form>
-          </div>
-        </div>
+               {/* Mobile Input Line */}
+               <form onSubmit={handleSubmit} className="flex items-center space-x-2 w-full relative mt-4">
+                 <span className="text-blue-400 text-sm">
+                   samson@117secops:~$
+                 </span>
+                 <input
+                   ref={inputRef}
+                   type="text"
+                   value={input}
+                   onChange={(e) => setInput(e.target.value)}
+                   onKeyDown={handleKeyDown}
+                   className="flex-1 bg-transparent outline-none text-white text-sm"
+                   style={{
+                     caretColor: 'transparent'
+                   }}
+                   placeholder=""
+                   disabled={isTyping}
+                 />
+                 <div 
+                   className={`w-3 h-5 bg-red-500 ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}
+                   style={{
+                     position: 'absolute',
+                     left: `${(input.length * 6) + 150}px`,
+                     top: '50%',
+                     transform: 'translateY(-50%)'
+                   }}
+                 ></div>
+               </form>
+             </div>
+           </div>
+
+           {/* Mobile Bottom Status Bar */}
+           <div className="flex justify-between items-center text-xs text-red-400/70 border-t-2 border-red-500 p-4">
+             <div>
+               samson@117secops:~$
+             </div>
+             <div className="flex items-center space-x-4">
+               <span>{currentTime.toLocaleTimeString()}</span>
+               <span>{currentTime.toLocaleDateString()}</span>
+             </div>
+           </div>
+         </div>
       ) : (
         // Desktop Layout - Original Split Screen
         <>
