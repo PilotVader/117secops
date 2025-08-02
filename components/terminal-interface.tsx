@@ -151,8 +151,8 @@ Type 'help' to see available commands.`
   experience              - Work experience
   contact                 - Contact information
   education               - Educational background
-  certifications          - Professional certifications
-  sudo su                 - Try it and see what happens
+  certifications          - Professional certificates
+  sudo su                 - Gain root access
   clear                   - Clear terminal
   exit                    - Exit terminal mode`
       }
