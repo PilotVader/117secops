@@ -201,26 +201,25 @@ function SeriesCard({ seriesName, projects, index, openLightbox, openSeriesModal
               : "hover:shadow-blue-500/20 hover:border-blue-500/30"}`}
       >
         <div className="flex flex-col h-full">
-          <div 
-            className="relative h-[200px] cursor-pointer" 
-            onClick={() => openLightbox([{ src: firstProject.image || "/images/project-placeholder.svg", alt: firstProject.title }])}
-          >
-            <Image
-              src={firstProject.image || "/images/project-placeholder.svg"}
-              alt={firstProject.title}
-              fill
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
-            <div 
-              className={`absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300
-                ${isRed 
-                  ? "group-hover:from-red-900/50" 
-                  : isInfrastructure
-                    ? "group-hover:from-green-900/50"
-                    : "group-hover:from-blue-900/50"}`}
-            />
-          </div>
+          <Link href={`/projects/${firstProject.slug}/`}>
+            <div className="relative h-[200px] cursor-pointer">
+              <Image
+                src={firstProject.image || "/images/project-placeholder.svg"}
+                alt={firstProject.title}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+              <div 
+                className={`absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300
+                  ${isRed 
+                    ? "group-hover:from-red-900/50" 
+                    : isInfrastructure
+                      ? "group-hover:from-green-900/50"
+                      : "group-hover:from-blue-900/50"}`}
+              />
+            </div>
+          </Link>
           
           <CardHeader className="p-6">
             <CardTitle 
@@ -277,16 +276,11 @@ function SeriesCard({ seriesName, projects, index, openLightbox, openSeriesModal
           </CardContent>
           <CardFooter className="px-6 pb-6">
             <Button
-              className={`w-full text-xs shadow-lg transition-all duration-300
-                ${isRed 
-                  ? "bg-red-600 hover:bg-red-700 shadow-red-500/10" 
-                  : isInfrastructure
-                    ? "bg-green-600 hover:bg-green-700 shadow-green-500/10"
-                    : "bg-blue-600 hover:bg-blue-700 shadow-blue-500/10"}`}
-              size="sm"
+              variant="outline"
+              className="w-full"
               onClick={() => openSeriesModal(seriesName, projects)}
             >
-              View Series Details
+              View All Parts
             </Button>
           </CardFooter>
         </div>
