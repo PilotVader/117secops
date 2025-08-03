@@ -2,8 +2,6 @@
 const fs = require("fs")
 const path = require("path")
 const matter = require("gray-matter")
-const { remark } = require("remark")
-const html = require("remark-html")
 
 // Paths
 const projectsDirectory = path.join(process.cwd(), "content/projects")
@@ -44,9 +42,8 @@ const parseProjectData = async () => {
 
       const matterResult = matter(fileContents)
 
-      // Process content to HTML
-      const processedContent = await remark().use(html).process(matterResult.content)
-      const contentHtml = processedContent.toString()
+      // Pass raw content instead of processing to HTML
+      const content = matterResult.content
 
       // Apply defaults and handle flexible data formats
       const data = matterResult.data
@@ -94,7 +91,7 @@ const parseProjectData = async () => {
       // Extract images from content if not explicitly defined
       if (images.length === 0) {
         // Simple regex to find markdown image syntax
-        const imageRegex = /!\[(.*?)\]$$(.*?)$$/g
+        const imageRegex = /!\[(.*?)\]\((.*?)\)/g
         let match
         while ((match = imageRegex.exec(matterResult.content)) !== null) {
           images.push({
@@ -115,12 +112,13 @@ const parseProjectData = async () => {
         challenge: data.challenge || "",
         solution: data.solution || "",
         results,
-        category: data.category === "red" || data.category === "blue" ? data.category : "blue",
+        category: data.category === "red" || data.category === "blue" || data.category === "Infrastructure" ? data.category : "blue",
         tags,
-        content: contentHtml,
+        content: content,
         image: data.image || "/placeholder.svg?height=300&width=600",
         technologies,
         images,
+        series: data.series,
       }
     }),
   )

@@ -46,13 +46,19 @@ export function BlogContentRenderer({
       .replace(/\*(.*?)\*/g, '<em>$1</em>')
       // Links
       .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
-      // Paragraphs
-      .replace(/\n\n/g, '</p><p>')
-      .replace(/^(?!<[h|p|{{])/gm, '<p>')
-      .replace(/(?<!>)$/gm, '</p>')
+      // Paragraphs - handle more carefully
+      .replace(/\n\n+/g, '</p><p>')
       // Clean up empty paragraphs
       .replace(/<p><\/p>/g, '')
       .replace(/<p>\s*<\/p>/g, '')
+
+    // Ensure content is wrapped in paragraphs
+    if (!newContent.startsWith('<')) {
+      newContent = '<p>' + newContent
+    }
+    if (!newContent.endsWith('>')) {
+      newContent = newContent + '</p>'
+    }
 
     setProcessedContent(newContent)
   }, [content])

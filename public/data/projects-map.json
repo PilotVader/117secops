@@ -26,43 +26,15 @@
       "Homelab",
       "Blue Team"
     ],
-    "content": "\r\n## Project 4.4: Integrating Wazuh SIEM/XDR and Nessus in a Cybersecurity Home Lab\r\n\r\n### Building the SIEM Foundation: Wazuh Server Deployment\r\n\r\nContinuing from the previous episodes of my cybersecurity home lab journey, I entered the next to introduce Wazuh as the SIEM and XDR solution for telemetry collection, log correlation, and detection engineering. I provisioned a new Ubuntu server virtual machine on Proxmox with 4 vCPUs, 8GB of RAM, and 160GB of disk space, ensuring it resided within VLAN 5 (my security tools network) using the IP 10.10.5.51/24. The Wazuh installation process was straightforward. After setting a static IP and configuring DNS and gateway entries, I initiated a basic update and upgrade cycle, then ran the official Wazuh installation script from their GitHub repository.\r\n\r\nOnce the installation was completed, I accessed the Wazuh dashboard via HTTPS at https://10.10.5.51, authenticated using the auto-generated credentials, and confirmed a successful deployment. With the Wazuh manager operational, the next step was deploying agents across key systems in the lab.\r\n\r\n### Deploying Agents: Parrot OS and Docker Server Integration\r\n\r\nThe first endpoint I configured was my Parrot OS. I elevated to root and ran the prescribed commands to add the Wazuh repository, perform an update, and install the agent. I edited the agent configuration to point it at the Wazuh manager IP and verified connectivity. Upon launching the agent, it registered on the Wazuh dashboard and began transmitting logs shortly after.\r\n\r\nI replicated the same process on my Ubuntu Docker server (10.10.30.100), again ensuring root privileges, repository addition, and agent configuration. I initiated the agent and confirmed its visibility on the Wazuh interface. To extend observability into containerised environments, I proceeded to install the Wazuh Docker Listener and configured the Docker API for telemetry ingestion. I appended the required JSON configuration into the agent's config file, restarted the service, and enabled the module on the Wazuh dashboard under Settings > Modules > Docker Listener. Container-level logs began appearing as I restarted a few test containers to validate.\r\n\r\n### OPNsense Firewall Agent Issues: Encountering the PID File Roadblock\r\n\r\nWith both endpoint systems operational in Wazuh, I turned my attention to integrating my OPNsense firewall (192.168.1.1) running on dedicated hardware. This step diverged significantly from the Linux-based agents, as it required enabling FreeBSD repositories and handling configuration in a constrained BSD environment. I SSHed into OPNsense, enabled SSH under System > Advanced, and modified the FreeBSD.conf file to set enabled=YES. Unlike the tutorial, I found only the freebsd.conf file available, not pfsense.conf, due to architectural differences between OPNsense and pfSense.\r\n\r\nFollowing the installation instructions, I attempted to run the agent-auth binary to register the agent with the manager. However, I encountered a persistent error: agent-auth: CRITICAL (1212): Unable to create PID file. This indicated a permission or filesystem-level issue preventing the Wazuh agent from properly initialising. Further troubleshooting revealed that the ossec user and group did not exist by default. Attempts to assign ownership using chown -R ossec:ossec /var/ossec returned \"illegal group name\" errors.\r\n\r\nI manually verified write permissions by creating and removing test files under /var/ossec, which confirmed basic functionality. Despite that, the Wazuh agent daemon (wazuh-agentd) consistently failed to start. Configuration and log file reviews pointed to missing or incompatible startup routines specific to FreeBSD. I eventually confirmed that even after enabling FreeBSD package support and properly configuring ossec.conf to include the manager IP, the agent appeared on the Wazuh dashboard but failed to show \"Active\" status.\r\n\r\nAt this point, I decided to temporarily pause work on the OPNsense agent integration. The issue remained unresolved, likely due to deeper compatibility mismatches or required kernel parameters not present on the OPNsense BSD environment. I plan to revisit this with a custom-built FreeBSD agent installation script or by manually creating missing users and startup routines. But if anyone has encountered this issue, please reach out to me with suggestions, I'll really appreciate.\r\n\r\n### Deploying Nessus: Introducing Vulnerability Scanning to the Lab\r\n\r\nWith the SIEM side in partial production, I progressed to deploying Nessus for vulnerability scanning. I created a new Ubuntu VM on Proxmox with 4 vCPUs, 4 GB RAM, and 40 GB disk, assigning it the IP address 10.10.5.52/24 within VLAN 5. After configuring static networking and enabling SSH, I logged in and ran the commands to download the latest Nessus Debian package. I installed it using dpkg and started the nessusd service.\r\n\r\nAccessing Nessus via the browser at https://10.10.5.52:8834 allowed me to register for the Essentials version and input the activation key. The platform then began downloading its full set of plugins and signature files. Once installation was completed, I created a quick scan targeting the Metasploitable2 VM. Even with the basic scan template, the results after the scan show that it was successful even with limited information, confirming its functionality.\r\n\r\n### Conclusion\r\n\r\nAt this point, I had a partially complete security monitoring stack within my home lab. Wazuh was successfully collecting logs from my Parrot OS and Docker machines and even parsing Docker container activity. Nessus was active and ready to scan targets across VLAN 5. However, OPNsense integration remained incomplete due to agent startup issues tied to BSD permission handling. I plan to circle back to this issue later with a deeper understanding of BSD service management or possibly using Syslog forwarding as a temporary workaround.\r\n\r\nThis project showcases the real-world challenges of building a hybrid monitoring environment, integrating both Linux and BSD-based systems into a centralised SIEM. It's a valuable case study for anyone deploying Wazuh in a segmented network and dealing with heterogeneous operating systems. My next step will be to document the resolution of the OPNsense agent issue and expand Wazuh's use to include alert rule tuning and dashboard customisation.\r\n\r\nStay tuned for the next stage of this project as we integrate more detection and response tools.\r\n\r\n**Credits:** This walkthrough is based on Episode 2 of the Ultimate Cybersecurity Lab YouTube series by Gerard O'Brien. While the steps closely followed his guidance, the project was independently implemented by Samson Otori, with custom network configurations and host assignments tailored to fit a pre-existing VLAN-segmented lab environment.\r\n\r\nHere's a link to his YouTube channels:\r\n\r\n[Gerard O'Brien's Channel](https://www.youtube.com/watch?v=ytWZ6OrFEQE&list=PL3ljjyal211AbTqlxSo6CGBiVqsXw8wrp&index=9) \r\n",
-    "image": "/images/projects/hardware-lab/Image header for project 4.4.JPEG",
+    "content": "\n## Project 4.4: Integrating Wazuh SIEM/XDR and Nessus in a Cybersecurity Home Lab\n\n### Building the SIEM Foundation: Wazuh Server Deployment\n\nContinuing from the previous episodes of my cybersecurity home lab journey, I entered the next to introduce Wazuh as the SIEM and XDR solution for telemetry collection, log correlation, and detection engineering. I provisioned a new Ubuntu server virtual machine on Proxmox with 4 vCPUs, 8GB of RAM, and 160GB of disk space, ensuring it resided within VLAN 5 (my security tools network) using the IP 10.10.5.51/24. The Wazuh installation process was straightforward. After setting a static IP and configuring DNS and gateway entries, I initiated a basic update and upgrade cycle, then ran the official Wazuh installation script from their GitHub repository.\n\nOnce the installation was completed, I accessed the Wazuh dashboard via HTTPS at https://10.10.5.51, authenticated using the auto-generated credentials, and confirmed a successful deployment. With the Wazuh manager operational, the next step was deploying agents across key systems in the lab.\n\n<InlineGallery images={wazuh-server-deployment} title=\"Wazuh Server Deployment\" />\n\n### Deploying Agents: Parrot OS and Docker Server Integration\n\nThe first endpoint I configured was my Parrot OS. I elevated to root and ran the prescribed commands to add the Wazuh repository, perform an update, and install the agent. I edited the agent configuration to point it at the Wazuh manager IP and verified connectivity. Upon launching the agent, it registered on the Wazuh dashboard and began transmitting logs shortly after.\n\nI replicated the same process on my Ubuntu Docker server (10.10.30.100), again ensuring root privileges, repository addition, and agent configuration. I initiated the agent and confirmed its visibility on the Wazuh interface. To extend observability into containerised environments, I proceeded to install the Wazuh Docker Listener and configured the Docker API for telemetry ingestion. I appended the required JSON configuration into the agent's config file, restarted the service, and enabled the module on the Wazuh dashboard under Settings > Modules > Docker Listener. Container-level logs began appearing as I restarted a few test containers to validate.\n\n<InlineGallery images={agent-installation} title=\"Agent Installation Process\" />\n\n### OPNsense Firewall Agent Issues: Encountering the PID File Roadblock\n\nWith both endpoint systems operational in Wazuh, I turned my attention to integrating my OPNsense firewall (192.168.1.1) running on dedicated hardware. This step diverged significantly from the Linux-based agents, as it required enabling FreeBSD repositories and handling configuration in a constrained BSD environment. I SSHed into OPNsense, enabled SSH under System > Advanced, and modified the FreeBSD.conf file to set enabled=YES. Unlike the tutorial, I found only the freebsd.conf file available, not pfsense.conf, due to architectural differences between OPNsense and pfSense.\n\nFollowing the installation instructions, I attempted to run the agent-auth binary to register the agent with the manager. However, I encountered a persistent error: agent-auth: CRITICAL (1212): Unable to create PID file. This indicated a permission or filesystem-level issue preventing the Wazuh agent from properly initialising. Further troubleshooting revealed that the ossec user and group did not exist by default. Attempts to assign ownership using chown -R ossec:ossec /var/ossec returned \"illegal group name\" errors.\n\nI manually verified write permissions by creating and removing test files under /var/ossec, which confirmed basic functionality. Despite that, the Wazuh agent daemon (wazuh-agentd) consistently failed to start. Configuration and log file reviews pointed to missing or incompatible startup routines specific to FreeBSD. I eventually confirmed that even after enabling FreeBSD package support and properly configuring ossec.conf to include the manager IP, the agent appeared on the Wazuh dashboard but failed to show \"Active\" status.\n\nAt this point, I decided to temporarily pause work on the OPNsense agent integration. The issue remained unresolved, likely due to deeper compatibility mismatches or required kernel parameters not present on the OPNsense BSD environment. I plan to revisit this with a custom-built FreeBSD agent installation script or by manually creating missing users and startup routines. But if anyone has encountered this issue, please reach out to me with suggestions, I'll really appreciate.\n\n<InlineGallery images={opnsense-setup} title=\"OPNsense Firewall Configuration\" />\n\n### Deploying Nessus: Introducing Vulnerability Scanning to the Lab\n\nWith the SIEM side in partial production, I progressed to deploying Nessus for vulnerability scanning. I created a new Ubuntu VM on Proxmox with 4 vCPUs, 4 GB RAM, and 40 GB disk, assigning it the IP address 10.10.5.52/24 within VLAN 5. After configuring static networking and enabling SSH, I logged in and ran the commands to download the latest Nessus Debian package. I installed it using dpkg and started the nessusd service.\n\nAccessing Nessus via the browser at https://10.10.5.52:8834 allowed me to register for the Essentials version and input the activation key. The platform then began downloading its full set of plugins and signature files. Once installation was completed, I created a quick scan targeting the Metasploitable2 VM. Even with the basic scan template, the results after the scan show that it was successful even with limited information, confirming its functionality.\n\n<InlineGallery images={nessus-deployment} title=\"Nessus Vulnerability Scanner Setup\" />\n\n### Conclusion\n\nAt this point, I had a partially complete security monitoring stack within my home lab. Wazuh was successfully collecting logs from my Parrot OS and Docker machines and even parsing Docker container activity. Nessus was active and ready to scan targets across VLAN 5. However, OPNsense integration remained incomplete due to agent startup issues tied to BSD permission handling. I plan to circle back to this issue later with a deeper understanding of BSD service management or possibly using Syslog forwarding as a temporary workaround.\n\nThis project showcases the real-world challenges of building a hybrid monitoring environment, integrating both Linux and BSD-based systems into a centralised SIEM. It's a valuable case study for anyone deploying Wazuh in a segmented network and dealing with heterogeneous operating systems. My next step will be to document the resolution of the OPNsense agent issue and expand Wazuh's use to include alert rule tuning and dashboard customisation.\n\nStay tuned for the next stage of this project as we integrate more detection and response tools.\n\n**Credits:** This walkthrough is based on Episode 2 of the Ultimate Cybersecurity Lab YouTube series by Gerard O'Brien. While the steps closely followed his guidance, the project was independently implemented by Samson Otori, with custom network configurations and host assignments tailored to fit a pre-existing VLAN-segmented lab environment.\n\nHere's a link to his YouTube channels:\n\n[Gerard O'Brien's Channel](https://www.youtube.com/watch?v=ytWZ6OrFEQE&list=PL3ljjyal211AbTqlxSo6CGBiVqsXw8wrp&index=9) ",
+    "image": "/images/projects/hardware-lab/Image header for project 4.4.jpeg",
     "technologies": [],
-    "images": [
-      {
-        "src": "/images/projects/hardware-lab/wazuh-server-deployment.jpg",
-        "alt": "Wazuh server deployment and configuration"
-      },
-      {
-        "src": "/images/projects/hardware-lab/wazuh-dashboard.jpg",
-        "alt": "Wazuh dashboard interface showing agent status"
-      },
-      {
-        "src": "/images/projects/hardware-lab/parrot-os-agent.jpg",
-        "alt": "Parrot OS Wazuh agent installation and configuration"
-      },
-      {
-        "src": "/images/projects/hardware-lab/docker-agent-setup.jpg",
-        "alt": "Docker server Wazuh agent and listener configuration"
-      },
-      {
-        "src": "/images/projects/hardware-lab/opnsense-agent-issue.jpg",
-        "alt": "OPNsense firewall agent PID file error troubleshooting"
-      },
-      {
-        "src": "/images/projects/hardware-lab/nessus-deployment.jpg",
-        "alt": "Nessus vulnerability scanner deployment and configuration"
-      },
-      {
-        "src": "/images/projects/hardware-lab/nessus-scan-results.jpg",
-        "alt": "Nessus scan results showing vulnerabilities detected"
-      },
-      {
-        "src": "/images/projects/hardware-lab/security-monitoring-stack.jpg",
-        "alt": "Complete security monitoring stack overview"
-      }
-    ]
+    "images": [],
+    "series": {
+      "name": "Project 4.4: Integrating Wazuh SIEM/XDR and Nessus in a Cybersecurity Home Lab",
+      "part": 1,
+      "totalParts": 1
+    }
   },
   "upgrade-1-4tb-sata-hard-drive-proxmox": {
     "slug": "upgrade-1-4tb-sata-hard-drive-proxmox",
@@ -74,7 +46,7 @@
     "challenge": "",
     "solution": "",
     "results": [],
-    "category": "blue",
+    "category": "Infrastructure",
     "tags": [
       "Proxmox",
       "Storage",
@@ -114,7 +86,12 @@
         "src": "/images/projects/hardware-lab/New 4 TB HArd drive.png",
         "alt": "New 4TB hard drive overview"
       }
-    ]
+    ],
+    "series": {
+      "name": "Upgrade 1: Installing a 4TB SATA Hard Drive in My Proxmox Server",
+      "part": 1,
+      "totalParts": 1
+    }
   },
   "vulnerable-machines-installation": {
     "slug": "vulnerable-machines-installation",
@@ -304,7 +281,12 @@
         "src": "/images/projects/hardware-lab/39 webgoat loging page accessed.png",
         "alt": "39 webgoat loging page accessed"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 4.3: Vulnerable Machines Installation (Metasploitable2, DVWA, bWAPP, WebGoat)",
+      "part": 1,
+      "totalParts": 1
+    }
   },
   "ubuntu-server-docker-portainer": {
     "slug": "ubuntu-server-docker-portainer",
@@ -412,7 +394,12 @@
         "src": "/images/projects/hardware-lab/portainer dashboard 2.png",
         "alt": "Portainer dashboard 2"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 4.2: Ubuntu Server, Docker and Portainer Installation",
+      "part": 1,
+      "totalParts": 1
+    }
   },
   "vlans-segmentation-homelab": {
     "slug": "vlans-segmentation-homelab",
@@ -424,7 +411,7 @@
     "challenge": "",
     "solution": "",
     "results": [],
-    "category": "blue",
+    "category": "Infrastructure",
     "tags": [
       "VLAN",
       "Network Segmentation",
@@ -534,7 +521,12 @@
         "src": "/images/projects/hardware-lab/CHATGPTSHELL.png",
         "alt": "ChatGPT shell assistance"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 4.1: VLANs Segmentation In My Homelab",
+      "part": 1,
+      "totalParts": 1
+    }
   },
   "building-full-hardware-cybersecurity-homelab": {
     "slug": "building-full-hardware-cybersecurity-homelab",
@@ -546,7 +538,7 @@
     "challenge": "",
     "solution": "",
     "results": [],
-    "category": "blue",
+    "category": "Infrastructure",
     "tags": [
       "Home Lab",
       "Hardware",
@@ -638,7 +630,12 @@
         "src": "/images/projects/hardware-lab/20-switch.png",
         "alt": "Switch Management Interface"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 4: Building a Full Hardware Cybersecurity Home Lab",
+      "part": 1,
+      "totalParts": 1
+    }
   },
   "soc-automation-project-part2": {
     "slug": "soc-automation-project-part2",
@@ -702,7 +699,12 @@
         "src": "/images/projects/soc-automation/part3/10 Alert generated on wazuh on mimikatz usage.png",
         "alt": "Wazuh Alert Generated for Mimikatz Usage"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 2: SOC Automation Project",
+      "part": 3,
+      "totalParts": 3
+    }
   },
   "soc-automation-project-part1": {
     "slug": "soc-automation-project-part1",
@@ -793,7 +795,12 @@
         "src": "/images/projects/soc-automation/part2/17 Alert for file added to endpoint on wazuh.png",
         "alt": "Wazuh Alert for File Addition on Endpoint"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 2: SOC Automation Project",
+      "part": 2,
+      "totalParts": 3
+    }
   },
   "soc-automation-project": {
     "slug": "soc-automation-project",
@@ -834,7 +841,12 @@
         "src": "/images/projects/soc-automation/simple-workflow.png",
         "alt": "Simplified SOC Automation Workflow diagram showing the basic data flow between components"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 2: SOC Automation Project",
+      "part": 1,
+      "totalParts": 3
+    }
   },
   "30-day-soc-analyst-challenge-part30": {
     "slug": "30-day-soc-analyst-challenge-part30",
@@ -862,7 +874,12 @@
         "src": "/images/projects/30-day-challenge/30Days-MYDFIR-Challenge.png",
         "alt": "30 Days MYDFIR SOC Analyst Challenge"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 30,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part29": {
     "slug": "30-day-soc-analyst-challenge-part29",
@@ -890,7 +907,12 @@
         "src": "/images/projects/30-day-challenge/30-days-day-29.png",
         "alt": "30 Days MYDFIR SOC Analyst Challenge Day 29"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 29,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part28": {
     "slug": "30-day-soc-analyst-challenge-part28",
@@ -918,7 +940,12 @@
         "src": "/images/projects/30-day-challenge/30-days-day-28.png",
         "alt": "30 Days MYDFIR SOC Analyst Challenge Day 28"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 28,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part27": {
     "slug": "30-day-soc-analyst-challenge-part27",
@@ -946,7 +973,12 @@
         "src": "/images/projects/30-day-challenge/30-days-day-27.png",
         "alt": "30 Days MYDFIR SOC Analyst Challenge Day 27"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 27,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part26": {
     "slug": "30-day-soc-analyst-challenge-part26",
@@ -974,7 +1006,12 @@
         "src": "/images/projects/30-day-challenge/30-days-day-26.png",
         "alt": "30 Days MYDFIR SOC Analyst Challenge Day 26"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 26,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part25": {
     "slug": "30-day-soc-analyst-challenge-part25",
@@ -1010,7 +1047,12 @@
         "src": "/images/projects/30-day-challenge/3-Screenshot-2024-09-25-204554.png",
         "alt": "Elastic Stack Connector Setup"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 25,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part24": {
     "slug": "30-day-soc-analyst-challenge-part24",
@@ -1054,7 +1096,12 @@
         "src": "/images/projects/30-day-challenge/5-Screenshot.png",
         "alt": "OS Ticket Configuration"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 24,
+      "totalParts": 30
+    }
   },
   "building-cybersecurity-home-lab-part2": {
     "slug": "building-cybersecurity-home-lab-part2",
@@ -1197,7 +1244,12 @@
         "src": "/images/projects/homelab-part2/28 Python http server to deply malware online for download.png",
         "alt": "Python HTTP Server for Malware Deployment"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 1: Building a Cybersecurity Home Lab",
+      "part": 2,
+      "totalParts": 2
+    }
   },
   "30-day-soc-analyst-challenge-part23": {
     "slug": "30-day-soc-analyst-challenge-part23",
@@ -1225,7 +1277,12 @@
         "src": "/images/projects/30-day-challenge/30-days-day-23.png",
         "alt": "30 Days MYDFIR SOC Analyst Challenge Day 23"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 23,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part22": {
     "slug": "30-day-soc-analyst-challenge-part22",
@@ -1265,7 +1322,12 @@
         "src": "/images/projects/30-day-challenge/4-MyDFIR-Suspicious-Activity.png",
         "alt": "MyDFIR Suspicious Activity Dashboard"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 22,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part21": {
     "slug": "30-day-soc-analyst-challenge-part21",
@@ -1329,7 +1391,12 @@
         "src": "/images/projects/30-day-challenge/10-exfiltration.png",
         "alt": "Data Exfiltration"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 21,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part20": {
     "slug": "30-day-soc-analyst-challenge-part20",
@@ -1365,7 +1432,12 @@
         "src": "/images/projects/30-day-challenge/mythic-dashboard.png",
         "alt": "Mythic Dashboard Interface"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 20,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part19": {
     "slug": "30-day-soc-analyst-challenge-part19",
@@ -1405,7 +1477,12 @@
         "src": "/images/projects/30-day-challenge/attack-diagram-3.png",
         "alt": "Attack Diagram Phase 3"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 19,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part18": {
     "slug": "30-day-soc-analyst-challenge-part18",
@@ -1433,7 +1510,12 @@
         "src": "/images/projects/30-day-challenge/30-days-day-18.png",
         "alt": "30 Days MYDFIR SOC Analyst Challenge Day 18"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 18,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part17": {
     "slug": "30-day-soc-analyst-challenge-part17",
@@ -1469,7 +1551,12 @@
         "src": "/images/projects/30-day-challenge/Dashboard-2.png",
         "alt": "Detailed Authentication Analysis Dashboard"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 17,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part16": {
     "slug": "30-day-soc-analyst-challenge-part16",
@@ -1513,7 +1600,12 @@
         "src": "/images/projects/30-day-challenge/SSH-brute-for-attempt.png",
         "alt": "SSH Brute Force Attempt Detection"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 16,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part15": {
     "slug": "30-day-soc-analyst-challenge-part15",
@@ -1541,7 +1633,12 @@
         "src": "/images/projects/30-day-challenge/30-days-day-15.png",
         "alt": "30 Days MYDFIR SOC Analyst Challenge Day 15"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 15,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part14": {
     "slug": "30-day-soc-analyst-challenge-part14",
@@ -1573,7 +1670,12 @@
         "src": "/images/projects/30-day-challenge/Alert-creation-and-dashboard-on-Kibana-day-14.png",
         "alt": "Alert Creation and Dashboard Configuration in Kibana"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 14,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part13": {
     "slug": "30-day-soc-analyst-challenge-part13",
@@ -1605,7 +1707,12 @@
         "src": "/images/projects/30-day-challenge/Image-for-day-13-elastic-agent-install-for-ubuntu.png",
         "alt": "Elastic Agent Installation Process for Ubuntu"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 13,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part12": {
     "slug": "30-day-soc-analyst-challenge-part12",
@@ -1645,7 +1752,12 @@
         "src": "/images/projects/30-day-challenge/failed-login-attempts-i-root.png",
         "alt": "Failed Login Attempts Targeting Root User"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 12,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part11": {
     "slug": "30-day-soc-analyst-challenge-part11",
@@ -1673,7 +1785,12 @@
         "src": "/images/projects/30-day-challenge/30-days-day-11.png",
         "alt": "30 Days MYDFIR SOC Analyst Challenge Day 11"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 11,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part10": {
     "slug": "30-day-soc-analyst-challenge-part10",
@@ -1705,7 +1822,12 @@
         "src": "/images/projects/30-day-challenge/Elasticsearch-Ingest-Data-Image.png",
         "alt": "Elasticsearch Data Ingestion Process"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 10,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part9": {
     "slug": "30-day-soc-analyst-challenge-part9",
@@ -1737,7 +1859,12 @@
         "src": "/images/projects/30-day-challenge/Sysmon-Installation.png",
         "alt": "Sysmon Installation Process"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 9,
+      "totalParts": 30
+    }
   },
   "building-cybersecurity-home-lab": {
     "slug": "building-cybersecurity-home-lab",
@@ -1767,7 +1894,12 @@
       "Sysmon",
       "Splunk"
     ],
-    "images": []
+    "images": [],
+    "series": {
+      "name": "Project 1: Building a Cybersecurity Home Lab",
+      "part": 1,
+      "totalParts": 2
+    }
   },
   "30-day-soc-analyst-challenge-part8": {
     "slug": "30-day-soc-analyst-challenge-part8",
@@ -1795,7 +1927,12 @@
         "src": "/images/projects/30-day-challenge/30-days-day-8.png",
         "alt": "30 Days MYDFIR SOC Analyst Challenge Day 8"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 8,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part7": {
     "slug": "30-day-soc-analyst-challenge-part7",
@@ -1839,7 +1976,12 @@
         "src": "/images/projects/30-day-challenge/Logs-Captured-from-Elastic-GUI.png",
         "alt": "Logs Captured from Elastic GUI"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 7,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part6": {
     "slug": "30-day-soc-analyst-challenge-part6",
@@ -1867,7 +2009,12 @@
         "src": "/images/projects/30-day-challenge/30-days-day-6.png",
         "alt": "30 Days MYDFIR SOC Analyst Challenge Day 6"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 6,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part5": {
     "slug": "30-day-soc-analyst-challenge-part5",
@@ -1899,7 +2046,12 @@
         "src": "/images/projects/30-day-challenge/30-days-day-5.png",
         "alt": "30 Days MYDFIR SOC Analyst Challenge Day 5"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 5,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part4": {
     "slug": "30-day-soc-analyst-challenge-part4",
@@ -1931,7 +2083,12 @@
         "src": "/images/projects/30-day-challenge/30-Days-Day-4.png",
         "alt": "30 Days MYDFIR SOC Analyst Challenge Day 4"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 4,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part3": {
     "slug": "30-day-soc-analyst-challenge-part3",
@@ -1963,7 +2120,12 @@
         "src": "/images/projects/30-day-challenge/Elasticsearch-Installation.png",
         "alt": "Elasticsearch Installation"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 3,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part2": {
     "slug": "30-day-soc-analyst-challenge-part2",
@@ -1991,7 +2153,12 @@
         "src": "/images/projects/30-day-challenge/Day-2-mydfir-soc-analyst-challenge.png",
         "alt": "Day 2 MYDFIR SOC Analyst Challenge"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 2,
+      "totalParts": 30
+    }
   },
   "30-day-soc-analyst-challenge-part1": {
     "slug": "30-day-soc-analyst-challenge-part1",
@@ -2022,7 +2189,12 @@
         "src": "/images/projects/30-day-challenge/2-Day-1-work-with-draw-io.png",
         "alt": "Working with Draw.io on Day 1"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 1,
+      "totalParts": 30
+    }
   },
   "30-day-mydfir-soc-analyst-challenge-part0": {
     "slug": "30-day-mydfir-soc-analyst-challenge-part0",
@@ -2054,6 +2226,11 @@
         "src": "/images/projects/30-day-challenge/30Days-MYDFIR-Challenge.png",
         "alt": "30 Days MYDFIR SOC Analyst Challenge Overview"
       }
-    ]
+    ],
+    "series": {
+      "name": "Project 3: 30-Day MYDFIR SOC Analyst Challenge",
+      "part": 0,
+      "totalParts": 30
+    }
   }
 }

@@ -23,6 +23,7 @@ export function InlineGallery({ images, title }: InlineGalleryProps) {
   const [dragStart, setDragStart] = useState<number | null>(null)
   const [dragScrollLeft, setDragScrollLeft] = useState<number | null>(null)
   const thumbnailRef = useRef<HTMLDivElement>(null)
+  const isInitialMount = useRef(true)
 
   if (!images || images.length === 0) {
     return null
@@ -103,18 +104,29 @@ export function InlineGallery({ images, title }: InlineGalleryProps) {
     setDragScrollLeft(null)
   }
 
-  // Scroll thumbnail into view when current index changes
+  // Scroll thumbnail into view when current index changes (but not on initial mount)
   useEffect(() => {
+    // Skip the first render to prevent auto-scrolling on mount
+    if (isInitialMount.current) {
+      isInitialMount.current = false
+      return
+    }
+
     if (thumbnailRef.current && images.length > 1) {
       const thumbnailContainer = thumbnailRef.current
       const activeThumbnail = thumbnailContainer.children[currentIndex] as HTMLElement
       
       if (activeThumbnail) {
-        // Use scrollIntoView for natural, minimal scrolling
-        activeThumbnail.scrollIntoView({
-          behavior: 'smooth',
-          block: 'nearest',
-          inline: 'center'
+        // Calculate scroll position to center the active thumbnail
+        const containerWidth = thumbnailContainer.offsetWidth
+        const thumbnailWidth = activeThumbnail.offsetWidth
+        const thumbnailLeft = activeThumbnail.offsetLeft
+        const scrollLeft = thumbnailLeft - (containerWidth / 2) + (thumbnailWidth / 2)
+        
+        // Smooth scroll within the container only
+        thumbnailContainer.scrollTo({
+          left: Math.max(0, scrollLeft),
+          behavior: 'smooth'
         })
       }
     }
@@ -255,12 +267,9 @@ export function InlineGallery({ images, title }: InlineGalleryProps) {
         {/* Thumbnail Slider */}
         {images.length > 1 && (
           <div className="mt-4">
-            <div 
+            <div
               ref={thumbnailRef}
-              className="flex space-x-2 overflow-x-auto snap-x snap-mandatory pb-2 cursor-grab active:cursor-grabbing select-none"
-              style={{ 
-                scrollBehavior: 'smooth'
-              }}
+              className="flex space-x-2 overflow-x-auto snap-x snap-mandatory pb-2 cursor-grab active:cursor-grabbing select-none smooth-scroll"
               onMouseDown={handleMouseDown}
               onMouseMove={handleMouseMove}
               onMouseUp={handleMouseUp}

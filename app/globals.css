@@ -193,8 +193,13 @@
   }
 }
 
-/* Smooth scrolling */
+/* Smooth scrolling - only for specific elements, not the entire page */
 html {
+  scroll-behavior: auto;
+}
+
+/* Apply smooth scrolling only to specific elements that need it */
+.smooth-scroll {
   scroll-behavior: smooth;
 }
 

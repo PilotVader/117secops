@@ -52,6 +52,7 @@ export function TerminalInterface({ onClose }: { onClose: () => void }) {
 
   // Sample data - you can replace with actual data from your API
   const projects: Project[] = [
+    { name: "Project 4.4: Wazuh SIEM/XDR and Nessus Integration", slug: "project-4-4-wazuh-nessus-integration", description: "SIEM and vulnerability scanning integration" },
     { name: "Upgrade 1: 4TB SATA Hard Drive Installation", slug: "upgrade-1-4tb-sata-hard-drive-proxmox", description: "Hardware upgrade and troubleshooting" },
     { name: "Project 4.1: VLANs Segmentation", slug: "vlans-segmentation-homelab", description: "Network segmentation implementation" },
     { name: "SOC Automation Project", slug: "soc-automation-project", description: "Security operations automation" },
@@ -74,6 +75,9 @@ export function TerminalInterface({ onClose }: { onClose: () => void }) {
 
   // Keyword-to-Project Mapping
   const projectMap: { [key: string]: string } = {
+    wazuh: '/projects/project-4-4-wazuh-nessus-integration',
+    nessus: '/projects/project-4-4-wazuh-nessus-integration',
+    siem: '/projects/project-4-4-wazuh-nessus-integration',
     buildlab: '/projects/building-cybersecurity-home-lab',
     socauto: '/projects/soc-automation-project',
     mydfir30: '/projects/30-day-mydfir-soc-analyst-challenge-part0',
@@ -181,42 +185,47 @@ and documenting my learning journey through practical experience.`
       action: () => {
         return `🚀 Projects:
 
-1. Upgrade 1: 4TB SATA Hard Drive Installation
+1. Project 4.4: Wazuh SIEM/XDR and Nessus Integration
+   SIEM and vulnerability scanning integration in cybersecurity homelab
+   Technologies: Wazuh, Nessus, SIEM, XDR, Vulnerability Scanning
+   Link: [CLICK:/projects/project-4-4-wazuh-nessus-integration]
+
+2. Upgrade 1: 4TB SATA Hard Drive Installation
    Hardware upgrade and troubleshooting for Proxmox VE server
    Technologies: Proxmox, Linux, SATA, Storage Management
    Link: [CLICK:/projects/upgrade-1-4tb-sata-hard-drive-proxmox]
 
-2. Project 4.1: VLANs Segmentation
+3. Project 4.1: VLANs Segmentation
    Network segmentation implementation in cybersecurity homelab
    Technologies: OPNsense, VLANs, Network Security, Proxmox
    Link: [CLICK:/projects/vlans-segmentation-homelab]
 
-3. SOC Automation Project
+4. SOC Automation Project
    Security operations automation and monitoring implementation
    Technologies: Wazuh, TheHive, Elastic Stack, Security Automation
    Link: [CLICK:/projects/soc-automation-project]
 
-4. 30-Day SOC Analyst Challenge
+5. 30-Day SOC Analyst Challenge
    SOC analyst training challenge and hands-on learning
    Technologies: Security Monitoring, Incident Response, Threat Hunting
    Link: [CLICK:/projects/30-day-mydfir-soc-analyst-challenge-part0]
 
-5. Building a Cybersecurity Home Lab
+6. Building a Cybersecurity Home Lab
    Comprehensive cybersecurity homelab setup and configuration
    Technologies: Proxmox, OPNsense, Security Tools, Virtualization
    Link: [CLICK:/projects/building-cybersecurity-home-lab]
 
-6. Full Hardware Cybersecurity Lab
+7. Full Hardware Cybersecurity Lab
    Complete hardware-based cybersecurity laboratory setup
    Technologies: Hardware Security, Network Infrastructure, Security Tools
    Link: [CLICK:/projects/building-full-hardware-cybersecurity-homelab]
 
-7. Ubuntu Server, Docker and Portainer Installation
+8. Ubuntu Server, Docker and Portainer Installation
    Containerization setup with Docker and Portainer management
    Technologies: Ubuntu Server, Docker, Portainer, Containerization
    Link: [CLICK:/projects/ubuntu-server-docker-portainer]
 
-8. Vulnerable Machine Installation
+9. Vulnerable Machine Installation
    Setup and configuration of vulnerable machines for testing
    Technologies: Virtual Machines, Security Testing, Penetration Testing
    Link: [CLICK:/projects/vulnerable-machines-installation]
