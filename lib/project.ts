@@ -219,9 +219,8 @@ export async function getProjectData(slug: string): Promise<Project | null> {
     // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents)
 
-    // Use remark to convert markdown into HTML string
-    const processedContent = await remark().use(html).process(matterResult.content)
-    const contentHtml = processedContent.toString()
+    // Pass raw markdown content to let BlogContentRenderer handle custom components
+    const contentHtml = matterResult.content
 
     // Apply defaults and handle flexible data formats
     const data = matterResult.data

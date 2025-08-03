@@ -31,6 +31,8 @@ interface Project {
   }[]
 }
 
+
+
 export default function ProjectClientPage({ projectData }: { projectData: Project }) {
   const params = useParams()
   const slug = params?.slug
@@ -171,12 +173,13 @@ export default function ProjectClientPage({ projectData }: { projectData: Projec
             )}
           </div>
 
-          <div className="prose prose-purple max-w-none dark:prose-invert prose-img:rounded-lg prose-img:mx-auto prose-img:shadow-md">
-            <BlogContentRenderer
-              content={project.content}
-              groupId={`project-${project.slug}`}
-            />
-          </div>
+          {/* Use enhanced BlogContentRenderer with inline gallery support */}
+          <BlogContentRenderer
+            content={project.content}
+            groupId={`project-${project.slug}`}
+          />
+
+          
 
           {/* Project Gallery */}
           {project.images && project.images.length > 0 && (
