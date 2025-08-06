@@ -11,7 +11,7 @@ const dataDirectory = path.join(process.cwd(), "public/data")
 export interface Project {
   slug: string
   title: string
-  description?: string
+  description: string
   date?: string
   author?: string
   client?: string

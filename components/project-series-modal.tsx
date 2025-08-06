@@ -40,7 +40,7 @@ export function ProjectSeriesModal({ isOpen, onClose, series, seriesName }: Proj
                   </div>
                   <Link
                     href={`/projects/${project.slug}`}
-                    className="shrink-0 rounded-md bg-primary px-3 py-1 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+                    className="shrink-0 rounded-md bg-primary px-3 py-1 text-sm font-medium text-primary-foreground"
                   >
                     Read More
                   </Link>

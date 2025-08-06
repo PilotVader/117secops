@@ -2,12 +2,12 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
-    "*.{js,ts,jsx,tsx,mdx}",
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
   ],
+  prefix: "",
   theme: {
     container: {
       center: true,
@@ -51,6 +51,11 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Cyberpunk colors
+        'cyber-green': 'hsl(var(--cyber-green))',
+        'cyber-blue': 'hsl(var(--cyber-blue))',
+        'cyber-purple': 'hsl(var(--cyber-purple))',
+        'cyber-orange': 'hsl(var(--cyber-orange))',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -59,51 +64,54 @@ module.exports = {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: 0 },
+          from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 },
+          to: { height: "0" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-20px)" },
+        },
+        glow: {
+          "0%, 100%": { boxShadow: "0 0 20px hsl(var(--primary) / 0.3)" },
+          "50%": { boxShadow: "0 0 30px hsl(var(--primary) / 0.5)" },
+        },
+        blink: {
+          "0%, 50%": { opacity: "1" },
+          "51%, 100%": { opacity: "0" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "float": "float 3s ease-in-out infinite",
+        "glow": "glow 2s ease-in-out infinite",
+        "blink": "blink 1s infinite",
       },
-      typography: (theme) => ({
-        purple: {
-          css: {
-            "--tw-prose-links": theme("colors.primary.DEFAULT"),
-            "--tw-prose-invert-links": theme("colors.primary.DEFAULT"),
-            a: {
-              color: "var(--tw-prose-links)",
-              "&:hover": {
-                color: "var(--tw-prose-links)",
-                opacity: 0.8,
-              },
-            },
-          },
-        },
-      }),
+      fontFamily: {
+        'mono': ['JetBrains Mono', 'monospace'],
+        'sans': ['Inter', 'sans-serif'],
+      },
+      backgroundImage: {
+        'cyber-gradient': 'var(--gradient-cyber)',
+        'dark-gradient': 'var(--gradient-dark)',
+        'glow-gradient': 'var(--gradient-glow)',
+      },
+      boxShadow: {
+        'cyber': 'var(--shadow-cyber)',
+        'glow': 'var(--shadow-glow)',
+      },
+      textShadow: {
+        'cyber': 'var(--text-glow)',
+      },
+      transitionProperty: {
+        'cyber': 'var(--transition-cyber)',
+        'glow': 'var(--transition-glow)',
+      },
     },
   },
-  plugins: [
-    require("tailwindcss-animate"), 
-    require("@tailwindcss/typography"),
-    function({ addUtilities }) {
-      addUtilities({
-        '.scrollbar-hide': {
-          /* IE and Edge */
-          '-ms-overflow-style': 'none',
-          /* Firefox */
-          'scrollbar-width': 'none',
-          /* Safari and Chrome */
-          '&::-webkit-scrollbar': {
-            display: 'none'
-          }
-        }
-      })
-    }
-  ],
+  plugins: [require("tailwindcss-animate")],
 }

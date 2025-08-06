@@ -29,12 +29,13 @@ export function SeriesCard({ seriesName, projects, index, openLightbox, openSeri
       transition={{ duration: 0.4, delay: index * 0.1 }}
     >
       <Card 
-        className={`overflow-hidden transition-all duration-300 group w-full
-          ${isRed 
-            ? "hover:shadow-red-500/20 hover:border-red-500/30" 
-            : isInfrastructure
-              ? "hover:shadow-green-500/20 hover:border-green-500/30"
-              : "hover:shadow-blue-500/20 hover:border-blue-500/30"}`}
+        className={`cyber-border bg-card/50 backdrop-blur-sm rounded-lg overflow-hidden transition-cyber ${
+          firstProject.category === "red"
+            ? ""
+            : firstProject.category === "Infrastructure"
+            ? ""
+            : ""
+        }`}
       >
         <div className="flex flex-col h-full">
           <div 
@@ -45,27 +46,22 @@ export function SeriesCard({ seriesName, projects, index, openLightbox, openSeri
               src={firstProject.image || "/images/project-placeholder.svg"}
               alt={firstProject.title}
               fill
-              className="object-cover transition-transform duration-300 group-hover:scale-105"
+              className="object-cover"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
             <div 
-              className={`absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300
-                ${isRed 
-                  ? "group-hover:from-red-900/50" 
-                  : isInfrastructure
-                    ? "group-hover:from-green-900/50"
-                    : "group-hover:from-blue-900/50"}`}
+              className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0"
             />
           </div>
           
           <CardHeader className="p-6">
             <CardTitle 
-              className={`text-base font-semibold mb-2 transition-colors duration-300
+              className={`text-base font-semibold mb-2 font-mono
                 ${isRed 
-                  ? "text-red-500 group-hover:text-red-600" 
+                  ? "text-red-500" 
                   : isInfrastructure
-                    ? "text-green-500 group-hover:text-green-600"
-                    : "text-blue-500 group-hover:text-blue-600"}`}
+                    ? "text-green-500"
+                    : "text-blue-500"}`}
             >
               {seriesName}
             </CardTitle>
@@ -100,12 +96,12 @@ export function SeriesCard({ seriesName, projects, index, openLightbox, openSeri
             
             <ul className="mt-2 space-y-1">
               {projects.slice(0, 2).map((project) => (
-                <li key={project.slug} className="text-xs text-muted-foreground">
+                <li key={project.slug} className="text-xs text-muted-foreground font-mono">
                   {project.title.includes("Part ") ? project.title : `Part ${project.series?.part}: ${project.title}`}
                 </li>
               ))}
               {totalParts > 2 && (
-                <li className="text-xs text-muted-foreground font-medium">
+                <li className="text-xs text-muted-foreground font-medium font-mono">
                   +{totalParts - 2} more {totalParts - 2 === 1 ? 'part' : 'parts'}
                 </li>
               )}
@@ -113,12 +109,12 @@ export function SeriesCard({ seriesName, projects, index, openLightbox, openSeri
           </CardContent>
           <CardFooter className="p-6 pt-0">
             <Button
-              className={`w-full text-xs shadow-lg transition-all duration-300
+              className={`w-full text-xs shadow-lg
                 ${isRed 
-                  ? "bg-red-600 hover:bg-red-700 shadow-red-500/10" 
+                  ? "bg-red-600 shadow-red-500/10" 
                   : isInfrastructure
-                    ? "bg-green-600 hover:bg-green-700 shadow-green-500/10"
-                    : "bg-blue-600 hover:bg-blue-700 shadow-blue-500/10"}`}
+                    ? "bg-green-600 shadow-green-500/10"
+                    : "bg-blue-600 shadow-blue-500/10"}`}
               size="sm"
               onClick={() => openSeriesModal(seriesName, projects)}
             >

@@ -18,7 +18,7 @@ tags:
   - "VLAN"
   - "Homelab"
   - "Blue Team"
-image: "/images/projects/hardware-lab/Image header for project 4.4.jpeg"
+image: "/images/projects/hardware-lab/Image-header-for-project-4.4.jpeg"
 series:
   name: "Project 4.4: Integrating Wazuh SIEM/XDR and Nessus in a Cybersecurity Home Lab"
   part: 1

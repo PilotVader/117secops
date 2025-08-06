@@ -1,5 +1,23 @@
 "use client"
 
+/**
+ * ARCHIVED CONTACT PAGE
+ * 
+ * This page has been archived and moved to /archived/get-in-touch
+ * The original contact form and functionality is preserved here for future use.
+ * 
+ * TO REACTIVATE:
+ * 1. Move this file back to /app/contact/page.tsx
+ * 2. Update the "Get In Touch" button links in the header to point to /contact
+ * 3. Remove the "Activate Firewall" button and firewall page
+ * 
+ * Original functionality includes:
+ * - Contact form with name, email, company, date, time, and message fields
+ * - Form submission handling
+ * - Contact information display
+ * - Emergency response section
+ */
+
 import type React from "react"
 
 import { useState } from "react"
@@ -11,7 +29,7 @@ import PageTransition from "@/components/page-transition"
 import { fadeIn, staggerContainer } from "@/lib/animations"
 import { Mail, Phone, Calendar, Clock, Send, Shield } from "lucide-react"
 
-export default function ContactPage() {
+export default function ArchivedContactPage() {
   const [date, setDate] = useState<Date>()
   const [submitted, setSubmitted] = useState(false)
   const [formData, setFormData] = useState({
@@ -44,10 +62,10 @@ export default function ContactPage() {
           animate="animate"
         >
           <motion.h1 className="text-3xl md:text-5xl font-bold tracking-tighter text-gradient" variants={fadeIn}>
-            Get in Touch
+            Get in Touch (ARCHIVED)
           </motion.h1>
           <motion.p className="text-xl text-muted-foreground max-w-3xl" variants={fadeIn}>
-            Schedule a consultation or reach out with any questions about cybersecurity services
+            This contact form has been archived. The "Get In Touch" functionality has been replaced with "Activate Firewall".
           </motion.p>
         </motion.div>
 
@@ -276,4 +294,4 @@ export default function ContactPage() {
       </div>
     </PageTransition>
   )
-}
+} 

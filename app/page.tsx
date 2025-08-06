@@ -1,5 +1,5 @@
-import { HeroSection } from "@/components/hero-section"
-import { FeaturedProjects } from "@/components/featured-projects"
+import { CyberHero } from "@/components/cyber-hero"
+import { CyberFeaturedProjects } from "@/components/cyber-featured-projects"
 import { getSortedProjectsData } from "@/lib/project"
 
 export default async function Home() {
@@ -8,9 +8,11 @@ export default async function Home() {
   const featuredProjects = projects.slice(0, 3)
 
   return (
-    <main>
-      <HeroSection />
-      <FeaturedProjects projects={featuredProjects} />
-    </main>
+    <div className="min-h-screen bg-background">
+      <main>
+        <CyberHero />
+        <CyberFeaturedProjects projects={featuredProjects} />
+      </main>
+    </div>
   )
 }

@@ -4,572 +4,372 @@ import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, Expand, X, Maximize2, ZoomIn, ZoomOut, RotateCcw } from "lucide-react"
-import { cn } from "@/lib/utils"
 
 interface InlineGalleryProps {
-  images: {
-    src: string
-    alt: string
-  }[]
+  images: string[]
   title?: string
 }
 
 export function InlineGallery({ images, title }: InlineGalleryProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isFullscreen, setIsFullscreen] = useState(false)
-  const [touchStart, setTouchStart] = useState<number | null>(null)
-  const [touchEnd, setTouchEnd] = useState<number | null>(null)
-  const [isDragging, setIsDragging] = useState(false)
-  const [dragStart, setDragStart] = useState<number | null>(null)
-  const [dragScrollLeft, setDragScrollLeft] = useState<number | null>(null)
-  const [zoom, setZoom] = useState(1)
-  const [showThumbnails, setShowThumbnails] = useState(true)
+  const [zoomLevel, setZoomLevel] = useState(1)
+  const [showThumbnails, setShowThumbnails] = useState(false)
   const [isPanning, setIsPanning] = useState(false)
-  const [panStart, setPanStart] = useState({ x: 0, y: 0 })
   const [panOffset, setPanOffset] = useState({ x: 0, y: 0 })
-  const thumbnailRef = useRef<HTMLDivElement>(null)
-  const fullscreenThumbnailRef = useRef<HTMLDivElement>(null)
-  const imageContainerRef = useRef<HTMLDivElement>(null)
+  const [lastPanPoint, setLastPanPoint] = useState({ x: 0, y: 0 })
+  const thumbnailContainerRef = useRef<HTMLDivElement>(null)
   const isInitialMount = useRef(true)
 
-  if (!images || images.length === 0) {
-    return null
+  const nextImage = () => {
+    setCurrentIndex((prev) => (prev + 1) % images.length)
   }
 
-  const handlePrevious = () => {
-    setCurrentIndex((current) => (current === 0 ? images.length - 1 : current - 1))
-    setZoom(1) // Reset zoom when changing images
-    setPanOffset({ x: 0, y: 0 }) // Reset pan when changing images
+  const prevImage = () => {
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)
   }
 
-  const handleNext = () => {
-    setCurrentIndex((current) => (current === images.length - 1 ? 0 : current + 1))
-    setZoom(1) // Reset zoom when changing images
-    setPanOffset({ x: 0, y: 0 }) // Reset pan when changing images
-  }
-
-  const handleThumbnailClick = (index: number) => {
-    if (!isDragging) {
-      setCurrentIndex(index)
-      setZoom(1) // Reset zoom when changing images
-      setPanOffset({ x: 0, y: 0 }) // Reset pan when changing images
-    }
+  const goToImage = (index: number) => {
+    setCurrentIndex(index)
   }
 
   const toggleFullscreen = () => {
-    setIsFullscreen((current) => !current)
-    setZoom(1) // Reset zoom when entering fullscreen
-    setPanOffset({ x: 0, y: 0 }) // Reset pan when entering fullscreen
-  }
-
-  const closeFullscreen = () => {
-    setIsFullscreen(false)
-    setZoom(1) // Reset zoom when closing fullscreen
-    setPanOffset({ x: 0, y: 0 }) // Reset pan when closing fullscreen
+    setIsFullscreen(!isFullscreen)
+    if (!isFullscreen) {
+      setZoomLevel(1)
+      setPanOffset({ x: 0, y: 0 })
+    }
   }
 
   const handleZoomIn = () => {
-    setZoom((current) => Math.min(current + 0.25, 3))
+    setZoomLevel((prev) => Math.min(prev + 0.5, 3))
   }
 
   const handleZoomOut = () => {
-    setZoom((current) => Math.max(current - 0.25, 0.5))
+    setZoomLevel((prev) => Math.max(prev - 0.5, 0.5))
   }
 
-  const handleResetZoom = () => {
-    setZoom(1)
+  const resetZoom = () => {
+    setZoomLevel(1)
     setPanOffset({ x: 0, y: 0 })
   }
 
   const toggleThumbnails = () => {
-    setShowThumbnails((current) => !current)
+    setShowThumbnails(!showThumbnails)
   }
 
-  // Pan functionality for zoomed images
-  const handleImageMouseDown = (e: React.MouseEvent) => {
-    if (zoom > 1) {
-      setIsPanning(true)
-      setPanStart({ x: e.clientX - panOffset.x, y: e.clientY - panOffset.y })
-      if (imageContainerRef.current) {
-        imageContainerRef.current.style.cursor = 'grabbing'
-      }
-    }
-  }
-
-  const handleImageMouseMove = (e: React.MouseEvent) => {
-    if (isPanning && zoom > 1) {
-      e.preventDefault()
-      const newX = e.clientX - panStart.x
-      const newY = e.clientY - panStart.y
-      setPanOffset({ x: newX, y: newY })
-    }
-  }
-
-  const handleImageMouseUp = () => {
-    setIsPanning(false)
-    if (imageContainerRef.current) {
-      imageContainerRef.current.style.cursor = zoom > 1 ? 'grab' : 'default'
-    }
-  }
-
-  // Mouse drag handlers for thumbnail slider
   const handleMouseDown = (e: React.MouseEvent) => {
-    if (!thumbnailRef.current) return
-    
-    setIsDragging(true)
-    setDragStart(e.clientX)
-    setDragScrollLeft(thumbnailRef.current.scrollLeft)
-    thumbnailRef.current.style.cursor = 'grabbing'
-    thumbnailRef.current.style.userSelect = 'none'
+    if (zoomLevel > 1) {
+      setIsPanning(true)
+      setLastPanPoint({ x: e.clientX, y: e.clientY })
+    }
   }
 
   const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging || !thumbnailRef.current || dragStart === null || dragScrollLeft === null) return
-    
-    e.preventDefault()
-    const x = e.clientX
-    const walk = (x - dragStart) * 2 // Scroll speed multiplier
-    thumbnailRef.current.scrollLeft = dragScrollLeft - walk
+    if (isPanning && zoomLevel > 1) {
+      const deltaX = e.clientX - lastPanPoint.x
+      const deltaY = e.clientY - lastPanPoint.y
+      setPanOffset((prev) => ({
+        x: prev.x + deltaX,
+        y: prev.y + deltaY,
+      }))
+      setLastPanPoint({ x: e.clientX, y: e.clientY })
+    }
   }
 
   const handleMouseUp = () => {
-    setIsDragging(false)
-    setDragStart(null)
-    setDragScrollLeft(null)
-    if (thumbnailRef.current) {
-      thumbnailRef.current.style.cursor = 'grab'
-      thumbnailRef.current.style.userSelect = 'auto'
-    }
+    setIsPanning(false)
   }
 
-  // Touch handlers for thumbnail slider
-  const handleThumbnailTouchStart = (e: React.TouchEvent) => {
-    if (!thumbnailRef.current) return
-    
-    setTouchStart(e.targetTouches[0].clientX)
-    setDragScrollLeft(thumbnailRef.current.scrollLeft)
-  }
-
-  const handleThumbnailTouchMove = (e: React.TouchEvent) => {
-    if (!touchStart || !thumbnailRef.current || dragScrollLeft === null) return
-    
-    e.preventDefault()
-    const x = e.targetTouches[0].clientX
-    const walk = (x - touchStart) * 2
-    thumbnailRef.current.scrollLeft = dragScrollLeft - walk
-  }
-
-  const handleThumbnailTouchEnd = () => {
-    setTouchStart(null)
-    setTouchEnd(null)
-    setDragScrollLeft(null)
-  }
-
-  // Improved thumbnail scroll behavior
-  useEffect(() => {
-    // Skip the first render to prevent auto-scrolling on mount
-    if (isInitialMount.current) {
-      isInitialMount.current = false
-      return
-    }
-
-    // Scroll inline thumbnails
-    if (thumbnailRef.current && images.length > 1) {
-      const thumbnailContainer = thumbnailRef.current
-      const activeThumbnail = thumbnailContainer.children[currentIndex] as HTMLElement
-      
-      if (activeThumbnail) {
-        activeThumbnail.scrollIntoView({
-          behavior: 'smooth',
-          block: 'nearest',
-          inline: 'center'
-        })
-      }
-    }
-
-    // Scroll fullscreen thumbnails
-    if (fullscreenThumbnailRef.current && images.length > 1) {
-      const thumbnailContainer = fullscreenThumbnailRef.current
-      const activeThumbnail = thumbnailContainer.children[currentIndex] as HTMLElement
-      
-      if (activeThumbnail) {
-        activeThumbnail.scrollIntoView({
-          behavior: 'smooth',
-          block: 'nearest',
-          inline: 'center'
-        })
-      }
-    }
-  }, [currentIndex, images.length])
-
-  // Handle keyboard navigation
-  useEffect(() => {
-    if (!isFullscreen) return
-
-    const handleKeyDown = (e: KeyboardEvent) => {
-      switch (e.key) {
-        case "ArrowLeft":
-          handlePrevious()
-          break
-        case "ArrowRight":
-          handleNext()
-          break
-        case "Escape":
-          closeFullscreen()
-          break
-        case "+":
-        case "=":
-          e.preventDefault()
-          handleZoomIn()
-          break
-        case "-":
-          e.preventDefault()
-          handleZoomOut()
-          break
-        case "0":
-          e.preventDefault()
-          handleResetZoom()
-          break
-        case "t":
-          e.preventDefault()
-          toggleThumbnails()
-          break
-      }
-    }
-
-    document.addEventListener("keydown", handleKeyDown)
-    return () => document.removeEventListener("keydown", handleKeyDown)
-  }, [isFullscreen])
-
-  // Handle touch/swipe navigation for main image
   const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStart(e.targetTouches[0].clientX)
+    if (zoomLevel > 1 && e.touches.length === 1) {
+      setIsPanning(true)
+      setLastPanPoint({ x: e.touches[0].clientX, y: e.touches[0].clientY })
+    }
   }
 
   const handleTouchMove = (e: React.TouchEvent) => {
-    setTouchEnd(e.targetTouches[0].clientX)
+    if (isPanning && zoomLevel > 1 && e.touches.length === 1) {
+      const deltaX = e.touches[0].clientX - lastPanPoint.x
+      const deltaY = e.touches[0].clientY - lastPanPoint.y
+      setPanOffset((prev) => ({
+        x: prev.x + deltaX,
+        y: prev.y + deltaY,
+      }))
+      setLastPanPoint({ x: e.touches[0].clientX, y: e.touches[0].clientY })
+    }
   }
 
   const handleTouchEnd = () => {
-    if (!touchStart || !touchEnd) return
-
-    const distance = touchStart - touchEnd
-    const isLeftSwipe = distance > 50
-    const isRightSwipe = distance < -50
-
-    if (isLeftSwipe) {
-      handleNext()
-    }
-    if (isRightSwipe) {
-      handlePrevious()
-    }
-
-    setTouchStart(null)
-    setTouchEnd(null)
+    setIsPanning(false)
   }
 
-  // Prevent body scroll when fullscreen
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (!isFullscreen) return
+
+    switch (e.key) {
+      case "Escape":
+        toggleFullscreen()
+        break
+      case "ArrowLeft":
+        prevImage()
+        break
+      case "ArrowRight":
+        nextImage()
+        break
+      case "+":
+      case "=":
+        handleZoomIn()
+        break
+      case "-":
+        handleZoomOut()
+        break
+      case "0":
+        resetZoom()
+        break
+      case "t":
+        toggleThumbnails()
+        break
+    }
+  }
+
   useEffect(() => {
     if (isFullscreen) {
-      document.body.style.overflow = "hidden"
-    } else {
-      document.body.style.overflow = "unset"
-    }
-
-    return () => {
-      document.body.style.overflow = "unset"
+      document.addEventListener("keydown", handleKeyDown)
+      return () => document.removeEventListener("keydown", handleKeyDown)
     }
   }, [isFullscreen])
+
+  useEffect(() => {
+    if (!isInitialMount.current && thumbnailContainerRef.current) {
+      const activeThumbnail = thumbnailContainerRef.current.children[currentIndex] as HTMLElement
+      if (activeThumbnail) {
+        activeThumbnail.scrollIntoView({
+          behavior: "smooth",
+          inline: "center",
+          block: "nearest",
+        })
+      }
+    } else {
+      isInitialMount.current = false
+    }
+  }, [currentIndex])
+
+  if (!images || images.length === 0) return null
 
   return (
     <>
       {/* Inline Gallery */}
       <div className="my-8">
-        {title && (
-          <h3 className="text-lg font-semibold mb-4 text-gray-700 dark:text-gray-300">
-            {title}
-          </h3>
-        )}
-        
-        {/* Main Gallery Container */}
-        <div className="relative group">
-          {/* Navigation Arrows */}
-          {images.length > 1 && (
-            <>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="absolute left-2 top-1/2 z-10 h-10 w-10 -translate-y-1/2 rounded-full bg-black/20 backdrop-blur-sm opacity-0 transition-opacity group-hover:opacity-100 hover:bg-black/40 text-white"
-                onClick={handlePrevious}
-              >
-                <ChevronLeft className="h-5 w-5" />
-              </Button>
-              
-              <Button
-                variant="ghost"
-                size="icon"
-                className="absolute right-2 top-1/2 z-10 h-10 w-10 -translate-y-1/2 rounded-full bg-black/20 backdrop-blur-sm opacity-0 transition-opacity group-hover:opacity-100 hover:bg-black/40 text-white"
-                onClick={handleNext}
-              >
-                <ChevronRight className="h-5 w-5" />
-              </Button>
-            </>
-          )}
-
-          {/* Expand Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="absolute right-2 top-2 z-10 h-8 w-8 rounded-full bg-black/20 backdrop-blur-sm opacity-0 transition-opacity group-hover:opacity-100 hover:bg-black/40 text-white"
-            onClick={toggleFullscreen}
-          >
-            <Maximize2 className="h-4 w-4" />
-          </Button>
-
-          {/* Single Image Display */}
-          <div 
-            className="relative aspect-[16/10] w-full overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800"
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
-          >
+        <div className="relative bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
+          {/* Main Image */}
+          <div className="relative aspect-video">
             <Image
-              src={images[currentIndex].src}
-              alt={images[currentIndex].alt}
+              src={images[currentIndex]}
+              alt={`${title || "Gallery"} image ${currentIndex + 1}`}
               fill
-              className="object-contain transition-transform duration-300"
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 70vw"
-              priority
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
             />
-          </div>
+            
+            {/* Navigation Arrows */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-black/20 backdrop-blur-sm text-white"
+              onClick={prevImage}
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </Button>
+            
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-black/20 backdrop-blur-sm text-white"
+              onClick={nextImage}
+            >
+              <ChevronRight className="h-5 w-5" />
+            </Button>
 
-          {/* Image Counter */}
-          {images.length > 1 && (
+            {/* Expand Button */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute right-2 top-2 z-10 h-8 w-8 rounded-full bg-black/20 backdrop-blur-sm text-white"
+              onClick={toggleFullscreen}
+            >
+              <Expand className="h-4 w-4" />
+            </Button>
+
+            {/* Image Counter */}
             <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-sm text-white text-sm px-3 py-1 rounded-full">
               {currentIndex + 1} of {images.length}
             </div>
-          )}
-        </div>
+          </div>
 
-        {/* Thumbnail Slider */}
-        {images.length > 1 && (
-          <div className="mt-4">
+          {/* Thumbnail Strip */}
+          <div className="p-4 bg-gray-50 dark:bg-gray-900">
             <div
-              ref={thumbnailRef}
-              className="flex space-x-2 overflow-x-auto snap-x snap-mandatory pb-2 cursor-grab active:cursor-grabbing select-none smooth-scroll"
-              onMouseDown={handleMouseDown}
-              onMouseMove={handleMouseMove}
-              onMouseUp={handleMouseUp}
-              onMouseLeave={handleMouseUp}
-              onTouchStart={handleThumbnailTouchStart}
-              onTouchMove={handleThumbnailTouchMove}
-              onTouchEnd={handleThumbnailTouchEnd}
+              ref={thumbnailContainerRef}
+              className="flex gap-2 overflow-x-auto scrollbar-hide"
             >
               {images.map((image, index) => (
-                <button
+                <div
                   key={index}
-                  onClick={() => handleThumbnailClick(index)}
-                  className={cn(
-                    "relative flex-shrink-0 snap-start w-20 md:w-24 lg:w-28 h-16 md:h-18 lg:h-20 overflow-hidden rounded-md transition-all duration-200 hover:scale-105 bg-gray-200 dark:bg-gray-700",
-                    currentIndex === index
-                      ? "ring-2 ring-purple-500 ring-offset-2 ring-offset-white dark:ring-offset-gray-900 scale-105"
-                      : "ring-1 ring-gray-300 dark:ring-gray-600 hover:ring-2 hover:ring-purple-300 dark:hover:ring-purple-400"
-                  )}
+                  className={`flex-shrink-0 w-28 h-20 rounded-md transition-all duration-200 bg-gray-200 dark:bg-gray-700 ${
+                    index === currentIndex
+                      ? "ring-2 ring-purple-500 ring-offset-2"
+                      : "ring-1 ring-gray-300 dark:ring-gray-600"
+                  }`}
                 >
                   <Image
-                    src={image.src}
-                    alt={image.alt}
+                    src={image}
+                    alt={`Thumbnail ${index + 1}`}
                     width={112}
                     height={80}
-                    className="w-full h-full object-cover object-center"
-                    sizes="(max-width: 768px) 80px, (max-width: 1024px) 96px, 112px"
+                    className="w-full h-full object-cover object-center rounded-md cursor-pointer"
+                    onClick={() => goToImage(index)}
                   />
-                  {/* Active indicator overlay */}
-                  {currentIndex === index && (
-                    <div className="absolute inset-0 bg-purple-500/20" />
-                  )}
-                </button>
+                </div>
               ))}
             </div>
           </div>
-        )}
+        </div>
       </div>
 
       {/* Fullscreen Modal */}
       {isFullscreen && (
-        <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4">
-          {/* Top Controls Bar */}
-          <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10">
-            <div className="flex items-center space-x-2">
-              {/* Zoom Controls */}
+        <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center">
+          <div className="relative w-full h-full flex items-center justify-center">
+            {/* Main Image */}
+            <div
+              className="relative w-full h-full flex items-center justify-center"
+              onMouseDown={handleMouseDown}
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUp}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
+              <Image
+                src={images[currentIndex]}
+                alt={`${title || "Gallery"} image ${currentIndex + 1}`}
+                fill
+                className="object-contain"
+                style={{
+                  transform: `scale(${zoomLevel}) translate(${panOffset.x / zoomLevel}px, ${panOffset.y / zoomLevel}px)`,
+                  cursor: isPanning ? "grabbing" : zoomLevel > 1 ? "grab" : "default",
+                }}
+                sizes="100vw"
+              />
+            </div>
+
+            {/* Navigation Arrows */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute left-4 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-white/10 backdrop-blur-sm text-white"
+              onClick={prevImage}
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </Button>
+            
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute right-4 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-white/10 backdrop-blur-sm text-white"
+              onClick={nextImage}
+            >
+              <ChevronRight className="h-6 w-6" />
+            </Button>
+
+            {/* Close Button */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute right-4 top-4 h-10 w-10 rounded-full bg-white/10 backdrop-blur-sm text-white"
+              onClick={toggleFullscreen}
+            >
+              <X className="h-5 w-5" />
+            </Button>
+
+            {/* Zoom Controls */}
+            <div className="absolute left-4 top-4 flex gap-2">
               <Button
                 variant="ghost"
                 size="icon"
-                className="h-10 w-10 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white"
-                onClick={handleZoomOut}
-                disabled={zoom <= 0.5}
-              >
-                <ZoomOut className="h-5 w-5" />
-              </Button>
-              
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-10 w-10 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white"
-                onClick={handleResetZoom}
-              >
-                <RotateCcw className="h-5 w-5" />
-              </Button>
-              
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-10 w-10 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white"
+                className="h-10 w-10 rounded-full bg-white/10 backdrop-blur-sm text-white"
                 onClick={handleZoomIn}
-                disabled={zoom >= 3}
               >
                 <ZoomIn className="h-5 w-5" />
               </Button>
-              
-              {/* Zoom Level Display */}
-              <span className="text-white text-sm bg-black/50 backdrop-blur-sm px-2 py-1 rounded">
-                {Math.round(zoom * 100)}%
-              </span>
-            </div>
-            
-            <div className="flex items-center space-x-2">
-              {/* Toggle Thumbnails Button */}
               <Button
                 variant="ghost"
                 size="icon"
-                className="h-10 w-10 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white"
-                onClick={toggleThumbnails}
+                className="h-10 w-10 rounded-full bg-white/10 backdrop-blur-sm text-white"
+                onClick={handleZoomOut}
               >
-                <span className="text-xs font-medium">T</span>
+                <ZoomOut className="h-5 w-5" />
               </Button>
-              
-              {/* Close Button */}
               <Button
                 variant="ghost"
                 size="icon"
-                className="h-10 w-10 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white"
-                onClick={closeFullscreen}
+                className="h-10 w-10 rounded-full bg-white/10 backdrop-blur-sm text-white"
+                onClick={resetZoom}
               >
-                <X className="h-6 w-6" />
+                <RotateCcw className="h-5 w-5" />
               </Button>
             </div>
-          </div>
 
-          {/* Navigation Arrows */}
-          {images.length > 1 && (
-            <>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="absolute left-4 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white z-10"
-                onClick={handlePrevious}
-              >
-                <ChevronLeft className="h-8 w-8" />
-              </Button>
-              
-              <Button
-                variant="ghost"
-                size="icon"
-                className="absolute right-4 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white z-10"
-                onClick={handleNext}
-              >
-                <ChevronRight className="h-8 w-8" />
-              </Button>
-            </>
-          )}
+            {/* Zoom Level Display */}
+            {zoomLevel !== 1 && (
+              <div className="absolute left-4 bottom-4 bg-black/50 backdrop-blur-sm text-white text-sm px-3 py-1 rounded-full">
+                {Math.round(zoomLevel * 100)}%
+              </div>
+            )}
 
-          {/* Fullscreen Image */}
-          <div 
-            className="relative w-full h-full max-w-6xl max-h-[90vh] flex items-center justify-center overflow-hidden"
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
-          >
-            <div 
-              ref={imageContainerRef}
-              className="relative w-full h-full flex items-center justify-center"
-              style={{
-                transform: `scale(${zoom}) translate(${panOffset.x / zoom}px, ${panOffset.y / zoom}px)`,
-                transition: isPanning ? 'none' : 'transform 0.2s ease-out',
-                cursor: zoom > 1 ? (isPanning ? 'grabbing' : 'grab') : 'default'
-              }}
-              onMouseDown={handleImageMouseDown}
-              onMouseMove={handleImageMouseMove}
-              onMouseUp={handleImageMouseUp}
-              onMouseLeave={handleImageMouseUp}
-            >
-              <Image
-                src={images[currentIndex].src}
-                alt={images[currentIndex].alt}
-                fill
-                className="object-contain"
-                sizes="100vw"
-                priority
-              />
-            </div>
-          </div>
-
-          {/* Fullscreen Image Counter */}
-          {images.length > 1 && (
-            <div className="absolute bottom-20 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-sm text-white text-lg px-4 py-2 rounded-full z-10">
+            {/* Image Counter */}
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-sm text-white text-sm px-3 py-1 rounded-full">
               {currentIndex + 1} of {images.length}
             </div>
-          )}
 
-          {/* Image Caption */}
-          <div className="absolute bottom-32 left-1/2 -translate-x-1/2 max-w-2xl text-center z-10">
-            <p className="text-white text-sm bg-black/50 backdrop-blur-sm px-4 py-2 rounded-lg">
-              {images[currentIndex].alt}
-            </p>
-          </div>
+            {/* Thumbnails Toggle */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="absolute right-4 bottom-4 h-10 w-10 rounded-full bg-white/10 backdrop-blur-sm text-white"
+              onClick={toggleThumbnails}
+            >
+              <Maximize2 className="h-5 w-5" />
+            </Button>
 
-          {/* Fullscreen Thumbnails */}
-          {showThumbnails && images.length > 1 && (
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-full max-w-4xl px-4 z-10">
-              <div
-                ref={fullscreenThumbnailRef}
-                className="flex space-x-2 overflow-x-auto snap-x snap-mandatory pb-2 cursor-grab active:cursor-grabbing select-none smooth-scroll"
-                onMouseDown={handleMouseDown}
-                onMouseMove={handleMouseMove}
-                onMouseUp={handleMouseUp}
-                onMouseLeave={handleMouseUp}
-                onTouchStart={handleThumbnailTouchStart}
-                onTouchMove={handleThumbnailTouchMove}
-                onTouchEnd={handleThumbnailTouchEnd}
-              >
-                {images.map((image, index) => (
-                  <button
-                    key={index}
-                    onClick={() => handleThumbnailClick(index)}
-                    className={cn(
-                      "relative flex-shrink-0 snap-start w-16 md:w-20 lg:w-24 h-12 md:h-15 lg:h-18 overflow-hidden rounded-md transition-all duration-200 hover:scale-105 bg-gray-800",
-                      currentIndex === index
-                        ? "ring-2 ring-white ring-offset-2 ring-offset-black scale-105"
-                        : "ring-1 ring-white/30 hover:ring-2 hover:ring-white/50"
-                    )}
-                  >
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      width={96}
-                      height={72}
-                      className="w-full h-full object-cover object-center"
-                      sizes="(max-width: 768px) 64px, (max-width: 1024px) 80px, 96px"
-                    />
-                    {/* Active indicator overlay */}
-                    {currentIndex === index && (
-                      <div className="absolute inset-0 bg-white/20" />
-                    )}
-                  </button>
-                ))}
+            {/* Fullscreen Thumbnails */}
+            {showThumbnails && (
+              <div className="absolute bottom-20 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-sm rounded-lg p-4">
+                <div className="flex gap-2 max-w-96 overflow-x-auto">
+                  {images.map((image, index) => (
+                    <div
+                      key={index}
+                      className={`flex-shrink-0 w-24 h-18 rounded-md transition-all duration-200 bg-gray-800 ${
+                        index === currentIndex
+                          ? "ring-2 ring-white/50"
+                          : "ring-1 ring-white/30"
+                      }`}
+                    >
+                      <Image
+                        src={image}
+                        alt={`Thumbnail ${index + 1}`}
+                        width={96}
+                        height={72}
+                        className="w-full h-full object-cover object-center rounded-md cursor-pointer"
+                        onClick={() => goToImage(index)}
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       )}
     </>
