@@ -13,6 +13,7 @@ import { fadeIn, staggerContainer } from "@/lib/animations"
 import { ProjectLightbox } from "@/components/project-lightbox"
 import { ProjectSeriesModal } from "@/components/project-series-modal"
 import type { Project } from "@/lib/project"
+import { Shield, Terminal, Zap, ArrowRight } from "lucide-react"
 
 // Helper function to group projects by series
 function groupProjectsBySeries(projects: Project[]): {
@@ -133,22 +134,22 @@ export default function ProjectsClientPage({ initialProjects }: { initialProject
             </TabsList>
           </motion.div>
 
-          {["all", "blue", "red", "Cloud", "Infrastructure"].map((category) => (
-            <TabsContent key={category} value={category} className="space-y-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-8">
-                {Object.entries(filterProjects(category).seriesMap).map(([seriesName, seriesProjects], index) => (
-                  <SeriesCard
-                    key={seriesName}
-                    seriesName={seriesName}
-                    projects={seriesProjects}
-                    index={index}
-                    openLightbox={openLightbox}
-                    openSeriesModal={openSeriesModal}
-                  />
-                ))}
-              </div>
-            </TabsContent>
-          ))}
+                     {["all", "blue", "red", "Cloud", "Infrastructure"].map((category) => (
+             <TabsContent key={category} value={category} className="space-y-8">
+               <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-8 items-stretch">
+                 {Object.entries(filterProjects(category).seriesMap).map(([seriesName, seriesProjects], index) => (
+                   <SeriesCard
+                     key={seriesName}
+                     seriesName={seriesName}
+                     projects={seriesProjects}
+                     index={index}
+                     openLightbox={openLightbox}
+                     openSeriesModal={openSeriesModal}
+                   />
+                 ))}
+               </div>
+             </TabsContent>
+           ))}
         </Tabs>
 
         {/* Modals */}
@@ -181,106 +182,117 @@ interface SeriesCardProps {
 
 function SeriesCard({ seriesName, projects, index, openLightbox, openSeriesModal }: SeriesCardProps) {
   const firstProject = projects[0]
-  const isRed = firstProject.category === "red"
-  const isInfrastructure = firstProject.category === "Infrastructure"
-  const accentColor = isRed ? "red" : isInfrastructure ? "green" : "blue"
   const totalParts = projects.length
 
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case "red":
+        return <Zap className="w-4 h-4" />
+      case "Infrastructure":
+        return <Shield className="w-4 h-4" />
+      default:
+        return <Terminal className="w-4 h-4" />
+    }
+  }
+
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case "red":
+        return { color: '#dc2626' } // red-600
+      case "Infrastructure":
+        return { color: '#16a34a' } // green-600
+      default:
+        return { color: '#2563eb' } // blue-600
+    }
+  }
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: index * 0.1 }}
-    >
-      <Card 
-        className={`cyber-border bg-card/50 backdrop-blur-sm rounded-lg overflow-hidden transition-cyber ${
-          firstProject.category === "red"
-            ? ""
-            : firstProject.category === "Infrastructure"
-            ? ""
-            : ""
-        }`}
-      >
-        <div className="flex flex-col h-full">
-          <Link href={`/projects/${firstProject.slug}/`}>
-            <div className="relative h-[200px] cursor-pointer">
-              <Image
-                src={firstProject.image || "/images/project-placeholder.svg"}
-                alt={firstProject.title}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
-              <div 
-                className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0"
-              />
-            </div>
-          </Link>
-          
-          <CardHeader className="p-6">
-            <CardTitle 
-              className={`text-base font-semibold mb-2 font-mono
-                ${isRed 
-                  ? "text-red-500" 
-                  : isInfrastructure
-                    ? "text-green-500"
-                    : "text-blue-500"}`}
-            >
-              {seriesName}
-            </CardTitle>
-            <CardDescription className="text-sm line-clamp-2">
-              {firstProject.description}
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="px-6 pb-6 mt-3 flex-1">
-            <div className="flex flex-wrap gap-1.5 mb-3">
-              {firstProject.tags?.slice(0, 3).map((tag) => (
-                <Badge 
-                  key={tag} 
-                  variant="outline" 
-                  className={`text-xs
-                    ${isRed 
-                      ? "bg-red-500/5 border-red-500/20" 
-                      : isInfrastructure
-                        ? "bg-green-500/5 border-green-500/20"
-                        : "bg-blue-500/5 border-blue-500/20"}`}
-                >
-                  {tag}
-                </Badge>
-              ))}
-              {firstProject.tags && firstProject.tags.length > 3 && (
-                <Badge variant="outline" className="text-xs">+{firstProject.tags.length - 3} more</Badge>
-              )}
-            </div>
-            
-            <p className="text-sm text-muted-foreground">
-              {totalParts} {totalParts === 1 ? 'Part' : 'Parts'}
-            </p>
-            
-            <ul className="mt-2 space-y-1">
-              {projects.slice(0, 2).map((project) => (
-                <li key={project.slug} className="text-xs text-muted-foreground font-mono">
-                  {project.title.includes("Part ") ? project.title : `Part ${project.series?.part}: ${project.title}`}
-                </li>
-              ))}
-              {totalParts > 2 && (
-                <li className="text-xs text-muted-foreground font-medium font-mono">
-                  +{totalParts - 2} more {totalParts - 2 === 1 ? 'part' : 'parts'}
-                </li>
-              )}
-            </ul>
-          </CardContent>
-          <CardFooter className="px-6 pb-6">
-            <Button
-              variant="outline"
-              className="w-full"
-              onClick={() => openSeriesModal(seriesName, projects)}
-            >
-              View All Parts
-            </Button>
-          </CardFooter>
-        </div>
-      </Card>
-    </motion.div>
+         <motion.div
+       key={seriesName}
+       initial={{ opacity: 0, y: 30 }}
+       animate={{ opacity: 1, y: 0 }}
+       transition={{ duration: 0.5, delay: index * 0.1 }}
+       className="relative h-full"
+     >
+       <div className="cyber-border bg-card/50 backdrop-blur-sm rounded-lg overflow-hidden h-full flex flex-col">
+         {/* Project Image */}
+         <div className="aspect-video relative overflow-hidden">
+           <Link href={`/projects/${firstProject.slug}/`}>
+             <Image
+               src={firstProject.image || "/images/project-placeholder.svg"}
+               alt={firstProject.title}
+               fill
+               className="object-cover"
+             />
+           </Link>
+         </div>
+         
+         {/* Project Content */}
+         <div className="p-6 flex flex-col flex-1">
+           {/* Category Badge */}
+           <div className="flex items-center gap-2 mb-3">
+             <Badge 
+               variant="outline" 
+               className="cyber-border bg-card/30"
+             >
+               <span style={getCategoryColor(firstProject.category || 'blue')} className="flex items-center">
+                 {getCategoryIcon(firstProject.category || 'blue')}
+                 {firstProject.category === "red" ? "Red Team" : 
+                  firstProject.category === "Infrastructure" ? "Infrastructure" : "Blue Team"}
+               </span>
+             </Badge>
+           </div>
+           
+           {/* Title */}
+           <h3 className="text-xl font-semibold mb-3 font-mono text-foreground">
+             {seriesName}
+           </h3>
+           
+           {/* Description */}
+           <p className="text-muted-foreground mb-4 line-clamp-2">
+             {firstProject.description}
+           </p>
+           
+           {/* Part Number */}
+           <div className="mb-4">
+             <p className="text-sm text-muted-foreground font-mono">
+               {totalParts} {totalParts === 1 ? 'Part' : 'Parts'}
+             </p>
+           </div>
+           
+           {/* Tags */}
+           {firstProject.tags && firstProject.tags.length > 0 && (
+             <div className="flex flex-wrap gap-1 mb-4">
+               {firstProject.tags.filter(tag => tag).slice(0, 3).map((tag, tagIndex) => (
+                 <span
+                   key={`${tag}-${tagIndex}`}
+                   className="text-xs px-2 py-1 bg-gray-100 dark:bg-muted/50 rounded border border-gray-200 dark:border-border text-gray-800 dark:text-muted-foreground"
+                 >
+                   {tag}
+                 </span>
+               ))}
+               {firstProject.tags.filter(tag => tag).length > 3 && (
+                 <span className="text-xs px-2 py-1 bg-gray-100 dark:bg-muted/50 rounded border border-gray-200 dark:border-border text-gray-800 dark:text-muted-foreground">
+                   +{firstProject.tags.filter(tag => tag).length - 3}
+                 </span>
+               )}
+             </div>
+           )}
+           
+           {/* Read More Button */}
+           <div className="mt-auto">
+             <Button
+               variant="outline"
+               size="sm"
+               className="w-full cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white"
+               onClick={() => openSeriesModal(seriesName, projects)}
+             >
+               <span>View All Parts</span>
+               <ArrowRight className="w-4 h-4 ml-2" />
+             </Button>
+           </div>
+         </div>
+       </div>
+     </motion.div>
   )
 }

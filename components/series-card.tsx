@@ -72,21 +72,17 @@ export function SeriesCard({ seriesName, projects, index, openLightbox, openSeri
           <CardContent className="px-6 pb-6 mt-3 flex-1">
             <div className="flex flex-wrap gap-1.5 mb-3">
               {firstProject.tags?.slice(0, 3).map((tag) => (
-                <Badge 
-                  key={tag} 
-                  variant="outline" 
-                  className={`text-xs
-                    ${isRed 
-                      ? "bg-red-500/5 border-red-500/20" 
-                      : isInfrastructure
-                        ? "bg-green-500/5 border-green-500/20"
-                        : "bg-blue-500/5 border-blue-500/20"}`}
+                <span
+                  key={tag}
+                  className="text-xs px-2 py-1 bg-gray-100 dark:bg-muted/50 rounded border border-gray-200 dark:border-border text-gray-800 dark:text-muted-foreground"
                 >
                   {tag}
-                </Badge>
+                </span>
               ))}
               {firstProject.tags && firstProject.tags.length > 3 && (
-                <Badge variant="outline" className="text-xs">+{firstProject.tags.length - 3} more</Badge>
+                <span className="text-xs px-2 py-1 bg-gray-100 dark:bg-muted/50 rounded border border-gray-200 dark:border-border text-gray-800 dark:text-muted-foreground">
+                  +{firstProject.tags.length - 3} more
+                </span>
               )}
             </div>
             

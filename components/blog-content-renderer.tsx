@@ -122,11 +122,18 @@ export function BlogContentRenderer({
           // Get images from the predefined galleries
           const galleryImages = getGalleryImages(imagesKey)
           
-          if (galleryImages) {
+                               if (galleryImages) {
+            // Get descriptive image names
+            const imageNames = getImageNames(imagesKey)
+            
+            // Debug: Log the image names to see if they're being passed correctly
+            console.log('Gallery:', imagesKey, 'Image Names:', imageNames)
+            
             elements.push(
               <InlineGallery 
                 key={`component-${i}`} 
                 images={galleryImages}
+                imageNames={imageNames}
                 title={title || undefined}
               />
             )
@@ -197,6 +204,66 @@ export function BlogContentRenderer({
     }
 
     return galleries[imagesKey] || []
+  }
+
+  // Function to get descriptive image names based on key
+  const getImageNames = (imagesKey: string) => {
+    const imageNames: { [key: string]: string[] } = {
+      "wazuh-server-deployment": [
+        "Ubuntu Server Wazuh Summary",
+        "Wazuh Installation on Ubuntu Server",
+        "SSH Connection to Wazuh Server",
+        "Wazuh Installation Process",
+        "Wazuh Successfully Installed",
+        "Wazuh Login Interface",
+        "Wazuh Dashboard Overview"
+      ],
+      "agent-installation": [
+        "Agent Installation Commands",
+        "Wazuh Agent Installation Process",
+        "Agent Installed on Parrot OS",
+        "Agents Installed on Docker Server",
+        "Installing Dependencies on Docker",
+        "Dependencies Installation Progress",
+        "OSSEC Configuration File Setup",
+        "Agent Status Verification",
+        "Log Forwarding to Wazuh Server"
+      ],
+      "opnsense-setup": [
+        "Enabling Secure Shell on OPNsense",
+        "SSH Connection to Firewall",
+        "FreeBSD Configuration Check",
+        "Editing FreeBSD Configuration",
+        "FreeBSD Configuration Update",
+        "Searching for Wazuh Agent",
+        "Installing Wazuh Agent on OPNsense",
+        "Wazuh Agent Installation Success",
+        "Timezone and OSSEC Config Setup",
+        "OSSEC Configuration with Wazuh IP",
+        "Enabling Wazuh Agent on Firewall",
+        "Wazuh Agent Service Started",
+        "Agent Dashboard Verification"
+      ],
+      "nessus-deployment": [
+        "Creating Ubuntu VM for Nessus",
+        "IPv4 Network Configuration",
+        "Ubuntu Server VM Installation",
+        "Nessus Download Link",
+        "SSH and Nessus Download",
+        "Nessus Package Extraction",
+        "Starting Nessus Service",
+        "Nessus Web Interface Access",
+        "Nessus Plugin Download",
+        "Nessus Dashboard Loaded",
+        "Setting Up New Scan",
+        "Simple Scan Configuration",
+        "Scan Results Overview 1",
+        "Scan Results Overview 2",
+        "Scan Results Overview 3"
+      ]
+    }
+
+    return imageNames[imagesKey] || []
   }
 
   return (

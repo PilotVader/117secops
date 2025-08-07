@@ -85,7 +85,7 @@ export function CyberHero() {
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 font-mono">
             <span className="text-cyber-glow">Hi, I'm</span>
             <br />
-            <span className="bg-cyber-gradient bg-clip-text text-transparent">
+            <span className="text-cyber-glow">
               Samson Otori
             </span>
           </h1>
@@ -109,21 +109,20 @@ export function CyberHero() {
             <Link href="/projects">
               <Button 
                 size="lg" 
-                className="cyber-border bg-primary text-primary-foreground"
+                className="cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white"
               >
                 <Terminal className="w-5 h-5 mr-2" />
                 Explore My Work
               </Button>
             </Link>
-            <Button 
-              variant="outline" 
-              size="lg"
-              onClick={() => setShowTerminal(true)}
-              className="cyber-border bg-card/50 backdrop-blur-sm border-red-500 text-red-500"
-            >
-              <Shield className="w-5 h-5 mr-2" />
-              Terminal Mode
-            </Button>
+                         <Button 
+               size="lg"
+               onClick={() => setShowTerminal(true)}
+               className="cyber-border bg-transparent text-foreground hover:bg-red-600 hover:text-white"
+             >
+               <Shield className="w-5 h-5 mr-2" />
+               Terminal Mode
+             </Button>
           </div>
 
           {/* Scroll indicator */}

@@ -72,11 +72,24 @@
   /* Light mode (for contrast testing) */
   .light {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 220 15% 15%;
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --card-foreground: 220 15% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+    --primary: 220 15% 15%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 15% 35%;
+    --accent: 220 15% 95%;
+    --accent-foreground: 220 15% 15%;
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 15% 85%;
+    --input: 220 15% 95%;
+    --ring: 220 15% 15%;
   }
 }
 
@@ -89,9 +102,45 @@
     @apply bg-background text-foreground font-mono;
     font-family: 'Inter', 'JetBrains Mono', monospace;
     background: hsl(var(--background));
-    background-image: var(--gradient-dark);
     min-height: 100vh;
     scroll-behavior: auto;
+  }
+
+  .dark body {
+    background-image: var(--gradient-dark);
+  }
+
+  /* Light mode text improvements */
+  .light {
+    color-scheme: light;
+  }
+
+  .light .text-muted-foreground {
+    color: hsl(220 15% 35%) !important;
+  }
+
+  .light .text-foreground {
+    color: hsl(220 15% 15%) !important;
+  }
+
+  .light .card-foreground {
+    color: hsl(220 15% 15%) !important;
+  }
+
+  .light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
+    color: hsl(220 15% 15%) !important;
+  }
+
+  .light p {
+    color: hsl(220 15% 25%) !important;
+  }
+
+  .light .text-sm {
+    color: hsl(220 15% 30%) !important;
+  }
+
+  .light .text-xs {
+    color: hsl(220 15% 35%) !important;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -755,4 +804,16 @@ html {
   100% {
     background-position: 0% 50%;
   }
+}
+
+/* Override ShadCN dropdown menu hover styles */
+[data-radix-popper-content-wrapper] [data-radix-dropdown-menu-item]:hover {
+  background-color: rgb(147 51 234) !important;
+  color: white !important;
+}
+
+/* Alternative approach for dropdown menu items */
+.dropdown-menu-item-hover:hover {
+  background-color: rgb(147 51 234) !important;
+  color: white !important;
 }

@@ -7,7 +7,7 @@ import PageTransition from "@/components/page-transition"
 import { motion } from "framer-motion"
 import { fadeIn, staggerContainer } from "@/lib/animations"
 import Background3D from "@/components/3d-background"
-import Card3D from "@/components/3d-card"
+import { Card } from "@/components/ui/card"
 import { useState } from "react"
 import { X } from "lucide-react"
 
@@ -46,7 +46,7 @@ export default function PortfolioPage() {
           </motion.div>
 
           <TabsContent value="certifications" className="space-y-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
               {certifications.map((cert, index) => (
                 <CertificationCard
                   key={index}
@@ -59,7 +59,7 @@ export default function PortfolioPage() {
           </TabsContent>
 
           <TabsContent value="achievements" className="space-y-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
               {achievements.map((achievement, index) => (
                 <AchievementCard key={index} achievement={achievement} index={index} />
               ))}
@@ -82,7 +82,7 @@ export default function PortfolioPage() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
             {awards.map((award, index) => (
               <AwardCard key={index} award={award} index={index} />
             ))}
@@ -142,10 +142,11 @@ function CertificationCard({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
       viewport={{ once: true }}
+      className="h-full flex"
     >
-      <Card3D>
+      <Card className="h-full w-full flex flex-col cyber-border bg-card/50 backdrop-blur-sm">
         <div
-          className="h-40 relative bg-muted flex items-center justify-center p-6 overflow-hidden cursor-pointer"
+          className="h-40 relative bg-muted flex items-center justify-center p-6 overflow-hidden cursor-pointer flex-shrink-0"
           onClick={() => setSelectedCertificate({ name: certification.name, image: certification.image })}
         >
           <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-all duration-400" />
@@ -157,7 +158,7 @@ function CertificationCard({
             className="object-contain max-h-full relative z-10 transition-transform duration-400 group-hover:scale-105"
           />
         </div>
-        <CardHeader>
+        <CardHeader className="flex-shrink-0">
           <CardTitle className="text-xl group-hover:text-primary transition-colors duration-400">
             {certification.name}
           </CardTitle>
@@ -165,23 +166,23 @@ function CertificationCard({
             {certification.organization} • {certification.year}
           </CardDescription>
         </CardHeader>
-        <CardContent>
-          <p className="text-muted-foreground text-sm">{certification.description}</p>
+        <CardContent className="flex-1 flex flex-col">
+          <p className="text-muted-foreground text-sm flex-1 line-clamp-4">{certification.description}</p>
           {certification.certificateUrl && (
             <a
               href={certification.certificateUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center text-sm text-primary hover:text-primary/80 transition-colors duration-200 mt-2"
+              className="inline-flex items-center text-sm text-primary hover:text-primary/80 transition-colors duration-200 mt-2 flex-shrink-0"
             >
               🔗 View Certificate
             </a>
-          )}
-        </CardContent>
-      </Card3D>
-    </motion.div>
-  )
-}
+                     )}
+         </CardContent>
+       </Card>
+     </motion.div>
+   )
+ }
 
 interface Achievement {
   title: string
@@ -197,10 +198,11 @@ function AchievementCard({ achievement, index }: { achievement: Achievement; ind
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
       viewport={{ once: true }}
+      className="h-full flex"
     >
-      <Card3D>
-        <div className="flex flex-col md:flex-row">
-          <div className="md:w-1/3 relative overflow-hidden">
+      <Card className="h-full w-full flex flex-col cyber-border bg-card/50 backdrop-blur-sm">
+        <div className="flex flex-col md:flex-row h-full">
+          <div className="md:w-1/3 relative overflow-hidden flex-shrink-0">
             <Image
               src={achievement.image || "/placeholder.svg"}
               alt={achievement.title}
@@ -210,22 +212,22 @@ function AchievementCard({ achievement, index }: { achievement: Achievement; ind
             />
             <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-all duration-400" />
           </div>
-          <div className="md:w-2/3">
-            <CardHeader>
+          <div className="md:w-2/3 flex flex-col flex-1">
+            <CardHeader className="flex-shrink-0">
               <CardTitle className="text-xl group-hover:text-primary transition-colors duration-400">
                 {achievement.title}
               </CardTitle>
               <CardDescription className="text-primary/80">{achievement.date}</CardDescription>
             </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">{achievement.description}</p>
+            <CardContent className="flex-1 flex flex-col">
+              <p className="text-muted-foreground flex-1 line-clamp-4">{achievement.description}</p>
             </CardContent>
-          </div>
-        </div>
-      </Card3D>
-    </motion.div>
-  )
-}
+                     </div>
+         </div>
+       </Card>
+     </motion.div>
+   )
+ }
 
 interface Award {
   title: string
@@ -242,9 +244,10 @@ function AwardCard({ award, index }: { award: Award; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
       viewport={{ once: true }}
+      className="h-full flex"
     >
-      <Card3D>
-        <div className="h-40 relative bg-muted flex items-center justify-center p-6 overflow-hidden">
+      <Card className="h-full w-full flex flex-col cyber-border bg-card/50 backdrop-blur-sm">
+        <div className="h-40 relative bg-muted flex items-center justify-center p-6 overflow-hidden flex-shrink-0">
           <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-all duration-400" />
           <Image
             src={award.image || "/placeholder.svg"}
@@ -254,7 +257,7 @@ function AwardCard({ award, index }: { award: Award; index: number }) {
             className="object-contain max-h-full relative z-10 transition-transform duration-400 group-hover:scale-105"
           />
         </div>
-        <CardHeader>
+        <CardHeader className="flex-shrink-0">
           <CardTitle className="text-xl group-hover:text-primary transition-colors duration-400">
             {award.title}
           </CardTitle>
@@ -262,13 +265,13 @@ function AwardCard({ award, index }: { award: Award; index: number }) {
             {award.organization} • {award.year}
           </CardDescription>
         </CardHeader>
-        <CardContent>
-          <p className="text-muted-foreground text-sm">{award.description}</p>
-        </CardContent>
-      </Card3D>
-    </motion.div>
-  )
-}
+        <CardContent className="flex-1 flex flex-col">
+          <p className="text-muted-foreground text-sm flex-1 line-clamp-4">{award.description}</p>
+                 </CardContent>
+       </Card>
+     </motion.div>
+   )
+ }
 
 const certifications = [
   {

@@ -7,10 +7,14 @@ import { ChevronLeft, ChevronRight, Expand, X, Maximize2, ZoomIn, ZoomOut, Rotat
 
 interface InlineGalleryProps {
   images: string[]
+  imageNames?: string[]
   title?: string
 }
 
-export function InlineGallery({ images, title }: InlineGalleryProps) {
+export function InlineGallery({ images, imageNames, title }: InlineGalleryProps) {
+  // Debug: Log the props to see what's being received
+  console.log('InlineGallery Props:', { images: images?.length, imageNames: imageNames?.length, title })
+  
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isFullscreen, setIsFullscreen] = useState(false)
   const [zoomLevel, setZoomLevel] = useState(1)
@@ -159,14 +163,14 @@ export function InlineGallery({ images, title }: InlineGalleryProps) {
 
   return (
     <>
-      {/* Inline Gallery */}
-      <div className="my-8">
-        <div className="relative bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
+             {/* Inline Gallery */}
+       <div className="my-8">
+         <div className="relative bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden border-4 border-purple-500">
           {/* Main Image */}
           <div className="relative aspect-video">
             <Image
               src={images[currentIndex]}
-              alt={`${title || "Gallery"} image ${currentIndex + 1}`}
+              alt={imageNames?.[currentIndex] || `${title || "Gallery"} image ${currentIndex + 1}`}
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
@@ -201,10 +205,17 @@ export function InlineGallery({ images, title }: InlineGalleryProps) {
               <Expand className="h-4 w-4" />
             </Button>
 
-            {/* Image Counter */}
-            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-sm text-white text-sm px-3 py-1 rounded-full">
-              {currentIndex + 1} of {images.length}
-            </div>
+                         {/* Image Counter and Name */}
+             <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1">
+               <div className="bg-black/90 dark:bg-black/90 bg-white/90 dark:bg-black/90 backdrop-blur-md text-black dark:text-white text-sm px-3 py-1 rounded-full font-medium">
+                 {currentIndex + 1} of {images.length}
+               </div>
+               {imageNames?.[currentIndex] && (
+                 <div className="bg-black/95 dark:bg-black/95 bg-white/95 dark:bg-black/95 backdrop-blur-md text-black dark:text-white text-sm px-3 py-1 rounded-lg max-w-xs text-center font-medium shadow-lg">
+                   {imageNames[currentIndex]}
+                 </div>
+               )}
+             </div>
           </div>
 
           {/* Thumbnail Strip */}
@@ -224,7 +235,7 @@ export function InlineGallery({ images, title }: InlineGalleryProps) {
                 >
                   <Image
                     src={image}
-                    alt={`Thumbnail ${index + 1}`}
+                    alt={imageNames?.[index] || `Thumbnail ${index + 1}`}
                     width={112}
                     height={80}
                     className="w-full h-full object-cover object-center rounded-md cursor-pointer"
@@ -253,7 +264,7 @@ export function InlineGallery({ images, title }: InlineGalleryProps) {
             >
               <Image
                 src={images[currentIndex]}
-                alt={`${title || "Gallery"} image ${currentIndex + 1}`}
+                alt={imageNames?.[currentIndex] || `${title || "Gallery"} image ${currentIndex + 1}`}
                 fill
                 className="object-contain"
                 style={{
@@ -328,24 +339,28 @@ export function InlineGallery({ images, title }: InlineGalleryProps) {
               </div>
             )}
 
-            {/* Image Counter */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-sm text-white text-sm px-3 py-1 rounded-full">
-              {currentIndex + 1} of {images.length}
-            </div>
+                         {/* Image Counter and Name */}
+             <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+               <div className="bg-white/90 dark:bg-black/80 backdrop-blur-md text-black dark:text-white text-sm px-4 py-2 rounded-full font-medium">
+                 {currentIndex + 1} of {images.length}
+               </div>
+               {imageNames?.[currentIndex] && (
+                 <div className="bg-white/95 dark:bg-black/90 backdrop-blur-md text-black dark:text-white text-base px-4 py-2 rounded-lg max-w-lg text-center font-medium shadow-lg">
+                   {imageNames[currentIndex]}
+                 </div>
+               )}
+             </div>
 
-            {/* Thumbnails Toggle */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="absolute right-4 bottom-4 h-10 w-10 rounded-full bg-white/10 backdrop-blur-sm text-white"
-              onClick={toggleThumbnails}
+            {/* Fullscreen Thumbnails with Hover Effect */}
+            <div 
+              className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/80 to-transparent transition-transform duration-300 ease-in-out"
+              style={{
+                transform: showThumbnails ? 'translateY(0)' : 'translateY(100%)'
+              }}
+              onMouseEnter={() => setShowThumbnails(true)}
+              onMouseLeave={() => setShowThumbnails(false)}
             >
-              <Maximize2 className="h-5 w-5" />
-            </Button>
-
-            {/* Fullscreen Thumbnails */}
-            {showThumbnails && (
-              <div className="absolute bottom-20 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-sm rounded-lg p-4">
+              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 backdrop-blur-sm rounded-lg p-4">
                 <div className="flex gap-2 max-w-96 overflow-x-auto">
                   {images.map((image, index) => (
                     <div
@@ -358,7 +373,7 @@ export function InlineGallery({ images, title }: InlineGalleryProps) {
                     >
                       <Image
                         src={image}
-                        alt={`Thumbnail ${index + 1}`}
+                        alt={imageNames?.[index] || `Thumbnail ${index + 1}`}
                         width={96}
                         height={72}
                         className="w-full h-full object-cover object-center rounded-md cursor-pointer"
@@ -368,7 +383,7 @@ export function InlineGallery({ images, title }: InlineGalleryProps) {
                   ))}
                 </div>
               </div>
-            )}
+            </div>
           </div>
         </div>
       )}

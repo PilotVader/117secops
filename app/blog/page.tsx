@@ -82,7 +82,7 @@ export default function BlogPage() {
           In the meantime, why not check out the exciting projects I've been working on? From SOC analysis to security monitoring, I've got plenty of interesting content to share.
         </p>
         <Link href="/projects">
-          <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+          <Button size="lg" className="cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white transition-colors">
             View My Projects
           </Button>
         </Link>

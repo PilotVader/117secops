@@ -11,7 +11,7 @@ export default function FirewallPage() {
   const [glitchActive, setGlitchActive] = useState(false)
   const [asciiFrame, setAsciiFrame] = useState(0)
 
-  const originalText = "You've reached the edge of the cyberverse.\nThis feature is still under encryption.\nCome back when the firewall cools down."
+  const originalText = "Hello there!\nI'm Otori Samson, but you can call me 'PilotVader', or simply '117'\nA cybersecurity analyst\nI'm here to ensure that digital threats meet their match.\nI secure, I protect, I conquer.\nWelcome to my portfolio site"
 
   // ASCII Parrot animation frames
   const parrotFrames = [
@@ -130,7 +130,7 @@ export default function FirewallPage() {
             glitchActive ? 'text-red-500' : 'text-green-400'
           }`}>
             <Shield className="inline-block w-8 h-8 mr-2" />
-            FIREWALL ACTIVATED
+            README.md
           </h1>
           
           <div className={`text-lg md:text-xl leading-relaxed ${
@@ -149,26 +149,14 @@ export default function FirewallPage() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mb-8"
         >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-            <div className="bg-green-900/20 border border-green-500/30 p-4 rounded">
-              <div className="flex items-center justify-center mb-2">
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse mr-2"></div>
-                <span>ENCRYPTION: ACTIVE</span>
-              </div>
-            </div>
-            <div className="bg-red-900/20 border border-red-500/30 p-4 rounded">
-              <div className="flex items-center justify-center mb-2">
-                <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse mr-2"></div>
-                <span>ACCESS: DENIED</span>
-              </div>
-            </div>
-            <div className="bg-yellow-900/20 border border-yellow-500/30 p-4 rounded">
-              <div className="flex items-center justify-center mb-2">
-                <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse mr-2"></div>
-                <span>STATUS: COOLING</span>
-              </div>
-            </div>
-          </div>
+                     <div className="flex justify-center">
+             <div className="bg-green-900/20 border border-green-500/30 p-4 rounded">
+               <div className="flex items-center justify-center mb-2">
+                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse mr-2"></div>
+                 <span>STATUS: ONLINE</span>
+               </div>
+             </div>
+           </div>
         </motion.div>
 
         {/* Action buttons */}
@@ -187,30 +175,20 @@ export default function FirewallPage() {
             </Button>
           </Link>
           
-          <Button 
-            variant="outline"
-            className="border-red-500 text-red-400 hover:bg-red-500/10"
-            onClick={() => {
-              setGlitchActive(true)
-              setTimeout(() => setGlitchActive(false), 500)
-            }}
-          >
-            <Zap className="w-4 h-4 mr-2" />
-            Test Firewall
-          </Button>
+                                   <Button 
+               variant="outline"
+               className="border-purple-500 text-purple-400 hover:bg-purple-500/10"
+               onClick={() => {
+                 setGlitchActive(true)
+                 setTimeout(() => setGlitchActive(false), 500)
+               }}
+             >
+               <Zap className="w-4 h-4 mr-2" />
+               Stop Glitch
+             </Button>
         </motion.div>
 
-        {/* Easter egg */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.2 }}
-          className="mt-8 text-xs text-green-600"
-        >
-          <p>// TODO: Implement proper contact form</p>
-          <p>// Current status: Under development</p>
-          <p>// Estimated completion: When the firewall cools down</p>
-        </motion.div>
+        
       </div>
     </div>
   )

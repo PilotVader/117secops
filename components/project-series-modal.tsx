@@ -40,7 +40,7 @@ export function ProjectSeriesModal({ isOpen, onClose, series, seriesName }: Proj
                   </div>
                   <Link
                     href={`/projects/${project.slug}`}
-                    className="shrink-0 rounded-md bg-primary px-3 py-1 text-sm font-medium text-primary-foreground"
+                    className="shrink-0 cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white px-3 py-1 text-sm font-medium border rounded-md transition-colors"
                   >
                     Read More
                   </Link>
@@ -48,9 +48,12 @@ export function ProjectSeriesModal({ isOpen, onClose, series, seriesName }: Proj
                 {project.tags && project.tags.length > 0 && (
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary">
+                      <span
+                        key={tag}
+                        className="text-xs px-2 py-1 bg-gray-100 dark:bg-muted/50 rounded border border-gray-200 dark:border-border text-gray-800 dark:text-muted-foreground"
+                      >
                         {tag}
-                      </Badge>
+                      </span>
                     ))}
                   </div>
                 )}

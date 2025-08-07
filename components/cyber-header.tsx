@@ -42,7 +42,7 @@ export function CyberHeader() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo Section */}
           <div className="flex items-center gap-3">
             <div className="flex-shrink-0 -ml-2 perspective-1000 z-10">
@@ -91,7 +91,7 @@ export function CyberHeader() {
               <Link href="https://www.linkedin.com/in/otori-samson/" target="_blank" rel="noopener noreferrer">
                 <Button 
                   size="sm" 
-                  className="cyber-border bg-transparent text-foreground"
+                  className="cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white"
                 >
                   Contact Me
                 </Button>
@@ -106,10 +106,10 @@ export function CyberHeader() {
                           <Link href="/firewall">
                             <Button 
                               size="sm" 
-                              className="cyber-border bg-red-600 hover:bg-red-700 text-white border-red-500"
+                              className="cyber-border bg-transparent text-foreground hover:bg-red-600 hover:text-white"
                             >
                               <Shield className="w-4 h-4 mr-2" />
-                              Activate Firewall
+                              ReadMe
                             </Button>
                           </Link>
                         </motion.div>
@@ -180,7 +180,7 @@ export function CyberHeader() {
                   >
                     <Button 
                       size="sm" 
-                      className="w-full cyber-border bg-transparent text-foreground"
+                      className="w-full cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white"
                     >
                       Contact Me
                     </Button>
@@ -194,11 +194,11 @@ export function CyberHeader() {
                               <Link href="/firewall">
                                 <Button
                                   size="sm"
-                                  className="w-full cyber-border bg-red-600 hover:bg-red-700 text-white border-red-500"
+                                  className="w-full cyber-border bg-transparent text-foreground hover:bg-red-600 hover:text-white"
                                   onClick={() => setIsMobileMenuOpen(false)}
                                 >
-                                  <Shield className="w-4 h-4 mr-2" />
-                                  Activate Firewall
+                                                                <Shield className="w-4 h-4 mr-2" />
+                              ReadMe
                                 </Button>
                               </Link>
                             </motion.div>

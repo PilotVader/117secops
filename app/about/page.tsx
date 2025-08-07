@@ -28,9 +28,9 @@ import { Badge } from "@/components/ui/badge"
 export default function AboutPage() {
   return (
     <PageTransition>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen pt-20">
         {/* Hero Section */}
-        <section className="hero-gradient text-white py-20 relative overflow-hidden">
+        <section className="bg-purple-600 text-white py-20 relative overflow-hidden">
           <motion.div
             className="absolute inset-0 bg-purple-500/10 z-0"
             initial={{ opacity: 0 }}
@@ -128,38 +128,46 @@ export default function AboutPage() {
         </section>
 
         {/* Mission and Values */}
-        <section className="py-16 bg-accent">
-          <div className="container mx-auto px-4 md:px-6">
+        <section className="bg-purple-600 text-white py-20 relative overflow-hidden">
+          <motion.div
+            className="absolute inset-0 bg-purple-500/10 z-0"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.4 }}
+          />
+          <div className="container mx-auto px-4 md:px-6 relative z-10">
             <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              viewport={{ once: true }}
+              className="flex flex-col items-center text-center space-y-6"
+              variants={staggerContainer}
+              initial="initial"
+              animate="animate"
             >
-              <h2 className="text-3xl font-bold tracking-tight text-gradient">MY MISSION</h2>
+              <motion.h2 className="text-4xl md:text-6xl font-bold tracking-tighter" variants={fadeIn}>
+                MY MISSION
+              </motion.h2>
+              <motion.p className="text-xl max-w-3xl mx-auto text-gray-100" variants={fadeIn}>
+                To develop the hands-on security expertise that protects modern businesses, while documenting my
+                journey openly at 117SecOps. I believe effective cybersecurity isn't just about tools, but
+                practical risk management that enables growth. Every lab, tutorial, and project brings me closer
+                to becoming the defender organizations need.
+              </motion.p>
             </motion.div>
-            <div className="flex justify-center">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4 }}
-                viewport={{ once: true }}
-                className="max-w-2xl"
-              >
-                <Card className="card-transition border-primary/10">
-                  <CardContent className="pt-6">
-                    <p className="text-muted-foreground">
-                      To develop the hands-on security expertise that protects modern businesses, while documenting my
-                      journey openly at 117SecOps. I believe effective cybersecurity isn't just about tools, but
-                      practical risk management that enables growth. Every lab, tutorial, and project brings me closer
-                      to becoming the defender organizations need.
-                    </p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
           </div>
+
+          {/* Animated background elements */}
+          <motion.div
+            className="absolute -bottom-16 -left-16 w-64 h-64 rounded-full bg-primary/20 blur-3xl"
+            animate={{
+              x: [0, 30, 0],
+              y: [0, -30, 0],
+              opacity: [0.4, 0.6, 0.4],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Number.POSITIVE_INFINITY,
+              repeatType: "reverse",
+            }}
+          />
         </section>
 
         {/* Educational Background */}
@@ -308,12 +316,12 @@ export default function AboutPage() {
                     </div>
                     <h3 className="text-xl font-bold mb-2 text-primary">GitHub</h3>
                     <p className="text-muted-foreground mb-4">Check out my projects and contributions</p>
-                    <Button asChild className="shadow-lg shadow-primary/20 transition-all duration-400">
-                      <a href="https://github.com/PilotVader" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                        <Github className="h-4 w-4" />
-                        Visit Profile
-                      </a>
-                    </Button>
+                                         <Button asChild className="cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white transition-colors">
+                       <a href="https://github.com/PilotVader" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                         <Github className="h-4 w-4" />
+                         Visit Profile
+                       </a>
+                     </Button>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -333,14 +341,14 @@ export default function AboutPage() {
                     </div>
                     <h3 className="text-xl font-bold mb-2 text-primary">LinkedIn</h3>
                     <p className="text-muted-foreground mb-4">Connect with me professionally</p>
-                    <Button asChild className="shadow-lg shadow-primary/20 transition-all duration-400">
-                      <a href="https://www.linkedin.com/in/otori-samson/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                        <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
-                        </svg>
-                        Connect
-                      </a>
-                    </Button>
+                                         <Button asChild className="cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white transition-colors">
+                       <a href="https://www.linkedin.com/in/otori-samson/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                         <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                           <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                         </svg>
+                         Connect
+                       </a>
+                     </Button>
                   </CardContent>
                 </Card>
               </motion.div>

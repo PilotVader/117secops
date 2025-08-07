@@ -143,7 +143,7 @@ export default function Navbar() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
             <Button className="w-full mt-2 bg-[#7B34DD] hover:bg-[#6929C4] text-white rounded-md" asChild>
               <a
-                href="https://www.linkedin.com/posts/otori-samson"
+                href="https://www.linkedin.com/in/otori-samson/"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsMobileMenuOpen(false)}

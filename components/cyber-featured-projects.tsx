@@ -27,11 +27,11 @@ export function CyberFeaturedProjects({ projects }: CyberFeaturedProjectsProps) 
   const getCategoryColor = (category: string) => {
     switch (category) {
       case "red":
-        return "text-cyber-orange"
+        return { color: '#dc2626' } // red-600
       case "Infrastructure":
-        return "text-cyber-green"
+        return { color: '#16a34a' } // green-600
       default:
-        return "text-primary"
+        return { color: '#2563eb' } // blue-600
     }
   }
 
@@ -48,10 +48,10 @@ export function CyberFeaturedProjects({ projects }: CyberFeaturedProjectsProps) 
             transition={{ duration: 0.5 }}
             className="mb-4"
           >
-            <Badge variant="outline" className="cyber-border bg-card/50 backdrop-blur-sm">
-              <Terminal className="w-3 h-3 mr-1" />
-              Featured Arsenal
-            </Badge>
+                         <Badge variant="outline" className="cyber-border bg-card/50 backdrop-blur-sm">
+               <Terminal className="w-3 h-3 mr-1" />
+               Featured Posts
+             </Badge>
           </motion.div>
           
           <motion.h2
@@ -62,7 +62,7 @@ export function CyberFeaturedProjects({ projects }: CyberFeaturedProjectsProps) 
           >
             <span className="text-cyber-glow">Security</span>
             <br />
-            <span className="bg-cyber-gradient bg-clip-text text-transparent">
+            <span className="text-cyber-glow">
               Operations
             </span>
           </motion.h2>
@@ -101,14 +101,16 @@ export function CyberFeaturedProjects({ projects }: CyberFeaturedProjectsProps) 
                 <div className="p-6">
                   {/* Category Badge */}
                   <div className="flex items-center gap-2 mb-3">
-                    <Badge 
-                      variant="outline" 
-                      className={`cyber-border bg-card/30 ${getCategoryColor(project.category || 'blue')}`}
-                    >
-                      {getCategoryIcon(project.category || 'blue')}
-                      {project.category === "red" ? "Red Team" : 
-                       project.category === "Infrastructure" ? "Infrastructure" : "Blue Team"}
-                    </Badge>
+                                         <Badge 
+                       variant="outline" 
+                       className="cyber-border bg-card/30"
+                     >
+                       <span style={getCategoryColor(project.category || 'blue')} className="flex items-center">
+                         {getCategoryIcon(project.category || 'blue')}
+                         {project.category === "red" ? "Red Team" : 
+                          project.category === "Infrastructure" ? "Infrastructure" : "Blue Team"}
+                       </span>
+                     </Badge>
                   </div>
                   
                   {/* Title */}
@@ -127,13 +129,13 @@ export function CyberFeaturedProjects({ projects }: CyberFeaturedProjectsProps) 
                       {project.tags.filter(tag => tag).slice(0, 3).map((tag, tagIndex) => (
                         <span
                           key={`${tag}-${tagIndex}`}
-                          className="text-xs px-2 py-1 bg-muted/50 rounded border border-border"
+                          className="text-xs px-2 py-1 bg-gray-100 dark:bg-muted/50 rounded border border-gray-200 dark:border-border text-gray-800 dark:text-muted-foreground"
                         >
                           {tag}
                         </span>
                       ))}
                       {project.tags.filter(tag => tag).length > 3 && (
-                        <span className="text-xs px-2 py-1 bg-muted/50 rounded border border-border">
+                        <span className="text-xs px-2 py-1 bg-gray-100 dark:bg-muted/50 rounded border border-gray-200 dark:border-border text-gray-800 dark:text-muted-foreground">
                           +{project.tags.filter(tag => tag).length - 3}
                         </span>
                       )}
@@ -145,7 +147,7 @@ export function CyberFeaturedProjects({ projects }: CyberFeaturedProjectsProps) 
                     <Button
                       variant="outline"
                       size="sm"
-                      className="w-full cyber-border bg-transparent text-foreground"
+                      className="w-full cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white"
                     >
                       <span>Read More</span>
                       <ArrowRight className="w-4 h-4 ml-2" />
@@ -167,7 +169,7 @@ export function CyberFeaturedProjects({ projects }: CyberFeaturedProjectsProps) 
           <Link href="/projects">
             <Button
               size="lg"
-              className="cyber-border bg-primary text-primary-foreground"
+              className="cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white"
             >
               <Terminal className="w-5 h-5 mr-2" />
               View All Operations

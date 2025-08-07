@@ -188,7 +188,7 @@ export default function HomeClientPage({ initialProjects }: { initialProjects: P
               <Button
                 size="lg"
                 asChild
-                className="shadow-lg shadow-primary/20 transition-all duration-400"
+                className="shadow-lg shadow-primary/20 transition-all duration-400 bg-[#7B34DD] hover:bg-[#6929C4] text-white"
               >
                 <a
                   href="https://www.linkedin.com/in/otori-samson/"
@@ -227,11 +227,16 @@ function FeaturedProjectCard({ project, delay = 0 }: { project: Project; delay?:
         <CardContent className="pb-4 bg-background dark:bg-black text-muted-foreground dark:text-gray-300">
           <p>{project.description}</p>
         </CardContent>
-        <CardFooter className="bg-background dark:bg-black">
-          <Button variant="black" size="sm" className="w-full border border-input dark:border-gray-800" asChild>
-            <Link href={`/projects/${project.slug}/`}>Read More</Link>
-          </Button>
-        </CardFooter>
+                 <CardFooter className="bg-background dark:bg-black">
+           <Button 
+             variant="purple"
+             size="sm" 
+             className="w-full" 
+             asChild
+           >
+             <Link href={`/projects/${project.slug}/`}>Read More</Link>
+           </Button>
+         </CardFooter>
       </Card>
     </motion.div>
   )

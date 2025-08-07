@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import PageTransition from "@/components/page-transition"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, Calendar, User, Tag, Building } from "lucide-react"
+import { ArrowLeft, Calendar, User, Tag, Building, Shield, Terminal, Zap } from "lucide-react"
 import { BlogContentRenderer } from "@/components/blog-content-renderer"
 import { ImageGallery } from "@/components/ui/image-gallery"
 
@@ -32,6 +32,29 @@ interface Project {
 }
 
 
+
+// Helper functions for category styling
+const getCategoryIcon = (category: string) => {
+  switch (category) {
+    case "red":
+      return <Zap className="w-4 h-4" />
+    case "Infrastructure":
+      return <Shield className="w-4 h-4" />
+    default:
+      return <Terminal className="w-4 h-4" />
+  }
+}
+
+const getCategoryColor = (category: string) => {
+  switch (category) {
+    case "red":
+      return { color: '#dc2626' } // red-600
+    case "Infrastructure":
+      return { color: '#16a34a' } // green-600
+    default:
+      return { color: '#2563eb' } // blue-600
+  }
+}
 
 export default function ProjectClientPage({ projectData }: { projectData: Project }) {
   const params = useParams()
@@ -65,13 +88,7 @@ export default function ProjectClientPage({ projectData }: { projectData: Projec
         <div className="max-w-3xl mx-auto">
           <Link
             href="/projects/"
-            className={`inline-flex items-center ${
-              colorScheme === "red" 
-                ? "text-red-600 hover:text-red-700" 
-                : colorScheme === "green"
-                  ? "text-green-600 hover:text-green-700"
-                  : "text-blue-600 hover:text-blue-700"
-            } mb-8 transition-colors duration-400`}
+            className="inline-flex items-center text-purple-600 hover:text-purple-700 mb-8 transition-colors duration-400"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to all projects
@@ -99,21 +116,15 @@ export default function ProjectClientPage({ projectData }: { projectData: Projec
                   <span>{project.client}</span>
                 </div>
               )}
-              <Badge
-                variant="outline"
-                className={`${
-                  colorScheme === "red"
-                    ? "bg-red-500/5 border-red-500/20 text-red-600"
-                    : colorScheme === "green"
-                      ? "bg-green-500/5 border-green-500/20 text-green-600"
-                    : "bg-blue-500/5 border-blue-500/20 text-blue-600"
-                }`}
+              <Badge 
+                variant="outline" 
+                className="cyber-border bg-card/30"
               >
-                {project.category === "red" 
-                  ? "PROJECT RED" 
-                  : project.category === "Infrastructure"
-                    ? "INFRASTRUCTURE"
-                    : "PROJECT BLUE"}
+                <span style={getCategoryColor(project.category)} className="flex items-center">
+                  {getCategoryIcon(project.category)}
+                  {project.category === "red" ? "Red Team" : 
+                   project.category === "Infrastructure" ? "Infrastructure" : "Blue Team"}
+                </span>
               </Badge>
             </div>
 
