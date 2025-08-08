@@ -13,4 +13,4 @@ I'm working hard to bring you engaging content, but my blog section isn't quite 
 
 In the meantime, why not check out the exciting projects I've been working on? From SOC analysis to security monitoring, I've got plenty of interesting content to share.
 
-[View Our Projects](/projects) 
+[View My Projects](/projects) 

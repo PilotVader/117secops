@@ -70,6 +70,29 @@ export function SeriesCard({ seriesName, projects, index, openLightbox, openSeri
             </CardDescription>
           </CardHeader>
           <CardContent className="px-6 pb-6 mt-3 flex-1">
+            {/* Team badges just under image area when used in grid cards */}
+            <div className="flex items-center gap-2 mb-3">
+              {(() => {
+                const normalizedTags = (firstProject.tags || []).map((t) => t.toLowerCase())
+                const labels: string[] = []
+                if (normalizedTags.includes("blue team")) labels.push("Blue Team")
+                if (normalizedTags.includes("red team")) labels.push("Red Team")
+                const fallback =
+                  firstProject.category === "red"
+                    ? "Red Team"
+                    : firstProject.category === "Infrastructure"
+                      ? "Infrastructure"
+                      : "Blue Team"
+                const toCat = (label: string) => (label === "Red Team" ? "red" : label === "Infrastructure" ? "Infrastructure" : "blue")
+                const finalLabels = labels.length > 0 ? labels.slice(0, 2) : [fallback]
+                return finalLabels.map((label) => (
+                  <span key={label} className="text-xs px-2 py-1 bg-gray-100 dark:bg-muted/50 rounded border border-gray-200 dark:border-border text-gray-800 dark:text-muted-foreground">
+                    {label}
+                  </span>
+                ))
+              })()}
+            </div>
+
             <div className="flex flex-wrap gap-1.5 mb-3">
               {firstProject.tags?.slice(0, 3).map((tag) => (
                 <span

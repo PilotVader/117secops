@@ -116,16 +116,37 @@ export default function ProjectClientPage({ projectData }: { projectData: Projec
                   <span>{project.client}</span>
                 </div>
               )}
-              <Badge 
-                variant="outline" 
-                className="cyber-border bg-card/30"
-              >
-                <span style={getCategoryColor(project.category)} className="flex items-center">
-                  {getCategoryIcon(project.category)}
-                  {project.category === "red" ? "Red Team" : 
-                   project.category === "Infrastructure" ? "Infrastructure" : "Blue Team"}
-                </span>
-              </Badge>
+              {(() => {
+                const normalizedTags = (project.tags || []).map((t) => t.toLowerCase())
+                const teamBadges: string[] = []
+                if (normalizedTags.includes("blue team")) teamBadges.push("Blue Team")
+                if (normalizedTags.includes("red team")) teamBadges.push("Red Team")
+
+                const labels = teamBadges.length > 0
+                  ? teamBadges
+                  : [
+                      project.category === "red"
+                        ? "Red Team"
+                        : project.category === "Infrastructure"
+                          ? "Infrastructure"
+                          : "Blue Team",
+                    ]
+
+                const labelToCategory = (label: string) =>
+                  label === "Red Team" ? "red" : label === "Infrastructure" ? "Infrastructure" : "blue"
+
+                return labels.slice(0, 2).map((label) => {
+                  const cat = labelToCategory(label)
+                  return (
+                    <Badge key={label} variant="outline" className="cyber-border bg-card/30">
+                      <span style={getCategoryColor(cat)} className="flex items-center">
+                        {getCategoryIcon(cat)}
+                        {label}
+                      </span>
+                    </Badge>
+                  )
+                })
+              })()}
             </div>
 
             <div className="aspect-video relative rounded-lg overflow-hidden mb-8">

@@ -200,6 +200,43 @@ export function BlogContentRenderer({
         "/images/projects/hardware-lab/26 - Scan results out 1.png",
         "/images/projects/hardware-lab/27 - scan results out 2.png",
         "/images/projects/hardware-lab/28 - scan results out 3.png"
+      ],
+      // Security Onion deployment walkthrough (Project 4.5)
+      "security-onion-deployment": [
+        "/images/projects/hardware-lab/23 - Security Onion specifications during vm creation.png",
+        "/images/projects/hardware-lab/24 - adding second netwrok adapter for security onion.png",
+        "/images/projects/hardware-lab/25 - Security Onion installation started.png",
+        "/images/projects/hardware-lab/26 - security onion installation process.png",
+        "/images/projects/hardware-lab/27 - Installation finally complete after 2 hours!!!!.png",
+        "/images/projects/hardware-lab/28 - accessing the security onion web interface.png",
+        "/images/projects/hardware-lab/29 - security onion overview page.png",
+        "/images/projects/hardware-lab/30 - security onion dashboard beautiful.png"
+      ],
+      // Caldera deployment walkthrough (Project 4.5)
+      "caldera-deployment": [
+        "/images/projects/hardware-lab/1 - Caldera VM specifications during creation.png",
+        "/images/projects/hardware-lab/2 - ubuntu server for caldera installation started.png",
+        "/images/projects/hardware-lab/3 - ubuntu server installation for caldera complete .png",
+        "/images/projects/hardware-lab/4 - SSHed into caldera ubuntu VM on proxmox.png",
+        "/images/projects/hardware-lab/5 - caldera documentation that would be used for installation.png",
+        "/images/projects/hardware-lab/6 - caldera download started from github repo.png",
+        "/images/projects/hardware-lab/7 - python3 installation for caldera.png",
+        "/images/projects/hardware-lab/8 - installing pip requirement .png",
+        "/images/projects/hardware-lab/8 - installing pip requirement coming out with an error.png",
+        "/images/projects/hardware-lab/9 - installing python virtal environment to install pip3 requirements.png",
+        "/images/projects/hardware-lab/10 - now in the virtual environment.png",
+        "/images/projects/hardware-lab/11 - installing requirements in virtual environment.png",
+        "/images/projects/hardware-lab/12 - installing requirements in virtual environment 2.png",
+        "/images/projects/hardware-lab/13 - error when trying to start caldera server.png",
+        "/images/projects/hardware-lab/14 - error continuation.png",
+        "/images/projects/hardware-lab/15 - error again when trying to build - so would install nodejs first.png",
+        "/images/projects/hardware-lab/16 - nodejs installation started.png",
+        "/images/projects/hardware-lab/17 - re-entered virtual env and building again.png",
+        "/images/projects/hardware-lab/18 - build process running and was succesful.png",
+        "/images/projects/hardware-lab/19 - caldera started.png",
+        "/images/projects/hardware-lab/20 - caldera web interface accessed.png",
+        "/images/projects/hardware-lab/21 - loggin into caldera as red.png",
+        "/images/projects/hardware-lab/22 - logging into caldera as blue.png"
       ]
     }
 
@@ -260,6 +297,43 @@ export function BlogContentRenderer({
         "Scan Results Overview 1",
         "Scan Results Overview 2",
         "Scan Results Overview 3"
+      ],
+      // Security Onion deployment walkthrough (Project 4.5)
+      "security-onion-deployment": [
+        "VM specs for Security Onion",
+        "Add second network adapter",
+        "Installation started",
+        "Installation progress",
+        "Installation complete (~2 hours)",
+        "Access Security Onion web UI",
+        "Overview page",
+        "Dashboard view"
+      ],
+      // Caldera deployment walkthrough (Project 4.5) - concise, human-friendly titles
+      "caldera-deployment": [
+        "Proxmox VM specs for Caldera",
+        "Ubuntu Server setup begins",
+        "Ubuntu install complete",
+        "SSH into Caldera VM",
+        "Caldera install docs",
+        "Cloning Caldera from GitHub",
+        "Install Python 3",
+        "Install pip dependencies",
+        "Pip error encountered",
+        "Create Python virtual environment",
+        "Virtual environment activated",
+        "Install requirements in venv",
+        "Requirements installation progress",
+        "Server start error",
+        "Error details",
+        "Build fails — installing Node.js",
+        "Node.js installation",
+        "Rebuild inside virtual env",
+        "Build succeeded",
+        "Caldera server running",
+        "Caldera web UI accessed",
+        "Login as Red Team",
+        "Login as Blue Team"
       ]
     }
 

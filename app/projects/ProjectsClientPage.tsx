@@ -80,7 +80,7 @@ export default function ProjectsClientPage({ initialProjects }: { initialProject
     setIsSeriesModalOpen(true)
   }
 
-  // Filter projects by category
+  // Filter projects by category (also consider tags like "Blue Team" / "Red Team")
   const filterProjects = (category: string) => {
     if (category === "all") {
       return { seriesMap }
@@ -88,11 +88,26 @@ export default function ProjectsClientPage({ initialProjects }: { initialProject
 
     const filteredSeries: Record<string, Project[]> = {}
 
+    const matchesCategory = (project: Project) => {
+      if (category === "Infrastructure") {
+        return project.category === "Infrastructure"
+      }
+      if (category === "red") {
+        const tags = (project.tags || []).map((t) => t.toLowerCase())
+        return project.category === "red" || tags.includes("red team")
+      }
+      if (category === "blue") {
+        const tags = (project.tags || []).map((t) => t.toLowerCase())
+        return project.category === "blue" || tags.includes("blue team")
+      }
+      // Cloud is not a primary category in our schema; treat like strict tag-less match (no-op)
+      // Fallback strict match
+      return project.category === category
+    }
+
     // Filter series projects
     Object.entries(seriesMap).forEach(([seriesName, seriesProjects]) => {
-      const filtered = seriesProjects.filter(project => 
-        category === "Infrastructure" ? project.category === "Infrastructure" : project.category === category
-      )
+      const filtered = seriesProjects.filter(matchesCategory)
       if (filtered.length > 0) {
         filteredSeries[seriesName] = filtered
       }
@@ -229,19 +244,42 @@ function SeriesCard({ seriesName, projects, index, openLightbox, openSeriesModal
          
          {/* Project Content */}
          <div className="p-6 flex flex-col flex-1">
-           {/* Category Badge */}
-           <div className="flex items-center gap-2 mb-3">
-             <Badge 
-               variant="outline" 
-               className="cyber-border bg-card/30"
-             >
-               <span style={getCategoryColor(firstProject.category || 'blue')} className="flex items-center">
-                 {getCategoryIcon(firstProject.category || 'blue')}
-                 {firstProject.category === "red" ? "Red Team" : 
-                  firstProject.category === "Infrastructure" ? "Infrastructure" : "Blue Team"}
-               </span>
-             </Badge>
-           </div>
+           {/* Team Badges (prioritize Blue/Red if present in tags) */}
+           {(() => {
+             const normalizedTags = (firstProject.tags || []).map((t) => t.toLowerCase())
+             const teamBadges: string[] = []
+             if (normalizedTags.includes("blue team")) teamBadges.push("Blue Team")
+             if (normalizedTags.includes("red team")) teamBadges.push("Red Team")
+
+             const labels = teamBadges.length > 0
+               ? teamBadges
+               : [
+                   firstProject.category === "red"
+                     ? "Red Team"
+                     : firstProject.category === "Infrastructure"
+                       ? "Infrastructure"
+                       : "Blue Team",
+                 ]
+
+             const labelToCategory = (label: string) =>
+               label === "Red Team" ? "red" : label === "Infrastructure" ? "Infrastructure" : "blue"
+
+             return (
+               <div className="flex items-center gap-2 mb-3">
+                 {labels.slice(0, 2).map((label) => {
+                   const cat = labelToCategory(label)
+                   return (
+                     <Badge key={label} variant="outline" className="cyber-border bg-card/30">
+                       <span style={getCategoryColor(cat)} className="flex items-center">
+                         {getCategoryIcon(cat)}
+                         {label}
+                       </span>
+                     </Badge>
+                   )
+                 })}
+               </div>
+             )
+           })()}
            
            {/* Title */}
            <h3 className="text-xl font-semibold mb-3 font-mono text-foreground">

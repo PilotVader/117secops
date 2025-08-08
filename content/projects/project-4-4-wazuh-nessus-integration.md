@@ -72,7 +72,7 @@ This project showcases the real-world challenges of building a hybrid monitoring
 
 Stay tuned for the next stage of this project as we integrate more detection and response tools.
 
-**Credits:** This walkthrough is based on Episode 2 of the Ultimate Cybersecurity Lab YouTube series by Gerard O'Brien. While the steps closely followed his guidance, the project was independently implemented by Samson Otori, with custom network configurations and host assignments tailored to fit a pre-existing VLAN-segmented lab environment.
+**Credits:** This walkthrough is based on Episode 3 of the Ultimate Cybersecurity Lab YouTube series by Gerard O'Brien. While the steps closely followed his guidance, the project was independently implemented by Samson Otori, with custom network configurations and host assignments tailored to fit a pre-existing VLAN-segmented lab environment.
 
 Here's a link to his YouTube channels:
 

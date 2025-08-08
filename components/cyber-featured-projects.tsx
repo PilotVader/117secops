@@ -99,19 +99,42 @@ export function CyberFeaturedProjects({ projects }: CyberFeaturedProjectsProps) 
                 
                 {/* Project Content */}
                 <div className="p-6">
-                  {/* Category Badge */}
-                  <div className="flex items-center gap-2 mb-3">
-                                         <Badge 
-                       variant="outline" 
-                       className="cyber-border bg-card/30"
-                     >
-                       <span style={getCategoryColor(project.category || 'blue')} className="flex items-center">
-                         {getCategoryIcon(project.category || 'blue')}
-                         {project.category === "red" ? "Red Team" : 
-                          project.category === "Infrastructure" ? "Infrastructure" : "Blue Team"}
-                       </span>
-                     </Badge>
-                  </div>
+                  {/* Team Badges (prioritize Blue/Red if present in tags) */}
+                  {(() => {
+                    const normalizedTags = (project.tags || []).map((t) => t.toLowerCase())
+                    const teamBadges: string[] = []
+                    if (normalizedTags.includes("blue team")) teamBadges.push("Blue Team")
+                    if (normalizedTags.includes("red team")) teamBadges.push("Red Team")
+
+                    const labels = teamBadges.length > 0
+                      ? teamBadges
+                      : [
+                          project.category === "red"
+                            ? "Red Team"
+                            : project.category === "Infrastructure"
+                              ? "Infrastructure"
+                              : "Blue Team",
+                        ]
+
+                    const labelToCategory = (label: string) =>
+                      label === "Red Team" ? "red" : label === "Infrastructure" ? "Infrastructure" : "blue"
+
+                    return (
+                      <div className="flex items-center gap-2 mb-3">
+                        {labels.slice(0, 2).map((label) => {
+                          const cat = labelToCategory(label)
+                          return (
+                            <Badge key={label} variant="outline" className="cyber-border bg-card/30">
+                              <span style={getCategoryColor(cat)} className="flex items-center">
+                                {getCategoryIcon(cat)}
+                                {label}
+                              </span>
+                            </Badge>
+                          )
+                        })}
+                      </div>
+                    )
+                  })()}
                   
                   {/* Title */}
                   <h3 className="text-xl font-semibold mb-3 font-mono text-foreground">
