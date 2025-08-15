@@ -84,9 +84,9 @@ export function CyberFeaturedProjects({ projects }: CyberFeaturedProjectsProps) 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative"
+              className="relative h-full"
             >
-              <div className="cyber-border bg-card/50 backdrop-blur-sm rounded-lg overflow-hidden">
+              <div className="cyber-border bg-card/50 backdrop-blur-sm rounded-lg overflow-hidden h-full flex flex-col min-h-[500px]">
                 {/* Project Image */}
                 <div className="aspect-video relative overflow-hidden">
                   <Image
@@ -98,7 +98,7 @@ export function CyberFeaturedProjects({ projects }: CyberFeaturedProjectsProps) 
                 </div>
                 
                 {/* Project Content */}
-                <div className="p-6">
+                <div className="p-6 flex-1 flex flex-col">
                   {/* Team Badges (prioritize Blue/Red if present in tags) */}
                   {(() => {
                     const normalizedTags = (project.tags || []).map((t) => t.toLowerCase())
@@ -142,13 +142,13 @@ export function CyberFeaturedProjects({ projects }: CyberFeaturedProjectsProps) 
                   </h3>
                   
                   {/* Description */}
-                  <p className="text-muted-foreground mb-4 line-clamp-2">
+                  <p className="text-muted-foreground mb-4 line-clamp-2 flex-1">
                     {project.description}
                   </p>
                   
                   {/* Tags */}
                   {project.tags && project.tags.length > 0 && (
-                    <div className="flex flex-wrap gap-1 mb-4">
+                    <div className="flex flex-wrap gap-1 mb-4 flex-shrink-0">
                       {project.tags.filter(tag => tag).slice(0, 3).map((tag, tagIndex) => (
                         <span
                           key={`${tag}-${tagIndex}`}
@@ -166,7 +166,7 @@ export function CyberFeaturedProjects({ projects }: CyberFeaturedProjectsProps) 
                   )}
                   
                   {/* Read More Button */}
-                  <Link href={`/projects/${project.slug}`}>
+                  <Link href={`/projects/${project.slug}`} className="flex-shrink-0">
                     <Button
                       variant="outline"
                       size="sm"

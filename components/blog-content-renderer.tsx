@@ -237,8 +237,66 @@ export function BlogContentRenderer({
         "/images/projects/hardware-lab/20 - caldera web interface accessed.png",
         "/images/projects/hardware-lab/21 - loggin into caldera as red.png",
         "/images/projects/hardware-lab/22 - logging into caldera as blue.png"
-      ]
-    }
+      ],
+      // Windows Server 2022 deployment walkthrough (Project 4.6)
+      "windows-server-deployment": [
+        "/images/projects/hardware-lab/1 - Creating windows server 2022 VM on proxmox.png",
+        "/images/projects/hardware-lab/2 - Added second iso file for driver during installation.png",
+        "/images/projects/hardware-lab/3 - Windwos server installation started.png",
+        "/images/projects/hardware-lab/4 - No disk here because of driver issue - so we have to load the driver.png",
+        "/images/projects/hardware-lab/5 - Loading driver from the second CD rom drive that was added.png",
+        "/images/projects/hardware-lab/6 - this is the path to the driver.png",
+        "/images/projects/hardware-lab/7 - this is the driver we are loading.png",
+        "/images/projects/hardware-lab/8 - drive now showing after driver installation.png",
+        "/images/projects/hardware-lab/9 - windows server 2022 installation complete.png",
+        "/images/projects/hardware-lab/10 - windows servfer 2022.png",
+        "/images/projects/hardware-lab/11 - windows server with the assigned address.png",
+        "/images/projects/hardware-lab/12 - windows server dashboard.png",
+        "/images/projects/hardware-lab/13 - GIVING THE WINDOWS SERVER A STATIC IP.png",
+        "/images/projects/hardware-lab/14 - verifying the static ip settings.png",
+        "/images/projects/hardware-lab/15 - Changed name for the server.png",
+        "/images/projects/hardware-lab/16 - Adding features and services in my windows server.png",
+        "/images/projects/hardware-lab/17 - selected services installing.png",
+        "/images/projects/hardware-lab/18 - services installed succesfully.png",
+        "/images/projects/hardware-lab/19 - promoting the server to a domain controller .png",
+                 "/images/projects/hardware-lab/20 - configured and passed checked for installation.png",
+         "/images/projects/hardware-lab/21 - Domain controller configured and reboot next.png"
+       ],
+       // User and Group Configuration walkthrough (Project 4.6)
+       "user-group-configuration": [
+         "/images/projects/hardware-lab/22 - Security groups and users creation.png",
+         "/images/projects/hardware-lab/23 - Group creation.png",
+         "/images/projects/hardware-lab/24 - 1st User creation.png",
+         "/images/projects/hardware-lab/25 - 1st user created.png",
+         "/images/projects/hardware-lab/26 - 2nd user created.png",
+         "/images/projects/hardware-lab/27 - Adding admin user to Domian Admins group.png"
+       ],
+       // DHCP Migration walkthrough (Project 4.6)
+       "dhcp-migration": [
+         "/images/projects/hardware-lab/28 - disabling dhcp on vlan 20 to move it accross to the DC firewall.png",
+         "/images/projects/hardware-lab/29 - moving dhcp from router to dc firewall.png",
+         "/images/projects/hardware-lab/30 - dhcp moved from router to dc firewall.png"
+       ],
+       // Group Policy Drive Mapping walkthrough (Project 4.6)
+       "group-policy-drive-mapping": [
+         "/images/projects/hardware-lab/31 - SHARED FOLDER CREATION TO BE MAPPED AS A DRIVE ACCROSS THE WORKSTATIONS.png",
+         "/images/projects/hardware-lab/31.5 - SHARED FOLDER CREATION TO BE MAPPED AS A DRIVE ACCROSS THE WORKSTATIONS.png",
+         "/images/projects/hardware-lab/32 - using group policy to make the shared folder a drive.png",
+         "/images/projects/hardware-lab/33 - made group policy to ensure the shared folder is seen as a drive.png",
+         "/images/projects/hardware-lab/33.5 - made group policy to ensure the shared folder is seen as a drive.png",
+         "/images/projects/hardware-lab/34 - making my initially created user part of the security group.png",
+         "/images/projects/hardware-lab/35 - making the admin user part of the security group also.png"
+       ],
+       // Windows 10 Workstation Domain Join walkthrough (Project 4.6)
+       "windows-10-domain-join": [
+         "/images/projects/hardware-lab/36 - windows 10 already built hardware settings.png",
+         "/images/projects/hardware-lab/37 - adding my windows 10 to my domian account.png",
+         "/images/projects/hardware-lab/38 - windows 10 added to domian.png",
+         "/images/projects/hardware-lab/39 - loggin in as my domain user account in windows 10.png",
+         "/images/projects/hardware-lab/40 - shared folder to server as drive displaying in my windows 10 account after logging in to my domain account from my windows server.png",
+         "/images/projects/hardware-lab/41 - test file showing in the shared folder directory.png"
+       ]
+     }
 
     return galleries[imagesKey] || []
   }
@@ -334,8 +392,66 @@ export function BlogContentRenderer({
         "Caldera web UI accessed",
         "Login as Red Team",
         "Login as Blue Team"
-      ]
-    }
+      ],
+      // Windows Server 2022 deployment walkthrough (Project 4.6) - concise, human-friendly titles
+      "windows-server-deployment": [
+        "Creating Windows Server 2022 VM in Proxmox",
+        "Adding VirtIO ISO for driver support",
+        "Windows Server installation begins",
+        "Storage device not detected - driver issue",
+        "Loading VirtIO driver from second CD-ROM",
+        "Driver file path location",
+        "Selecting the appropriate driver",
+        "Storage drive now visible after driver install",
+        "Windows Server 2022 installation complete",
+        "Windows Server 2022 desktop",
+        "Server with DHCP-assigned IP address",
+        "Windows Server dashboard",
+        "Configuring static IP address",
+        "Verifying static IP configuration",
+        "Renaming server to PROJECT-DC",
+        "Adding Active Directory roles and features",
+        "Installing selected services",
+        "Services installation completed successfully",
+        "Promoting server to domain controller",
+                 "Configuration validation passed",
+         "Domain controller configured - reboot required"
+       ],
+       // User and Group Configuration walkthrough (Project 4.6) - concise, human-friendly titles
+       "user-group-configuration": [
+         "Security groups and users creation overview",
+         "Creating Shared Folder Access security group",
+         "Creating first user account",
+         "First user account successfully created",
+         "Second user account created",
+         "Adding admin user to Domain Admins group"
+       ],
+       // DHCP Migration walkthrough (Project 4.6) - concise, human-friendly titles
+       "dhcp-migration": [
+         "Disabling DHCP on VLAN 20 to migrate to domain controller",
+         "Moving DHCP service from router to domain controller",
+         "DHCP successfully migrated from router to domain controller"
+       ],
+       // Group Policy Drive Mapping walkthrough (Project 4.6) - concise, human-friendly titles
+       "group-policy-drive-mapping": [
+         "Creating shared folder for network drive mapping",
+         "Shared folder creation continued",
+         "Configuring Group Policy for drive mapping",
+         "Group Policy configuration for shared folder drive",
+         "Group Policy drive mapping configuration continued",
+         "Adding first user to security group",
+         "Adding admin user to security group"
+       ],
+       // Windows 10 Workstation Domain Join walkthrough (Project 4.6) - concise, human-friendly titles
+       "windows-10-domain-join": [
+         "Windows 10 VM hardware configuration",
+         "Adding Windows 10 workstation to domain",
+         "Windows 10 successfully joined to domain",
+         "Logging in with domain user account",
+         "Shared folder mapped as network drive",
+         "Test file visible in shared folder"
+       ]
+     }
 
     return imageNames[imagesKey] || []
   }

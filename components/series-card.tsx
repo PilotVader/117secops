@@ -29,7 +29,7 @@ export function SeriesCard({ seriesName, projects, index, openLightbox, openSeri
       transition={{ duration: 0.4, delay: index * 0.1 }}
     >
       <Card 
-        className={`cyber-border bg-card/50 backdrop-blur-sm rounded-lg overflow-hidden transition-cyber ${
+        className={`cyber-border bg-card/50 backdrop-blur-sm rounded-lg overflow-hidden transition-cyber min-h-[500px] ${
           firstProject.category === "red"
             ? ""
             : firstProject.category === "Infrastructure"

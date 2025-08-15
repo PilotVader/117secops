@@ -216,15 +216,16 @@ function FeaturedProjectCard({ project, delay = 0 }: { project: Project; delay?:
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay }}
       viewport={{ once: true }}
+      className="h-full"
     >
-      <Card className="overflow-hidden transition-all duration-400 hover:shadow-lg group">
+      <Card className="overflow-hidden transition-all duration-400 hover:shadow-lg group h-full flex flex-col min-h-[500px]">
         <div className="aspect-video relative cursor-pointer bg-gray-100">
           <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
         </div>
         <CardHeader className="pb-2 bg-background dark:bg-black">
           <CardTitle className={`text-xl ${cardColor}`}>{project.title}</CardTitle>
         </CardHeader>
-        <CardContent className="pb-4 bg-background dark:bg-black text-muted-foreground dark:text-gray-300">
+        <CardContent className="pb-4 bg-background dark:bg-black text-muted-foreground dark:text-gray-300 flex-1">
           <p>{project.description}</p>
         </CardContent>
                  <CardFooter className="bg-background dark:bg-black">

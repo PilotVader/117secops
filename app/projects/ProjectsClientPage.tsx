@@ -229,7 +229,7 @@ function SeriesCard({ seriesName, projects, index, openLightbox, openSeriesModal
        transition={{ duration: 0.5, delay: index * 0.1 }}
        className="relative h-full"
      >
-       <div className="cyber-border bg-card/50 backdrop-blur-sm rounded-lg overflow-hidden h-full flex flex-col">
+       <div className="cyber-border bg-card/50 backdrop-blur-sm rounded-lg overflow-hidden h-full flex flex-col min-h-[500px]">
          {/* Project Image */}
          <div className="aspect-video relative overflow-hidden">
            <Link href={`/projects/${firstProject.slug}/`}>
@@ -287,7 +287,7 @@ function SeriesCard({ seriesName, projects, index, openLightbox, openSeriesModal
            </h3>
            
            {/* Description */}
-           <p className="text-muted-foreground mb-4 line-clamp-2">
+           <p className="text-muted-foreground mb-4 line-clamp-2 flex-1">
              {firstProject.description}
            </p>
            
