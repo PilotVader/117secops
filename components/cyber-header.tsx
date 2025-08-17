@@ -49,7 +49,7 @@ export function CyberHeader() {
               <Logo3D />
             </div>
             <div className="font-mono hidden sm:block">
-              <div className="text-lg font-bold">117 SecOps</div>
+              <div className="text-lg font-bold">Samson's</div>
               <div className="text-xs text-muted-foreground">Cybersecurity Portfolio</div>
             </div>
           </div>

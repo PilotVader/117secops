@@ -9,7 +9,7 @@ tags:
   - "Security"
   - "Learning"
   - "Career Development"
-image: "/images/projects/30-day-soc-analyst-challenge.png"
+image: "/images/projects/Mydfir 30 day challenge.png"
 images: [
   { "src": "/images/projects/30-day-challenge/30Days-MYDFIR-Challenge.png", "alt": "30 Days MYDFIR SOC Analyst Challenge" }
 ]

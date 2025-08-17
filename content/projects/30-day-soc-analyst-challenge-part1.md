@@ -8,7 +8,7 @@ tags:
   - "SOC"
   - "Architecture"
   - "Documentation"
-image: "/images/projects/30-day-soc-analyst-challenge.png"
+image: "/images/projects/Mydfir 30 day challenge.png"
 images: [
   { "src": "/images/projects/30-day-challenge/1-30Days-MYDFIR-Day-1.png", "alt": "30 Days MYDFIR Challenge Day 1" },
   { "src": "/images/projects/30-day-challenge/2-Day-1-work-with-draw-io.png", "alt": "Working with Draw.io on Day 1" }

@@ -4,7 +4,7 @@ client: "Personal Project"
 description: "An introduction to the comprehensive 30-day challenge for aspiring SOC analysts."
 date: "2024-10-31"
 author: "Samson Otori"
-image: "/images/projects/30-day-soc-analyst-challenge.png"
+image: "/images/projects/Mydfir 30 day challenge.png"
 technologies: ["ELK Stack", "SIEM", "Security Tools", "Monitoring"]
 category: "blue"
 tags: ["Blue Team", "SOC", "Security Monitoring", "Training"]

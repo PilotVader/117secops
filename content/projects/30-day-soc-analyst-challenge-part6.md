@@ -9,7 +9,7 @@ tags:
   - "Centralized Management"
   - "SOC"
   - "Security Monitoring"
-image: "/images/projects/30-day-soc-analyst-challenge.png"
+image: "/images/projects/Mydfir 30 day challenge.png"
 images: [
   { "src": "/images/projects/30-day-challenge/30-days-day-6.png", "alt": "30 Days MYDFIR SOC Analyst Challenge Day 6" }
 ]

@@ -59,7 +59,7 @@ export default function HomeClientPage({ initialProjects }: { initialProjects: P
                   stiffness: 100,
                 }}
               >
-                117 Security Operations
+                Samson's
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl max-w-3xl mx-auto text-muted-foreground dark:text-gray-100"

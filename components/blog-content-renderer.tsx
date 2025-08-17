@@ -295,7 +295,27 @@ export function BlogContentRenderer({
          "/images/projects/hardware-lab/39 - loggin in as my domain user account in windows 10.png",
          "/images/projects/hardware-lab/40 - shared folder to server as drive displaying in my windows 10 account after logging in to my domain account from my windows server.png",
          "/images/projects/hardware-lab/41 - test file showing in the shared folder directory.png"
-       ]
+       ],
+               // TheHive Configuration walkthrough (Project 4.7)
+        "thehive-configuration": [
+          "/images/projects/hardware-lab/1 - Accessing the hive site.png",
+          "/images/projects/hardware-lab/2 - the hive download page.png",
+          "/images/projects/hardware-lab/3 - taking the ocker compose file to import in docker.png",
+          "/images/projects/hardware-lab/4 - back to portainer to add new stack.png",
+          "/images/projects/hardware-lab/5 - givint the stack a name and pasting the yml compose file content.png",
+          "/images/projects/hardware-lab/6 - stack created.png",
+          "/images/projects/hardware-lab/7 - All containers deployed.png",
+          "/images/projects/hardware-lab/8 - the hive login accessed using the port.png",
+          "/images/projects/hardware-lab/9 - the hive dashboard.png",
+          "/images/projects/hardware-lab/10 - creating new organization.png",
+          "/images/projects/hardware-lab/11 - adding user to the organization.png"
+        ],
+        // Cortex Setup walkthrough (Project 4.7)
+        "cortex-setup": [
+          "/images/projects/hardware-lab/12 - cortex login accessed.png",
+          "/images/projects/hardware-lab/13 - loggin into cortex with created credential.png",
+          "/images/projects/hardware-lab/14 - cortex dashboard accessed .png"
+        ]
      }
 
     return galleries[imagesKey] || []
@@ -450,6 +470,26 @@ export function BlogContentRenderer({
          "Logging in with domain user account",
          "Shared folder mapped as network drive",
          "Test file visible in shared folder"
+       ],
+       // TheHive Configuration walkthrough (Project 4.7) - concise, human-friendly titles
+       "thehive-configuration": [
+         "Accessing TheHive website",
+         "TheHive download page",
+         "Copying Docker Compose file for import",
+         "Returning to Portainer to add new stack",
+         "Naming the stack and pasting YAML content",
+         "Stack successfully created",
+         "All containers deployed and running",
+         "TheHive login accessed via port",
+         "TheHive dashboard overview",
+         "Creating new organization",
+         "Adding user to the organization"
+       ],
+       // Cortex Setup walkthrough (Project 4.7) - concise, human-friendly titles
+       "cortex-setup": [
+         "Cortex login accessed",
+         "Logging into Cortex with created credentials",
+         "Cortex dashboard accessed"
        ]
      }
 

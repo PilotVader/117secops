@@ -11,7 +11,7 @@ results: [
   "Implemented attack detection capabilities",
   "Gained hands-on experience with security tools"
 ]
-image: "/images/projects/homelab-coding.jpg"
+image: "/images/projects/Project 1.png"
 technologies: ["Nmap", "Metasploit", "Python", "Splunk"]
 category: "blue"
 tags: ["Blue Team", "Home Lab", "SIEM"]

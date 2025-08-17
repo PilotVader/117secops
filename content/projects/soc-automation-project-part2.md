@@ -5,7 +5,7 @@ date: "2025-03-21"
 author: "Samson Otori"
 category: "blue"
 tags: ["Blue Team", "SOC", "Automation", "SIEM", "Telemetry"]
-image: "/images/projects/soc-automation/soc-automation-project.png"
+image: "/images/projects/project 2.png"
 images: [
   { "src": "/images/projects/soc-automation/part3/1 Editing ossec config file to ingest sysmon logs.png", "alt": "Editing Wazuh ossec.conf File to Ingest Sysmon Logs" },
   { "src": "/images/projects/soc-automation/part3/2 Sysmon service running on windows for telemetary generation.png", "alt": "Sysmon Service Running on Windows for Telemetry Generation" },

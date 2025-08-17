@@ -72,7 +72,7 @@ export default function Footer() {
         </div>
         <div className="border-t border-border mt-5 pt-3 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} 117SECOPS. Personal cybersecurity portfolio.
+            &copy; {new Date().getFullYear()} Samson's. Personal cybersecurity portfolio.
           </p>
         </div>
       </div>

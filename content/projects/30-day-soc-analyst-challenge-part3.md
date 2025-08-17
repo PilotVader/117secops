@@ -9,7 +9,7 @@ tags:
   - "Cloud"
   - "SOC"
   - "Security Analysis"
-image: "/images/projects/30-day-soc-analyst-challenge.png"
+image: "/images/projects/Mydfir 30 day challenge.png"
 images: [
   { "src": "/images/projects/30-day-challenge/30-days-day-3.png", "alt": "30 Days MYDFIR SOC Analyst Challenge Day 3" },
   { "src": "/images/projects/30-day-challenge/Elasticsearch-Installation.png", "alt": "Elasticsearch Installation" }

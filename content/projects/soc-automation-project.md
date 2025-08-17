@@ -12,7 +12,7 @@ results: [
   "Outlined the main workflow from event generation to case management",
   "Mapped alert flow using color-coded connections"
 ]
-image: "/images/projects/soc-automation/soc-automation-project.png"
+image: "/images/projects/project 2.png"
 technologies: ["Wazuh", "The Hive", "Shuffle", "Windows 10", "Draw.io"]
 category: "blue"
 tags: ["Blue Team", "SIEM", "SOAR"]

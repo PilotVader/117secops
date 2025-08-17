@@ -9,7 +9,7 @@ tags:
   - "Networking"
   - "Infrastructure"
   - "Virtualization"
-image: "/images/projects/home-lab.png"
+image: "/images/projects/project 4.jpg"
 images: [
   { "src": "/images/projects/hardware-lab/1-router.jpg", "alt": "Router Configuration - Initial Setup" },
   { "src": "/images/projects/hardware-lab/2-router.jpg", "alt": "Router Configuration - Network Settings" },

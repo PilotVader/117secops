@@ -9,7 +9,7 @@ tags:
   - "SOC"
   - "Security"
   - "Integration"
-image: "/images/projects/30-day-soc-analyst-challenge.png"
+image: "/images/projects/Mydfir 30 day challenge.png"
 images: [
   { "src": "/images/projects/30-day-challenge/1-30-days-day-25.png", "alt": "30 Days MYDFIR SOC Analyst Challenge Day 25" },
   { "src": "/images/projects/30-day-challenge/2-Screenshot-2024-09-25-204517.png", "alt": "OS Ticket API Configuration" },

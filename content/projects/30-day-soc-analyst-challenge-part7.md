@@ -9,7 +9,7 @@ tags:
   - "Log Management"
   - "SOC"
   - "Security Monitoring"
-image: "/images/projects/30-day-soc-analyst-challenge.png"
+image: "/images/projects/Mydfir 30 day challenge.png"
 images: [
   { "src": "/images/projects/30-day-challenge/30-days-day-7.png", "alt": "30 Days MYDFIR SOC Analyst Challenge Day 7" },
   { "src": "/images/projects/30-day-challenge/Elastic-agent-Installation-on-fleet-server.png", "alt": "Elastic Agent Installation on Fleet Server" },

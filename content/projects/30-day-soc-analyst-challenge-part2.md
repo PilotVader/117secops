@@ -9,7 +9,7 @@ tags:
   - "Logstash"
   - "Kibana"
   - "Log Management"
-image: "/images/projects/30-day-soc-analyst-challenge.png"
+image: "/images/projects/Mydfir 30 day challenge.png"
 images: [
   { "src": "/images/projects/30-day-challenge/Day-2-mydfir-soc-analyst-challenge.png", "alt": "Day 2 MYDFIR SOC Analyst Challenge" }
 ]

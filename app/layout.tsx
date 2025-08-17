@@ -9,7 +9,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "117SECOPS | Cybersecurity Portfolio",
+      title: "Samson's | Cybersecurity Portfolio",
   description: "Professional cybersecurity portfolio showcasing expertise in digital security",
   icons: {
     icon: [

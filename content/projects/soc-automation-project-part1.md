@@ -5,7 +5,7 @@ date: "2025-03-05"
 author: "Samson Otori"
 category: "blue"
 tags: ["Blue Team", "SOC", "Automation", "SIEM"]
-image: "/images/projects/soc-automation/soc-automation-project.png"
+image: "/images/projects/project 2.png"
 images: [
   { "src": "/images/projects/soc-automation/part2/1 Windows 10 virtual machine properties.png", "alt": "Windows 10 Virtual Machine Setup Properties" },
   { "src": "/images/projects/soc-automation/part2/2 Ubuntu OS Virtual Machine properties.png", "alt": "Ubuntu OS Virtual Machine Properties" },

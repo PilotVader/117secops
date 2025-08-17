@@ -11,7 +11,7 @@ results: [
   "Enabled telemetry generation and analysis",
   "Built foundational skills in monitoring and detection"
 ]
-image: "/images/projects/homelab-coding.jpg"
+image: "/images/projects/Project 1.png"
 technologies: ["VirtualBox", "Parrot Security OS", "Sysmon", "Splunk"]
 category: "blue"
 tags: ["Blue Team", "Home Lab", "SIEM"]
