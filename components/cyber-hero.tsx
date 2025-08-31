@@ -123,6 +123,19 @@ export function CyberHero() {
                <Shield className="w-5 h-5 mr-2" />
                Terminal Mode
              </Button>
+            <Link href="/blog">
+              <Button 
+                size="lg"
+                className="cyber-border bg-gradient-to-r from-purple-600 to-purple-800 text-white hover:from-purple-700 hover:to-purple-900 relative overflow-hidden group animate-pulse"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-purple-600 opacity-0 group-hover:opacity-30 transition-opacity duration-300" />
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-bounce" />
+                <div className="relative flex items-center text-white">
+                  <span className="mr-2 font-bold text-white">NEW</span>
+                  <span className="text-white">Check Out My Blog</span>
+                </div>
+              </Button>
+            </Link>
           </div>
 
           {/* Scroll indicator */}

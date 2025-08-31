@@ -29,7 +29,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
+      <head>
+        {/* Umami Analytics Script */}
+        <script defer src="https://cloud.umami.is/script.js" data-website-id="1c0f224c-1fe0-4093-a4e2-c43cb8c84bfa"></script>
+        {/* End Umami Analytics Script */}
+      </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" disableTransitionOnChange>
           <div className="flex min-h-screen flex-col">
