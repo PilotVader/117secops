@@ -10,6 +10,8 @@ import { TerminalInterface } from "./terminal-interface"
 export function CyberHero() {
   const [typedText, setTypedText] = useState("")
   const [showTerminal, setShowTerminal] = useState(false)
+  const [glitchActive, setGlitchActive] = useState(false)
+  const [glitchText, setGlitchText] = useState("Check Out My Blog")
   const roles = ["Cybersecurity Analyst", "SOC Analyst", "Security Engineer"]
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0)
   const [isTyping, setIsTyping] = useState(true)
@@ -41,6 +43,38 @@ export function CyberHero() {
 
     return () => clearTimeout(timeout)
   }, [typedText, isTyping, currentRoleIndex, roles])
+
+  // Glitch effect for the announcement button
+  useEffect(() => {
+    const glitchInterval = setInterval(() => {
+      setGlitchActive(true)
+      setTimeout(() => setGlitchActive(false), 150)
+    }, 3000) // Glitch every 3 seconds
+
+    return () => clearInterval(glitchInterval)
+  }, [])
+
+  // Text glitch effect
+  useEffect(() => {
+    const originalText = "Check Out My Blog"
+    
+    if (glitchActive) {
+      const glitchChars = "!@#$%^&*()_+-=[]{}|;:,.<>?"
+      const glitchedText = originalText
+        .split('')
+        .map(char => {
+          if (Math.random() < 0.3) {
+            return glitchChars[Math.floor(Math.random() * glitchChars.length)]
+          }
+          return char
+        })
+        .join('')
+      
+      setGlitchText(glitchedText)
+    } else {
+      setGlitchText(originalText)
+    }
+  }, [glitchActive])
 
   return (
     <>
@@ -126,13 +160,23 @@ export function CyberHero() {
             <Link href="/blog">
               <Button 
                 size="lg"
-                className="cyber-border bg-gradient-to-r from-purple-600 to-purple-800 text-white hover:from-purple-700 hover:to-purple-900 relative overflow-hidden group animate-pulse"
+                className={`cyber-border bg-gradient-to-r from-purple-600 to-purple-800 text-white hover:from-purple-700 hover:to-purple-900 relative overflow-hidden group animate-pulse ${
+                  glitchActive ? 'shadow-lg shadow-red-500/50' : ''
+                }`}
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-purple-600 opacity-0 group-hover:opacity-30 transition-opacity duration-300" />
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-bounce" />
-                <div className="relative flex items-center text-white">
-                  <span className="mr-2 font-bold text-white">NEW</span>
-                  <span className="text-white">Check Out My Blog</span>
+                <div className={`absolute -top-1 -right-1 w-3 h-3 rounded-full animate-bounce ${
+                  glitchActive ? 'bg-red-400' : 'bg-yellow-400'
+                }`} />
+                <div className={`relative flex items-center ${
+                  glitchActive ? 'text-red-300' : 'text-white'
+                }`}>
+                  <span className={`mr-2 font-bold ${
+                    glitchActive ? 'text-red-300' : 'text-white'
+                  }`}>NEW</span>
+                  <span className={glitchActive ? 'text-red-300' : 'text-white'}>
+                    {glitchText}
+                  </span>
                 </div>
               </Button>
             </Link>
