@@ -48,7 +48,7 @@ export default function AboutPage() {
                 About Me
               </motion.h1>
               <motion.p className="text-xl max-w-3xl mx-auto text-gray-100" variants={fadeIn}>
-                Security analyst in training - breaking, fixing and documenting systems. Samson's is my public lab
+                Security analyst in training - breaking, fixing and documenting systems. 117secops is my public lab
                 notebook for offensive/defensive experiments.
               </motion.p>
             </motion.div>
@@ -147,7 +147,7 @@ export default function AboutPage() {
               </motion.h2>
               <motion.p className="text-xl max-w-3xl mx-auto text-gray-100" variants={fadeIn}>
                 To develop the hands-on security expertise that protects modern businesses, while documenting my
-                journey openly at Samson's. I believe effective cybersecurity isn't just about tools, but
+                journey openly at 117secops. I believe effective cybersecurity isn't just about tools, but
                 practical risk management that enables growth. Every lab, tutorial, and project brings me closer
                 to becoming the defender organizations need.
               </motion.p>
