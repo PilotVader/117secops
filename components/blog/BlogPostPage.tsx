@@ -9,6 +9,7 @@ import Link from "next/link"
 import { getBlogPostBySlug, getRelatedBlogPosts, getPopularBlogPosts, getCategoryCounts } from "@/lib/blog"
 import { BlogSidebar } from "./BlogSidebar"
 import { BlogCard } from "./BlogCard"
+import { BlogContentRenderer } from "@/components/blog-content-renderer"
 import type { BlogPost } from "./BlogCard"
 
 interface BlogPostPageProps {
@@ -177,36 +178,9 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
 
           {/* Article Content */}
           <div className="blog-content mb-12">
-            <div 
-              className="text-foreground leading-relaxed"
-              dangerouslySetInnerHTML={{ 
-                __html: post.content
-                  .split('\n')
-                  .map(line => {
-                    if (line.startsWith('# ')) {
-                      return `<h1>${line.substring(2)}</h1>`
-                    }
-                    if (line.startsWith('## ')) {
-                      return `<h2>${line.substring(3)}</h2>`
-                    }
-                    if (line.startsWith('### ')) {
-                      return `<h3>${line.substring(4)}</h3>`
-                    }
-                    if (line.startsWith('- **')) {
-                      const text = line.substring(4, line.lastIndexOf('**'))
-                      const description = line.substring(line.lastIndexOf('**') + 2)
-                      return `<div class="mb-3"><strong>${text}</strong>${description}</div>`
-                    }
-                    if (line.startsWith('- ')) {
-                      return `<li>${line.substring(2)}</li>`
-                    }
-                    if (line.trim() === '') {
-                      return '<br>'
-                    }
-                    return `<p>${line}</p>`
-                  })
-                  .join('')
-              }}
+            <BlogContentRenderer 
+              content={post.content}
+              groupId="blog-post"
             />
           </div>
 

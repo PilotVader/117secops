@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react"
 import { InlineGallery } from "./inline-gallery"
+import CodeBlock from "./CodeBlock"
 
 interface BlogContentRendererProps {
   content: string
@@ -29,12 +30,15 @@ export function BlogContentRenderer({
 
     let newContent = content
       // Process InlineGallery components first
-      .replace(/<InlineGallery images=\{([^}]+)\} title="([^"]*)" \/>/g, '{{INLINE_COMPONENT:InlineGallery:$1:$2}}')
+      .replace(/<InlineGallery images=\{([^}]+)\} title="([^"]*)" \/>/g, '{{INLINE_COMPONENT:$1:$2}}')
       
       // Headers with proper spacing
-      .replace(/^### (.*$)/gim, '\n<h3 class="text-xl font-semibold mt-6 mb-3">$1</h3>\n')
-      .replace(/^## (.*$)/gim, '\n<h2 class="text-2xl font-bold mt-8 mb-4">$1</h2>\n')
-      .replace(/^# (.*$)/gim, '\n<h1 class="text-3xl font-bold mt-10 mb-6">$1</h1>\n')
+      .replace(/^### (.*$)/gim, '\n<h3 class="text-xl font-semibold mt-6 mb-3 text-gray-900 dark:text-gray-100">$1</h3>\n')
+      .replace(/^## (.*$)/gim, '\n<h2 class="text-2xl font-bold mt-8 mb-4 text-gray-900 dark:text-gray-100">$1</h2>\n')
+      .replace(/^# (.*$)/gim, '\n<h1 class="text-3xl font-bold mt-10 mb-6 text-gray-900 dark:text-gray-100">$1</h1>\n')
+      
+      // Ensure all paragraph text has consistent colors
+      .replace(/^([^<\n].*)$/gm, '<p class="text-gray-900 dark:text-gray-100 mb-4">$1</p>')
       
       // Bold and italic
       .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold">$1</strong>')
@@ -43,7 +47,29 @@ export function BlogContentRenderer({
       // Links with proper styling
       .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">$1</a>')
       
-      // Code blocks
+      // Force the specific write-up link FIRST (before general name replacement)
+      .replace(/\[Felix Boulet's Original Write-up\]\([^)]+\)/g, '<a href="https://blog.qwertysecurity.com/Articles/blog3.html" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Felix Boulet\'s Original Write-up</a>')
+      .replace(/Felix Boulet's Original Write-up/g, '<a href="https://blog.qwertysecurity.com/Articles/blog3.html" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Felix Boulet\'s Original Write-up</a>')
+      
+      // Specific name links (after the specific write-up link) - only replace standalone names, not within sentences
+      .replace(/\bFelix Boulet\b(?!'s Original Write-up)/g, '<a href="https://www.linkedin.com/in/felix-boulet/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Felix Boulet</a>')
+      .replace(/Philippe Dugre/g, '<a href="https://www.linkedin.com/in/zer0x64/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Philippe Dugre</a>')
+      
+      // Terminal → format - make it display on separate lines (process before inline code)
+      .replace(/\*\*Terminal →\*\*\s*\r?\n\s*\r?\n\s*`([^`]+)`/g, (match, command) => {
+        console.log('TERMINAL MATCH FOUND:', { match: match.substring(0, 50), command: command.substring(0, 30) })
+        return '<div class="my-4"><div class="text-red-500 font-semibold mb-2">Terminal →</div><div class="bg-gray-900 text-gray-100 p-3 rounded-lg font-mono text-sm"><code>' + command + '</code></div></div>'
+      })
+      
+      // Fallback: Replace any remaining Terminal → text
+      .replace(/Terminal →/g, '<div class="my-4"><div class="text-red-500 font-semibold mb-2">Terminal →</div></div>')
+      
+      // Code blocks - we'll handle these with React components
+      .replace(/```(\w+)?\n([\s\S]*?)```/g, (match, lang, code) => {
+        const language = lang || 'bash'
+        const cleanCode = code.trim()
+        return `{{CODE_BLOCK:${language}:${cleanCode.replace(/\n/g, '\\n')}}}`
+      })
       .replace(/`([^`]+)`/g, '<code class="bg-muted px-1 py-0.5 rounded text-sm font-mono">$1</code>')
       
       // Lists
@@ -99,35 +125,87 @@ export function BlogContentRenderer({
   const renderContentWithComponents = () => {
     if (!processedContent) return null
 
-    // Split content by component markers
-    const parts = processedContent.split(/{{INLINE_COMPONENT:([^}]+)}}/)
+    // First handle code blocks
+    let contentWithCodeBlocks = processedContent
+    const codeBlockMatches = contentWithCodeBlocks.match(/{{CODE_BLOCK:([^:]+):([^}]+)}}/g)
+    
+    if (codeBlockMatches) {
+      codeBlockMatches.forEach((match, index) => {
+        const [, language, code] = match.match(/{{CODE_BLOCK:([^:]+):([^}]+)}}/) || []
+        const cleanCode = code.replace(/\\n/g, '\n')
+        const codeBlockId = `code-block-${index}`
+        contentWithCodeBlocks = contentWithCodeBlocks.replace(match, `{{CODE_BLOCK_PLACEHOLDER:${codeBlockId}}}`)
+      })
+    }
+
+    // Split content by component markers (original working pattern)
+    const parts = contentWithCodeBlocks.split(/{{INLINE_COMPONENT:([^}]+)}}/)
     const elements = []
 
     for (let i = 0; i < parts.length; i++) {
       if (i % 2 === 0) {
-        // Regular content
+        // Regular content - check for code blocks
         if (parts[i].trim()) {
-          elements.push(
-            <div 
-              key={`content-${i}`}
-              dangerouslySetInnerHTML={{ __html: parts[i] }} 
-            />
-          )
+          let content = parts[i]
+          
+          // Replace code block placeholders with actual components
+          const codeBlockPlaceholders = content.match(/{{CODE_BLOCK_PLACEHOLDER:([^}]+)}}/g)
+          if (codeBlockPlaceholders) {
+            const contentParts = content.split(/{{CODE_BLOCK_PLACEHOLDER:([^}]+)}}/)
+            const contentElements = []
+            
+            for (let j = 0; j < contentParts.length; j++) {
+              if (j % 2 === 0) {
+                // Regular content
+                if (contentParts[j].trim()) {
+                  contentElements.push(
+                    <div 
+                      key={`content-${i}-${j}`}
+                      dangerouslySetInnerHTML={{ __html: contentParts[j] }} 
+                    />
+                  )
+                }
+              } else {
+                // Code block placeholder
+                const codeBlockId = contentParts[j]
+                const originalMatch = codeBlockMatches?.find(match => match.includes(codeBlockId))
+                if (originalMatch) {
+                  const [, language, code] = originalMatch.match(/{{CODE_BLOCK:([^:]+):([^}]+)}}/) || []
+                  const cleanCode = code.replace(/\\n/g, '\n')
+                  
+                  contentElements.push(
+                    <CodeBlock
+                      key={`code-${i}-${j}`}
+                      language={language || 'bash'}
+                      code={cleanCode}
+                    />
+                  )
+                }
+              }
+            }
+            
+            elements.push(...contentElements)
+          } else {
+            // No code blocks, just regular content
+            elements.push(
+              <div 
+                key={`content-${i}`}
+                dangerouslySetInnerHTML={{ __html: content }} 
+              />
+            )
+          }
         }
       } else {
         // Component marker
-        const [componentType, imagesKey, title] = parts[i].split(':')
+        const [imagesKey, title] = parts[i].split(':')
         
-        if (componentType === 'InlineGallery') {
+        if (imagesKey) {
           // Get images from the predefined galleries
           const galleryImages = getGalleryImages(imagesKey)
           
-                               if (galleryImages) {
+          if (galleryImages) {
             // Get descriptive image names
             const imageNames = getImageNames(imagesKey)
-            
-            // Debug: Log the image names to see if they're being passed correctly
-            console.log('Gallery:', imagesKey, 'Image Names:', imageNames)
             
             elements.push(
               <InlineGallery 
@@ -315,6 +393,13 @@ export function BlogContentRenderer({
           "/images/projects/hardware-lab/12 - cortex login accessed.png",
           "/images/projects/hardware-lab/13 - loggin into cortex with created credential.png",
           "/images/projects/hardware-lab/14 - cortex dashboard accessed .png"
+        ],
+        // Docker CVE-2025-9074 demonstration walkthrough
+        "docker-cve-demonstration": [
+          "/images/blog/1 - Downloaded the older version of docker for desktop - the vilnerable version.png",
+          "/images/blog/2 - POC testing .png", 
+          "/images/blog/3 - text file created in the host C drive.png",
+          "/images/blog/4 - text content -pwned- written into the file from container to host machine.png"
         ]
      }
 
@@ -490,6 +575,13 @@ export function BlogContentRenderer({
          "Cortex login accessed",
          "Logging into Cortex with created credentials",
          "Cortex dashboard accessed"
+       ],
+       // Docker CVE-2025-9074 demonstration walkthrough - concise, human-friendly titles
+       "docker-cve-demonstration": [
+         "Downloaded vulnerable Docker Desktop version",
+         "Proof of concept testing in progress",
+         "Text file created on host C: drive",
+         "Pwned text written from container to host"
        ]
      }
 
