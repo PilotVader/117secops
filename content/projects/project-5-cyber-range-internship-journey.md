@@ -1,5 +1,5 @@
 ---
-title: "Project 5: Cyber Range Internship Journey"
+title: "Project 5: LOG(N) Pacific Internship: Cyber Range Journey"
 client: "Personal Project"
 description: "An immersive journey into enterprise-grade cybersecurity tools through the Cyber Range internship program, focusing on Microsoft Azure, Sentinel, Defender for Endpoint, and Tenable vulnerability management."
 date: "2025-08-28"
@@ -9,7 +9,7 @@ technologies: ["Microsoft Azure", "Microsoft Sentinel", "Microsoft Defender for 
 category: "blue"
 tags: ["Blue Team", "SOC", "Internship", "Microsoft Security", "Enterprise Tools", "Threat Hunting", "Incident Response"]
 series:
-  name: "Project 5: Cyber Range Internship Journey"
+  name: "Project 5: LOG(N) Pacific Internship: Cyber Range Journey"
   part: 1
   totalParts: 1
 ---

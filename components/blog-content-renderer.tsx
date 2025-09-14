@@ -375,17 +375,39 @@ export function BlogContentRenderer({
          "/images/projects/hardware-lab/41 - test file showing in the shared folder directory.png"
        ],
                // TheHive Configuration walkthrough (Project 4.7)
-        "thehive-configuration": [
-          "/images/projects/hardware-lab/1 - Accessing the hive site.png",
-          "/images/projects/hardware-lab/2 - the hive download page.png",
-          "/images/projects/hardware-lab/3 - taking the ocker compose file to import in docker.png",
-          "/images/projects/hardware-lab/4 - back to portainer to add new stack.png",
-          "/images/projects/hardware-lab/5 - givint the stack a name and pasting the yml compose file content.png",
-          "/images/projects/hardware-lab/6 - stack created.png",
-          "/images/projects/hardware-lab/7 - All containers deployed.png",
-          "/images/projects/hardware-lab/8 - the hive login accessed using the port.png",
-          "/images/projects/hardware-lab/9 - the hive dashboard.png",
-          "/images/projects/hardware-lab/10 - creating new organization.png",
+       "internet-facing-device-investigation": [
+         "/images/projects/project-5-1/1 - Using this query to get a general overview of the table content.png",
+         "/images/projects/project-5-1/2 - Narrowing down to see all distinct devices in the table.png",
+         "/images/projects/project-5-1/3 - Narrowing down further to the scope - i.e the computer im working with.png",
+         "/images/projects/project-5-1/4 - picking one and checking for relevant information- here we can see the field isinternetfacing is 1 meaning the vm was online.png",
+         "/images/projects/project-5-1/5 - narrowing further by viewing only the records where isinternetfacing is true and view them from most recent.png",
+         "/images/projects/project-5-1/6 - getting into the windows logon events for the target system.png"
+       ],
+       "brute-force-analysis": [
+         "/images/projects/project-5-1/7 - further streamline to see how many times diffrent IP addresses targeted a brute force attack on our target machine.png"
+       ],
+       "malicious-ip-validation": [
+         "/images/projects/project-5-1/8 - Taking the top 7 desprate brute force attackers IP addresses to see if any of them have been able to login succesfully into our target machine .png"
+       ],
+        "account-failed-logons": [
+          "/images/projects/project-5-1/9 - fine tuning the query to only see if the account name nicklabuser for the target machine has failed a login attempt.png",
+          "/images/projects/project-5-1/12 - checking to see how many times the account nicklabuser has failed to login to the target machine.png"
+        ],
+       "account-successful-logons": [
+         "/images/projects/project-5-1/10 - checking to see how many times the account nicklabuser has been able to login succesfully to the target machine.png",
+         "/images/projects/project-5-1/11 - checking to see all the ip addresses that the account nicklabuser has used to login to this target machine.png"
+       ],
+       "thehive-configuration": [
+         "/images/projects/hardware-lab/1 - Accessing the hive site.png",
+         "/images/projects/hardware-lab/2 - the hive download page.png",
+         "/images/projects/hardware-lab/3 - taking the ocker compose file to import in docker.png",
+         "/images/projects/hardware-lab/4 - back to portainer to add new stack.png",
+         "/images/projects/hardware-lab/5 - givint the stack a name and pasting the yml compose file content.png",
+         "/images/projects/hardware-lab/6 - stack created.png",
+         "/images/projects/hardware-lab/7 - All containers deployed.png",
+         "/images/projects/hardware-lab/8 - the hive login accessed using the port.png",
+         "/images/projects/hardware-lab/9 - the hive dashboard.png",
+         "/images/projects/hardware-lab/10 - creating new organization.png",
           "/images/projects/hardware-lab/11 - adding user to the organization.png"
         ],
         // Cortex Setup walkthrough (Project 4.7)
@@ -555,6 +577,33 @@ export function BlogContentRenderer({
          "Logging in with domain user account",
          "Shared folder mapped as network drive",
          "Test file visible in shared folder"
+       ],
+       // Internet-Facing Device Investigation (Project 5.1) - concise, human-friendly titles
+       "internet-facing-device-investigation": [
+         "Using KQL query to get general overview of table content",
+         "Narrowing down to see all distinct devices in the table",
+         "Narrowing down further to the target computer",
+         "Checking relevant information - VM was internet-facing",
+         "Filtering records where IsInternetFacing is true and viewing most recent",
+         "Accessing Windows logon events for the target system"
+       ],
+       // Brute Force Analysis (Project 5.1) - concise, human-friendly titles
+       "brute-force-analysis": [
+         "Analyzing brute force attack attempts from different IP addresses"
+       ],
+       // Malicious IP Validation (Project 5.1) - concise, human-friendly titles
+       "malicious-ip-validation": [
+         "Checking if top 7 persistent brute force attackers gained unauthorized access"
+       ],
+        // Account Failed Logons (Project 5.1) - concise, human-friendly titles
+        "account-failed-logons": [
+          "Fine-tuning query to check for failed login attempts on nick-labuser account",
+          "Analyzing failed login attempts count for nick-labuser account"
+        ],
+       // Account Successful Logons (Project 5.1) - concise, human-friendly titles
+       "account-successful-logons": [
+         "Checking successful login attempts for nick-labuser account on target machine",
+         "Analyzing all IP addresses used by nick-labuser account for logins"
        ],
        // TheHive Configuration walkthrough (Project 4.7) - concise, human-friendly titles
        "thehive-configuration": [

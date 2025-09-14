@@ -177,33 +177,27 @@ export function InlineGallery({ images, imageNames, title }: InlineGalleryProps)
             />
             
             {/* Navigation Arrows */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-black/20 backdrop-blur-sm text-white"
+            <button
+              className="absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-purple-600 text-white hover:bg-purple-600 focus:bg-purple-600 active:bg-purple-600 transition-none"
               onClick={prevImage}
             >
-              <ChevronLeft className="h-5 w-5" />
-            </Button>
+              <ChevronLeft className="h-5 w-5 mx-auto" />
+            </button>
             
-            <Button
-              variant="ghost"
-              size="icon"
-              className="absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-black/20 backdrop-blur-sm text-white"
+            <button
+              className="absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-purple-600 text-white hover:bg-purple-600 focus:bg-purple-600 active:bg-purple-600 transition-none"
               onClick={nextImage}
             >
-              <ChevronRight className="h-5 w-5" />
-            </Button>
+              <ChevronRight className="h-5 w-5 mx-auto" />
+            </button>
 
             {/* Expand Button */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="absolute right-2 top-2 z-10 h-8 w-8 rounded-full bg-black/20 backdrop-blur-sm text-white"
+            <button
+              className="absolute right-2 top-2 z-10 h-8 w-8 rounded-full bg-purple-600 text-white hover:bg-purple-600 focus:bg-purple-600 active:bg-purple-600 transition-none"
               onClick={toggleFullscreen}
             >
-              <Expand className="h-4 w-4" />
-            </Button>
+              <Expand className="h-4 w-4 mx-auto" />
+            </button>
 
                          {/* Image Counter and Name */}
              <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1">
@@ -276,60 +270,48 @@ export function InlineGallery({ images, imageNames, title }: InlineGalleryProps)
             </div>
 
             {/* Navigation Arrows */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="absolute left-4 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-white/10 backdrop-blur-sm text-white"
+            <button
+              className="absolute left-4 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-purple-600 text-white hover:bg-purple-600 focus:bg-purple-600 active:bg-purple-600 transition-none"
               onClick={prevImage}
             >
-              <ChevronLeft className="h-6 w-6" />
-            </Button>
+              <ChevronLeft className="h-6 w-6 mx-auto" />
+            </button>
             
-            <Button
-              variant="ghost"
-              size="icon"
-              className="absolute right-4 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-white/10 backdrop-blur-sm text-white"
+            <button
+              className="absolute right-4 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-purple-600 text-white hover:bg-purple-600 focus:bg-purple-600 active:bg-purple-600 transition-none"
               onClick={nextImage}
             >
-              <ChevronRight className="h-6 w-6" />
-            </Button>
+              <ChevronRight className="h-6 w-6 mx-auto" />
+            </button>
 
             {/* Close Button */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="absolute right-4 top-4 h-10 w-10 rounded-full bg-white/10 backdrop-blur-sm text-white"
+            <button
+              className="absolute right-4 top-4 h-10 w-10 rounded-full bg-purple-600 text-white hover:bg-purple-600 focus:bg-purple-600 active:bg-purple-600 transition-none"
               onClick={toggleFullscreen}
             >
-              <X className="h-5 w-5" />
-            </Button>
+              <X className="h-5 w-5 mx-auto" />
+            </button>
 
             {/* Zoom Controls */}
             <div className="absolute left-4 top-4 flex gap-2">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-10 w-10 rounded-full bg-white/10 backdrop-blur-sm text-white"
+              <button
+                className="h-10 w-10 rounded-full bg-purple-600 text-white hover:bg-purple-600 focus:bg-purple-600 active:bg-purple-600 transition-none"
                 onClick={handleZoomIn}
               >
-                <ZoomIn className="h-5 w-5" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-10 w-10 rounded-full bg-white/10 backdrop-blur-sm text-white"
+                <ZoomIn className="h-5 w-5 mx-auto" />
+              </button>
+              <button
+                className="h-10 w-10 rounded-full bg-purple-600 text-white hover:bg-purple-600 focus:bg-purple-600 active:bg-purple-600 transition-none"
                 onClick={handleZoomOut}
               >
-                <ZoomOut className="h-5 w-5" />
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="h-10 w-10 rounded-full bg-white/10 backdrop-blur-sm text-white"
+                <ZoomOut className="h-5 w-5 mx-auto" />
+              </button>
+              <button
+                className="h-10 w-10 rounded-full bg-purple-600 text-white hover:bg-purple-600 focus:bg-purple-600 active:bg-purple-600 transition-none"
                 onClick={resetZoom}
               >
-                <RotateCcw className="h-5 w-5" />
-              </Button>
+                <RotateCcw className="h-5 w-5 mx-auto" />
+              </button>
             </div>
 
             {/* Zoom Level Display */}
