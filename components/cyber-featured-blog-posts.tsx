@@ -81,70 +81,73 @@ export function CyberFeaturedBlogPosts({ blogPosts }: CyberFeaturedBlogPostsProp
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative h-full"
             >
-              <div className="cyber-border bg-card/50 backdrop-blur-sm rounded-lg overflow-hidden h-full flex flex-col min-h-[500px]">
-                {/* Blog Post Image */}
-                <div className="aspect-video relative overflow-hidden">
-                  <Image
-                    src={post.image || "/images/blog-placeholder.svg"}
-                    alt={post.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                
-                {/* Blog Post Content */}
-                <div className="p-6 flex-1 flex flex-col">
-                  {/* Category Badge */}
-                  <div className="flex items-center gap-2 mb-3">
-                    <Badge variant="outline" className="cyber-border bg-card/30">
-                      <span style={getCategoryColor(post.category)} className="flex items-center">
-                        {post.category}
-                      </span>
-                    </Badge>
+              <Link href={`/blog/${post.slug}`}>
+                <div className="cyber-border bg-card/50 backdrop-blur-sm rounded-lg overflow-hidden h-full flex flex-col min-h-[500px] hover:bg-card/70 transition-all duration-300 group cursor-pointer">
+                  {/* Blog Post Image */}
+                  <div className="aspect-video relative overflow-hidden">
+                    <Image
+                      src={post.image || "/images/blog-placeholder.svg"}
+                      alt={post.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
                   
-                  {/* Title */}
-                  <h3 className="text-xl font-semibold mb-3 font-mono text-foreground">
-                    {post.title}
-                  </h3>
-                  
-                  {/* Excerpt */}
-                  <p className="text-muted-foreground mb-4 line-clamp-2 flex-1">
-                    {post.excerpt}
-                  </p>
-                  
-                  {/* Tags */}
-                  {post.tags && post.tags.length > 0 && (
-                    <div className="flex flex-wrap gap-1 mb-4 flex-shrink-0">
-                      {post.tags.slice(0, 3).map((tag, tagIndex) => (
-                        <span
-                          key={`${tag}-${tagIndex}`}
-                          className="text-xs px-2 py-1 bg-gray-100 dark:bg-muted/50 rounded border border-gray-200 dark:border-border text-gray-800 dark:text-muted-foreground"
-                        >
-                          {tag}
+                  {/* Blog Post Content */}
+                  <div className="p-6 flex-1 flex flex-col">
+                    {/* Category Badge */}
+                    <div className="flex items-center gap-2 mb-3">
+                      <Badge variant="outline" className="cyber-border bg-card/30">
+                        <span style={getCategoryColor(post.category)} className="flex items-center">
+                          {post.category}
                         </span>
-                      ))}
-                      {post.tags.length > 3 && (
-                        <span className="text-xs px-2 py-1 bg-gray-100 dark:bg-muted/50 rounded border border-gray-200 dark:border-border text-gray-800 dark:text-muted-foreground">
-                          +{post.tags.length - 3}
-                        </span>
-                      )}
+                      </Badge>
                     </div>
-                  )}
-                  
-                  {/* Read More Button */}
-                  <Link href={`/blog/${post.slug}`} className="flex-shrink-0">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="w-full cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white"
-                    >
-                      <span>Read More</span>
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </Link>
+                    
+                    {/* Title */}
+                    <h3 className="text-xl font-semibold mb-3 font-mono text-foreground group-hover:text-primary transition-colors">
+                      {post.title}
+                    </h3>
+                    
+                    {/* Excerpt */}
+                    <p className="text-muted-foreground mb-4 line-clamp-2 flex-1">
+                      {post.excerpt}
+                    </p>
+                    
+                    {/* Tags */}
+                    {post.tags && post.tags.length > 0 && (
+                      <div className="flex flex-wrap gap-1 mb-4 flex-shrink-0">
+                        {post.tags.slice(0, 3).map((tag, tagIndex) => (
+                          <span
+                            key={`${tag}-${tagIndex}`}
+                            className="text-xs px-2 py-1 bg-gray-100 dark:bg-muted/50 rounded border border-gray-200 dark:border-border text-gray-800 dark:text-muted-foreground"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                        {post.tags.length > 3 && (
+                          <span className="text-xs px-2 py-1 bg-gray-100 dark:bg-muted/50 rounded border border-gray-200 dark:border-border text-gray-800 dark:text-muted-foreground">
+                            +{post.tags.length - 3}
+                          </span>
+                        )}
+                      </div>
+                    )}
+                    
+                    {/* Read More Button */}
+                    <div className="flex-shrink-0">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="w-full cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white"
+                      >
+                        <span>Read More</span>
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Button>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </motion.div>
           ))}
         </div>
