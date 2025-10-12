@@ -4,7 +4,7 @@ client: "Personal Project"
 description: "An immersive journey into enterprise-grade cybersecurity tools through the Cyber Range internship program, focusing on Microsoft Azure, Sentinel, Defender for Endpoint, and Tenable vulnerability management."
 date: "2025-08-28"
 author: "Samson Otori"
-image: "/images/projects/Cyber range NEW.png"
+image: "/images/projects/cyber-range-image.jpg"
 technologies: ["Microsoft Azure", "Microsoft Sentinel", "Microsoft Defender for Endpoint", "Tenable", "SIEM", "EDR", "Vulnerability Management"]
 category: "blue"
 tags: ["Blue Team", "SOC", "Internship", "Microsoft Security", "Enterprise Tools", "Threat Hunting", "Incident Response"]
