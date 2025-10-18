@@ -2,7 +2,6 @@
 
 import { useEffect, useState, useRef } from "react"
 import { InlineGallery } from "./inline-gallery"
-import CodeBlock from "./CodeBlock"
 
 interface BlogContentRendererProps {
   content: string
@@ -64,11 +63,10 @@ export function BlogContentRenderer({
       // Fallback: Replace any remaining Terminal → text
       .replace(/Terminal →/g, '<div class="my-4"><div class="text-red-500 font-semibold mb-2">Terminal →</div></div>')
       
-      // Code blocks - we'll handle these with React components
+      // Code blocks - style as italic text
       .replace(/```(\w+)?\n([\s\S]*?)```/g, (match, lang, code) => {
-        const language = lang || 'bash'
         const cleanCode = code.trim()
-        return `{{CODE_BLOCK:${language}:${cleanCode.replace(/\n/g, '\\n')}}}`
+        return `<pre class="italic font-normal bg-gray-50 dark:bg-gray-800 p-4 rounded-lg my-4 overflow-x-auto"><code>${cleanCode}</code></pre>`
       })
       .replace(/`([^`]+)`/g, '<code class="bg-muted px-1 py-0.5 rounded text-sm font-mono">$1</code>')
       
@@ -125,75 +123,20 @@ export function BlogContentRenderer({
   const renderContentWithComponents = () => {
     if (!processedContent) return null
 
-    // First handle code blocks
-    let contentWithCodeBlocks = processedContent
-    const codeBlockMatches = contentWithCodeBlocks.match(/{{CODE_BLOCK:([^:]+):([^}]+)}}/g)
-    
-    if (codeBlockMatches) {
-      codeBlockMatches.forEach((match, index) => {
-        const [, language, code] = match.match(/{{CODE_BLOCK:([^:]+):([^}]+)}}/) || []
-        const cleanCode = code.replace(/\\n/g, '\n')
-        const codeBlockId = `code-block-${index}`
-        contentWithCodeBlocks = contentWithCodeBlocks.replace(match, `{{CODE_BLOCK_PLACEHOLDER:${codeBlockId}}}`)
-      })
-    }
-
-    // Split content by component markers (original working pattern)
-    const parts = contentWithCodeBlocks.split(/{{INLINE_COMPONENT:([^}]+)}}/)
+    // Split content by component markers
+    const parts = processedContent.split(/{{INLINE_COMPONENT:([^}]+)}}/)
     const elements = []
 
     for (let i = 0; i < parts.length; i++) {
       if (i % 2 === 0) {
-        // Regular content - check for code blocks
+        // Regular content
         if (parts[i].trim()) {
-          let content = parts[i]
-          
-          // Replace code block placeholders with actual components
-          const codeBlockPlaceholders = content.match(/{{CODE_BLOCK_PLACEHOLDER:([^}]+)}}/g)
-          if (codeBlockPlaceholders) {
-            const contentParts = content.split(/{{CODE_BLOCK_PLACEHOLDER:([^}]+)}}/)
-            const contentElements = []
-            
-            for (let j = 0; j < contentParts.length; j++) {
-              if (j % 2 === 0) {
-                // Regular content
-                if (contentParts[j].trim()) {
-                  contentElements.push(
-                    <div 
-                      key={`content-${i}-${j}`}
-                      dangerouslySetInnerHTML={{ __html: contentParts[j] }} 
-                    />
-                  )
-                }
-              } else {
-                // Code block placeholder
-                const codeBlockId = contentParts[j]
-                const originalMatch = codeBlockMatches?.find(match => match.includes(codeBlockId))
-                if (originalMatch) {
-                  const [, language, code] = originalMatch.match(/{{CODE_BLOCK:([^:]+):([^}]+)}}/) || []
-                  const cleanCode = code.replace(/\\n/g, '\n')
-                  
-                  contentElements.push(
-                    <CodeBlock
-                      key={`code-${i}-${j}`}
-                      language={language || 'bash'}
-                      code={cleanCode}
-                    />
-                  )
-                }
-              }
-            }
-            
-            elements.push(...contentElements)
-          } else {
-            // No code blocks, just regular content
-            elements.push(
-              <div 
-                key={`content-${i}`}
-                dangerouslySetInnerHTML={{ __html: content }} 
-              />
-            )
-          }
+          elements.push(
+            <div 
+              key={`content-${i}`}
+              dangerouslySetInnerHTML={{ __html: parts[i] }} 
+            />
+          )
         }
       } else {
         // Component marker
@@ -422,6 +365,30 @@ export function BlogContentRenderer({
           "/images/blog/2 - POC testing .png", 
           "/images/blog/3 - text file created in the host C drive.png",
           "/images/blog/4 - text content -pwned- written into the file from container to host machine.png"
+        ],
+        // VM Setup and Microsoft Defender Onboarding (Project 5.2)
+        "vm-setup-onboarding": [
+          "/images/projects/1- created new vm.png",
+          "/images/projects/2 - RDP into the created vm .png",
+          "/images/projects/3 - downloading the onboarding package for microsoft defender.png",
+          "/images/projects/4 - extracted and running the package as an administrator.png",
+          "/images/projects/5 - onboarding process started and eventually completed succesfully.png",
+          "/images/projects/6 - VM showing in windows defender and active.png"
+        ],
+        // Network Investigation Analysis (Project 5.2)
+        "network-investigation-analysis": [
+          "/images/projects/7 - ran the code given in the excercise in my VM to observe with MD.png",
+          "/images/projects/8 - checking what data is in the netwrok event logs for investigation.png",
+          "/images/projects/9 - device file event logs for investigation.png",
+          "/images/projects/10 - device process events logs for investigation.png"
+        ],
+        // Port Scan Investigation and Device Isolation (Project 5.2)
+        "port-scan-investigation-isolation": [
+          "/images/projects/11 - Samson-windows- failing connection requests.png",
+          "/images/projects/12 - running another query and finding out its relation to being a port scan.png",
+          "/images/projects/13 - checking to see what might had trigered the port scan and noticing a powershell script named portscanps1.png",
+          "/images/projects/14 - I logged into the suspected computer to observe the powershell script that was used to conduct the port scan.png",
+          "/images/projects/15 - next step taken was to isolate the device.png"
         ]
      }
 
@@ -631,6 +598,30 @@ export function BlogContentRenderer({
          "Proof of concept testing in progress",
          "Text file created on host C: drive",
          "Pwned text written from container to host"
+       ],
+       // VM Setup and Microsoft Defender Onboarding (Project 5.2) - concise, human-friendly titles
+       "vm-setup-onboarding": [
+         "Created new VM in the environment",
+         "RDP connection established to the VM",
+         "Downloading Microsoft Defender onboarding package",
+         "Running the onboarding package as administrator",
+         "Onboarding process completed successfully",
+         "VM showing as active in Windows Defender portal"
+       ],
+       // Network Investigation Analysis (Project 5.2) - concise, human-friendly titles
+       "network-investigation-analysis": [
+         "Executing PowerShell script to generate network activity",
+         "Analyzing network event logs for investigation",
+         "Reviewing device file event logs for investigation",
+         "Examining device process events logs for investigation"
+       ],
+       // Port Scan Investigation and Device Isolation (Project 5.2) - concise, human-friendly titles
+       "port-scan-investigation-isolation": [
+         "Samson-windows- device showing multiple failed connection requests",
+         "Running additional queries to identify port scan activity",
+         "Identifying PowerShell script as the source of port scanning",
+         "Logging into suspected computer to examine the PowerShell script",
+         "Isolating the compromised device from the network"
        ]
      }
 
@@ -640,7 +631,7 @@ export function BlogContentRenderer({
   return (
     <div 
       ref={contentRef}
-      className={`prose prose-gray dark:prose-invert max-w-none ${groupId}`}
+      className={`blog-content prose prose-gray dark:prose-invert max-w-none ${groupId}`}
     >
       {renderContentWithComponents()}
     </div>

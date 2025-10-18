@@ -792,6 +792,27 @@ html {
   @apply bg-transparent p-0;
 }
 
+/* Regular text content - Inter font */
+.blog-content p,
+.blog-content div:not(:has(code)),
+.blog-content h1,
+.blog-content h2,
+.blog-content h3,
+.blog-content h4,
+.blog-content h5,
+.blog-content h6,
+.blog-content li,
+.blog-content blockquote {
+  font-family: 'Inter', sans-serif !important;
+}
+
+/* Code blocks - same font as paragraphs but italic */
+.blog-content pre,
+.blog-content pre code {
+  font-family: 'Inter', sans-serif !important;
+  font-style: italic !important;
+}
+
 /* Line clamp utilities */
 .line-clamp-2 {
   display: -webkit-box;

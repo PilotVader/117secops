@@ -27,61 +27,88 @@
   @apply px-3 py-2 text-xs text-emerald-400 bg-black/80 border-t border-white/10;
 }
 
-/* Syntax highlighting tokens */
-.token-prompt {
-  @apply text-green-400 font-bold;
+/* Syntax highlighting tokens - Dark theme matching screenshot */
+.token-keyword {
+  color: #569cd6; /* Blue for keywords */
+  font-weight: 600;
 }
 
-.token-command {
-  @apply text-blue-400 font-semibold;
+.token-function {
+  color: #dcdcaa; /* Light yellow for functions */
 }
 
-.token-flag {
-  @apply text-yellow-400;
-}
-
-.token-path {
-  @apply text-cyan-400;
-}
-
-.token-url {
-  @apply text-purple-400 underline;
-}
-
-.token-number {
-  @apply text-orange-400;
+.token-operator {
+  color: #d4d4d4; /* Light gray for operators */
 }
 
 .token-string {
-  @apply text-green-300;
+  color: #ce9178; /* Orange for strings */
 }
 
-.token-property {
-  @apply text-pink-400;
-}
-
-.token-boolean {
-  @apply text-red-400;
-}
-
-.token-punctuation {
-  @apply text-gray-300;
-}
-
-.token-directive {
-  @apply text-blue-300 font-semibold;
-}
-
-.token-value {
-  @apply text-yellow-300;
-}
-
-.token-block {
-  @apply text-purple-300 font-semibold;
+.token-number {
+  color: #b5cea8; /* Green for numbers */
 }
 
 .token-comment {
-  @apply text-gray-500 italic;
+  color: #6a9955; /* Green for comments */
+  font-style: italic;
+}
+
+.token-variable {
+  color: #9cdcfe; /* Light blue for variables */
+}
+
+.token-parameter {
+  color: #dcdcaa; /* Light yellow for parameters */
+}
+
+.token-prompt {
+  color: #4ec9b0; /* Cyan for prompts */
+  font-weight: bold;
+}
+
+.token-command {
+  color: #4ec9b0; /* Cyan for commands */
+  font-weight: 600;
+}
+
+.token-flag {
+  color: #dcdcaa; /* Light yellow for flags */
+}
+
+.token-path {
+  color: #4ec9b0; /* Cyan for paths */
+}
+
+.token-url {
+  color: #c586c0; /* Purple for URLs */
+  text-decoration: underline;
+}
+
+.token-property {
+  color: #9cdcfe; /* Light blue for properties */
+}
+
+.token-boolean {
+  color: #569cd6; /* Blue for booleans */
+}
+
+.token-punctuation {
+  color: #d4d4d4; /* Light gray for punctuation */
+}
+
+.token-directive {
+  color: #569cd6; /* Blue for directives */
+  font-weight: 600;
+}
+
+.token-value {
+  color: #dcdcaa; /* Light yellow for values */
+}
+
+.token-block {
+  color: #c586c0; /* Purple for blocks */
+  font-weight: 600;
 }
 
 /* Inline code style */

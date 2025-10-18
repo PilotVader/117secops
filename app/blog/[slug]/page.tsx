@@ -10,8 +10,8 @@ export function generateStaticParams() {
   }))
 }
 
-export default function BlogPostRoute({ params }: { params: { slug: string } }) {
-  const slug = params.slug
+export default async function BlogPostRoute({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
   const postData = getBlogPostBySlug(slug)
 
   if (!postData) {
