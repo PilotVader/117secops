@@ -268,7 +268,7 @@ export async function getProjectData(slug: string): Promise<Project | null> {
     // Extract images from content if not explicitly defined
     if (images.length === 0) {
       // Simple regex to find markdown image syntax
-      const imageRegex = /!\[(.*?)\]$$(.*?)$$/g
+      const imageRegex = /!\[(.*?)\]\((.*?)\)/g
       let match
       while ((match = imageRegex.exec(matterResult.content)) !== null) {
         images.push({
@@ -345,4 +345,150 @@ export function groupProjectsBySeries(projects: Project[]): {
   });
 
   return { series: seriesMap, standalone };
+}
+
+// Get related projects based on category and tags
+export function getRelatedProjects(currentSlug: string, limit: number = 3): Project[] {
+  try {
+    let projects: Project[] = []
+    
+    // Check if we're in production and have pre-generated data
+    if (process.env.NODE_ENV === "production" && fs.existsSync(path.join(dataDirectory, "projects.json"))) {
+      projects = JSON.parse(fs.readFileSync(path.join(dataDirectory, "projects.json"), "utf8"))
+    } else {
+      // Otherwise, read from the projects directory
+      if (!fs.existsSync(projectsDirectory)) {
+        return []
+      }
+      
+      const fileNames = fs.readdirSync(projectsDirectory)
+      const projectFiles = fileNames.filter((fileName) => fileName.endsWith(".md"))
+      
+      projects = projectFiles.map((fileName) => {
+        const slug = fileName.replace(/\.md$/, "")
+        const fullPath = path.join(projectsDirectory, fileName)
+        const fileContents = fs.readFileSync(fullPath, "utf8")
+        const matterResult = matter(fileContents)
+        
+        return {
+          slug,
+          title: matterResult.data.title || slug.replace(/-/g, " "),
+          description: matterResult.data.description || "",
+          date: matterResult.data.date || new Date().toISOString().split("T")[0],
+          author: matterResult.data.author || "Samson Otori",
+          client: matterResult.data.client || "Personal Project",
+          challenge: matterResult.data.challenge || "",
+          solution: matterResult.data.solution || "",
+          results: matterResult.data.results || [],
+          category: matterResult.data.category === "Infrastructure" ? "Infrastructure" as const : (matterResult.data.category === "red" ? "red" as const : "blue" as const),
+          tags: matterResult.data.tags || [],
+          content: matterResult.content,
+          image: matterResult.data.image || "/placeholder.svg?height=300&width=600",
+          technologies: matterResult.data.technologies || [],
+          images: matterResult.data.images || [],
+          series: matterResult.data.series,
+        }
+      })
+    }
+    
+    // Find the current project
+    const currentProject = projects.find(p => p.slug === currentSlug)
+    if (!currentProject) return []
+    
+    // Filter out the current project and find related ones
+    const otherProjects = projects.filter(p => p.slug !== currentSlug)
+    
+    // Score projects based on category and tag similarity
+    const scoredProjects = otherProjects.map(project => {
+      let score = 0
+      
+      // Category match gets high score
+      if (project.category === currentProject.category) {
+        score += 10
+      }
+      
+      // Tag matches get medium score
+      const currentTags = (currentProject.tags || []).map(t => t.toLowerCase())
+      const projectTags = (project.tags || []).map(t => t.toLowerCase())
+      const commonTags = currentTags.filter(tag => projectTags.includes(tag))
+      score += commonTags.length * 3
+      
+      // Series match gets high score
+      if (currentProject.series?.name && project.series?.name && 
+          currentProject.series.name === project.series.name) {
+        score += 15
+      }
+      
+      return { project, score }
+    })
+    
+    // Sort by score and return the top projects
+    return scoredProjects
+      .sort((a, b) => b.score - a.score)
+      .slice(0, limit)
+      .map(item => item.project)
+      
+  } catch (error) {
+    console.error("Error getting related projects:", error)
+    return []
+  }
+}
+
+// Get project category counts
+export function getProjectCategoryCounts(): { [key: string]: number } {
+  try {
+    let projects: Project[] = []
+    
+    // Check if we're in production and have pre-generated data
+    if (process.env.NODE_ENV === "production" && fs.existsSync(path.join(dataDirectory, "projects.json"))) {
+      projects = JSON.parse(fs.readFileSync(path.join(dataDirectory, "projects.json"), "utf8"))
+    } else {
+      // Otherwise, read from the projects directory
+      if (!fs.existsSync(projectsDirectory)) {
+        return {}
+      }
+      
+      const fileNames = fs.readdirSync(projectsDirectory)
+      const projectFiles = fileNames.filter((fileName) => fileName.endsWith(".md"))
+      
+      projects = projectFiles.map((fileName) => {
+        const slug = fileName.replace(/\.md$/, "")
+        const fullPath = path.join(projectsDirectory, fileName)
+        const fileContents = fs.readFileSync(fullPath, "utf8")
+        const matterResult = matter(fileContents)
+        
+        return {
+          slug,
+          title: matterResult.data.title || slug.replace(/-/g, " "),
+          description: matterResult.data.description || "",
+          date: matterResult.data.date || new Date().toISOString().split("T")[0],
+          author: matterResult.data.author || "Samson Otori",
+          client: matterResult.data.client || "Personal Project",
+          challenge: matterResult.data.challenge || "",
+          solution: matterResult.data.solution || "",
+          results: matterResult.data.results || [],
+          category: matterResult.data.category === "Infrastructure" ? "Infrastructure" as const : (matterResult.data.category === "red" ? "red" as const : "blue" as const),
+          tags: matterResult.data.tags || [],
+          content: matterResult.content,
+          image: matterResult.data.image || "/placeholder.svg?height=300&width=600",
+          technologies: matterResult.data.technologies || [],
+          images: matterResult.data.images || [],
+          series: matterResult.data.series,
+        }
+      })
+    }
+    
+    // Count projects by category
+    const categoryCounts: { [key: string]: number } = {}
+    projects.forEach(project => {
+      const category = project.category || "blue"
+      categoryCounts[category] = (categoryCounts[category] || 0) + 1
+    })
+    
+    return categoryCounts
+    
+  } catch (error) {
+    console.error("Error getting project category counts:", error)
+    return {}
+  }
 }

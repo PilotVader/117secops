@@ -9,27 +9,9 @@ import Link from "next/link"
 import { ArrowLeft, Calendar, User, Tag, Building, Shield, Terminal, Zap } from "lucide-react"
 import { BlogContentRenderer } from "@/components/blog-content-renderer"
 import { ImageGallery } from "@/components/ui/image-gallery"
+import { ProjectSidebar } from "@/components/projects/ProjectSidebar"
 
-interface Project {
-  slug: string
-  title: string
-  description: string
-  date?: string
-  author?: string
-  client?: string
-  category: string
-  challenge?: string
-  solution?: string
-  results?: string[]
-  image: string
-  technologies?: string[]
-  tags?: string[]
-  content: string
-  images?: {
-    src: string
-    alt: string
-  }[]
-}
+import type { Project } from "@/lib/project"
 
 
 
@@ -56,7 +38,17 @@ const getCategoryColor = (category: string) => {
   }
 }
 
-export default function ProjectClientPage({ projectData }: { projectData: Project }) {
+interface ProjectClientPageProps {
+  projectData: Project
+  relatedProjects: Project[]
+  categoryCounts: { [key: string]: number }
+}
+
+export default function ProjectClientPage({ 
+  projectData, 
+  relatedProjects, 
+  categoryCounts 
+}: ProjectClientPageProps) {
   const params = useParams()
   const slug = params?.slug
 
@@ -85,14 +77,18 @@ export default function ProjectClientPage({ projectData }: { projectData: Projec
   return (
     <PageTransition>
       <div className="container mx-auto px-4 md:px-6 py-12">
-        <div className="max-w-3xl mx-auto">
-          <Link
-            href="/projects/"
-            className="inline-flex items-center text-purple-600 hover:text-purple-700 mb-8 transition-colors duration-400"
-          >
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to all projects
-          </Link>
+        {/* Back Navigation */}
+        <Link
+          href="/projects/"
+          className="inline-flex items-center text-purple-600 hover:text-purple-700 mb-8 transition-colors duration-400"
+        >
+          <ArrowLeft className="mr-2 h-4 w-4" />
+          Back to all projects
+        </Link>
+
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          {/* Main Content */}
+          <div className="lg:col-span-3">
 
           <div className="mb-8">
             <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">{project.title}</h1>
@@ -288,6 +284,15 @@ export default function ProjectClientPage({ projectData }: { projectData: Projec
               </div>
             </div>
           )}
+          </div>
+
+          {/* Sidebar */}
+          <div className="lg:col-span-1">
+            <ProjectSidebar
+              relatedProjects={relatedProjects}
+              categoryCounts={categoryCounts}
+            />
+          </div>
         </div>
       </div>
     </PageTransition>
