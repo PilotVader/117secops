@@ -389,6 +389,15 @@ export function BlogContentRenderer({
           "/images/projects/13 - checking to see what might had trigered the port scan and noticing a powershell script named portscanps1.png",
           "/images/projects/14 - I logged into the suspected computer to observe the powershell script that was used to conduct the port scan.png",
           "/images/projects/15 - next step taken was to isolate the device.png"
+        ],
+        // Data Exfiltration Detection and Analysis (Project 5.3)
+        "data-exfiltration-detection-analysis": [
+          "/images/projects/1 - Running the powershell command in the vm to get logs and for the scenerio.png",
+          "/images/projects/2 - checking the suspected vm for any activity relating to zip files or data transfer.png",
+          "/images/projects/3 - Narrowing down within a specific event to see what happend around that time frame and noticing sucpicious activities.png",
+          "/images/projects/4 - these 2 activities where when the user installed 7zip app and used it to export and zip employee data .png",
+          "/images/projects/5 - narrowing down to get more information on the software install process.png",
+          "/images/projects/6 - narrowing down on this time frame to comfirm if this was actually a data exfiltration process and it was.png"
         ]
      }
 
@@ -615,14 +624,23 @@ export function BlogContentRenderer({
          "Reviewing device file event logs for investigation",
          "Examining device process events logs for investigation"
        ],
-       // Port Scan Investigation and Device Isolation (Project 5.2) - concise, human-friendly titles
-       "port-scan-investigation-isolation": [
-         "Samson-windows- device showing multiple failed connection requests",
-         "Running additional queries to identify port scan activity",
-         "Identifying PowerShell script as the source of port scanning",
-         "Logging into suspected computer to examine the PowerShell script",
-         "Isolating the compromised device from the network"
-       ]
+        // Port Scan Investigation and Device Isolation (Project 5.2) - concise, human-friendly titles
+        "port-scan-investigation-isolation": [
+          "Samson-windows- device showing multiple failed connection requests",
+          "Running additional queries to identify port scan activity",
+          "Identifying PowerShell script as the source of port scanning",
+          "Logging into suspected computer to examine the PowerShell script",
+          "Isolating the compromised device from the network"
+        ],
+        // Data Exfiltration Detection and Analysis (Project 5.3) - concise, human-friendly titles
+        "data-exfiltration-detection-analysis": [
+          "Running the PowerShell command in the VM to generate logs for the scenario",
+          "Checking the suspected VM for any activity relating to zip files or data transfer",
+          "Narrowing down within a specific event to see what happened around that timeframe and noticing suspicious activities",
+          "These 2 activities were when the user installed 7-Zip app and used it to export and zip employee data",
+          "Narrowing down to get more information on the software install process",
+          "Narrowing down on this timeframe to confirm if this was actually a data exfiltration process and it was"
+        ]
      }
 
     return imageNames[imagesKey] || []
