@@ -1,0 +1,162 @@
+1:"$Sreact.fragment"
+2:I[9304,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"ThemeProvider"]
+3:I[9241,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"CyberHeader"]
+4:I[7555,[],""]
+5:I[1295,[],""]
+6:I[1024,["542","static/chunks/542-9c169102c7286aba.js","838","static/chunks/838-83c262eea6b250cb.js","345","static/chunks/app/not-found-f26a84874965db45.js"],"default"]
+7:I[3063,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"Image"]
+8:I[6874,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],""]
+a:I[9665,[],"OutletBoundary"]
+d:I[9665,[],"ViewportBoundary"]
+f:I[9665,[],"MetadataBoundary"]
+11:I[6614,[],""]
+:HL["/_next/static/css/78204a441d290532.css","style"]
+:HL["/_next/static/css/b5c3a1bf19425f6c.css","style"]
+0:{"P":null,"b":"ueOktod6GdedqcxtLheow","p":"","c":["","projects","30-day-soc-analyst-challenge-part16",""],"i":false,"f":[[["",{"children":["projects",{"children":[["slug","30-day-soc-analyst-challenge-part16","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/78204a441d290532.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b5c3a1bf19425f6c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"defer":true,"src":"https://cloud.umami.is/script.js","data-website-id":"1c0f224c-1fe0-4093-a4e2-c43cb8c84bfa"}]}],["$","body",null,{"className":"__className_f367f3","children":["$","$L2",null,{"attribute":"class","defaultTheme":"light","disableTransitionOnChange":true,"children":["$","div",null,{"className":"flex min-h-screen flex-col","children":[["$","$L3",null,{}],["$","main",null,{"className":"flex-1 pt-16","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L6",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-background py-5 border-t border-border","children":["$","div",null,{"className":"container mx-auto px-4 md:px-6","children":[["$","div",null,{"className":"grid grid-cols-1 md:grid-cols-3 gap-4","children":[["$","div",null,{"className":"space-y-2","children":[["$","div",null,{"className":"flex items-center","children":["$","div",null,{"className":"relative w-[3.6rem] h-[3.6rem]","children":["$","$L7",null,{"src":"https://hebbkx1anhila5yf.public.blob.vercel-storage.com/117%20Corporation%20no%20bg-5VVBXF0igK8jcCo43su7cpA2isco7t.png","alt":"117 SECOPS Logo","fill":true,"className":"object-contain"}]}]}],["$","p",null,{"className":"text-sm text-muted-foreground max-w-xs","children":"Cybersecurity professional specializing in protecting digital assets from evolving threats."}],["$","div",null,{"className":"pt-0","children":["$","a",null,{"href":"https://www.linkedin.com/in/otori-samson/","target":"_blank","rel":"noopener noreferrer","children":"Contact Me","className":"inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-9 rounded-md px-3 cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white","ref":null}]}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"font-medium text-sm mb-2 text-foreground","children":"Quick Links"}],["$","ul",null,{"className":"space-y-0.5","children":[["$","li",null,{"children":["$","$L8",null,{"href":"/","className":"text-sm text-muted-foreground hover:text-primary","children":"Home"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/blog","className":"text-sm text-muted-foreground hover:text-primary","children":"Blog"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/projects","className":"text-sm text-muted-foreground hover:text-primary","children":"Projects"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/portfolio","className":"text-sm text-muted-foreground hover:text-primary","children":"Portfolio"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/about","className":"text-sm text-muted-foreground hover:text-primary","children":"About"}]}]]}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"font-medium text-sm mb-2 text-foreground","children":"Areas of Expertise"}],["$","ul",null,{"className":"space-y-0.5","children":[["$","li",null,{"className":"text-sm text-muted-foreground","children":"Security Assessment"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Penetration Testing"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Secure Development"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Incident Response"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Compliance"}]]}]]}]]}],["$","div",null,{"className":"border-t border-border mt-5 pt-3 flex flex-col md:flex-row justify-between items-center","children":["$","p",null,{"className":"text-sm text-muted-foreground","children":["© ",2025," Samson's. Personal cybersecurity portfolio."]}]}]]}]}]]}]}]}]]}]]}],{"children":["projects",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","30-day-soc-analyst-challenge-part16","d"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9","$undefined",null,["$","$La",null,{"children":["$Lb","$Lc",null]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","I8ZgVuQOZGAsx2Jv62Gx9",{"children":[["$","$Ld",null,{"children":"$Le"}],null]}],["$","$Lf",null,{"children":"$L10"}]]}],false]],"m":"$undefined","G":["$11","$undefined"],"s":false,"S":true}
+12:I[2238,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","842","static/chunks/842-e0e5a1d477d9d65d.js","150","static/chunks/150-c359029d3b689678.js","419","static/chunks/app/projects/%5Bslug%5D/page-41cd4d27245b4b70.js"],"default"]
+13:Tc06,
+## Day 16 of the 30-Day MYDFIR SOC Analyst Challenge: Windows Authentication Logs and RDP/SSH Brute Force Alerts
+
+## Overview
+
+On Day 16 of our challenge, I delved into the task of analyzing Windows authentication logs and creating alerts for RDP and SSH Brute Force attempts. This exercise built upon our previous work, further improving my skills as a SOC analyst.
+
+## Analyzing Windows Authentication Logs
+
+I began by accessing the Elastic web GUI and filtering events specifically for my Windows RDP server. My primary objective was to identify failed authentication attempts, which are key indicators of potential Brute Force activities. Through my research, I discovered that Event ID 4625 is associated with failed logon attempts on Windows systems, providing me with a specific marker to focus on.
+
+## Customizing Data View
+
+To gain a comprehensive understanding of these failed attempts, I tailored my data view in Elastic. I focused on three critical pieces of information:
+- The failed attempts themselves (represented by Event ID 4625)
+- The source IP address of the login attempt
+- The username being targeted
+
+This customized view allowed me to quickly assess the nature and scope of potential attacks. I then verified my setup by performing a test login attempt, ensuring that my system accurately captured RDP-specific events.
+
+## Creating RDP And SSH Brute Force Alerts
+
+My initial approach involved setting up a basic alert that would trigger when Event ID 4625 occurred more than five times within a five-minute window. However, I quickly realized that this alert lacked the detail necessary for effective threat analysis.
+
+To address this, I developed an enhanced custom rule. This improved alert incorporated specific usernames, such as "administrator," and grouped events by both source IP and username. I also increased the frequency of our checks, configuring the system to analyze data every minute while looking back over five minutes.
+
+## Conclusion
+
+Through this exercise, I gained several valuable insights:
+- The importance of fine-tuning alerts to provide truly actionable information
+- A deeper understanding of various authentication event IDs and their significance in Windows environments
+- The value of correlating events across multiple data points for a more comprehensive picture
+- The need for continuous refinement of alert systems to minimize false positives
+
+As I move forward, our next session will focus on creating dashboards to visualize the sources of these authentication attempts, further enhancing my ability to detect and respond to threats efficiently.
+
+Here's the link to follow along: [30-Day MYDFIR SOC Analyst Challenge](https://www.youtube.com/watch?v=11eBIfDeZ7k&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=43)
+
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)*
+
+#CyberSecurity #SOCAnalyst #MYDFIRChallenge #HandsOnExperience #Day16 14:Tc55,
+## Day 14 of the 30-Day MYDFIR SOC Analyst Challenge: Creating an SSH Brute Force Alert and Dashboard
+
+## Overview
+
+Today, I focused on setting up real-time alerts and dashboards to monitor brute-force activity from unauthorized sources. This exercise taught me how to visualize, monitor, and respond to SSH brute-force attacks more efficiently.
+
+## Querying SSH Logs
+
+The first task involved querying logs from my SSH server, which had already been ingested into ElasticSearch. By accessing the Discover tab, I could filter out logs specific to my SSH server. I found it crucial to focus on specific fields like `system.auth.ssh.event` and `user.name` to track failed authentication attempts. The process began by filtering for failed SSH authentication attempts. This was accomplished by searching for logs where the `system.auth.ssh.event` field indicated failed attempts, giving me an initial view of how many attempts were occurring and from where.
+
+## Building the Brute Force Alert
+
+Next, I focused on creating an alert for SSH brute-force attempts. The goal was to automate the detection process and trigger an alert based on predefined thresholds. Using ElasticSearch's alert feature, I created a search-based threshold rule. My rule was set to trigger if more than five failed login attempts occurred within five minutes, a common indicator of brute-force activity.
+
+I also configured how frequently the rule should check for new logs. To ensure near real-time monitoring, I set it to check every minute. While this was a basic alert configuration, it showcased the power of automating log analysis in detecting potential threats. Though this particular rule may not be perfect, it sets a solid foundation for building more sophisticated alerts later.
+
+## Visualizing with Dashboards
+
+To complement the alert system, I created a visual dashboard to track the geographical origins of these brute-force attempts. By navigating to the Maps section in ElasticSearch, I built a dashboard that plotted failed authentication attempts based on their source IP geolocation. This allowed me to see patterns of attack, such as which regions were targeting my SSH server the most.
+
+For example, I noticed most failed attempts came from countries like North Korea and China. Using the choropleth layer in the map, I visualized these locations, providing an easy-to-understand view of attack origins.
+
+## Conclusion
+
+By the end of Day 14, I had successfully created both an alert system and a dashboard for monitoring SSH brute-force attacks. The combination of real-time alerts and visualization tools has significantly improved my ability to detect and respond to these types of attacks quickly.
+
+Here's the link to follow along: [30-Day MYDFIR SOC Analyst Challenge](https://www.youtube.com/watch?v=AdUMhT1l1eY&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=41)
+
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)*
+
+#CyberSecurity #SOCAnalyst #MYDFIRChallenge #HandsOnExperience #Day14 15:Tb3a,
+## Day 22 of the 30-Day MyDFIR SOC Analyst Challenge: Creating Alerts and Dashboards for Mythic C2 Detection
+
+## Overview
+
+On Day 22 of the 30-Day MyDFIR SOC Analyst Challenge, I focused on creating alerts and dashboards to detect Mythic C2 activity, building on the groundwork from Day 21. This step is crucial in setting up efficient monitoring and detection of suspicious activity within the SOC environment.
+
+## Creating the Alert
+
+I started by accessing the Elastic web UI, navigating to the Discover section, and resetting the view. To ensure I captured relevant events, I set the time range to 30 days. This gave me a clear view of the events linked to "svchost-pilotvader.exe," which was triggered by our Mythic C2 agent in the previous exercise.
+
+The next step was filtering the process creation events using Sysmon's event code 1. This allowed me to see details like the MD5 hash of the binary associated with Mythic C2. Using this information, I further investigated the event by cross-referencing the SHA-1 hash with VirusTotal for additional context. Since the agent was newly created, the results were limited but still useful.
+
+Interestingly, the original file name of the Mythic C2 agent was "apollo.exe," even though it was executed as "svchost-pilotvader.exe." This discrepancy helped pinpoint the activity more accurately, making it a prime candidate for alert creation.
+
+## Setting the Alert
+
+I created a query based on event code 1 for process creation. The query focused on the SHA-256 hash and the original file name "apollo.exe." Once the alert was set, it was designed to trigger whenever Mythic C2 activity surfaced in the environment.
+
+## Building the Dashboard
+
+Next, I built a dashboard to visualize the Mythic C2 activity. By leveraging Elastic's Kibana features, I set up visualizations that track key metrics, such as:
+
+- Process creation events
+- File hashes
+- Network connections linked to Mythic C2
+
+The dashboard provides real-time insights, allowing for faster detection and response to similar threats in the future.
+
+## Conclusion
+
+With the alert and dashboard in place, I've taken an important step toward proactive monitoring of Mythic C2 activity. These tools will enhance the detection and visibility of malicious actions within the environment. Next, I'll refine my detection capabilities by expanding these alerts and dashboards to cover more complex threats.
+
+Here's the link to follow along: [30-Day MYDFIR SOC Analyst Challenge](https://www.youtube.com/watch?v=WcVuUamMApA&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=49)
+
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)*
+
+#CyberSecurity #SOCAnalyst #MYDFIRChallenge #HandsOnExperience #Day22 16:Tcd5,
+## Day 17 of the 30-Day MyDFIR SOC Analyst Challenge: Building a Dashboard for RDP And SSH Activity
+
+## Overview
+
+Today I focused on creating a dashboard to monitor Remote Desktop Protocol (RDP) and Secure Shell (SSH) activity. This is critical for understanding authentication attempts on the Windows Server set up earlier in the challenge. Here's how I did it.
+
+## Querying for Failed RDP Authentication Attempts
+
+The first step was to log into the Elastic web GUI. I navigated to the "Maps" section by clicking the hamburger icon on the left sidebar. Since I needed to query for failed RDP attempts, I returned to the "Discover" tab to check a previous query. Using the search for failed authentication attempts, I retrieved a query using the event code 4625, which represents failed logon events in Windows.
+
+With the query set, I added a new layer to my map. I chose "world countries" as the boundary and the country ISO code as the join field, allowing me to see where the failed RDP attempts were coming from. The results were striking, over 131,276 failed attempts from Ukraine alone!
+
+## Querying for Successful RDP Authentication Attempts
+
+Next, I needed to monitor successful RDP logins. I used the event code 4624, which represents successful logons. However, to specifically track RDP logins, I focused on logon types 10 and 7, which are associated with RDP connections. I updated the query to look for successful authentications of these types.
+
+After running the query in the "Discover" tab, I saved it and moved it to the dashboard. I duplicated the earlier failed authentication dashboard and updated the query with my new one for successful RDP logins. Once saved, the dashboard displayed successful RDP connections, including their geographical origin — in my case, the United Kingdom.
+
+## Adding a Table for Easier Analysis
+
+To enhance my dashboard, I added a table showing the username, source IP, and country for each failed and successful RDP attempt. In the "Discover" tab, I created a new search query for failed attempts using event code 4625 and then did the same for successful attempts.
+
+I added these saved searches to the dashboard and arranged them as tables beneath the maps. This gave me a clearer view of which usernames were being targeted and from which countries. Finally, I sorted the data to display the top values, showing the most frequent IP addresses and usernames involved in failed and successful logins.
+
+## Conclusion
+
+By setting up dashboards for both failed and successful RDP and SSH attempts, I can now better monitor authentication activity on my Windows Server. With this visibility, I am equipped to detect potential threats, particularly from brute force attacks on RDP and SSH. Next, I'll dive into command and control (C2) techniques using Mythic's framework.
+
+Here's the link to follow along: [30-Day MYDFIR SOC Analyst Challenge](https://www.youtube.com/watch?v=pAfIi6Z6a2g&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=44)
+
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)*
+
+#CyberSecurity #SOCAnalyst #MYDFIRChallenge #HandsOnExperience #Day17 9:["$","$L12",null,{"projectData":{"slug":"30-day-soc-analyst-challenge-part16","title":"Part 16: Windows Authentication Logs and RDP/SSH Brute Force Alerts","description":"Day 16 of the 30-Day MYDFIR SOC Analyst Challenge: Analyzing Windows authentication logs and creating sophisticated alerts for brute force detection.","date":"2024-11-16","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Windows","Authentication","Alerts","SOC","Security Monitoring"],"content":"$13","image":"/images/projects/Mydfir 30 day challenge.png","technologies":[],"images":[{"src":"/images/projects/30-day-challenge/30-days-day-16.png","alt":"30 Days MYDFIR SOC Analyst Challenge Day 16"},{"src":"/images/projects/30-day-challenge/Elastisearch-query-breached.png","alt":"Elasticsearch Query for Breached Attempts"},{"src":"/images/projects/30-day-challenge/overview.png","alt":"Overview of Authentication Monitoring"},{"src":"/images/projects/30-day-challenge/RDP-brute-force-attempt.png","alt":"RDP Brute Force Attempt Detection"},{"src":"/images/projects/30-day-challenge/SSH-brute-for-attempt.png","alt":"SSH Brute Force Attempt Detection"}],"series":{"name":"Project 3: 30-Day MYDFIR SOC Analyst Challenge","part":16,"totalParts":30}},"relatedProjects":[{"slug":"30-day-soc-analyst-challenge-part14","title":"Part 14: Creating an SSH Brute Force Alert and Dashboard","description":"Day 14 of the 30-Day MYDFIR SOC Analyst Challenge: Setting up real-time alerts and dashboards to monitor and visualize SSH brute-force attacks.","date":"2024-11-14","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["SSH","Alerts","Dashboards","SOC","Security Monitoring"],"content":"$14","image":"/images/projects/Mydfir 30 day challenge.png","technologies":[],"images":[{"src":"/images/projects/30-day-challenge/30-days-day-14.png","alt":"30 Days MYDFIR SOC Analyst Challenge Day 14"},{"src":"/images/projects/30-day-challenge/Alert-creation-and-dashboard-on-Kibana-day-14.png","alt":"Alert Creation and Dashboard Configuration in Kibana"}],"series":{"name":"Project 3: 30-Day MYDFIR SOC Analyst Challenge","part":14,"totalParts":30}},{"slug":"30-day-soc-analyst-challenge-part22","title":"Part 22: Creating Alerts and Dashboards for Mythic C2 Detection","description":"Day 22 of the 30-Day MYDFIR SOC Analyst Challenge: Building alerts and dashboards to detect and monitor Mythic C2 activity in the SOC environment.","date":"2024-11-22","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Alerts","Dashboards","SOC","Security","Threat Detection"],"content":"$15","image":"/images/projects/Mydfir 30 day challenge.png","technologies":[],"images":[{"src":"/images/projects/30-day-challenge/1-30-days-day-22.png","alt":"30 Days MYDFIR SOC Analyst Challenge Day 22"},{"src":"/images/projects/30-day-challenge/2-Mythic-C2-Apollo-Agent-Detection-Rule.png","alt":"Mythic C2 Apollo Agent Detection Rule"},{"src":"/images/projects/30-day-challenge/3-Mythic-Alert.png","alt":"Mythic Alert Configuration"},{"src":"/images/projects/30-day-challenge/4-MyDFIR-Suspicious-Activity.png","alt":"MyDFIR Suspicious Activity Dashboard"}],"series":{"name":"Project 3: 30-Day MYDFIR SOC Analyst Challenge","part":22,"totalParts":30}},{"slug":"30-day-soc-analyst-challenge-part17","title":"Part 17: Building a Dashboard for RDP And SSH Activity","description":"Day 17 of the 30-Day MYDFIR SOC Analyst Challenge: Creating comprehensive dashboards to monitor and analyze RDP and SSH authentication attempts.","date":"2024-11-17","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["RDP","SSH","Dashboards","SOC","Security Monitoring"],"content":"$16","image":"/images/projects/Mydfir 30 day challenge.png","technologies":[],"images":[{"src":"/images/projects/30-day-challenge/30-days-day-17.png","alt":"30 Days MYDFIR SOC Analyst Challenge Day 17"},{"src":"/images/projects/30-day-challenge/Dashboard-1.png","alt":"RDP Authentication Dashboard Overview"},{"src":"/images/projects/30-day-challenge/Dashboard-2.png","alt":"Detailed Authentication Analysis Dashboard"}],"series":{"name":"Project 3: 30-Day MYDFIR SOC Analyst Challenge","part":17,"totalParts":30}}],"categoryCounts":{"blue":45,"Infrastructure":3,"red":1}}]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+c:null
+10:[["$","title","0",{"children":"Samson's | Cybersecurity Portfolio"}],["$","meta","1",{"name":"description","content":"Professional cybersecurity portfolio showcasing expertise in digital security"}],["$","meta","2",{"name":"generator","content":"v0.dev"}],["$","link","3",{"rel":"icon","href":"https://hebbkx1anhila5yf.public.blob.vercel-storage.com/117%20Corporation%20no%20bg-5VVBXF0igK8jcCo43su7cpA2isco7t.png"}]]

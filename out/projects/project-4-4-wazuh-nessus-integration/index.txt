@@ -1,0 +1,265 @@
+1:"$Sreact.fragment"
+2:I[9304,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"ThemeProvider"]
+3:I[9241,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"CyberHeader"]
+4:I[7555,[],""]
+5:I[1295,[],""]
+6:I[1024,["542","static/chunks/542-9c169102c7286aba.js","838","static/chunks/838-83c262eea6b250cb.js","345","static/chunks/app/not-found-f26a84874965db45.js"],"default"]
+7:I[3063,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"Image"]
+8:I[6874,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],""]
+a:I[9665,[],"OutletBoundary"]
+d:I[9665,[],"ViewportBoundary"]
+f:I[9665,[],"MetadataBoundary"]
+11:I[6614,[],""]
+:HL["/_next/static/css/78204a441d290532.css","style"]
+:HL["/_next/static/css/b5c3a1bf19425f6c.css","style"]
+0:{"P":null,"b":"ueOktod6GdedqcxtLheow","p":"","c":["","projects","project-4-4-wazuh-nessus-integration",""],"i":false,"f":[[["",{"children":["projects",{"children":[["slug","project-4-4-wazuh-nessus-integration","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/78204a441d290532.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b5c3a1bf19425f6c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"defer":true,"src":"https://cloud.umami.is/script.js","data-website-id":"1c0f224c-1fe0-4093-a4e2-c43cb8c84bfa"}]}],["$","body",null,{"className":"__className_f367f3","children":["$","$L2",null,{"attribute":"class","defaultTheme":"light","disableTransitionOnChange":true,"children":["$","div",null,{"className":"flex min-h-screen flex-col","children":[["$","$L3",null,{}],["$","main",null,{"className":"flex-1 pt-16","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L6",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-background py-5 border-t border-border","children":["$","div",null,{"className":"container mx-auto px-4 md:px-6","children":[["$","div",null,{"className":"grid grid-cols-1 md:grid-cols-3 gap-4","children":[["$","div",null,{"className":"space-y-2","children":[["$","div",null,{"className":"flex items-center","children":["$","div",null,{"className":"relative w-[3.6rem] h-[3.6rem]","children":["$","$L7",null,{"src":"https://hebbkx1anhila5yf.public.blob.vercel-storage.com/117%20Corporation%20no%20bg-5VVBXF0igK8jcCo43su7cpA2isco7t.png","alt":"117 SECOPS Logo","fill":true,"className":"object-contain"}]}]}],["$","p",null,{"className":"text-sm text-muted-foreground max-w-xs","children":"Cybersecurity professional specializing in protecting digital assets from evolving threats."}],["$","div",null,{"className":"pt-0","children":["$","a",null,{"href":"https://www.linkedin.com/in/otori-samson/","target":"_blank","rel":"noopener noreferrer","children":"Contact Me","className":"inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-9 rounded-md px-3 cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white","ref":null}]}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"font-medium text-sm mb-2 text-foreground","children":"Quick Links"}],["$","ul",null,{"className":"space-y-0.5","children":[["$","li",null,{"children":["$","$L8",null,{"href":"/","className":"text-sm text-muted-foreground hover:text-primary","children":"Home"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/blog","className":"text-sm text-muted-foreground hover:text-primary","children":"Blog"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/projects","className":"text-sm text-muted-foreground hover:text-primary","children":"Projects"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/portfolio","className":"text-sm text-muted-foreground hover:text-primary","children":"Portfolio"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/about","className":"text-sm text-muted-foreground hover:text-primary","children":"About"}]}]]}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"font-medium text-sm mb-2 text-foreground","children":"Areas of Expertise"}],["$","ul",null,{"className":"space-y-0.5","children":[["$","li",null,{"className":"text-sm text-muted-foreground","children":"Security Assessment"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Penetration Testing"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Secure Development"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Incident Response"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Compliance"}]]}]]}]]}],["$","div",null,{"className":"border-t border-border mt-5 pt-3 flex flex-col md:flex-row justify-between items-center","children":["$","p",null,{"className":"text-sm text-muted-foreground","children":["© ",2025," Samson's. Personal cybersecurity portfolio."]}]}]]}]}]]}]}]}]]}]]}],{"children":["projects",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","project-4-4-wazuh-nessus-integration","d"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9","$undefined",null,["$","$La",null,{"children":["$Lb","$Lc",null]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","_zuNkQiD7vyam3H0YX8sa",{"children":[["$","$Ld",null,{"children":"$Le"}],null]}],["$","$Lf",null,{"children":"$L10"}]]}],false]],"m":"$undefined","G":["$11","$undefined"],"s":false,"S":true}
+12:I[2238,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","842","static/chunks/842-e0e5a1d477d9d65d.js","150","static/chunks/150-c359029d3b689678.js","419","static/chunks/app/projects/%5Bslug%5D/page-41cd4d27245b4b70.js"],"default"]
+13:T1c86,
+## Project 4.4: Integrating Wazuh SIEM/XDR and Nessus in a Cybersecurity Home Lab
+
+### Building the SIEM Foundation: Wazuh Server Deployment
+
+Continuing from the previous episodes of my cybersecurity home lab journey, I entered the next to introduce Wazuh as the SIEM and XDR solution for telemetry collection, log correlation, and detection engineering. I provisioned a new Ubuntu server virtual machine on Proxmox with 4 vCPUs, 8GB of RAM, and 160GB of disk space, ensuring it resided within VLAN 5 (my security tools network) using the IP 10.10.5.51/24. The Wazuh installation process was straightforward. After setting a static IP and configuring DNS and gateway entries, I initiated a basic update and upgrade cycle, then ran the official Wazuh installation script from their GitHub repository.
+
+Once the installation was completed, I accessed the Wazuh dashboard via HTTPS at https://10.10.5.51, authenticated using the auto-generated credentials, and confirmed a successful deployment. With the Wazuh manager operational, the next step was deploying agents across key systems in the lab.
+
+<InlineGallery images={wazuh-server-deployment} title="Wazuh Server Deployment" />
+
+### Deploying Agents: Parrot OS and Docker Server Integration
+
+The first endpoint I configured was my Parrot OS. I elevated to root and ran the prescribed commands to add the Wazuh repository, perform an update, and install the agent. I edited the agent configuration to point it at the Wazuh manager IP and verified connectivity. Upon launching the agent, it registered on the Wazuh dashboard and began transmitting logs shortly after.
+
+I replicated the same process on my Ubuntu Docker server (10.10.30.100), again ensuring root privileges, repository addition, and agent configuration. I initiated the agent and confirmed its visibility on the Wazuh interface. To extend observability into containerised environments, I proceeded to install the Wazuh Docker Listener and configured the Docker API for telemetry ingestion. I appended the required JSON configuration into the agent's config file, restarted the service, and enabled the module on the Wazuh dashboard under Settings > Modules > Docker Listener. Container-level logs began appearing as I restarted a few test containers to validate.
+
+<InlineGallery images={agent-installation} title="Agent Installation Process" />
+
+### OPNsense Firewall Agent Issues: Encountering the PID File Roadblock
+
+With both endpoint systems operational in Wazuh, I turned my attention to integrating my OPNsense firewall (192.168.1.1) running on dedicated hardware. This step diverged significantly from the Linux-based agents, as it required enabling FreeBSD repositories and handling configuration in a constrained BSD environment. I SSHed into OPNsense, enabled SSH under System > Advanced, and modified the FreeBSD.conf file to set enabled=YES. Unlike the tutorial, I found only the freebsd.conf file available, not pfsense.conf, due to architectural differences between OPNsense and pfSense.
+
+Following the installation instructions, I attempted to run the agent-auth binary to register the agent with the manager. However, I encountered a persistent error: agent-auth: CRITICAL (1212): Unable to create PID file. This indicated a permission or filesystem-level issue preventing the Wazuh agent from properly initialising. Further troubleshooting revealed that the ossec user and group did not exist by default. Attempts to assign ownership using chown -R ossec:ossec /var/ossec returned "illegal group name" errors.
+
+I manually verified write permissions by creating and removing test files under /var/ossec, which confirmed basic functionality. Despite that, the Wazuh agent daemon (wazuh-agentd) consistently failed to start. Configuration and log file reviews pointed to missing or incompatible startup routines specific to FreeBSD. I eventually confirmed that even after enabling FreeBSD package support and properly configuring ossec.conf to include the manager IP, the agent appeared on the Wazuh dashboard but failed to show "Active" status.
+
+At this point, I decided to temporarily pause work on the OPNsense agent integration. The issue remained unresolved, likely due to deeper compatibility mismatches or required kernel parameters not present on the OPNsense BSD environment. I plan to revisit this with a custom-built FreeBSD agent installation script or by manually creating missing users and startup routines. But if anyone has encountered this issue, please reach out to me with suggestions, I'll really appreciate.
+
+<InlineGallery images={opnsense-setup} title="OPNsense Firewall Configuration" />
+
+### Deploying Nessus: Introducing Vulnerability Scanning to the Lab
+
+With the SIEM side in partial production, I progressed to deploying Nessus for vulnerability scanning. I created a new Ubuntu VM on Proxmox with 4 vCPUs, 4 GB RAM, and 40 GB disk, assigning it the IP address 10.10.5.52/24 within VLAN 5. After configuring static networking and enabling SSH, I logged in and ran the commands to download the latest Nessus Debian package. I installed it using dpkg and started the nessusd service.
+
+Accessing Nessus via the browser at https://10.10.5.52:8834 allowed me to register for the Essentials version and input the activation key. The platform then began downloading its full set of plugins and signature files. Once installation was completed, I created a quick scan targeting the Metasploitable2 VM. Even with the basic scan template, the results after the scan show that it was successful even with limited information, confirming its functionality.
+
+<InlineGallery images={nessus-deployment} title="Nessus Vulnerability Scanner Setup" />
+
+### Conclusion
+
+At this point, I had a partially complete security monitoring stack within my home lab. Wazuh was successfully collecting logs from my Parrot OS and Docker machines and even parsing Docker container activity. Nessus was active and ready to scan targets across VLAN 5. However, OPNsense integration remained incomplete due to agent startup issues tied to BSD permission handling. I plan to circle back to this issue later with a deeper understanding of BSD service management or possibly using Syslog forwarding as a temporary workaround.
+
+This project showcases the real-world challenges of building a hybrid monitoring environment, integrating both Linux and BSD-based systems into a centralised SIEM. It's a valuable case study for anyone deploying Wazuh in a segmented network and dealing with heterogeneous operating systems. My next step will be to document the resolution of the OPNsense agent issue and expand Wazuh's use to include alert rule tuning and dashboard customisation.
+
+Stay tuned for the next stage of this project as we integrate more detection and response tools.
+
+**Credits:** This walkthrough is based on Episode 3 of the Ultimate Cybersecurity Lab YouTube series by Gerard O'Brien. While the steps closely followed his guidance, the project was independently implemented by Samson Otori, with custom network configurations and host assignments tailored to fit a pre-existing VLAN-segmented lab environment.
+
+Here's a link to his YouTube channels:
+
+[Gerard O'Brien's Channel](https://www.youtube.com/watch?v=ytWZ6OrFEQE&list=PL3ljjyal211AbTqlxSo6CGBiVqsXw8wrp&index=9) 14:T1417,
+## Ubuntu Server, Docker and Portainer Installation in My Homelab
+
+After successfully segmenting my home lab using VLANs, the next major step was to deploy an Ubuntu Server dedicated to containerized tools using Docker and Portainer. Instead of using the Proxmox console directly throughout the process, I took a more modular and realistic approach: I SSHed into the Ubuntu server remotely from another laptop running Parrot OS. This Parrot OS laptop was physically connected to my Cisco switch using an RJ45 cable and had already been assigned to VLAN 5, the dedicated Security Tools segment in my lab.
+
+The entire flow unfolded like this:
+
+First, I logged into Proxmox and created a new virtual machine. I named it something like UbuntuServer-docker and assigned it to VLAN 30, which is where all my Docker/container workloads reside. I used the Ubuntu Server live image, selected ZFS as the storage type, and allocated 16GB RAM to ensure smooth performance.
+
+During the Ubuntu installation, I carefully observed the DHCP setup, a critical step. I confirmed that the system automatically received an IP address, which meant my OPNsense DHCP service was working flawlessly across VLAN 30. This gave me confidence that VLAN isolation and interconnectivity were functioning as intended.
+
+As I proceeded through the installer, I enabled OpenSSH so I could manage the server from my Parrot OS machine instead of using the Proxmox console. Once the installation was complete and the VM rebooted, I tested connectivity from Parrot OS by running a simple ping to the new server. It responded successfully.
+
+I then established an SSH session using:
+
+```bash
+ssh <pilotvader>@<10.10.30.100>
+```
+
+Inside the SSH session, I manually installed Docker. This included:
+
+1. Removing conflicting packages (if any)
+2. Setting up the Docker repository
+3. Installing Docker Engine
+4. Verifying with `sudo docker run hello-world`
+
+The confirmation message "Hello from Docker!" appeared, a satisfying sign that the installation was successful. Running `sudo docker ps` showed no running containers, just as expected.
+
+Next, I proceeded to install Portainer (Community Edition) by:
+
+1. Creating a Docker volume:
+
+```bash
+sudo docker volume create portainer_data
+```
+
+2. Running the Portainer container:
+
+```bash
+sudo docker run -d -p 8000:8000 -p 9443:9443 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+```
+
+Once the container was running, I opened a browser on my Parrot OS laptop and navigated to:
+
+```
+https://<10.10.30.100>:9443
+```
+
+There, I set my Portainer admin password and accessed the local environment, where I could already see two containers:
+
+1. The Portainer container itself
+2. The hello-world container Docker had used for verification
+
+To clean up, I deleted the hello-world container via the Portainer interface.
+
+At this point, my Ubuntu Server in VLAN 30 was now a fully functional Docker host, securely managed over VLAN 5 from my Parrot OS laptop. The whole setup reflected a real-world SOC design, segmentation, remote management, container orchestration, and will serve as the backbone for deploying security tools like Wazuh, TheHive, and Arkime in future phases.
+
+## Conclusion
+
+The installation of Ubuntu Server, Docker, and Portainer has laid a solid foundation for the Security Tools section of my home lab. A notable part of this setup was accessing the Ubuntu Server via SSH from a Parrot OS laptop that was physically connected, via RJ45 cable, to a specifically configured port on my Cisco switch assigned to VLAN 5 (Security Tools). This deliberate port configuration allowed the laptop to join the segmented network, and the successful DHCP assignment from my OPNsense firewall confirmed that the VLAN setup and network services were functioning properly. This mirrored the physical isolation strategy used by Gerard O'Brien and demonstrated secure out-of-band management in a segmented environment.
+
+With Portainer deployed on top of Docker, I now have a streamlined interface to manage containers across different network zones. This sets the stage for the next phase, where I'll deploy vulnerable applications like Metasploitable2, DVWA, and WebGoat for simulation and detection exercises. Before moving forward, it's crucial to ensure all infrastructure components, network segmentation, firewall configurations, and remote management, are fully operational. This step-by-step approach highlights the value of building a secure and modular lab environment from the ground up.
+
+Credits: This project was independently implemented by Samson Otori, drawing conceptual inspiration from Gerard O'Brien's Ultimate Cybersecurity Lab series.
+
+Here's a link to his YouTube channels:
+- [Gerard O'Brien's Channel](https://www.youtube.com/@techwithgerard)
+
+---
+
+**Tags:** #UbuntuServer #Docker #Portainer #SSH #VLAN #Containerization #Homelab #Proxmox #Cybersecurity #Infrastructure #Virtualization #NetworkSegmentation #SecurityTools #RemoteManagement #ContainerOrchestration 15:T150d,
+## Project 4.7: TheHive & Cortex Deployment in My Cybersecurity Home Lab
+
+### Overview
+
+With the foundation of my segmented cybersecurity home lab steadily taking shape, the next step was to integrate an incident response and analysis layer. For this stage, I deployed TheHive and Cortex, two powerful, open-source tools designed for incident management, case collaboration, and automated analysis.
+
+This build forms a critical part of my SOC workflow. TheHive serves as a centralized incident response platform, while Cortex allows for automated enrichment and analysis of observables. Together, they streamline investigations, improve collaboration, and create a more responsive detection and response cycle in my lab environment.
+
+### Deployment Approach
+
+While TheHive and Cortex can be installed directly on a Linux host or via automated scripts, I opted for a Docker-based deployment through Portainer for speed, maintainability, and container isolation. The process began with pulling the official Docker Compose configuration from TheHive documentation, which includes all required services. TheHive, Cortex, Cassandra, and Elasticsearch pre-configured to work together.
+
+After logging into Portainer, I created a new stack, named it thehive-cortex, pasted in the full Docker Compose configuration, and deployed. Within minutes, the stack creation was successful, and the containers for all components were visible and running.
+
+### Initial Configuration of TheHive
+
+Accessing TheHive was straightforward navigating to my lab IP (10.10.30.100:9000) brought up the login page. Using the default credentials (admin@thehive.local / secret), I entered the admin console, where I began configuring the platform for my lab:
+
+- Created a new organization for my lab environment, representing my segmented network.
+- Added a dedicated admin user tied to my internal domain (samson.local), assigning full organization administrator rights.
+- Configured a secure password and prepared the account for operational use.
+
+While TheHive offers extensive options for branding, Cortex integration, and case templates, my priority at this stage was preparing the environment to receive alerts from Wazuh, my SIEM/XDR platform deployed earlier in Project 4.3.
+
+<InlineGallery images={thehive-configuration} title="TheHive Initial Configuration and Organization Setup" />
+
+### Cortex Setup
+
+Cortex, accessible on port 9001, was initialized in a similar fashion, logging in with the admin account created earlier and verifying the platform's readiness for analyzer configuration. Cortex will eventually process observables from TheHive cases, performing automated enrichment through analyzers such as VirusTotal, MISP, and WHOIS lookups.
+
+I held off on detailed analyzer configuration for now, as the immediate focus is ensuring proper alert ingestion from Wazuh into TheHive. This will allow me to establish a case-driven workflow where detection events trigger investigations that are enriched automatically via Cortex.
+
+<InlineGallery images={cortex-setup} title="Cortex Platform Initialization and Configuration" />
+
+### Next Steps in the Workflow
+
+Once integration is complete, the workflow will look like this:
+
+1. Wazuh detects a security event in my lab environment.
+2. Alert is forwarded to TheHive, where it appears as a case or alert entry.
+3. Cortex automatically enriches observables, providing intelligence for quicker triage.
+4. Response actions are documented and executed directly from within TheHive.
+
+This aligns with the SOC triage and investigation process used in real-world enterprise environments.
+
+### Conclusion
+
+<p class="mb-4 leading-relaxed">TheHive and Cortex deployment marks the second-to-last stage in the base build of my home lab. The final foundational stage will involve cloud expansion, where I will connect my lab to Azure via a site-to-site VPN. This will extend my testing capabilities, enabling hybrid cloud security monitoring and cross-environment threat detection.</p>
+
+<p class="mb-4 leading-relaxed">Once integration between Wazuh, TheHive, and Cortex is fully operational, I will move into advanced detection engineering, creating adversary simulations in Caldera, monitoring network telemetry in Security Onion, and refining detection rules across my SOC toolchain.</p>
+
+<p class="mb-4 leading-relaxed">This project demonstrates the practical implementation of enterprise-grade incident response tools in a home lab environment, showcasing how Docker-based deployments can simplify complex SOC tool integration while maintaining the flexibility needed for custom configurations and testing scenarios.</p>
+
+<p class="mb-4 leading-relaxed"><strong class="font-semibold">Credits:</strong> This walkthrough is based on Episode 6 of the Ultimate Cybersecurity Lab YouTube series by Gerard O'Brien. While the core methodology followed his structure, the implementation was carried out independently by Samson Otori, with network addressing, VLAN assignments, and system configurations customized for my lab environment.</p>
+
+<p class="mb-4 leading-relaxed">Here's a link to his YouTube channel:</p>
+
+<p class="mb-4 leading-relaxed"><a href="https://www.youtube.com/watch?v=ej6iBrBqZEo" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Gerard O'Brien's Channel</a></p>
+16:T1eb8,
+## Project 4.6: Windows Server 2022 & Windows 10 Domain Integration in My Cybersecurity Home Lab
+
+### Overview
+
+In this stage of my cybersecurity home lab build, I focused on deploying a Windows Server 2022 domain controller and integrating a Windows 10 desktop into the domain. This step was crucial in establishing centralized authentication, DNS, DHCP, and Group Policy management within my segmented VLAN architecture. Following the structure of Gerard O'Brien's Building the Ultimate Cybersecurity Lab series, Episode 5, I adapted the process to fit my lab's unique VLAN assignments, IP addressing, and Proxmox-based virtualization environment. The result was a functional Windows Server Active Directory environment, complete with user accounts, security groups, DHCP migration, and automated drive mapping, all verified through a successful workstation domain join.
+
+### Building the Windows Server 2022 Domain Controller
+
+I began by provisioning a new virtual machine in Proxmox to host the domain controller. The VM was configured with Windows Server 2022 Standard (Desktop Experience) and allocated resources sufficient for Active Directory and supporting services. The network interface was connected to my vmbr0 bridge with VLAN 20 tagging to ensure isolation within the lab's network segmentation.
+
+During installation, the Windows setup process initially failed to detect any storage devices. This was due to the absence of necessary VirtIO drivers in the Windows installation media. To resolve this, I attached an additional virtual CD-ROM containing the VirtIO ISO, loaded the appropriate viostor driver for Windows Server 2022, and proceeded with the installation once the 64GB virtual disk became visible.
+
+After completing the installation and setting the initial administrator password, I confirmed that the server had obtained an IP address from my OPNsense firewall. I then reconfigured the NIC with a static IP of **10.10.20.10**, set the gateway to **10.10.20.254**, and assigned DNS to Google's public resolvers. The hostname was updated to Prod-DomainController and the server was rebooted to apply these changes.
+
+With networking finalized, I launched Server Manager and used the "Add Roles and Features" wizard to install Active Directory Domain Services, DNS Server, and DHCP Server. The server was then promoted to a domain controller, creating a new forest with the domain name **samson.local** and a forest functional level set to Windows Server 2016.
+
+<InlineGallery images={windows-server-deployment} title="Windows Server 2022 Domain Controller Deployment" />
+
+### User and Group Configuration
+
+Once Active Directory was operational, I opened Active Directory Users and Computers (ADUC) and created a security group named "Shared Folder Access," intended to control which users would automatically receive mapped network drives. I then created two accounts: a standard user account for workstation logins and a domain administrator account named SOAdmin, which was added to the Domain Admins group.
+
+<InlineGallery images={user-group-configuration} title="User and Group Configuration in Active Directory" />
+
+### Migrating DHCP from the Firewall to the Domain Controller
+
+Prior to this stage, DHCP for VLAN 20 was provided by my OPNsense firewall. To consolidate network services within the domain, I logged into OPNsense, disabled DHCP on VLAN 20, and configured a new DHCP scope on the domain controller. The scope covered IP addresses from **10.10.20.100** to **10.10.20.120**, used a subnet mask of **255.255.255.0**, and specified the default gateway as **10.10.20.254**. The domain controller itself was designated as the primary DNS server. This migration ensured that devices on VLAN 20 would now obtain addressing directly from Active Directory-integrated DHCP.
+
+<InlineGallery images={dhcp-migration} title="DHCP Migration from Firewall to Domain Controller" />
+
+### Implementing Group Policy for Drive Mapping
+
+To automate network drive assignments for authorized users, I used Group Policy Management to create a new GPO named "Map Network Drive." Under User Configuration → Preferences → Windows Settings → Drive Maps, I configured the policy to connect a G: drive to a shared folder on the domain controller. Item-Level Targeting was enabled so that only members of the "Shared Folder Access" security group would receive this mapping.
+
+The shared folder itself was configured in the server's file system with full control permissions granted for the purposes of lab testing, acknowledging that in a production scenario, permissions would be far more restrictive.
+
+<InlineGallery images={group-policy-drive-mapping} title="Group Policy Drive Mapping Configuration" />
+
+<InlineGallery images={group-policy-configuration} title="Group Policy and DHCP Configuration" />
+
+### Deploying and Joining the Windows 10 Workstation
+
+The Windows 10 desktop was provisioned in Proxmox with a network interface on VLAN 20 to ensure DHCP and domain connectivity. As with the domain controller installation, the Windows 10 setup required VirtIO storage drivers, which were loaded from an attached VirtIO ISO before installation could proceed.
+
+Following setup, I confirmed that the workstation received an IP address from the domain controller's DHCP service. I then joined the machine to the **Samson.local** domain by entering the domain name in the System Properties dialog and authenticating with the GEAdmin account. Upon reboot, the "Other User" option was used to log in with the standard domain account created earlier.
+
+The login was successful, and as expected, the Group Policy applied automatically, mapping the G: drive to the shared folder on the domain controller. This confirmed that the domain join process was working correctly and that both DHCP and GPO-driven resource mapping were functioning as intended.
+
+<InlineGallery images={windows-10-domain-join} title="Windows 10 Workstation Domain Integration" />
+
+### Conclusion
+
+<p class="mb-4 leading-relaxed">At this stage, my lab's Windows Server 2022 domain controller and Windows 10 workstation were fully integrated into a functioning Active Directory environment. The deployment included successful configuration of DNS and DHCP, migration of DHCP services from the firewall to the DC, creation of security groups and user accounts, and verification of Group Policy-based resource mapping.</p>
+
+<p class="mb-4 leading-relaxed">This project demonstrates the practical challenges of deploying a Windows domain in a segmented lab network, including overcoming storage driver issues in Proxmox, ensuring proper IP configuration, and managing DHCP migration. These foundational services are now in place to support centralized authentication, resource access control, and further SOC tool integrations in later stages.</p>
+
+<p class="mb-4 leading-relaxed">Stay tuned for the next stage of this project, where these Windows systems will be integrated with other monitoring and detection tools such as Wazuh, Security Onion, and Caldera, forming a complete security operations workflow within the lab.</p>
+
+<p class="mb-4 leading-relaxed"><strong class="font-semibold">Credits:</strong> This walkthrough is based on Episode 5 of the Ultimate Cybersecurity Lab YouTube series by Gerard O'Brien. While the core methodology followed his structure, the implementation was carried out independently by Samson Otori, with network addressing, VLAN assignments, and system configurations customized for my lab environment.</p>
+
+<p class="mb-4 leading-relaxed">Here's a link to his YouTube channel:</p>
+
+<p class="mb-4 leading-relaxed"><a href="https://www.youtube.com/watch?v=ej6iBrBqZEo" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Gerard O'Brien's Channel</a></p>
+9:["$","$L12",null,{"projectData":{"slug":"project-4-4-wazuh-nessus-integration","title":"Project 4.4: Integrating Wazuh SIEM/XDR and Nessus in a Cybersecurity Home Lab","description":"A comprehensive walkthrough of deploying Wazuh SIEM/XDR for log correlation and Nessus for vulnerability scanning in a segmented cybersecurity homelab environment.","date":"2025-08-03","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Wazuh","SIEM","XDR","Nessus","Vulnerability Scanning","Security Monitoring","OPNsense","Docker","Parrot OS","Ubuntu","Proxmox","VLAN","Homelab","Blue Team"],"content":"$13","image":"/images/projects/hardware-lab/Image-header-for-project-4.4.jpeg","technologies":[],"images":[],"series":{"name":"Project 4.4: Integrating Wazuh SIEM/XDR and Nessus in a Cybersecurity Home Lab","part":1,"totalParts":1}},"relatedProjects":[{"slug":"ubuntu-server-docker-portainer","title":"Ubuntu Server, Docker and Portainer Installation in My Homelab","description":"A detailed walkthrough of deploying Ubuntu Server with Docker and Portainer in my segmented cybersecurity homelab, including remote SSH management and VLAN integration.","date":"2025-07-03","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Ubuntu Server","Docker","Portainer","SSH","VLAN","Containerization","Homelab","Proxmox","Remote Management"],"content":"$14","image":"/images/projects/hardware-lab/ubuntu-docker-portainer.jpeg","technologies":[],"images":[{"src":"/images/projects/hardware-lab/Assigning cpu cores for processor.png","alt":"Assigning cpu cores for processor"},{"src":"/images/projects/hardware-lab/assigning internal network vlan30.png","alt":"Assigning internal network vlan30"},{"src":"/images/projects/hardware-lab/assigning ram.png","alt":"Assigning ram"},{"src":"/images/projects/hardware-lab/assigning storage.png","alt":"Assigning storage"},{"src":"/images/projects/hardware-lab/During server installation this shows our dhcp is active with right ip address.png","alt":"During server installation this shows our dhcp is active with right ip address"},{"src":"/images/projects/hardware-lab/Installing ubuntu server to create docker.png","alt":"Installing ubuntu server to create docker"},{"src":"/images/projects/hardware-lab/Logged into ubuntu server on proxmox.png","alt":"Logged into ubuntu server on proxmox"},{"src":"/images/projects/hardware-lab/Selecting ubuntu server image.png","alt":"Selecting ubuntu server image"},{"src":"/images/projects/hardware-lab/Starting ubuntu server installation.png","alt":"Starting ubuntu server installation"},{"src":"/images/projects/hardware-lab/summary of setup.png","alt":"Summary of setup"},{"src":"/images/projects/hardware-lab/Ubuntu server installation process running .png","alt":"Ubuntu server installation process running"},{"src":"/images/projects/hardware-lab/Pinging ubuntu server from my parrot OS.png","alt":"Pinging ubuntu server from my parrot OS"},{"src":"/images/projects/hardware-lab/SSHed into my ubuntu server from parrot OS.png","alt":"SSHed into my ubuntu server from parrot OS"},{"src":"/images/projects/hardware-lab/Docker installation from parrot OS on ubuntu server .png","alt":"Docker installation from parrot OS on ubuntu server"},{"src":"/images/projects/hardware-lab/Sudo docker run hello world test which shows docker installed.png","alt":"Sudo docker run hello world test which shows docker installed"},{"src":"/images/projects/hardware-lab/Portainer volume creation and installation.png","alt":"Portainer volume creation and installation"},{"src":"/images/projects/hardware-lab/sudo docker ps to see the port its running on.png","alt":"Sudo docker ps to see the port its running on"},{"src":"/images/projects/hardware-lab/accessing portainer dashboard in browser.png","alt":"Accessing portainer dashboard in browser"},{"src":"/images/projects/hardware-lab/Portainer dashboard.png","alt":"Portainer dashboard"},{"src":"/images/projects/hardware-lab/portainer dashboard 2.png","alt":"Portainer dashboard 2"}],"series":{"name":"Project 4.2: Ubuntu Server, Docker and Portainer Installation","part":1,"totalParts":1}},{"slug":"project-4-7-thehive-cortex-deployment","title":"Project 4.7: TheHive & Cortex Deployment in My Cybersecurity Home Lab","description":"Deploying TheHive incident response platform and Cortex automated analysis engine in my segmented cybersecurity home lab for enhanced SOC workflow capabilities.","date":"2025-08-15","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["TheHive","Cortex","Incident Response","SOC","Docker","Portainer","Cassandra","Elasticsearch","Case Management","Automated Analysis","Blue Team","Incident Management"],"content":"$15","image":"/images/projects/hardware-lab/The-Hive-and-Cortex.png","technologies":[],"images":[],"series":"hardware-lab"},{"slug":"project-4-6-windows-server-2022-windows-10-domain-integration","title":"Project 4.6: Windows Server 2022 & Windows 10 Domain Integration in My Cybersecurity Home Lab","description":"Deploying Windows Server 2022 domain controller and integrating Windows 10 workstation into Active Directory domain within my segmented cybersecurity home lab.","date":"2025-08-08","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Windows Server 2022","Active Directory","Domain Controller","Windows 10","DHCP","DNS","Group Policy","VLAN","Network Security","Blue Team"],"content":"$16","image":"/images/projects/hardware-lab/windows server.jpeg","technologies":[],"images":[],"series":"hardware-lab"}],"categoryCounts":{"blue":45,"Infrastructure":3,"red":1}}]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+c:null
+10:[["$","title","0",{"children":"Samson's | Cybersecurity Portfolio"}],["$","meta","1",{"name":"description","content":"Professional cybersecurity portfolio showcasing expertise in digital security"}],["$","meta","2",{"name":"generator","content":"v0.dev"}],["$","link","3",{"rel":"icon","href":"https://hebbkx1anhila5yf.public.blob.vercel-storage.com/117%20Corporation%20no%20bg-5VVBXF0igK8jcCo43su7cpA2isco7t.png"}]]

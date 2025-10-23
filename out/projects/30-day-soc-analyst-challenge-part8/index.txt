@@ -1,0 +1,186 @@
+1:"$Sreact.fragment"
+2:I[9304,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"ThemeProvider"]
+3:I[9241,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"CyberHeader"]
+4:I[7555,[],""]
+5:I[1295,[],""]
+6:I[1024,["542","static/chunks/542-9c169102c7286aba.js","838","static/chunks/838-83c262eea6b250cb.js","345","static/chunks/app/not-found-f26a84874965db45.js"],"default"]
+7:I[3063,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"Image"]
+8:I[6874,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],""]
+a:I[9665,[],"OutletBoundary"]
+d:I[9665,[],"ViewportBoundary"]
+f:I[9665,[],"MetadataBoundary"]
+11:I[6614,[],""]
+:HL["/_next/static/css/78204a441d290532.css","style"]
+:HL["/_next/static/css/b5c3a1bf19425f6c.css","style"]
+0:{"P":null,"b":"ueOktod6GdedqcxtLheow","p":"","c":["","projects","30-day-soc-analyst-challenge-part8",""],"i":false,"f":[[["",{"children":["projects",{"children":[["slug","30-day-soc-analyst-challenge-part8","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/78204a441d290532.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b5c3a1bf19425f6c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"defer":true,"src":"https://cloud.umami.is/script.js","data-website-id":"1c0f224c-1fe0-4093-a4e2-c43cb8c84bfa"}]}],["$","body",null,{"className":"__className_f367f3","children":["$","$L2",null,{"attribute":"class","defaultTheme":"light","disableTransitionOnChange":true,"children":["$","div",null,{"className":"flex min-h-screen flex-col","children":[["$","$L3",null,{}],["$","main",null,{"className":"flex-1 pt-16","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L6",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-background py-5 border-t border-border","children":["$","div",null,{"className":"container mx-auto px-4 md:px-6","children":[["$","div",null,{"className":"grid grid-cols-1 md:grid-cols-3 gap-4","children":[["$","div",null,{"className":"space-y-2","children":[["$","div",null,{"className":"flex items-center","children":["$","div",null,{"className":"relative w-[3.6rem] h-[3.6rem]","children":["$","$L7",null,{"src":"https://hebbkx1anhila5yf.public.blob.vercel-storage.com/117%20Corporation%20no%20bg-5VVBXF0igK8jcCo43su7cpA2isco7t.png","alt":"117 SECOPS Logo","fill":true,"className":"object-contain"}]}]}],["$","p",null,{"className":"text-sm text-muted-foreground max-w-xs","children":"Cybersecurity professional specializing in protecting digital assets from evolving threats."}],["$","div",null,{"className":"pt-0","children":["$","a",null,{"href":"https://www.linkedin.com/in/otori-samson/","target":"_blank","rel":"noopener noreferrer","children":"Contact Me","className":"inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-9 rounded-md px-3 cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white","ref":null}]}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"font-medium text-sm mb-2 text-foreground","children":"Quick Links"}],["$","ul",null,{"className":"space-y-0.5","children":[["$","li",null,{"children":["$","$L8",null,{"href":"/","className":"text-sm text-muted-foreground hover:text-primary","children":"Home"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/blog","className":"text-sm text-muted-foreground hover:text-primary","children":"Blog"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/projects","className":"text-sm text-muted-foreground hover:text-primary","children":"Projects"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/portfolio","className":"text-sm text-muted-foreground hover:text-primary","children":"Portfolio"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/about","className":"text-sm text-muted-foreground hover:text-primary","children":"About"}]}]]}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"font-medium text-sm mb-2 text-foreground","children":"Areas of Expertise"}],["$","ul",null,{"className":"space-y-0.5","children":[["$","li",null,{"className":"text-sm text-muted-foreground","children":"Security Assessment"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Penetration Testing"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Secure Development"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Incident Response"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Compliance"}]]}]]}]]}],["$","div",null,{"className":"border-t border-border mt-5 pt-3 flex flex-col md:flex-row justify-between items-center","children":["$","p",null,{"className":"text-sm text-muted-foreground","children":["© ",2025," Samson's. Personal cybersecurity portfolio."]}]}]]}]}]]}]}]}]]}]]}],{"children":["projects",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","30-day-soc-analyst-challenge-part8","d"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9","$undefined",null,["$","$La",null,{"children":["$Lb","$Lc",null]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","JzcJlgneLnGWd7MpziqZC",{"children":[["$","$Ld",null,{"children":"$Le"}],null]}],["$","$Lf",null,{"children":"$L10"}]]}],false]],"m":"$undefined","G":["$11","$undefined"],"s":false,"S":true}
+12:I[2238,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","842","static/chunks/842-e0e5a1d477d9d65d.js","150","static/chunks/150-c359029d3b689678.js","419","static/chunks/app/projects/%5Bslug%5D/page-41cd4d27245b4b70.js"],"default"]
+13:Tade,
+## Day 8 of the 30-Day MYDFIR SOC Analyst Challenge: Sysmon
+
+Day 8 of the 30-day My DFIR SOC Analyst Challenge focuses on improving endpoint visibility using Sysmon (System Monitor). Sysmon is a powerful tool from Microsoft's Sysinternals suite that provides detailed logging capabilities, such as tracking process creation, network connections, and file modifications—critical for effective incident response and threat detection.
+
+## Understanding Sysmon's Role
+
+The default logging settings in Windows are insufficient for capturing vital events like process creations. Sysmon fills this gap, offering extensive telemetry that enhances my ability to detect and investigate malicious activities. With Sysmon, I can track important event IDs, such as:
+
+## Key Event IDs and Their Significance
+
+Event ID 1 (Process Creation): Logs any new processes, along with their command lines, which helps identify suspicious activities. It also records file hashes for further analysis.
+
+Event ID 3 (Network Connections): Logs details of network connections made by processes, including source and destination IP addresses, and ports—useful for spotting unusual outbound connections.
+
+Event IDs 6, 7, 8 (Driver, Image Load, Create Remote Thread): These event IDs help detect advanced attack techniques, like process injection but can generate noise, so proper filtering is essential.
+
+Event ID 10 (Process Access): Monitors potential credential access attempts, especially against critical processes like LSASS (Local Security Authority Subsystem Service), which attackers often target to extract credentials.
+
+Event ID 22 (DNS Query): Tracks DNS requests made by endpoints, allowing me to detect suspicious domain lookups, such as those generated by malware using domain generation algorithms (DGA).
+
+## Configuration Considerations
+
+While Sysmon greatly enhances visibility, it's crucial to fine-tune the configuration to balance logging depth with noise reduction. I'll learn how to install and configure Sysmon in future sessions to optimize my endpoint monitoring capabilities. This step is vital for elevating my skills in threat detection and incident response within a SOC environment.
+
+## Conclusion
+
+The next phase of the challenge will guide me through installing Sysmon with a recommended configuration to start analyzing Sysmon logs and improve my cybersecurity analysis proficiency.
+
+Here's the link to follow along: [30-Day MYDFIR SOC Analyst Challenge](https://www.youtube.com/watch?v=hpUnKjEFCoU&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=35)
+
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)* 14:Tb3a,
+## Day 22 of the 30-Day MyDFIR SOC Analyst Challenge: Creating Alerts and Dashboards for Mythic C2 Detection
+
+## Overview
+
+On Day 22 of the 30-Day MyDFIR SOC Analyst Challenge, I focused on creating alerts and dashboards to detect Mythic C2 activity, building on the groundwork from Day 21. This step is crucial in setting up efficient monitoring and detection of suspicious activity within the SOC environment.
+
+## Creating the Alert
+
+I started by accessing the Elastic web UI, navigating to the Discover section, and resetting the view. To ensure I captured relevant events, I set the time range to 30 days. This gave me a clear view of the events linked to "svchost-pilotvader.exe," which was triggered by our Mythic C2 agent in the previous exercise.
+
+The next step was filtering the process creation events using Sysmon's event code 1. This allowed me to see details like the MD5 hash of the binary associated with Mythic C2. Using this information, I further investigated the event by cross-referencing the SHA-1 hash with VirusTotal for additional context. Since the agent was newly created, the results were limited but still useful.
+
+Interestingly, the original file name of the Mythic C2 agent was "apollo.exe," even though it was executed as "svchost-pilotvader.exe." This discrepancy helped pinpoint the activity more accurately, making it a prime candidate for alert creation.
+
+## Setting the Alert
+
+I created a query based on event code 1 for process creation. The query focused on the SHA-256 hash and the original file name "apollo.exe." Once the alert was set, it was designed to trigger whenever Mythic C2 activity surfaced in the environment.
+
+## Building the Dashboard
+
+Next, I built a dashboard to visualize the Mythic C2 activity. By leveraging Elastic's Kibana features, I set up visualizations that track key metrics, such as:
+
+- Process creation events
+- File hashes
+- Network connections linked to Mythic C2
+
+The dashboard provides real-time insights, allowing for faster detection and response to similar threats in the future.
+
+## Conclusion
+
+With the alert and dashboard in place, I've taken an important step toward proactive monitoring of Mythic C2 activity. These tools will enhance the detection and visibility of malicious actions within the environment. Next, I'll refine my detection capabilities by expanding these alerts and dashboards to cover more complex threats.
+
+Here's the link to follow along: [30-Day MYDFIR SOC Analyst Challenge](https://www.youtube.com/watch?v=WcVuUamMApA&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=49)
+
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)*
+
+#CyberSecurity #SOCAnalyst #MYDFIRChallenge #HandsOnExperience #Day22 15:Tce2,
+## Day 21 of the 30-Day MyDFIR SOC Analyst Challenge: Brute Force Attack & Establishing a C2 Session
+
+## Overview
+
+Today, I focused on executing a brute force attack, generating a Mythic agent, and establishing a Command and Control (C2) session on a Windows Server.
+
+## Brute Force Attack on Windows Server
+
+I started by connecting to the target Windows server via Remote Desktop Protocol (RDP). For this, I intentionally set a weak password on the server: Winter2024! This allowed me to simulate a typical scenario where an attacker might exploit weak credentials.
+
+Next, I used the Crowbar tool on my Parrot OS machine to brute-force the RDP login. With the weak password added to a wordlist, I ran Crowbar, which quickly cracked the credentials. Using the recovered password, I accessed the server via xfreerdp, verifying the successful login by executing basic commands like Whoami and ipconfig.
+
+## Disabling Windows Defender for Defense Evasion
+
+Once inside the Windows server, my first task was to disable its defenses. I navigated to the Windows Security settings and manually turned off real-time protection along with other key security features.
+
+## Generating the Mythic Agent
+
+With the server exposed, I generated a Mythic C2 payload. Mythic is a popular Command and Control (C2) framework used by attackers to remotely control compromised systems. I installed the Apollo agent and the HTTP C2 Profile on my Mythic platform, customizing the settings to ensure the payload would effectively communicate back to my control server.
+
+After setting up the Mythic agent, I created a Windows executable payload. This payload would be used to establish a persistent connection between the compromised server and the Mythic C2 server.
+
+## Establishing the C2 Session
+
+To deliver the payload to the Windows server, I used Python's http.server on port 9999 and PowerShell's Invoke-WebRequest to download it onto the target machine. Once the payload was executed on the server, it successfully connected to the Mythic C2 platform.
+
+## Data Exfiltration
+
+With full control established, I moved on to exfiltrate data. Specifically, I retrieved a file named passwords.txt from the server's Documents folder. Using the download command in Mythic, I successfully downloaded the file, confirming the presence of the weak password, Winter2024!
+
+## Conclusion
+
+I simulated a brute force attack, compromised a Windows server, and used Mythic to establish a C2 session for remote control and data exfiltration. This activity demonstrates the methods attackers use to infiltrate systems and the importance of maintaining strong security practices, such as enforcing complex passwords and securing endpoints.
+
+Next, I'll focus on creating alerts and dashboards to detect Mythic activity and defend against similar attacks. Stay tuned!
+
+Here's the link to follow along: [30-Day MYDFIR SOC Analyst Challenge](https://www.youtube.com/watch?v=85x0NLj2zUo&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=48)
+
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)*
+
+#CyberSecurity #SOCAnalyst #MYDFIRChallenge #HandsOnExperience #Day21 16:Td20,
+## Day 19 of the 30-Day MyDFIR SOC Analyst Challenge: Creating an Attack Diagram
+
+## Overview
+
+The focus for today is on using Draw.io, mapping out a plan to compromise a target machine, focusing on brute-forcing RDP credentials, disabling Windows Defender, and establishing a C2 connection.
+
+## Building the Attack Diagram
+
+The essential components of our attack:
+
+- **Mythic C2 Server** – This is the command and control server that we'll use to manage our attack.
+- **Windows Server** – This will be our target machine.
+- **Attacker Laptop** – Running Kali Linux, this is the machine we'll be using for the attack.
+
+A cloud represents the internet and connects all the components accordingly. The Kali Linux laptop will be on a separate network, while the Mythic C2 server will run in the cloud.
+
+## Phase 1: Initial Access – Brute Force
+
+In this phase, the attacker's laptop will attempt a brute force attack over Remote Desktop Protocol (RDP) to gain access to the Windows Server. This will serve as the initial access point. If successful, we will authenticate and proceed to the next phase.
+
+## Phase 2: Discovery – Gathering Information
+
+Once inside the Windows Server, the next step is Discovery. The attacker will run a series of commands like:
+
+- whoami
+- ipconfig
+- net user
+- net group
+
+These commands help us learn about the system, its users, and network settings. This information is crucial for planning our next moves.
+
+## Phase 3: Defense Evasion – Disabling Defender
+
+Before executing any malicious payloads, we need to bypass Windows Defender. The focus of this phase is defense evasion. Using our elevated privileges, we will attempt to disable Windows Defender on the server to prevent it from detecting our actions.
+
+## Phase 4: Execution – Downloading and Running Mythic Agent
+
+Once the defenses are down, we move to execution. In this phase, the Windows Server will reach out to our Mythic C2 server to download an agent. This will be done using PowerShell's Invoke-Expression (IEX) command to fetch and run the agent.
+
+## Phase 5: Command and Control – Establishing C2
+
+With the Mythic agent successfully installed, we establish a C2 connection between the compromised Windows Server and the Mythic C2 server. At this point, the attacker has full control over the target machine, enabling further malicious actions.
+
+## Phase 6: Exfiltration – Stealing Data
+
+The final phase is exfiltration. Creating a fake password file called passwords.txt on the Windows Server. Using the established C2 session, we'll download this file from the compromised server, mimicking a data theft scenario.
+
+## Conclusion
+
+This attack diagram is a simplified blueprint of how to compromise a machine, which is strictly for educational purposes only. Next, we'll go over how to set up the Mythic server and begin executing these steps. Stay tuned!
+
+Here's the link to follow along: [30-Day MYDFIR SOC Analyst Challenge](https://www.youtube.com/watch?v=jv-qiugJGHg&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=46)
+
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)*
+
+#CyberSecurity #SOCAnalyst #MYDFIRChallenge #HandsOnExperience #Day19 9:["$","$L12",null,{"projectData":{"slug":"30-day-soc-analyst-challenge-part8","title":"Part 8: Sysmon","description":"Day 8 of the 30-Day MYDFIR SOC Analyst Challenge: Enhancing endpoint visibility with Microsoft's System Monitor (Sysmon).","date":"2024-11-08","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Sysmon","Endpoint Monitoring","Windows Security","SOC","Threat Detection"],"content":"$13","image":"/images/projects/Mydfir 30 day challenge.png","technologies":[],"images":[{"src":"/images/projects/30-day-challenge/30-days-day-8.png","alt":"30 Days MYDFIR SOC Analyst Challenge Day 8"}],"series":{"name":"Project 3: 30-Day MYDFIR SOC Analyst Challenge","part":8,"totalParts":30}},"relatedProjects":[{"slug":"30-day-soc-analyst-challenge-part22","title":"Part 22: Creating Alerts and Dashboards for Mythic C2 Detection","description":"Day 22 of the 30-Day MYDFIR SOC Analyst Challenge: Building alerts and dashboards to detect and monitor Mythic C2 activity in the SOC environment.","date":"2024-11-22","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Alerts","Dashboards","SOC","Security","Threat Detection"],"content":"$14","image":"/images/projects/Mydfir 30 day challenge.png","technologies":[],"images":[{"src":"/images/projects/30-day-challenge/1-30-days-day-22.png","alt":"30 Days MYDFIR SOC Analyst Challenge Day 22"},{"src":"/images/projects/30-day-challenge/2-Mythic-C2-Apollo-Agent-Detection-Rule.png","alt":"Mythic C2 Apollo Agent Detection Rule"},{"src":"/images/projects/30-day-challenge/3-Mythic-Alert.png","alt":"Mythic Alert Configuration"},{"src":"/images/projects/30-day-challenge/4-MyDFIR-Suspicious-Activity.png","alt":"MyDFIR Suspicious Activity Dashboard"}],"series":{"name":"Project 3: 30-Day MYDFIR SOC Analyst Challenge","part":22,"totalParts":30}},{"slug":"30-day-soc-analyst-challenge-part21","title":"Part 21: Brute Force Attack & Establishing a C2 Session","description":"Day 21 of the 30-Day MYDFIR SOC Analyst Challenge: Executing a brute force attack, generating a Mythic agent, and establishing a Command and Control session on a Windows Server.","date":"2024-11-21","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Brute Force","C2","SOC","Security","Windows Security"],"content":"$15","image":"/images/projects/Mydfir 30 day challenge.png","technologies":[],"images":[{"src":"/images/projects/30-day-challenge/1-30-days-day-21.png","alt":"30 Days MYDFIR SOC Analyst Challenge Day 21"},{"src":"/images/projects/30-day-challenge/2-Screenshot.png","alt":"Initial Screenshot"},{"src":"/images/projects/30-day-challenge/3-rdp-windows-server-on-parrot.png","alt":"RDP Connection to Windows Server from Parrot"},{"src":"/images/projects/30-day-challenge/4-running-command-on-windows-server.png","alt":"Running Commands on Windows Server"},{"src":"/images/projects/30-day-challenge/5-turning-off-windows-defender-on-windows-server.png","alt":"Disabling Windows Defender"},{"src":"/images/projects/30-day-challenge/6-established-connection.png","alt":"Established Connection"},{"src":"/images/projects/30-day-challenge/7-mythic-dashboard-apollo-install.png","alt":"Mythic Dashboard Apollo Installation"},{"src":"/images/projects/30-day-challenge/8-C2-install-on-Mythic.png","alt":"C2 Installation on Mythic"},{"src":"/images/projects/30-day-challenge/9-command-and-control-stage.png","alt":"Command and Control Stage"},{"src":"/images/projects/30-day-challenge/10-exfiltration.png","alt":"Data Exfiltration"}],"series":{"name":"Project 3: 30-Day MYDFIR SOC Analyst Challenge","part":21,"totalParts":30}},{"slug":"30-day-soc-analyst-challenge-part19","title":"Part 19: Creating an Attack Diagram","description":"Day 19 of the 30-Day MYDFIR SOC Analyst Challenge: Mapping out a comprehensive attack plan using Draw.io, from initial access to data exfiltration.","date":"2024-11-19","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Attack Diagram","Draw.io","SOC","Security","Threat Detection"],"content":"$16","image":"/images/projects/Mydfir 30 day challenge.png","technologies":[],"images":[{"src":"/images/projects/30-day-challenge/30-days-day-19.png","alt":"30 Days MYDFIR SOC Analyst Challenge Day 19"},{"src":"/images/projects/30-day-challenge/attack-diagram-1.png","alt":"Attack Diagram Overview"},{"src":"/images/projects/30-day-challenge/attack-diagram-22.png","alt":"Attack Diagram Phase 22"},{"src":"/images/projects/30-day-challenge/attack-diagram-3.png","alt":"Attack Diagram Phase 3"}],"series":{"name":"Project 3: 30-Day MYDFIR SOC Analyst Challenge","part":19,"totalParts":30}}],"categoryCounts":{"blue":45,"Infrastructure":3,"red":1}}]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+c:null
+10:[["$","title","0",{"children":"Samson's | Cybersecurity Portfolio"}],["$","meta","1",{"name":"description","content":"Professional cybersecurity portfolio showcasing expertise in digital security"}],["$","meta","2",{"name":"generator","content":"v0.dev"}],["$","link","3",{"rel":"icon","href":"https://hebbkx1anhila5yf.public.blob.vercel-storage.com/117%20Corporation%20no%20bg-5VVBXF0igK8jcCo43su7cpA2isco7t.png"}]]

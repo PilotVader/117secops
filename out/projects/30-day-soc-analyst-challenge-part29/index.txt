@@ -1,0 +1,189 @@
+1:"$Sreact.fragment"
+2:I[9304,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"ThemeProvider"]
+3:I[9241,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"CyberHeader"]
+4:I[7555,[],""]
+5:I[1295,[],""]
+6:I[1024,["542","static/chunks/542-9c169102c7286aba.js","838","static/chunks/838-83c262eea6b250cb.js","345","static/chunks/app/not-found-f26a84874965db45.js"],"default"]
+7:I[3063,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"Image"]
+8:I[6874,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],""]
+a:I[9665,[],"OutletBoundary"]
+d:I[9665,[],"ViewportBoundary"]
+f:I[9665,[],"MetadataBoundary"]
+11:I[6614,[],""]
+:HL["/_next/static/css/78204a441d290532.css","style"]
+:HL["/_next/static/css/b5c3a1bf19425f6c.css","style"]
+0:{"P":null,"b":"ueOktod6GdedqcxtLheow","p":"","c":["","projects","30-day-soc-analyst-challenge-part29",""],"i":false,"f":[[["",{"children":["projects",{"children":[["slug","30-day-soc-analyst-challenge-part29","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/78204a441d290532.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b5c3a1bf19425f6c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"defer":true,"src":"https://cloud.umami.is/script.js","data-website-id":"1c0f224c-1fe0-4093-a4e2-c43cb8c84bfa"}]}],["$","body",null,{"className":"__className_f367f3","children":["$","$L2",null,{"attribute":"class","defaultTheme":"light","disableTransitionOnChange":true,"children":["$","div",null,{"className":"flex min-h-screen flex-col","children":[["$","$L3",null,{}],["$","main",null,{"className":"flex-1 pt-16","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L6",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-background py-5 border-t border-border","children":["$","div",null,{"className":"container mx-auto px-4 md:px-6","children":[["$","div",null,{"className":"grid grid-cols-1 md:grid-cols-3 gap-4","children":[["$","div",null,{"className":"space-y-2","children":[["$","div",null,{"className":"flex items-center","children":["$","div",null,{"className":"relative w-[3.6rem] h-[3.6rem]","children":["$","$L7",null,{"src":"https://hebbkx1anhila5yf.public.blob.vercel-storage.com/117%20Corporation%20no%20bg-5VVBXF0igK8jcCo43su7cpA2isco7t.png","alt":"117 SECOPS Logo","fill":true,"className":"object-contain"}]}]}],["$","p",null,{"className":"text-sm text-muted-foreground max-w-xs","children":"Cybersecurity professional specializing in protecting digital assets from evolving threats."}],["$","div",null,{"className":"pt-0","children":["$","a",null,{"href":"https://www.linkedin.com/in/otori-samson/","target":"_blank","rel":"noopener noreferrer","children":"Contact Me","className":"inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-9 rounded-md px-3 cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white","ref":null}]}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"font-medium text-sm mb-2 text-foreground","children":"Quick Links"}],["$","ul",null,{"className":"space-y-0.5","children":[["$","li",null,{"children":["$","$L8",null,{"href":"/","className":"text-sm text-muted-foreground hover:text-primary","children":"Home"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/blog","className":"text-sm text-muted-foreground hover:text-primary","children":"Blog"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/projects","className":"text-sm text-muted-foreground hover:text-primary","children":"Projects"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/portfolio","className":"text-sm text-muted-foreground hover:text-primary","children":"Portfolio"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/about","className":"text-sm text-muted-foreground hover:text-primary","children":"About"}]}]]}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"font-medium text-sm mb-2 text-foreground","children":"Areas of Expertise"}],["$","ul",null,{"className":"space-y-0.5","children":[["$","li",null,{"className":"text-sm text-muted-foreground","children":"Security Assessment"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Penetration Testing"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Secure Development"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Incident Response"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Compliance"}]]}]]}]]}],["$","div",null,{"className":"border-t border-border mt-5 pt-3 flex flex-col md:flex-row justify-between items-center","children":["$","p",null,{"className":"text-sm text-muted-foreground","children":["© ",2025," Samson's. Personal cybersecurity portfolio."]}]}]]}]}]]}]}]}]]}]]}],{"children":["projects",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","30-day-soc-analyst-challenge-part29","d"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9","$undefined",null,["$","$La",null,{"children":["$Lb","$Lc",null]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","bE2qXiJxC5A2qDMsPoWg5",{"children":[["$","$Ld",null,{"children":"$Le"}],null]}],["$","$Lf",null,{"children":"$L10"}]]}],false]],"m":"$undefined","G":["$11","$undefined"],"s":false,"S":true}
+12:I[2238,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","842","static/chunks/842-e0e5a1d477d9d65d.js","150","static/chunks/150-c359029d3b689678.js","419","static/chunks/app/projects/%5Bslug%5D/page-41cd4d27245b4b70.js"],"default"]
+13:Td0e,
+## Day 29 of the 30-Day MyDFIR SOC Analyst Challenge: Installing and Exploring Elastic Defend on Windows Server
+
+## Overview
+
+On Day 29, I focused on Elastic's Endpoint Detection and Response (EDR) tool—Elastic Defend. This powerful EDR solution offers comprehensive endpoint protection and valuable telemetry to help monitor and respond to threats.
+
+## Setting Up Elastic Defend
+
+Elastic Defend is part of the Elastic Stack, and with the free 30-day trial, I could unlock additional features like full telemetry and host isolation. To get started, I accessed the Integrations section in Elastic, From there, I added Elastic Defend to my environment. Elastic Defend offers several configuration options, including:
+- Data Collection
+- Next-Gen Antivirus
+- Essential EDR
+- Complete EDR
+
+For this challenge, I chose Complete EDR, I then deployed Elastic Defend to my Windows Server using a Fleet server, allowing centralized management of multiple endpoints.
+
+## Monitoring and Testing
+
+With Elastic Defend successfully installed, I checked the Security section in Kibana to ensure the endpoint appeared, confirming the agent was active. Elastic Defend offers multiple actions, including the ability to isolate the host, which is available with the trial version.
+
+I wanted to test Elastic Defend's malware detection capabilities, so I ran the pilotvader.exe process on my Windows Server, simulating a malicious action. As expected, Elastic Defend instantly flagged and blocked the file. A message appeared stating that the operation couldn't be completed because the file contained a virus, and I received a malware prevention alert confirming the file had been quarantined.
+
+## Investigating Telemetry
+
+To dive deeper, I went into the Discover tab in Kibana and filtered the logs to view recent events. There, I found the malware prevention alert with detailed information about the malicious file, including:
+- File hash
+- Quarantine path
+- Directory (C:\Users\Public\Downloads)
+
+In the Security tab, I also explored the process tree, which showed the relationship between the legitimate explorer.exe process and the blocked pilotvader.exe. If the malware had spawned other processes, they would have also appeared here.
+
+## Isolating the Host
+
+Next, I tested Elastic Defend's host isolation feature. After initiating an infinite ping to Google's DNS (8.8.8.8), I re-downloaded the malicious file, which Elastic Defend promptly quarantined again. Soon after, the host was isolated, demonstrating Elastic Defend's ability to take responsive action against threats.
+
+## Conclusion
+
+Day 29 was a valuable deep dive into Elastic Defend. I learned how to install, monitor, and test its EDR capabilities, reinforcing its importance for endpoint security. I'll wrap up the challenge tomorrow by reviewing troubleshooting techniques and fine-tuning detection strategies.
+
+Here's the link to follow along: [30-Day MYDFIR SOC Analyst Challenge](https://www.youtube.com/watch?v=Ec-Ab8TbJKs&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=56)
+
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)*
+
+#CyberSecurity #SOCAnalyst #MYDFIRChallenge #HandsOnExperience #Day29 14:Tbe9,
+## Day 24 of the 30-Day MyDFIR SOC Analyst Challenge: Setting Up and Configuring OS Ticket
+
+## Overview
+
+On Day 24 of the 30-Day MyDFIR SOC Analyst Challenge! I'll dive into OS Ticket, a ticketing system that will be an essential tool for my SOC operations. The aim is to set up OS Ticket successfully and configure it on a Windows Server. This system will streamline ticket management for the alerts we'll deal with throughout the challenge. Let's get started!
+
+## Deploying the Server
+
+The first step in setting up OS Ticket is to deploy a server. I used Vulture for this process, selecting "Cloud Compute" with a shared CPU and Windows Server 2022. The server specifications don't need to be too powerful; I chose 1 CPU and 2 GB of memory. After selecting a location and setting up firewall configurations, the server was ready for Remote Desktop Protocol (RDP) access.
+
+## Setting Up the Web Server
+
+Once connected to the server, I installed XAMPP, a free and open-source cross-platform web server solution. XAMPP makes it easy to set up Apache, MySQL, and PHP, all necessary for OS Ticket to function. After downloading XAMPP, I configured it by:
+
+- Changing the Apache domain name to my server's public IP address
+- Modifying the phpMyAdmin configuration to ensure secure access from my SOC analyst laptop
+
+## Configuring Firewall Rules
+
+Before moving further, I created inbound firewall rules for ports 80 and 443. This ensures that only authorized devices can access the web server. With XAMPP running, I started both the Apache and MySQL services and verified that everything was configured correctly.
+
+## Installing OS Ticket
+
+Next, I downloaded OS Ticket from their official site, choosing the latest stable version. After extracting the files, I moved them to the XAMPP htdocs folder to be served by the Apache server. Once the web server was up and running, I accessed the OS Ticket setup page, which prompted me to configure the system. This included:
+
+- Renaming configuration files
+- Setting up a MySQL database for OS Ticket to store data
+
+## Finalizing the Installation
+
+With the database created and the necessary configurations in place, the final step was to run the OS Ticket installation. After entering admin details and configuring the database connection, the OS Ticket was successfully installed. I also ensured file permissions were properly set for security.
+
+## Conclusion
+
+With this system, I'll be able to manage SOC alerts efficiently. Up next, I'll explore how to integrate OS Ticket with my tech stack so that alerts automatically generate tickets.
+
+Here's the link to follow along: [30-Day MYDFIR SOC Analyst Challenge](https://www.youtube.com/watch?v=xgxQuLL33oU&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=51)
+
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)*
+
+#CyberSecurity #SOCAnalyst #OSSTicket #MyDFIRChallenge #Day24 15:Tcd5,
+## Day 30 of the 30-Day MyDFIR SOC Analyst Challenge: Conclusion
+
+## Overview
+
+As I complete the 30-Day MyDFIR SOC Analyst Challenge, the journey has significantly deepened my understanding of SOC operations and cybersecurity best practices. Over these 30 days, I've worked with key tools, investigated real-world threats, and honed my incident response skills. Here's a recap of the most valuable lessons from this experience.
+
+## Setting Up the Foundation: Elasticsearch, Kibana, and OS Ticket
+
+The challenge began with setting up the core tools for a functional SOC environment: Elasticsearch and Kibana. These tools allowed me to collect, visualize, and analyze security data. I learned how to create dashboards that provided real-time insights into:
+- Brute-force attacks
+- Login attempts
+- Suspicious RDP activity
+
+Integrating OS Ticket into my environment was a significant milestone, as it automated incident management, ensuring every alert was systematically tracked and addressed.
+
+## Advanced Detection and Response
+
+As the challenge progressed, I encountered various real-world attack simulations. Investigating brute-force attacks—both SSH and RDP—taught me the importance of:
+- Log analysis
+- IP reputation checking
+- Using tools like AbuseIPDB and GreyNoise
+
+I gained hands-on experience in identifying and responding to malicious activity. Automating ticket creation for brute-force alerts streamlined the incident-handling process, reinforcing how crucial automation is in a fast-paced SOC environment.
+
+## Command and Control (C2) Detection
+
+A key highlight of the challenge was investigating the Mythic C2 framework, which provided insight into how attackers use Command and Control (C2) agents to maintain access to compromised systems. I utilized:
+- Network telemetry
+- Tools like RITA to identify beaconing behavior
+- Process creation logs
+
+This experience demonstrated the importance of understanding network traffic and process creation logs in detecting persistent threats.
+
+## Endpoint Security with Elastic Defend
+
+One of the most critical components of the challenge was deploying Elastic Defend for endpoint detection and response (EDR). By testing:
+- Malware detection
+- Host isolation
+- Telemetry data analysis
+
+I experienced firsthand how EDR solutions play a vital role in securing endpoints. I explored Elastic's telemetry data to investigate threats more deeply and learned how to prevent and mitigate attacks by quarantining malicious files and isolating compromised hosts.
+
+## Looking Ahead
+
+A big thank you to [@MyDFIR](https://www.youtube.com/@MyDFIR) for creating this challenge. It provided invaluable hands-on experience, deepened my technical skills, and gave me valuable insights into the day-to-day work of a SOC analyst. The challenge has equipped me with practical skills in:
+- Threat detection
+- Incident response
+- Endpoint security
+
+This journey has reinforced my passion for cybersecurity, and I'm eager to continue growing as a SOC analyst.
+
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)*
+
+#MyDFIR #SOCAnalyst #MYDFIRChallenge 16:Tcfe,
+## Day 28 of the 30-Day MyDFIR SOC Analyst Challenge: Investigating the Mythic C2 Framework
+
+## Overview
+
+On Day 28 of the 30-Day MyDFIR SOC Analyst Challenge, I shifted my focus to the Mythic Command and Control (C2) framework. Attackers widely use this framework to maintain control over compromised systems, allowing them to execute commands, steal data, and conduct other malicious activities without detection. My task was to investigate how the Mythic agent svchost_pilotvader.exe operated and how its communication could be detected.
+
+## Tracing the Mythic C2 Agent
+
+My investigation's first step was locating the Mythic C2 agent on one of the compromised systems. Armed with the knowledge of the agent's name, I used the Kibana Discover tool to search through the logs, narrowing the time range to the past 30 days. This allowed me to pinpoint 25 distinct events associated with the agent. Sorting these events chronologically, I was able to reconstruct the timeline of the agent's activity, gaining critical insight into how it interacted with the system over time.
+
+## Identifying C2 Traffic Through Network Telemetry
+
+In cases where the agent's name isn't known, identifying suspicious traffic can be challenging. Network telemetry analysis plays a critical role in detecting C2 activity. I began by analyzing network logs to identify the "top talkers"—the machines that generated the most traffic. Since Mythic, like most C2 frameworks, relies on consistent communication between the infected host and the attacker's server, unusual traffic patterns often stand out.
+
+To refine my detection, I utilized RITA (Real Intelligence Threat Analytics), a tool designed to detect beaconing behavior in C2 traffic. Beaconing occurs when an infected machine regularly checks in with a C2 server, and identifying these intervals allowed me to isolate Mythic's communication patterns. The detection of this regular network activity provided strong evidence of the C2 framework's presence.
+
+## Investigating Process Creation Logs
+
+Beyond network traffic, process creation analysis was essential for tracing the agent's activity. By examining these logs, I could see the exact processes initiated by the Mythic agent and track the attacker's movement within the system. These logs offer a detailed view of how the agent behaves, from its initial execution to spawning other processes critical to maintaining control over the system.
+
+## Conclusion
+
+Day 28's deep dive into the Mythic C2 framework offered valuable lessons in tracking adversary behavior. By leveraging network telemetry, beaconing detection, and process creation logs, I was able to uncover the activities of the Mythic agent and better understand its communication patterns. As the challenge nears its end, these investigations continue to hone my skills in threat detection and incident response.
+
+Here's the link to follow along: [30-Day MYDFIR SOC Analyst Challenge](https://www.youtube.com/watch?v=b11TuDx_CjU&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=55)
+
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)*
+
+#CyberSecurity #SOCAnalyst #MYDFIRChallenge #HandsOnExperience #Day28 9:["$","$L12",null,{"projectData":{"slug":"30-day-soc-analyst-challenge-part29","title":"Part 29: Installing and Exploring Elastic Defend on Windows Server","description":"Day 29 of the 30-Day MYDFIR SOC Analyst Challenge: Setting up and testing Elastic Defend EDR solution for comprehensive endpoint protection.","date":"2024-11-29","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Elastic Defend","EDR","SOC","Security","Windows Server"],"content":"$13","image":"/images/projects/Mydfir 30 day challenge.png","technologies":[],"images":[{"src":"/images/projects/30-day-challenge/30-days-day-29.png","alt":"30 Days MYDFIR SOC Analyst Challenge Day 29"}],"series":{"name":"Project 3: 30-Day MYDFIR SOC Analyst Challenge","part":29,"totalParts":30}},"relatedProjects":[{"slug":"30-day-soc-analyst-challenge-part24","title":"Part 24: Setting Up and Configuring OS Ticket","description":"Day 24 of the 30-Day MYDFIR SOC Analyst Challenge: Deploying and configuring OS Ticket on a Windows Server for efficient SOC alert management.","date":"2024-11-24","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["OS Ticket","XAMPP","SOC","Security","Windows Server"],"content":"$14","image":"/images/projects/Mydfir 30 day challenge.png","technologies":[],"images":[{"src":"/images/projects/30-day-challenge/1-30-days-day-24.png","alt":"30 Days MYDFIR SOC Analyst Challenge Day 24"},{"src":"/images/projects/30-day-challenge/2-Screenshott.png","alt":"Server Deployment Configuration"},{"src":"/images/projects/30-day-challenge/3-Screenshot.png","alt":"XAMPP Installation and Setup"},{"src":"/images/projects/30-day-challenge/4-Screenshot.png","alt":"OS Ticket Installation Process"},{"src":"/images/projects/30-day-challenge/5-Screenshot.png","alt":"OS Ticket Configuration"}],"series":{"name":"Project 3: 30-Day MYDFIR SOC Analyst Challenge","part":24,"totalParts":30}},{"slug":"30-day-soc-analyst-challenge-part30","title":"Part 30: Conclusion of the 30-Day MyDFIR SOC Analyst Challenge","description":"Day 30 of the 30-Day MYDFIR SOC Analyst Challenge: Reflecting on the journey and key learnings in SOC operations and cybersecurity.","date":"2024-11-30","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Conclusion","SOC","Security","Learning","Career Development"],"content":"$15","image":"/images/projects/Mydfir 30 day challenge.png","technologies":[],"images":[{"src":"/images/projects/30-day-challenge/30Days-MYDFIR-Challenge.png","alt":"30 Days MYDFIR SOC Analyst Challenge"}],"series":{"name":"Project 3: 30-Day MYDFIR SOC Analyst Challenge","part":30,"totalParts":30}},{"slug":"30-day-soc-analyst-challenge-part28","title":"Part 28: Investigating the Mythic C2 Framework","description":"Day 28 of the 30-Day MYDFIR SOC Analyst Challenge: Analyzing and investigating Command and Control (C2) framework activities using network telemetry and process logs.","date":"2024-11-28","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["C2","Mythic","SOC","Security","Investigation"],"content":"$16","image":"/images/projects/Mydfir 30 day challenge.png","technologies":[],"images":[{"src":"/images/projects/30-day-challenge/30-days-day-28.png","alt":"30 Days MYDFIR SOC Analyst Challenge Day 28"}],"series":{"name":"Project 3: 30-Day MYDFIR SOC Analyst Challenge","part":28,"totalParts":30}}],"categoryCounts":{"blue":45,"Infrastructure":3,"red":1}}]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+c:null
+10:[["$","title","0",{"children":"Samson's | Cybersecurity Portfolio"}],["$","meta","1",{"name":"description","content":"Professional cybersecurity portfolio showcasing expertise in digital security"}],["$","meta","2",{"name":"generator","content":"v0.dev"}],["$","link","3",{"rel":"icon","href":"https://hebbkx1anhila5yf.public.blob.vercel-storage.com/117%20Corporation%20no%20bg-5VVBXF0igK8jcCo43su7cpA2isco7t.png"}]]

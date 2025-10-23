@@ -1,0 +1,42 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#16213e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f3460;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="accent1" cx="20%" cy="80%" r="50%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#a855f7;stop-opacity:0" />
+    </radialGradient>
+    <radialGradient id="accent2" cx="80%" cy="20%" r="50%">
+      <stop offset="0%" style="stop-color:#9c55e4;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#9c55e4;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#bg)" rx="12"/>
+  
+  <!-- Accent overlays -->
+  <rect width="400" height="300" fill="url(#accent1)" rx="12"/>
+  <rect width="400" height="300" fill="url(#accent2)" rx="12"/>
+  
+  <!-- Title -->
+  <text x="200" y="80" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#a855f7">
+    AI in Cybersecurity
+  </text>
+  
+  <!-- Description -->
+  <text x="200" y="110" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white" opacity="0.8">
+    Artificial intelligence and
+  </text>
+  <text x="200" y="130" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white" opacity="0.8">
+    machine learning in security
+  </text>
+  
+  <!-- AI icon -->
+  <circle cx="200" cy="200" r="30" fill="none" stroke="#a855f7" stroke-width="2" opacity="0.6"/>
+  <circle cx="200" cy="200" r="15" fill="none" stroke="#a855f7" stroke-width="2" opacity="0.6"/>
+  <circle cx="200" cy="200" r="5" fill="#a855f7" opacity="0.6"/>
+</svg>

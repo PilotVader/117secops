@@ -1,0 +1,188 @@
+1:"$Sreact.fragment"
+2:I[9304,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"ThemeProvider"]
+3:I[9241,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"CyberHeader"]
+4:I[7555,[],""]
+5:I[1295,[],""]
+6:I[1024,["542","static/chunks/542-9c169102c7286aba.js","838","static/chunks/838-83c262eea6b250cb.js","345","static/chunks/app/not-found-f26a84874965db45.js"],"default"]
+7:I[3063,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"Image"]
+8:I[6874,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],""]
+a:I[9665,[],"OutletBoundary"]
+d:I[9665,[],"ViewportBoundary"]
+f:I[9665,[],"MetadataBoundary"]
+11:I[6614,[],""]
+:HL["/_next/static/css/78204a441d290532.css","style"]
+:HL["/_next/static/css/b5c3a1bf19425f6c.css","style"]
+0:{"P":null,"b":"ueOktod6GdedqcxtLheow","p":"","c":["","projects","30-day-soc-analyst-challenge-part22",""],"i":false,"f":[[["",{"children":["projects",{"children":[["slug","30-day-soc-analyst-challenge-part22","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/78204a441d290532.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b5c3a1bf19425f6c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"defer":true,"src":"https://cloud.umami.is/script.js","data-website-id":"1c0f224c-1fe0-4093-a4e2-c43cb8c84bfa"}]}],["$","body",null,{"className":"__className_f367f3","children":["$","$L2",null,{"attribute":"class","defaultTheme":"light","disableTransitionOnChange":true,"children":["$","div",null,{"className":"flex min-h-screen flex-col","children":[["$","$L3",null,{}],["$","main",null,{"className":"flex-1 pt-16","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L6",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-background py-5 border-t border-border","children":["$","div",null,{"className":"container mx-auto px-4 md:px-6","children":[["$","div",null,{"className":"grid grid-cols-1 md:grid-cols-3 gap-4","children":[["$","div",null,{"className":"space-y-2","children":[["$","div",null,{"className":"flex items-center","children":["$","div",null,{"className":"relative w-[3.6rem] h-[3.6rem]","children":["$","$L7",null,{"src":"https://hebbkx1anhila5yf.public.blob.vercel-storage.com/117%20Corporation%20no%20bg-5VVBXF0igK8jcCo43su7cpA2isco7t.png","alt":"117 SECOPS Logo","fill":true,"className":"object-contain"}]}]}],["$","p",null,{"className":"text-sm text-muted-foreground max-w-xs","children":"Cybersecurity professional specializing in protecting digital assets from evolving threats."}],["$","div",null,{"className":"pt-0","children":["$","a",null,{"href":"https://www.linkedin.com/in/otori-samson/","target":"_blank","rel":"noopener noreferrer","children":"Contact Me","className":"inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-9 rounded-md px-3 cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white","ref":null}]}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"font-medium text-sm mb-2 text-foreground","children":"Quick Links"}],["$","ul",null,{"className":"space-y-0.5","children":[["$","li",null,{"children":["$","$L8",null,{"href":"/","className":"text-sm text-muted-foreground hover:text-primary","children":"Home"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/blog","className":"text-sm text-muted-foreground hover:text-primary","children":"Blog"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/projects","className":"text-sm text-muted-foreground hover:text-primary","children":"Projects"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/portfolio","className":"text-sm text-muted-foreground hover:text-primary","children":"Portfolio"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/about","className":"text-sm text-muted-foreground hover:text-primary","children":"About"}]}]]}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"font-medium text-sm mb-2 text-foreground","children":"Areas of Expertise"}],["$","ul",null,{"className":"space-y-0.5","children":[["$","li",null,{"className":"text-sm text-muted-foreground","children":"Security Assessment"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Penetration Testing"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Secure Development"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Incident Response"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Compliance"}]]}]]}]]}],["$","div",null,{"className":"border-t border-border mt-5 pt-3 flex flex-col md:flex-row justify-between items-center","children":["$","p",null,{"className":"text-sm text-muted-foreground","children":["© ",2025," Samson's. Personal cybersecurity portfolio."]}]}]]}]}]]}]}]}]]}]]}],{"children":["projects",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","30-day-soc-analyst-challenge-part22","d"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9","$undefined",null,["$","$La",null,{"children":["$Lb","$Lc",null]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","ZApnZnUT_KxqbwnzQfVy2",{"children":[["$","$Ld",null,{"children":"$Le"}],null]}],["$","$Lf",null,{"children":"$L10"}]]}],false]],"m":"$undefined","G":["$11","$undefined"],"s":false,"S":true}
+12:I[2238,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","842","static/chunks/842-e0e5a1d477d9d65d.js","150","static/chunks/150-c359029d3b689678.js","419","static/chunks/app/projects/%5Bslug%5D/page-41cd4d27245b4b70.js"],"default"]
+13:Tb3a,
+## Day 22 of the 30-Day MyDFIR SOC Analyst Challenge: Creating Alerts and Dashboards for Mythic C2 Detection
+
+## Overview
+
+On Day 22 of the 30-Day MyDFIR SOC Analyst Challenge, I focused on creating alerts and dashboards to detect Mythic C2 activity, building on the groundwork from Day 21. This step is crucial in setting up efficient monitoring and detection of suspicious activity within the SOC environment.
+
+## Creating the Alert
+
+I started by accessing the Elastic web UI, navigating to the Discover section, and resetting the view. To ensure I captured relevant events, I set the time range to 30 days. This gave me a clear view of the events linked to "svchost-pilotvader.exe," which was triggered by our Mythic C2 agent in the previous exercise.
+
+The next step was filtering the process creation events using Sysmon's event code 1. This allowed me to see details like the MD5 hash of the binary associated with Mythic C2. Using this information, I further investigated the event by cross-referencing the SHA-1 hash with VirusTotal for additional context. Since the agent was newly created, the results were limited but still useful.
+
+Interestingly, the original file name of the Mythic C2 agent was "apollo.exe," even though it was executed as "svchost-pilotvader.exe." This discrepancy helped pinpoint the activity more accurately, making it a prime candidate for alert creation.
+
+## Setting the Alert
+
+I created a query based on event code 1 for process creation. The query focused on the SHA-256 hash and the original file name "apollo.exe." Once the alert was set, it was designed to trigger whenever Mythic C2 activity surfaced in the environment.
+
+## Building the Dashboard
+
+Next, I built a dashboard to visualize the Mythic C2 activity. By leveraging Elastic's Kibana features, I set up visualizations that track key metrics, such as:
+
+- Process creation events
+- File hashes
+- Network connections linked to Mythic C2
+
+The dashboard provides real-time insights, allowing for faster detection and response to similar threats in the future.
+
+## Conclusion
+
+With the alert and dashboard in place, I've taken an important step toward proactive monitoring of Mythic C2 activity. These tools will enhance the detection and visibility of malicious actions within the environment. Next, I'll refine my detection capabilities by expanding these alerts and dashboards to cover more complex threats.
+
+Here's the link to follow along: [30-Day MYDFIR SOC Analyst Challenge](https://www.youtube.com/watch?v=WcVuUamMApA&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=49)
+
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)*
+
+#CyberSecurity #SOCAnalyst #MYDFIRChallenge #HandsOnExperience #Day22 14:Td20,
+## Day 19 of the 30-Day MyDFIR SOC Analyst Challenge: Creating an Attack Diagram
+
+## Overview
+
+The focus for today is on using Draw.io, mapping out a plan to compromise a target machine, focusing on brute-forcing RDP credentials, disabling Windows Defender, and establishing a C2 connection.
+
+## Building the Attack Diagram
+
+The essential components of our attack:
+
+- **Mythic C2 Server** – This is the command and control server that we'll use to manage our attack.
+- **Windows Server** – This will be our target machine.
+- **Attacker Laptop** – Running Kali Linux, this is the machine we'll be using for the attack.
+
+A cloud represents the internet and connects all the components accordingly. The Kali Linux laptop will be on a separate network, while the Mythic C2 server will run in the cloud.
+
+## Phase 1: Initial Access – Brute Force
+
+In this phase, the attacker's laptop will attempt a brute force attack over Remote Desktop Protocol (RDP) to gain access to the Windows Server. This will serve as the initial access point. If successful, we will authenticate and proceed to the next phase.
+
+## Phase 2: Discovery – Gathering Information
+
+Once inside the Windows Server, the next step is Discovery. The attacker will run a series of commands like:
+
+- whoami
+- ipconfig
+- net user
+- net group
+
+These commands help us learn about the system, its users, and network settings. This information is crucial for planning our next moves.
+
+## Phase 3: Defense Evasion – Disabling Defender
+
+Before executing any malicious payloads, we need to bypass Windows Defender. The focus of this phase is defense evasion. Using our elevated privileges, we will attempt to disable Windows Defender on the server to prevent it from detecting our actions.
+
+## Phase 4: Execution – Downloading and Running Mythic Agent
+
+Once the defenses are down, we move to execution. In this phase, the Windows Server will reach out to our Mythic C2 server to download an agent. This will be done using PowerShell's Invoke-Expression (IEX) command to fetch and run the agent.
+
+## Phase 5: Command and Control – Establishing C2
+
+With the Mythic agent successfully installed, we establish a C2 connection between the compromised Windows Server and the Mythic C2 server. At this point, the attacker has full control over the target machine, enabling further malicious actions.
+
+## Phase 6: Exfiltration – Stealing Data
+
+The final phase is exfiltration. Creating a fake password file called passwords.txt on the Windows Server. Using the established C2 session, we'll download this file from the compromised server, mimicking a data theft scenario.
+
+## Conclusion
+
+This attack diagram is a simplified blueprint of how to compromise a machine, which is strictly for educational purposes only. Next, we'll go over how to set up the Mythic server and begin executing these steps. Stay tuned!
+
+Here's the link to follow along: [30-Day MYDFIR SOC Analyst Challenge](https://www.youtube.com/watch?v=jv-qiugJGHg&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=46)
+
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)*
+
+#CyberSecurity #SOCAnalyst #MYDFIRChallenge #HandsOnExperience #Day19 15:Tce4,
+## Day 18 of the 30-Day MyDFIR SOC Analyst Challenge: Understanding Command and Control (C2)
+
+## Overview
+
+Welcome to Day 18 of the 30-Day MyDFIR SOC Analyst Challenge. Today, our focus would be on an essential part of cyberattacks, Command and Control (C2). In this blog, we'll go over what C2 is, why it's crucial for attackers, and the common tools they use. We'll also look at one particular framework, Mythic, which we will use later in this challenge.
+
+## What is Command and Control?
+
+Command and Control (C2) refers to the techniques attackers use to communicate with systems they have compromised in a victim's network. According to the MITRE ATT&CK framework, C2 allows attackers to maintain control over the compromised system, enabling them to perform various malicious activities.
+
+Once attackers gain access to a victim's machine, they need a way to interact with it remotely. C2 helps them move closer to their end goal, stealing credentials, exfiltrating data, or deploying ransomware.
+
+## Why is Establishing C2 Important?
+
+The importance of C2 for attackers cannot be overstated. Without it, they couldn't perform further actions on the compromised network. C2 is a gateway for attackers to escalate privileges, move laterally, steal sensitive information, or even disrupt services.
+
+For attackers to cause harm, they must maintain access to the network, which they do through C2 channels. The MITRE ATT&CK framework lists 18 different techniques attackers use to establish C2, and understanding these techniques is crucial for any SOC analyst.
+
+## Common Tools and Frameworks for C2
+
+Several C2 frameworks are used in the wild. Let's focus on four of the most common:
+
+### 1. Metasploit
+Metasploit is a popular framework used for vulnerability exploitation. It's widely available and often used in ethical hacking environments, but attackers also use it to exploit vulnerable systems.
+
+### 2. Cobalt Strike
+Cobalt Strike is a commercial adversary emulation tool. Though it's legitimate software, attackers frequently use it in real-world breaches. Fortunately, because it's so widely used, there are many detection methods available.
+
+### 3. Sliver
+Sliver is an open-source alternative to Cobalt Strike, developed by Bishop Fox. It supports multiple protocols like HTTP, HTTPS, and DNS, making it a versatile tool for attackers.
+
+### 4. Mythic
+Mythic is the framework I'll be using in this challenge. Built with GoLang and Docker, Mythic provides a user-friendly interface for managing payloads and C2 profiles. This flexibility makes it a favorite for adversary emulation.
+
+## Conclusion
+
+In the next part of the challenge, I'll dive deeper into crafting attacks on our Windows Server and setting up a Mythic C2 server. Stay tuned as we explore how to deploy agents and establish a successful C2 session.
+
+Here's the link to follow along: [30-Day MYDFIR SOC Analyst Challenge](https://www.youtube.com/watch?v=WnOkhGNPmyA&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=45)
+
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)*
+
+#CyberSecurity #SOCAnalyst #MYDFIRChallenge #HandsOnExperience #Day18 16:Tc55,
+## Day 14 of the 30-Day MYDFIR SOC Analyst Challenge: Creating an SSH Brute Force Alert and Dashboard
+
+## Overview
+
+Today, I focused on setting up real-time alerts and dashboards to monitor brute-force activity from unauthorized sources. This exercise taught me how to visualize, monitor, and respond to SSH brute-force attacks more efficiently.
+
+## Querying SSH Logs
+
+The first task involved querying logs from my SSH server, which had already been ingested into ElasticSearch. By accessing the Discover tab, I could filter out logs specific to my SSH server. I found it crucial to focus on specific fields like `system.auth.ssh.event` and `user.name` to track failed authentication attempts. The process began by filtering for failed SSH authentication attempts. This was accomplished by searching for logs where the `system.auth.ssh.event` field indicated failed attempts, giving me an initial view of how many attempts were occurring and from where.
+
+## Building the Brute Force Alert
+
+Next, I focused on creating an alert for SSH brute-force attempts. The goal was to automate the detection process and trigger an alert based on predefined thresholds. Using ElasticSearch's alert feature, I created a search-based threshold rule. My rule was set to trigger if more than five failed login attempts occurred within five minutes, a common indicator of brute-force activity.
+
+I also configured how frequently the rule should check for new logs. To ensure near real-time monitoring, I set it to check every minute. While this was a basic alert configuration, it showcased the power of automating log analysis in detecting potential threats. Though this particular rule may not be perfect, it sets a solid foundation for building more sophisticated alerts later.
+
+## Visualizing with Dashboards
+
+To complement the alert system, I created a visual dashboard to track the geographical origins of these brute-force attempts. By navigating to the Maps section in ElasticSearch, I built a dashboard that plotted failed authentication attempts based on their source IP geolocation. This allowed me to see patterns of attack, such as which regions were targeting my SSH server the most.
+
+For example, I noticed most failed attempts came from countries like North Korea and China. Using the choropleth layer in the map, I visualized these locations, providing an easy-to-understand view of attack origins.
+
+## Conclusion
+
+By the end of Day 14, I had successfully created both an alert system and a dashboard for monitoring SSH brute-force attacks. The combination of real-time alerts and visualization tools has significantly improved my ability to detect and respond to these types of attacks quickly.
+
+Here's the link to follow along: [30-Day MYDFIR SOC Analyst Challenge](https://www.youtube.com/watch?v=AdUMhT1l1eY&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=41)
+
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)*
+
+#CyberSecurity #SOCAnalyst #MYDFIRChallenge #HandsOnExperience #Day14 9:["$","$L12",null,{"projectData":{"slug":"30-day-soc-analyst-challenge-part22","title":"Part 22: Creating Alerts and Dashboards for Mythic C2 Detection","description":"Day 22 of the 30-Day MYDFIR SOC Analyst Challenge: Building alerts and dashboards to detect and monitor Mythic C2 activity in the SOC environment.","date":"2024-11-22","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Alerts","Dashboards","SOC","Security","Threat Detection"],"content":"$13","image":"/images/projects/Mydfir 30 day challenge.png","technologies":[],"images":[{"src":"/images/projects/30-day-challenge/1-30-days-day-22.png","alt":"30 Days MYDFIR SOC Analyst Challenge Day 22"},{"src":"/images/projects/30-day-challenge/2-Mythic-C2-Apollo-Agent-Detection-Rule.png","alt":"Mythic C2 Apollo Agent Detection Rule"},{"src":"/images/projects/30-day-challenge/3-Mythic-Alert.png","alt":"Mythic Alert Configuration"},{"src":"/images/projects/30-day-challenge/4-MyDFIR-Suspicious-Activity.png","alt":"MyDFIR Suspicious Activity Dashboard"}],"series":{"name":"Project 3: 30-Day MYDFIR SOC Analyst Challenge","part":22,"totalParts":30}},"relatedProjects":[{"slug":"30-day-soc-analyst-challenge-part19","title":"Part 19: Creating an Attack Diagram","description":"Day 19 of the 30-Day MYDFIR SOC Analyst Challenge: Mapping out a comprehensive attack plan using Draw.io, from initial access to data exfiltration.","date":"2024-11-19","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Attack Diagram","Draw.io","SOC","Security","Threat Detection"],"content":"$14","image":"/images/projects/Mydfir 30 day challenge.png","technologies":[],"images":[{"src":"/images/projects/30-day-challenge/30-days-day-19.png","alt":"30 Days MYDFIR SOC Analyst Challenge Day 19"},{"src":"/images/projects/30-day-challenge/attack-diagram-1.png","alt":"Attack Diagram Overview"},{"src":"/images/projects/30-day-challenge/attack-diagram-22.png","alt":"Attack Diagram Phase 22"},{"src":"/images/projects/30-day-challenge/attack-diagram-3.png","alt":"Attack Diagram Phase 3"}],"series":{"name":"Project 3: 30-Day MYDFIR SOC Analyst Challenge","part":19,"totalParts":30}},{"slug":"30-day-soc-analyst-challenge-part18","title":"Part 18: Understanding Command and Control (C2)","description":"Day 18 of the 30-Day MYDFIR SOC Analyst Challenge: Exploring C2 frameworks, their importance in cyberattacks, and preparing for Mythic implementation.","date":"2024-11-18","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["C2","Mythic","Security","SOC","Threat Detection"],"content":"$15","image":"/images/projects/Mydfir 30 day challenge.png","technologies":[],"images":[{"src":"/images/projects/30-day-challenge/30-days-day-18.png","alt":"30 Days MYDFIR SOC Analyst Challenge Day 18"}],"series":{"name":"Project 3: 30-Day MYDFIR SOC Analyst Challenge","part":18,"totalParts":30}},{"slug":"30-day-soc-analyst-challenge-part14","title":"Part 14: Creating an SSH Brute Force Alert and Dashboard","description":"Day 14 of the 30-Day MYDFIR SOC Analyst Challenge: Setting up real-time alerts and dashboards to monitor and visualize SSH brute-force attacks.","date":"2024-11-14","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["SSH","Alerts","Dashboards","SOC","Security Monitoring"],"content":"$16","image":"/images/projects/Mydfir 30 day challenge.png","technologies":[],"images":[{"src":"/images/projects/30-day-challenge/30-days-day-14.png","alt":"30 Days MYDFIR SOC Analyst Challenge Day 14"},{"src":"/images/projects/30-day-challenge/Alert-creation-and-dashboard-on-Kibana-day-14.png","alt":"Alert Creation and Dashboard Configuration in Kibana"}],"series":{"name":"Project 3: 30-Day MYDFIR SOC Analyst Challenge","part":14,"totalParts":30}}],"categoryCounts":{"blue":45,"Infrastructure":3,"red":1}}]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+c:null
+10:[["$","title","0",{"children":"Samson's | Cybersecurity Portfolio"}],["$","meta","1",{"name":"description","content":"Professional cybersecurity portfolio showcasing expertise in digital security"}],["$","meta","2",{"name":"generator","content":"v0.dev"}],["$","link","3",{"rel":"icon","href":"https://hebbkx1anhila5yf.public.blob.vercel-storage.com/117%20Corporation%20no%20bg-5VVBXF0igK8jcCo43su7cpA2isco7t.png"}]]

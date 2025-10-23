@@ -1,0 +1,382 @@
+1:"$Sreact.fragment"
+2:I[9304,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"ThemeProvider"]
+3:I[9241,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"CyberHeader"]
+4:I[7555,[],""]
+5:I[1295,[],""]
+6:I[1024,["542","static/chunks/542-9c169102c7286aba.js","838","static/chunks/838-83c262eea6b250cb.js","345","static/chunks/app/not-found-f26a84874965db45.js"],"default"]
+7:I[3063,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"Image"]
+8:I[6874,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],""]
+a:I[9665,[],"OutletBoundary"]
+d:I[9665,[],"ViewportBoundary"]
+f:I[9665,[],"MetadataBoundary"]
+11:I[6614,[],""]
+:HL["/_next/static/css/78204a441d290532.css","style"]
+:HL["/_next/static/css/b5c3a1bf19425f6c.css","style"]
+0:{"P":null,"b":"ueOktod6GdedqcxtLheow","p":"","c":["","projects","project-5-cyber-range-internship-journey",""],"i":false,"f":[[["",{"children":["projects",{"children":[["slug","project-5-cyber-range-internship-journey","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/78204a441d290532.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b5c3a1bf19425f6c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"defer":true,"src":"https://cloud.umami.is/script.js","data-website-id":"1c0f224c-1fe0-4093-a4e2-c43cb8c84bfa"}]}],["$","body",null,{"className":"__className_f367f3","children":["$","$L2",null,{"attribute":"class","defaultTheme":"light","disableTransitionOnChange":true,"children":["$","div",null,{"className":"flex min-h-screen flex-col","children":[["$","$L3",null,{}],["$","main",null,{"className":"flex-1 pt-16","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L6",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-background py-5 border-t border-border","children":["$","div",null,{"className":"container mx-auto px-4 md:px-6","children":[["$","div",null,{"className":"grid grid-cols-1 md:grid-cols-3 gap-4","children":[["$","div",null,{"className":"space-y-2","children":[["$","div",null,{"className":"flex items-center","children":["$","div",null,{"className":"relative w-[3.6rem] h-[3.6rem]","children":["$","$L7",null,{"src":"https://hebbkx1anhila5yf.public.blob.vercel-storage.com/117%20Corporation%20no%20bg-5VVBXF0igK8jcCo43su7cpA2isco7t.png","alt":"117 SECOPS Logo","fill":true,"className":"object-contain"}]}]}],["$","p",null,{"className":"text-sm text-muted-foreground max-w-xs","children":"Cybersecurity professional specializing in protecting digital assets from evolving threats."}],["$","div",null,{"className":"pt-0","children":["$","a",null,{"href":"https://www.linkedin.com/in/otori-samson/","target":"_blank","rel":"noopener noreferrer","children":"Contact Me","className":"inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-9 rounded-md px-3 cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white","ref":null}]}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"font-medium text-sm mb-2 text-foreground","children":"Quick Links"}],["$","ul",null,{"className":"space-y-0.5","children":[["$","li",null,{"children":["$","$L8",null,{"href":"/","className":"text-sm text-muted-foreground hover:text-primary","children":"Home"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/blog","className":"text-sm text-muted-foreground hover:text-primary","children":"Blog"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/projects","className":"text-sm text-muted-foreground hover:text-primary","children":"Projects"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/portfolio","className":"text-sm text-muted-foreground hover:text-primary","children":"Portfolio"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/about","className":"text-sm text-muted-foreground hover:text-primary","children":"About"}]}]]}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"font-medium text-sm mb-2 text-foreground","children":"Areas of Expertise"}],["$","ul",null,{"className":"space-y-0.5","children":[["$","li",null,{"className":"text-sm text-muted-foreground","children":"Security Assessment"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Penetration Testing"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Secure Development"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Incident Response"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Compliance"}]]}]]}]]}],["$","div",null,{"className":"border-t border-border mt-5 pt-3 flex flex-col md:flex-row justify-between items-center","children":["$","p",null,{"className":"text-sm text-muted-foreground","children":["© ",2025," Samson's. Personal cybersecurity portfolio."]}]}]]}]}]]}]}]}]]}]]}],{"children":["projects",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","project-5-cyber-range-internship-journey","d"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9","$undefined",null,["$","$La",null,{"children":["$Lb","$Lc",null]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","ZyxqggjGKfLpwVsnCnGiS",{"children":[["$","$Ld",null,{"children":"$Le"}],null]}],["$","$Lf",null,{"children":"$L10"}]]}],false]],"m":"$undefined","G":["$11","$undefined"],"s":false,"S":true}
+12:I[2238,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","842","static/chunks/842-e0e5a1d477d9d65d.js","150","static/chunks/150-c359029d3b689678.js","419","static/chunks/app/projects/%5Bslug%5D/page-41cd4d27245b4b70.js"],"default"]
+13:T18c2,
+# Introduction
+
+Having already gained hands-on experience through my personal cybersecurity projects and previous professional engagements, I am always looking for opportunities to broaden my exposure to enterprise-grade tools and real-world SOC environments. Over the past few months, I have worked extensively on my home lab, documented multiple projects, and sharpened my skills across areas such as SIEM, incident response, and vulnerability management. However, I wanted to push further, especially into the Microsoft security ecosystem, while also gaining structured exposure to premium enterprise tools.
+
+That is why I enrolled in the Cyber Range internship program. This platform is built around Microsoft Azure, Microsoft Sentinel, and Microsoft Defender for Endpoint, combined with Tenable for enterprise vulnerability management. It provides a collaborative SOC-like environment where hundreds of analysts work within shared infrastructure that is constantly being targeted by real-world malicious activity. For me, this is not just about learning the basics, it is about refining my skills, testing myself in a live environment, and building familiarity with tools that are at the core of modern enterprise security operations.
+
+## Getting Started and Building the Foundation
+
+The first step in this journey is orientation. The Cyber Range platform begins with a structured roadmap that sets expectations for consistency and growth. Every participant is encouraged to treat it like a real job environment, logging in daily, building habits, and steadily improving. I will begin by following this roadmap, which introduces both theory and practice.
+
+In these early weeks, I will revisit fundamental cybersecurity concepts, particularly those aligned with frameworks and compliance regulations. For example, I'll explore how frameworks like NIST or ISO provide the backbone for security controls, and how compliance drivers such as HIPAA or GDPR influence day-to-day security operations. These sessions will serve as a refresher and prepare me for the more technical modules that follow, while also sharpening my understanding of how policy connects to practice.
+
+## Vulnerability Management with Tenable
+
+The first major technical module focuses on vulnerability management, an essential discipline in any cybersecurity program. Using Tenable, I will learn how to scan systems for weaknesses, interpret the findings, and take steps toward remediation.
+
+This will involve setting up and running vulnerability scans on virtual machines inside the shared Azure environment, examining the results, and applying patches or configuration changes to reduce risk. For example, if a scan reveals outdated services or missing patches, I'll work through the remediation process just as I would in a real enterprise. Over the coming weeks, my goal is to treat this module not as a checklist, but as a chance to build a workflow: from detection to prioritization, to resolution, and finally verification. Documenting these workflows will be an important part of this project.
+
+## Threat Hunting, Security Operations, and Incident Response
+
+The second technical phase immerses me in the SOC workflow. Here, I will be working with Microsoft Sentinel as the SIEM platform, Defender for Endpoint as the EDR solution, and real log data generated by hundreds of users and systems in the Cyber Range.
+
+This is where theory meets practice. Over the next few weeks, I will analyze log flows, craft queries, investigate anomalies, and conduct basic threat hunting. Since the environment is live and exposed to the internet, there will be real attempts by malicious actors to probe and exploit systems. My task will be to detect these attempts, understand their tactics, and respond effectively.
+
+I will also practice structured incident response. For example, if suspicious activity is detected on a virtual machine, I'll follow response steps: confirming the event, containing the activity, investigating root cause, and documenting lessons learned. This experience mirrors the responsibilities of a SOC analyst and will be central to my learning and documentation.
+
+## From Learning to Internship Experience
+
+Beyond the technical labs, the Cyber Range includes a formal internship component. As I progress, I will take on specific tasks that count toward this internship, such as vulnerability scans, incident investigations, and security monitoring activities. Each completed task adds to my record of experience, which can be verified by employers.
+
+This part of the program is significant because it transforms the learning journey into something that can be added to a CV and LinkedIn profile as real internship experience. Over the next few weeks, I will treat these tasks as milestones, carefully documenting what I did, how I approached the problem, and what the outcomes were. This will not only strengthen my portfolio but also demonstrate a clear path of professional growth.
+
+## Conclusion and Next Steps
+
+Project 5 marks an exciting phase in my cybersecurity journey. Unlike previous projects that focused on building my personal lab, this one places me directly inside a live, collaborative SOC-like environment where the stakes feel real and the tools mirror what enterprises use daily.
+
+Over the next few weeks, I will document every stage of this process: from foundational refreshers to vulnerability management, from SOC threat hunting to structured incident response, even blogging about theoretical concepts I learn from the platform and finally the internship validation itself. Each update will be posted on this site, showcasing not just the technical steps but also the reflections, challenges, and lessons learned along the way.
+
+The ultimate goal is to come out of this experience with practical, verifiable internship experience, sharpened SOC skills, and a portfolio that speaks directly to the expectations of employers. By treating this journey seriously and documenting it transparently, I hope to bridge the gap between learning and professional practice, one step at a time.
+
+## Important Link
+
+If you are interested in joining the Cyber Range community or following along with the labs, you can check it out here: [Cyber Range Community](https://skool.com/cyber-range)
+14:T20cc,
+# Introduction
+
+As part of my continuous threat hunting practice, I conducted a scenario using Microsoft Defender for Endpoint (MDE) and the Microsoft 365 Security suite. The objective was to investigate devices that may have been unintentionally exposed to the public internet, assess potential brute-force attempts, and determine whether unauthorized access occurred.
+
+For this exercise, I worked with a VM in my environment, `nick-test-vm-md`, and the account of interest was `nick-labuser`. This project demonstrates my ability to use advanced hunting queries, analyze telemetry, apply the MITRE ATT&CK framework, and document findings in a professional format.
+
+## Scenario Overview
+
+### Context
+
+During routine maintenance, the security team was tasked with investigating any VMs in the shared services cluster (DNS, Domain Services, DHCP, etc.) that were mistakenly exposed to the internet. The goal was to:
+
+- Identify misconfigured VMs exposed to the public internet
+- Investigate brute-force login attempts or successes
+- Validate whether unauthorized access took place
+- Document findings, map them to MITRE ATT&CK TTPs, and propose improvements
+
+## Investigation Process and Findings
+
+### Internet-Facing Device Check
+
+The first step was to verify which devices were exposed to the internet. Using MDE's DeviceInfo table, I confirmed that the VM `nick-test-vm-md` had been internet-facing for several days.
+
+-------------------------------------------------------
+
+kql
+DeviceInfo
+| where DeviceName == "nick-test-vm-md"
+| where IsInternetFacing == true
+| order by Timestamp desc
+
+
+-------------------------------------------------------
+
+**Result**: Confirmed that nick-test-vm-md was indeed internet-facing, which posed a significant security risk.
+
+<InlineGallery images={internet-facing-device-investigation} title="Internet-Facing Device Investigation Process" />
+
+### Failed Login Attempts Analysis
+
+Next, I investigated failed login attempts to identify potential brute-force attacks targeting the exposed VM.
+
+-------------------------------------------------------
+
+kql
+DeviceLogonEvents
+| where DeviceName == "nick-test-vm-md"
+| where LogonType has_any("Network", "Interactive", "RemoteInteractive", "Unlock")
+| where ActionType == "LogonFailed"
+| where isnotempty(RemoteIP)
+| summarize Attempts = count() by ActionType, RemoteIP, DeviceName
+| order by Attempts desc
+
+
+-------------------------------------------------------
+
+**Findings**: Multiple bad actors attempted to log into nick-test-vm-md from various external IP addresses, indicating clear evidence of brute-force attempts.
+
+<InlineGallery images={brute-force-analysis} title="Brute Force Attack Analysis" />
+
+### Validation of Brute Force Success Attempts
+
+To determine if any of the persistent attackers succeeded, I checked whether the top malicious IPs were able to gain unauthorized access.
+
+-------------------------------------------------------
+
+kql
+let RemoteIPsInQuestion = dynamic(["84.38.185.58","91.203.60.30", "171.254.92.66", "14.169.16.183", "185.243.96.107", "102.88.21.213", "62.60.136.105"]);
+DeviceLogonEvents
+| where LogonType has_any("Network","Interactive","RemoteInteractive","Unlock")
+| where ActionType == "LogonSuccess"
+| where RemoteIP has_any(RemoteIPsInQuestion)
+
+
+-------------------------------------------------------
+
+**Result**: No successful logons were found from any of the malicious IP addresses.
+
+<InlineGallery images={malicious-ip-validation} title="Malicious IP Validation Analysis" />
+
+### Account-Specific Analysis
+
+I then focused on the legitimate account nick-labuser to analyze its authentication patterns.
+
+#### Failed Logons for nick-labuser
+
+-------------------------------------------------------
+
+kql
+DeviceLogonEvents
+| where DeviceName == "nick-test-vm-md"
+| where LogonType == "Network"
+| where ActionType == "LogonFailed"
+| where AccountName == "nick-labuser"
+| summarize count()
+
+
+-------------------------------------------------------
+
+**Result**: 0 failed logon attempts for the `nick-labuser` account, making brute-force success unlikely.
+
+<InlineGallery images={account-failed-logons} title="Account Failed Logons Analysis" />
+
+#### Successful Logons for nick-labuser
+
+-------------------------------------------------------
+
+kql
+DeviceLogonEvents
+| where DeviceName == "nick-test-vm-md"
+| where LogonType == "Network"
+| where ActionType == "LogonSuccess"
+| where AccountName == "nick-labuser"
+| summarize LoginCount = count() by DeviceName, ActionType, AccountName, RemoteIP
+
+
+-------------------------------------------------------
+
+**Findings**: 18 total successful logons, all from consistent, legitimate IP addresses with no signs of compromise.
+
+<InlineGallery images={account-successful-logons} title="Account Successful Logons Analysis" />
+
+## Analysis
+
+### Key Findings
+
+1. Device Exposure: The VM nick-test-vm-md was confirmed to be internet-facing for several days
+2. Brute Force Activity: Clear evidence of multiple failed login attempts from external malicious IPs
+3. No Successful Compromise: Despite persistent attacks, no unauthorized access was achieved
+4. Legitimate Account Security: The nick-labuser account showed no signs of compromise with 18 successful logons from legitimate IPs
+
+### Security Assessment
+
+Though nick-test-vm-md was internet-facing and subjected to clear brute-force attempts, there is no evidence of successful brute force or unauthorized access:
+
+1. The legitimate account nick-labuser showed 18 successful logins, all from valid IPs
+2. No failed logons were associated with nick-labuser
+3. No malicious IPs were able to gain access
+
+## MITRE ATT&CK Framework Mapping
+
+This investigation identified several relevant MITRE ATT&CK techniques:
+
+1. T1190 – Exploit Public-Facing Application: The internet-facing VM represented a potential attack vector
+2. T1078 – Valid Accounts: Legitimate logons by nick-labuser demonstrated normal account usage
+3. T1110 – Brute Force: Multiple failed attempts from external IPs constituted brute-force attacks
+4. T1587.001 – Develop Capabilities: Exploit Code: Inference from multiple bad actors attempting access suggests organized attack attempts
+
+## Response Recommendations
+
+If this were a real enterprise environment, the following actions should be implemented:
+
+1. Network Security: Restrict inbound access via Network Security Groups (NSGs) to only trusted IPs
+2. Multi-Factor Authentication: Enforce MFA on critical accounts such as nick-labuser
+3. Account Lockout Policy: Implement an account lockout policy to prevent unlimited login attempts
+4. Continuous Monitoring: Monitor failed login telemetry continuously for early detection
+
+## Improvement & Reflection
+
+### Lessons Learned
+
+1. VM Hardening: Strengthen VM hardening by default to avoid unnecessary public exposure
+2. Query Efficiency: Improve efficiency of hunting queries by pre-building templates for repeated use
+3. Investigation Workflow: Enhance investigation workflow with automated enrichment of IP reputation and geolocation
+
+### Professional Development
+
+This threat hunting exercise demonstrates the process of validating whether an exposed VM has been compromised. Even though nick-test-vm-md was subject to persistent brute-force attempts, proper analysis confirmed no successful intrusion.
+
+Regular hunts like this not only uncover potential misconfigurations but also build proactive defense habits, mapping every finding against MITRE ATT&CK to ensure structured threat coverage.
+
+## Conclusion
+
+This scenario provided valuable hands-on experience with enterprise-grade security tools and real-world threat hunting methodologies. The systematic approach to investigation, from initial discovery through detailed analysis and documentation, mirrors the processes used in professional SOC environments.
+
+The successful identification and analysis of the brute-force attempts, combined with the validation that no compromise occurred, demonstrates the importance of thorough investigation and proper security controls. This experience reinforces the value of continuous monitoring, proper network segmentation, and the application of structured frameworks like MITRE ATT&CK in cybersecurity investigations.
+15:T150d,
+## Project 4.7: TheHive & Cortex Deployment in My Cybersecurity Home Lab
+
+### Overview
+
+With the foundation of my segmented cybersecurity home lab steadily taking shape, the next step was to integrate an incident response and analysis layer. For this stage, I deployed TheHive and Cortex, two powerful, open-source tools designed for incident management, case collaboration, and automated analysis.
+
+This build forms a critical part of my SOC workflow. TheHive serves as a centralized incident response platform, while Cortex allows for automated enrichment and analysis of observables. Together, they streamline investigations, improve collaboration, and create a more responsive detection and response cycle in my lab environment.
+
+### Deployment Approach
+
+While TheHive and Cortex can be installed directly on a Linux host or via automated scripts, I opted for a Docker-based deployment through Portainer for speed, maintainability, and container isolation. The process began with pulling the official Docker Compose configuration from TheHive documentation, which includes all required services. TheHive, Cortex, Cassandra, and Elasticsearch pre-configured to work together.
+
+After logging into Portainer, I created a new stack, named it thehive-cortex, pasted in the full Docker Compose configuration, and deployed. Within minutes, the stack creation was successful, and the containers for all components were visible and running.
+
+### Initial Configuration of TheHive
+
+Accessing TheHive was straightforward navigating to my lab IP (10.10.30.100:9000) brought up the login page. Using the default credentials (admin@thehive.local / secret), I entered the admin console, where I began configuring the platform for my lab:
+
+- Created a new organization for my lab environment, representing my segmented network.
+- Added a dedicated admin user tied to my internal domain (samson.local), assigning full organization administrator rights.
+- Configured a secure password and prepared the account for operational use.
+
+While TheHive offers extensive options for branding, Cortex integration, and case templates, my priority at this stage was preparing the environment to receive alerts from Wazuh, my SIEM/XDR platform deployed earlier in Project 4.3.
+
+<InlineGallery images={thehive-configuration} title="TheHive Initial Configuration and Organization Setup" />
+
+### Cortex Setup
+
+Cortex, accessible on port 9001, was initialized in a similar fashion, logging in with the admin account created earlier and verifying the platform's readiness for analyzer configuration. Cortex will eventually process observables from TheHive cases, performing automated enrichment through analyzers such as VirusTotal, MISP, and WHOIS lookups.
+
+I held off on detailed analyzer configuration for now, as the immediate focus is ensuring proper alert ingestion from Wazuh into TheHive. This will allow me to establish a case-driven workflow where detection events trigger investigations that are enriched automatically via Cortex.
+
+<InlineGallery images={cortex-setup} title="Cortex Platform Initialization and Configuration" />
+
+### Next Steps in the Workflow
+
+Once integration is complete, the workflow will look like this:
+
+1. Wazuh detects a security event in my lab environment.
+2. Alert is forwarded to TheHive, where it appears as a case or alert entry.
+3. Cortex automatically enriches observables, providing intelligence for quicker triage.
+4. Response actions are documented and executed directly from within TheHive.
+
+This aligns with the SOC triage and investigation process used in real-world enterprise environments.
+
+### Conclusion
+
+<p class="mb-4 leading-relaxed">TheHive and Cortex deployment marks the second-to-last stage in the base build of my home lab. The final foundational stage will involve cloud expansion, where I will connect my lab to Azure via a site-to-site VPN. This will extend my testing capabilities, enabling hybrid cloud security monitoring and cross-environment threat detection.</p>
+
+<p class="mb-4 leading-relaxed">Once integration between Wazuh, TheHive, and Cortex is fully operational, I will move into advanced detection engineering, creating adversary simulations in Caldera, monitoring network telemetry in Security Onion, and refining detection rules across my SOC toolchain.</p>
+
+<p class="mb-4 leading-relaxed">This project demonstrates the practical implementation of enterprise-grade incident response tools in a home lab environment, showcasing how Docker-based deployments can simplify complex SOC tool integration while maintaining the flexibility needed for custom configurations and testing scenarios.</p>
+
+<p class="mb-4 leading-relaxed"><strong class="font-semibold">Credits:</strong> This walkthrough is based on Episode 6 of the Ultimate Cybersecurity Lab YouTube series by Gerard O'Brien. While the core methodology followed his structure, the implementation was carried out independently by Samson Otori, with network addressing, VLAN assignments, and system configurations customized for my lab environment.</p>
+
+<p class="mb-4 leading-relaxed">Here's a link to his YouTube channel:</p>
+
+<p class="mb-4 leading-relaxed"><a href="https://www.youtube.com/watch?v=ej6iBrBqZEo" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Gerard O'Brien's Channel</a></p>
+16:T1d16,
+## Project 4.5: Caldera & Security Onion Deployment in my Cybersecurity Home Lab
+
+### Overview
+
+Over the past few weeks, my home lab has been steadily evolving into a fully functional, segmented cybersecurity test environment. Following the blueprint from Gerard O'Brien's Building the Ultimate Cybersecurity Lab series, I've reached one of the most exciting milestones so far: deploying MITRE Caldera for adversary emulation and Security Onion for network-based detection and threat hunting.
+
+Both tools play crucial roles in a mature SOC workflow, and getting them online was a mix of straightforward installs, unexpected technical snags, and valuable troubleshooting lessons.
+
+### Deploying MITRE Caldera
+
+Caldera is an adversary emulation platform developed by MITRE, designed to simulate real-world attacker behaviours and techniques in a controlled environment. The goal in my lab is to use it to generate realistic attack traffic and test detection capabilities across my monitoring stack.
+
+While the transcript in the tutorial followed a clean, predictable installation of Caldera 4.2, my own journey involved a few detours.
+
+### Initial Setup and Configuration
+
+I provisioned a new Ubuntu Server VM in Proxmox with 8GB of RAM, two vCPUs, and a 50GB disk, connected to my VLAN 1 "Security Tools" network. This ensured that Caldera would have unrestricted communication with the rest of my detection infrastructure. The static IP for this server was set to **10.10.5.53**.
+
+After cloning the Caldera repository from GitHub and moving into its directory, I attempted to install dependencies with the command `sudo pip3 install -r requirements.txt`.
+
+### Overcoming Python Environment Issues
+
+This is where I hit the first hurdle. Ubuntu 22.04 now ships with Python in a "externally managed" mode, meaning pip cannot directly install packages system-wide without bypassing the system package manager. The installation aborted with a message advising me to either use apt install for Debian packages or create a Python virtual environment.
+
+The latter was the more controlled option, so I created and activated a virtual environment using these commands:
+
+`python3 -m venv venv`
+`source venv/bin/activate`
+
+With the virtual environment active, pip installed the required packages cleanly. However, the next attempt to start Caldera using this command:
+
+`python3 server.py --insecure --build`
+
+triggered another failure, this time related to a missing npm command. The --build flag instructs Caldera to compile its Vue.js frontend, but this requires Node.js and npm. Installing them inside the VM resolved the problem:
+
+`sudo apt install nodejs npm`
+
+### Final Deployment and Verification
+
+Once Node.js was in place, I ran the build process again. The frontend compiled successfully, but npm threw network timeout errors at one point. This was due to npm's registry connection attempts failing intermittently, which I fixed by retrying the install after confirming the VM's DNS and gateway settings were correct.
+
+Finally, Caldera's web server launched without further issues, listening on port 8888. Accessing **http://10.10.5.53:8888** presented the login interface, where I could sign in as either the red team user (red:admin) or blue team user (blue:admin). This marked the successful deployment of Caldera 4.2, ready for later integration into attack simulation workflows.
+
+<InlineGallery images={caldera-deployment} title="Caldera Deployment Walkthrough" />
+
+### Installing Security Onion
+
+Next came Security Onion, a full-featured open-source platform for network security monitoring, intrusion detection, and threat hunting. Unlike Caldera's lightweight footprint, Security Onion's requirements are substantial—the standalone deployment calls for at least 16GB of RAM, four vCPUs, 200GB of storage, and dual network interfaces.
+
+### System Requirements and Preparation
+
+I created a new Proxmox VM meeting these specs and uploaded the latest Security Onion ISO. The primary NIC was connected to VLAN 1 for management, while a second NIC was reserved for potential sniffing or monitoring duties. Initially, I left the second NIC disconnected during installation to avoid known setup errors.
+
+### Installation Process
+
+The installation process began with selecting "Install Security Onion" and providing a username, password, and other initial setup details. The configuration was set to STANDALONE mode, with the management interface assigned a static IP.
+
+This is where an important adjustment was necessary. In the tutorial, the gateway was set to **10.10.1.254**, but in my network, the correct gateway for VLAN 1 is **10.10.5.254**. Using the wrong gateway would have left the system unable to route traffic correctly. DNS servers included my OPNsense firewall (**192.168.1.1**) and public resolvers (**8.8.8.8, 8.8.4.4**).
+
+After confirming the settings, the installation began, and this was not a quick process. Despite being on modern hardware, Security Onion's post-install configuration took over two hours to complete, performing extensive service installations, database setups, and Elastic Stack provisioning. Patience was essential here.
+
+### Accessing the Platform
+
+When the setup finally completed, I accessed the web interface by navigating to **https://10.10.5.54** from a browser on my management network. Logging in with the credentials created earlier presented the full Security Onion dashboard, ready to begin ingesting data from across the lab.
+
+<InlineGallery images={security-onion-deployment} title="Security Onion Deployment Walkthrough" />
+
+### Conclusion
+
+<p class="mb-4 leading-relaxed">At this point, I had successfully deployed both Caldera and Security Onion in my cybersecurity home lab. Caldera was operational and ready for adversary emulation, while Security Onion was configured for network-based detection and threat hunting. Both tools were integrated within my segmented VLAN architecture, providing a solid foundation for advanced security testing and monitoring.</p>
+
+<p class="mb-4 leading-relaxed">This project showcases the real-world challenges of deploying complex security tools in a home lab environment. The dependency issues with Python's managed mode and the resource-intensive nature of Security Onion highlighted the importance of proper planning and patience in cybersecurity engineering. The next phase will involve integrating these tools with Wazuh, running simulated attack campaigns, and validating that alerts are generated and correlated correctly.</p>
+
+<p class="mb-4 leading-relaxed">Stay tuned for the next stage of this project as we include our Windows Server and Windows 10 environment.</p>
+
+<p class="mb-4 leading-relaxed"><strong class="font-semibold">Credits:</strong> This walkthrough is based on Episode 4 of the Ultimate Cybersecurity Lab YouTube series by Gerard O'Brien. While the steps closely followed his guidance, the project was independently implemented by Samson Otori, with custom network configurations and host assignments tailored to fit a pre-existing VLAN-segmented lab environment.</p>
+
+<p class="mb-4 leading-relaxed">Here's a link to his YouTube channels:</p>
+
+<p class="mb-4 leading-relaxed"><a href="https://www.youtube.com/watch?v=ej6iBrBqZEo" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Gerard O'Brien's Channel</a></p>
+9:["$","$L12",null,{"projectData":{"slug":"project-5-cyber-range-internship-journey","title":"Project 5: LOG(N) Pacific Internship: Cyber Range Journey","description":"An immersive journey into enterprise-grade cybersecurity tools through the Cyber Range internship program, focusing on Microsoft Azure, Sentinel, Defender for Endpoint, and Tenable vulnerability management.","date":"2025-08-28","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Blue Team","SOC","Internship","Microsoft Security","Enterprise Tools","Threat Hunting","Incident Response"],"content":"$13","image":"/images/projects/cyber-range-image.jpg","technologies":["Microsoft Azure","Microsoft Sentinel","Microsoft Defender for Endpoint","Tenable","SIEM","EDR","Vulnerability Management"],"images":[],"series":{"name":"Project 5: LOG(N) Pacific Internship: Cyber Range Journey","part":1,"totalParts":1}},"relatedProjects":[{"slug":"project-5-1-log-n-pacific-internship-threat-hunting-scenario1","title":"Project 5.1: LOG(N) Pacific Internship: Threat Hunting Scenario 1: Devices Exposed to the Internet","description":"A comprehensive threat hunting exercise investigating devices accidentally exposed to the internet, using Microsoft Defender for Endpoint and Microsoft 365 Security suite to analyze brute-force attempts and validate unauthorized access.","date":"2025-09-14","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Blue Team","Threat Hunting","Microsoft Security","Incident Response","Brute Force Analysis","Security Investigation","MDE"],"content":"$14","image":"/images/projects/MDE image.png","technologies":["Microsoft Defender for Endpoint","Microsoft 365 Security","Advanced Hunting Queries","MITRE ATT&CK","Threat Hunting","Incident Response"],"images":[],"series":{"name":"Project 5.1: LOG(N) Pacific Internship: Threat Hunting Scenario 1: Devices Exposed to the Internet","part":1,"totalParts":1}},{"slug":"project-4-7-thehive-cortex-deployment","title":"Project 4.7: TheHive & Cortex Deployment in My Cybersecurity Home Lab","description":"Deploying TheHive incident response platform and Cortex automated analysis engine in my segmented cybersecurity home lab for enhanced SOC workflow capabilities.","date":"2025-08-15","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["TheHive","Cortex","Incident Response","SOC","Docker","Portainer","Cassandra","Elasticsearch","Case Management","Automated Analysis","Blue Team","Incident Management"],"content":"$15","image":"/images/projects/hardware-lab/The-Hive-and-Cortex.png","technologies":[],"images":[],"series":"hardware-lab"},{"slug":"project-4-5-caldera-security-onion-deployment","title":"Project 4.5: Caldera & Security Onion Deployment in my Cybersecurity Home Lab","description":"Deploying MITRE Caldera for adversary emulation and Security Onion for network-based detection and threat hunting in my cybersecurity home lab.","date":"2025-08-08","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Caldera","Security Onion","MITRE","Adversary Emulation","Threat Hunting","SOC","Network Security","Blue Team","Red Team"],"content":"$16","image":"/images/projects/hardware-lab/Caldera and security onion.png","technologies":[],"images":[],"series":"hardware-lab"}],"categoryCounts":{"blue":45,"Infrastructure":3,"red":1}}]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+c:null
+10:[["$","title","0",{"children":"Samson's | Cybersecurity Portfolio"}],["$","meta","1",{"name":"description","content":"Professional cybersecurity portfolio showcasing expertise in digital security"}],["$","meta","2",{"name":"generator","content":"v0.dev"}],["$","link","3",{"rel":"icon","href":"https://hebbkx1anhila5yf.public.blob.vercel-storage.com/117%20Corporation%20no%20bg-5VVBXF0igK8jcCo43su7cpA2isco7t.png"}]]

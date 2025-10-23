@@ -1,0 +1,151 @@
+1:"$Sreact.fragment"
+2:I[9304,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"ThemeProvider"]
+3:I[9241,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"CyberHeader"]
+4:I[7555,[],""]
+5:I[1295,[],""]
+6:I[1024,["542","static/chunks/542-9c169102c7286aba.js","838","static/chunks/838-83c262eea6b250cb.js","345","static/chunks/app/not-found-f26a84874965db45.js"],"default"]
+7:I[3063,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"Image"]
+8:I[6874,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],""]
+a:I[9665,[],"OutletBoundary"]
+d:I[9665,[],"ViewportBoundary"]
+f:I[9665,[],"MetadataBoundary"]
+11:I[6614,[],""]
+:HL["/_next/static/css/78204a441d290532.css","style"]
+:HL["/_next/static/css/b5c3a1bf19425f6c.css","style"]
+0:{"P":null,"b":"ueOktod6GdedqcxtLheow","p":"","c":["","projects","30-day-soc-analyst-challenge-part6",""],"i":false,"f":[[["",{"children":["projects",{"children":[["slug","30-day-soc-analyst-challenge-part6","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/78204a441d290532.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b5c3a1bf19425f6c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"defer":true,"src":"https://cloud.umami.is/script.js","data-website-id":"1c0f224c-1fe0-4093-a4e2-c43cb8c84bfa"}]}],["$","body",null,{"className":"__className_f367f3","children":["$","$L2",null,{"attribute":"class","defaultTheme":"light","disableTransitionOnChange":true,"children":["$","div",null,{"className":"flex min-h-screen flex-col","children":[["$","$L3",null,{}],["$","main",null,{"className":"flex-1 pt-16","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L6",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-background py-5 border-t border-border","children":["$","div",null,{"className":"container mx-auto px-4 md:px-6","children":[["$","div",null,{"className":"grid grid-cols-1 md:grid-cols-3 gap-4","children":[["$","div",null,{"className":"space-y-2","children":[["$","div",null,{"className":"flex items-center","children":["$","div",null,{"className":"relative w-[3.6rem] h-[3.6rem]","children":["$","$L7",null,{"src":"https://hebbkx1anhila5yf.public.blob.vercel-storage.com/117%20Corporation%20no%20bg-5VVBXF0igK8jcCo43su7cpA2isco7t.png","alt":"117 SECOPS Logo","fill":true,"className":"object-contain"}]}]}],["$","p",null,{"className":"text-sm text-muted-foreground max-w-xs","children":"Cybersecurity professional specializing in protecting digital assets from evolving threats."}],["$","div",null,{"className":"pt-0","children":["$","a",null,{"href":"https://www.linkedin.com/in/otori-samson/","target":"_blank","rel":"noopener noreferrer","children":"Contact Me","className":"inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-9 rounded-md px-3 cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white","ref":null}]}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"font-medium text-sm mb-2 text-foreground","children":"Quick Links"}],["$","ul",null,{"className":"space-y-0.5","children":[["$","li",null,{"children":["$","$L8",null,{"href":"/","className":"text-sm text-muted-foreground hover:text-primary","children":"Home"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/blog","className":"text-sm text-muted-foreground hover:text-primary","children":"Blog"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/projects","className":"text-sm text-muted-foreground hover:text-primary","children":"Projects"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/portfolio","className":"text-sm text-muted-foreground hover:text-primary","children":"Portfolio"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/about","className":"text-sm text-muted-foreground hover:text-primary","children":"About"}]}]]}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"font-medium text-sm mb-2 text-foreground","children":"Areas of Expertise"}],["$","ul",null,{"className":"space-y-0.5","children":[["$","li",null,{"className":"text-sm text-muted-foreground","children":"Security Assessment"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Penetration Testing"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Secure Development"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Incident Response"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Compliance"}]]}]]}]]}],["$","div",null,{"className":"border-t border-border mt-5 pt-3 flex flex-col md:flex-row justify-between items-center","children":["$","p",null,{"className":"text-sm text-muted-foreground","children":["© ",2025," Samson's. Personal cybersecurity portfolio."]}]}]]}]}]]}]}]}]]}]]}],{"children":["projects",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","30-day-soc-analyst-challenge-part6","d"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9","$undefined",null,["$","$La",null,{"children":["$Lb","$Lc",null]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","JqhA2oqj0M1aCLws-y8KY",{"children":[["$","$Ld",null,{"children":"$Le"}],null]}],["$","$Lf",null,{"children":"$L10"}]]}],false]],"m":"$undefined","G":["$11","$undefined"],"s":false,"S":true}
+12:I[2238,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","842","static/chunks/842-e0e5a1d477d9d65d.js","150","static/chunks/150-c359029d3b689678.js","419","static/chunks/app/projects/%5Bslug%5D/page-41cd4d27245b4b70.js"],"default"]
+13:Tc7c,
+## Day 6 of the 30-Day MYDFIR SOC Analyst Challenge: Centralized Management with Fleet Server and Elastic Agent
+
+On Day 6 of the 30-Day My Def for SOC Analyst Challenge, I explored the importance of centralized management for security agents across multiple endpoints. Imagine the hassle of manually configuring 100 machines. This is where Fleet Server and Elastic Agent come into play, making life much easier for a SOC analyst.
+
+## Understanding Elastic Agent
+
+The Elastic Agent is a key component in my setup, allowing me to monitor logs, metrics, and various types of data from different endpoints. It simplifies what used to be a complex process by acting as a single unified agent that can manage multiple data types. With Elastic Agent, I no longer have to deploy numerous Beats (specialized agents) on a single host. Instead, the Elastic Agent can handle it all, whether it's logs from applications, system metrics, or even security-related data.
+
+This agent can be installed in two modes: Standalone or Fleet-managed. For this challenge, I'm focusing on Fleet-managed mode because it allows centralized management. This will enable me to push updates, manage configurations, and control all my agents from one place.
+
+## Fleet Server: Centralized Control
+
+The Fleet Server acts as the central hub where I manage all the Elastic Agents. This is crucial because it lets me update policies, add integrations, and adjust configurations from one place. Without it, I'd be stuck making changes manually on each endpoint, which is impractical and error-prone.
+
+For instance, if I want to configure my agents to collect PowerShell logs, I can push that update through the Fleet Server instead of manually touching each machine. Similarly, if I want to change where my logs are being sent—whether to ElasticSearch or Logstash—I can do that centrally through Fleet. This flexibility is invaluable for managing a large environment.
+
+## Elastic Agent vs. Beats
+
+Beats are specialized agents that collect specific data types, like Filebeat for log files or Metricbeat for metrics. While Beats are great for specific tasks, the Elastic Agent consolidates all these capabilities into a single package, making it more versatile and easier to manage.
+
+Choosing between Beats and Elastic Agent depends on the specific needs of my environment. However, Elastic Agent often provides a more streamlined approach, especially when managing multiple data types across numerous endpoints.
+
+## Conclusion
+
+Concluding Day 6, I had a solid understanding of how to use Fleet Server and Elastic Agent to simplify and centralize my SOC environment's management. In the next session, I'll dive deeper into setting up Elastic Agent and configuring Fleet Server, ensuring all my endpoints are ready for centralized management.
+
+Here's the link to follow along: [30-Day MYDFIR SOC Analyst Challenge](https://www.youtube.com/watch?v=0WklP6ZsP1g&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=33)
+
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)* 14:Tc54,
+## Day 7 of the 30-Day MYDFIR SOC Analyst Challenge: Installing Elastic Agent and Setting Up Fleet Server
+
+Welcome to Day 7 of the 30-Day My DFIR SOC Analyst Challenge, I took critical steps toward building a robust monitoring system by installing the Elastic Agent on a Windows Server and setting up a Fleet server for centralized management. This process is vital for SOC analysts to efficiently manage logs across multiple endpoints.
+
+## Deploying the Fleet Server
+
+I began with deploying an Ubuntu server to act as the Fleet server. This server plays a pivotal role by allowing me to manage multiple Elastic Agents from a single location. By centralizing the management of these agents, I can easily push updates, modify policies, and ensure all endpoints are correctly configured without needing to access each one individually.
+
+## Setting Up in Kibana
+
+Next, I moved into Kibana's interface, where I configured the Fleet server. This step involved generating enrollment tokens and policies that would allow the Elastic Agents to communicate securely with the Fleet server and Elasticsearch. In a real-world SOC environment, getting these configurations right is crucial, as they dictate how data flows between my endpoints and my central log management system.
+
+## Overcoming Connectivity Challenges.
+
+A key part of this process was troubleshooting connectivity issues. The initial setup ran into problems due to restrictive firewall rules that blocked the necessary communication between the Fleet server and the Elasticsearch instance. Adjusting both the VPC and server-level firewall rules allowed for the proper connections to be established. This scenario underscored the delicate balance I must strike between securing my systems and maintaining operational functionality.
+
+## Installing the Elastic Agent on Windows Server
+
+Once the Fleet server was configured, the next task was to install the Elastic Agent on my Windows Server. This agent is essential for collecting logs and metrics, and forwarding them to my Elasticsearch instance via the Fleet server. During this step, I encountered a few errors related to certificate validation and network connectivity. However, by utilizing the --insecure flag and ensuring the correct firewall ports were open, I successfully enrolled the Windows Server into the Fleet.
+
+## Conclusion
+
+Day 7 was all about setting up the infrastructure needed for effective log management. By successfully installing the Elastic Agent and configuring a Fleet server, I laid the groundwork for a scalable, manageable, and secure logging environment. In the next session, I'll dive deeper into system activity monitoring by installing Sysmon on my Windows Server, further enhancing my ability to detect and respond to threats.
+
+Here's the link to follow along: [30-Day MYDFIR SOC Analyst Challenge](https://www.youtube.com/watch?v=P2SFC6Kwae0&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=34)
+
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)* 15:Tcf7,
+## Day 13 of the 30-Day MYDFIR SOC Analyst Challenge: Installing Elastic Agent On Ubuntu
+
+## Overview
+
+The focus for today was on installing the Elastic agent on the SSH server created on Day 12, which enables us to ingest logs from the server into our Elasticsearch instance, allowing for centralized log querying and analysis.
+
+## Creating an Agent Policy in Elasticsearch
+
+I began by logging into the Elasticsearch web GUI and navigating to Fleet under the Management section. Here, I created a new agent policy named "my-dfir-linux-policy". This policy is crucial as it defines what logs the Elastic agent will collect and forward to Elasticsearch.
+
+Within the policy, I selected the system-3 integration, which is designed to collect system logs from `/var/log/auth.log`.
+
+## Installing the Elastic Agent
+
+With the policy in place, I proceeded to add a new agent. I selected the newly created "my-dfir-linux-policy" and chose the Linux operating system. Elasticsearch provided a command to install the agent, which I copied and pasted into my SSH session on the Linux server.
+
+Initially, the installation failed due to certificate issues, as we're using a self-signed certificate. To resolve this, I added the `--insecure` flag to the installation command, allowing it to bypass certificate validation.
+
+After confirming the installation, the Elastic agent was successfully installed and enrolled in our Fleet.
+
+## Verifying Agent Installation and Data Ingestion
+
+Returning to the Elasticsearch GUI, I confirmed that the agent enrollment was successful and that incoming data was being received. To verify this further, I used the Discover page in Elasticsearch to query the incoming logs.
+
+I filtered the events by the agent name "my-dfir-linux-pilotvader" to focus on logs from our newly connected SSH server. This immediately showed me that log ingestion was working correctly.
+
+## Analyzing Authentication Failures
+
+I investigated authentication failures to demonstrate the power of centralized log analysis. From our previous day's exploration, I knew that many failed login attempts were coming from a specific IP address (110.44.50.140). Using Elasticsearch's query capabilities, I searched for events with "authentication failure" from this IP address. This returned 6744 events, which I could easily view and analyze within the Elasticsearch interface.
+
+To improve readability, I added the "message" field to the table view in Elasticsearch. This allowed me to quickly scan the authentication failure messages, providing a clear view of the attempted breaches.
+
+## Conclusion
+
+In the next part of this challenge, we'll explore creating alerts for brute force activities and develop dashboards to visualize attack origins. These steps will further enhance our ability to detect and respond to potential security threats efficiently.
+
+Here's the link to follow along: [30-Day MYDFIR SOC Analyst Challenge](https://www.youtube.com/watch?v=QHJr2-Kav4k&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=40)
+
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)*
+
+#CyberSecurity #SOCAnalyst #MYDFIRChallenge #HandsOnExperience #Day13 16:Tcd5,
+## Day 17 of the 30-Day MyDFIR SOC Analyst Challenge: Building a Dashboard for RDP And SSH Activity
+
+## Overview
+
+Today I focused on creating a dashboard to monitor Remote Desktop Protocol (RDP) and Secure Shell (SSH) activity. This is critical for understanding authentication attempts on the Windows Server set up earlier in the challenge. Here's how I did it.
+
+## Querying for Failed RDP Authentication Attempts
+
+The first step was to log into the Elastic web GUI. I navigated to the "Maps" section by clicking the hamburger icon on the left sidebar. Since I needed to query for failed RDP attempts, I returned to the "Discover" tab to check a previous query. Using the search for failed authentication attempts, I retrieved a query using the event code 4625, which represents failed logon events in Windows.
+
+With the query set, I added a new layer to my map. I chose "world countries" as the boundary and the country ISO code as the join field, allowing me to see where the failed RDP attempts were coming from. The results were striking, over 131,276 failed attempts from Ukraine alone!
+
+## Querying for Successful RDP Authentication Attempts
+
+Next, I needed to monitor successful RDP logins. I used the event code 4624, which represents successful logons. However, to specifically track RDP logins, I focused on logon types 10 and 7, which are associated with RDP connections. I updated the query to look for successful authentications of these types.
+
+After running the query in the "Discover" tab, I saved it and moved it to the dashboard. I duplicated the earlier failed authentication dashboard and updated the query with my new one for successful RDP logins. Once saved, the dashboard displayed successful RDP connections, including their geographical origin — in my case, the United Kingdom.
+
+## Adding a Table for Easier Analysis
+
+To enhance my dashboard, I added a table showing the username, source IP, and country for each failed and successful RDP attempt. In the "Discover" tab, I created a new search query for failed attempts using event code 4625 and then did the same for successful attempts.
+
+I added these saved searches to the dashboard and arranged them as tables beneath the maps. This gave me a clearer view of which usernames were being targeted and from which countries. Finally, I sorted the data to display the top values, showing the most frequent IP addresses and usernames involved in failed and successful logins.
+
+## Conclusion
+
+By setting up dashboards for both failed and successful RDP and SSH attempts, I can now better monitor authentication activity on my Windows Server. With this visibility, I am equipped to detect potential threats, particularly from brute force attacks on RDP and SSH. Next, I'll dive into command and control (C2) techniques using Mythic's framework.
+
+Here's the link to follow along: [30-Day MYDFIR SOC Analyst Challenge](https://www.youtube.com/watch?v=pAfIi6Z6a2g&list=PLG6KGSNK4PuBWmX9NykU0wnWamjxdKhDJ&index=44)
+
+*Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)*
+
+#CyberSecurity #SOCAnalyst #MYDFIRChallenge #HandsOnExperience #Day17 9:["$","$L12",null,{"projectData":{"slug":"30-day-soc-analyst-challenge-part6","title":"Part 6: Centralized Management with Fleet Server and Elastic Agent","description":"Day 6 of the 30-Day MYDFIR SOC Analyst Challenge: Exploring centralized management solutions for security agents across multiple endpoints.","date":"2024-11-06","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Fleet Server","Elastic Agent","Centralized Management","SOC","Security Monitoring"],"content":"$13","image":"/images/projects/Mydfir 30 day challenge.png","technologies":[],"images":[{"src":"/images/projects/30-day-challenge/30-days-day-6.png","alt":"30 Days MYDFIR SOC Analyst Challenge Day 6"}],"series":{"name":"Project 3: 30-Day MYDFIR SOC Analyst Challenge","part":6,"totalParts":30}},"relatedProjects":[{"slug":"30-day-soc-analyst-challenge-part7","title":"Part 7: Installing Elastic Agent and Setting Up Fleet Server","description":"Day 7 of the 30-Day MYDFIR SOC Analyst Challenge: Setting up Elastic Agent and Fleet Server for centralized log management.","date":"2024-11-07","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Elastic Agent","Fleet Server","Log Management","SOC","Security Monitoring"],"content":"$14","image":"/images/projects/Mydfir 30 day challenge.png","technologies":[],"images":[{"src":"/images/projects/30-day-challenge/30-days-day-7.png","alt":"30 Days MYDFIR SOC Analyst Challenge Day 7"},{"src":"/images/projects/30-day-challenge/Elastic-agent-Installation-on-fleet-server.png","alt":"Elastic Agent Installation on Fleet Server"},{"src":"/images/projects/30-day-challenge/Elastic-agent-installation-on-windows-server.png","alt":"Elastic Agent Installation on Windows Server"},{"src":"/images/projects/30-day-challenge/Fleet-Installed-Image-on-elastic-gui.png","alt":"Fleet Installation on Elastic GUI"},{"src":"/images/projects/30-day-challenge/Logs-Captured-from-Elastic-GUI.png","alt":"Logs Captured from Elastic GUI"}],"series":{"name":"Project 3: 30-Day MYDFIR SOC Analyst Challenge","part":7,"totalParts":30}},{"slug":"30-day-soc-analyst-challenge-part13","title":"Part 13: Installing Elastic Agent On Ubuntu","description":"Day 13 of the 30-Day MYDFIR SOC Analyst Challenge: Setting up Elastic Agent for centralized log collection and analysis from our SSH server.","date":"2024-11-13","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Elastic Agent","Log Collection","Security Monitoring","SOC","Ubuntu"],"content":"$15","image":"/images/projects/Mydfir 30 day challenge.png","technologies":[],"images":[{"src":"/images/projects/30-day-challenge/30-days-day-13.png","alt":"30 Days MYDFIR SOC Analyst Challenge Day 13"},{"src":"/images/projects/30-day-challenge/Image-for-day-13-elastic-agent-install-for-ubuntu.png","alt":"Elastic Agent Installation Process for Ubuntu"}],"series":{"name":"Project 3: 30-Day MYDFIR SOC Analyst Challenge","part":13,"totalParts":30}},{"slug":"30-day-soc-analyst-challenge-part17","title":"Part 17: Building a Dashboard for RDP And SSH Activity","description":"Day 17 of the 30-Day MYDFIR SOC Analyst Challenge: Creating comprehensive dashboards to monitor and analyze RDP and SSH authentication attempts.","date":"2024-11-17","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["RDP","SSH","Dashboards","SOC","Security Monitoring"],"content":"$16","image":"/images/projects/Mydfir 30 day challenge.png","technologies":[],"images":[{"src":"/images/projects/30-day-challenge/30-days-day-17.png","alt":"30 Days MYDFIR SOC Analyst Challenge Day 17"},{"src":"/images/projects/30-day-challenge/Dashboard-1.png","alt":"RDP Authentication Dashboard Overview"},{"src":"/images/projects/30-day-challenge/Dashboard-2.png","alt":"Detailed Authentication Analysis Dashboard"}],"series":{"name":"Project 3: 30-Day MYDFIR SOC Analyst Challenge","part":17,"totalParts":30}}],"categoryCounts":{"blue":45,"Infrastructure":3,"red":1}}]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+b:null
+c:null
+10:[["$","title","0",{"children":"Samson's | Cybersecurity Portfolio"}],["$","meta","1",{"name":"description","content":"Professional cybersecurity portfolio showcasing expertise in digital security"}],["$","meta","2",{"name":"generator","content":"v0.dev"}],["$","link","3",{"rel":"icon","href":"https://hebbkx1anhila5yf.public.blob.vercel-storage.com/117%20Corporation%20no%20bg-5VVBXF0igK8jcCo43su7cpA2isco7t.png"}]]
