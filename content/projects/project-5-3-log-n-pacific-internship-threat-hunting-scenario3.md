@@ -164,3 +164,7 @@ This scenario successfully demonstrated how a disgruntled employee with admin ri
 Through structured querying in Microsoft Defender for Endpoint and methodical log analysis, I was able to trace the entire activity chain, from script execution to archiving and simulated upload attempts.
 
 This exercise reinforced the importance of monitoring for non-malware abuse of legitimate tools and the necessity of tight endpoint controls to detect and deter insider threats in modern enterprise networks.
+
+## Important Link
+
+If you are interested in joining the [CYBER-RANGE COMMUNITY](https://www.skool.com/cyber-range/about?ref=b6e2c83b43e243d2b690aa6ea6c383b5) or following along with the labs, you can check it out here: [LINK](https://www.skool.com/cyber-range/about?ref=b6e2c83b43e243d2b690aa6ea6c383b5)

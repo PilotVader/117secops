@@ -398,6 +398,23 @@ export function BlogContentRenderer({
           "/images/projects/4 - these 2 activities where when the user installed 7zip app and used it to export and zip employee data .png",
           "/images/projects/5 - narrowing down to get more information on the software install process.png",
           "/images/projects/6 - narrowing down on this time frame to comfirm if this was actually a data exfiltration process and it was.png"
+        ],
+        // PwnCrypt Ransomware Investigation and Analysis (Project 5.4)
+        "pwncrypt-ransomware-investigation": [
+          "/images/projects/1 - Running the powershell script on the VM to generate telemetry for the scenario.png",
+          "/images/projects/2 - Mass file modification high write volume detecting a device with a sudden spike in file modifications.png",
+          "/images/projects/3 - Looking for many file rename extension changes.png",
+          "/images/projects/4 - Looking for many files created in a specific folder staging behavior.png",
+          "/images/projects/5 - Find evidence of script execution, downloads, or suspicious command lines.png",
+          "/images/projects/6 - Search for process names commonly used to run scripts PowerShell, cmd, wmic, cscript, wscript.png",
+          "/images/projects/7 - broaden my search window and include child relationships.png",
+          "/images/projects/8 - pivoting to locate secondary payloads or delayed activity.png",
+          "/images/projects/9 - pivoting into targeted IOC hunting for PwnCrypt activity.png",
+          "/images/projects/10 - summarizing and pivoting to final verification.png",
+          "/images/projects/11 - Find file events on Desktop Users that show created renamed modified files.png",
+          "/images/projects/12 - confirming the presence of encrypted files in the target VM.png",
+          "/images/projects/13 - confirming infection scope & origin (final KQL pivot).png",
+          "/images/projects/14 - To confirm the link between powershell.exe and services.exe (and ensure it was not a legitimate service operation).png"
         ]
      }
 
@@ -640,6 +657,23 @@ export function BlogContentRenderer({
           "These 2 activities were when the user installed 7-Zip app and used it to export and zip employee data",
           "Narrowing down to get more information on the software install process",
           "Narrowing down on this timeframe to confirm if this was actually a data exfiltration process and it was"
+        ],
+        // PwnCrypt Ransomware Investigation and Analysis (Project 5.4) - concise, human-friendly titles
+        "pwncrypt-ransomware-investigation": [
+          "Running the PowerShell script on the VM to generate telemetry for the scenario",
+          "Mass file modification high write volume detecting a device with a sudden spike in file modifications",
+          "Looking for many file rename extension changes",
+          "Looking for many files created in a specific folder staging behavior",
+          "Find evidence of script execution, downloads, or suspicious command lines",
+          "Search for process names commonly used to run scripts PowerShell, cmd, wmic, cscript, wscript",
+          "Broaden my search window and include child relationships",
+          "Pivoting to locate secondary payloads or delayed activity",
+          "Pivoting into targeted IOC hunting for PwnCrypt activity",
+          "Summarizing and pivoting to final verification",
+          "Find file events on Desktop Users that show created renamed modified files",
+          "Confirming the presence of encrypted files in the target VM",
+          "Confirming infection scope & origin (final KQL pivot)",
+          "To confirm the link between powershell.exe and services.exe (and ensure it was not a legitimate service operation)"
         ]
      }
 

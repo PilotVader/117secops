@@ -37,10 +37,10 @@ Before starting the hunt, I ensured that my virtual machine, samson-windows-, wa
 <InlineGallery images={vm-setup-onboarding} title="VM Setup and Microsoft Defender Onboarding Process" />
 
 ### PowerShell Command
--------------------------------------------------------------------------
+-------------------------------------------------------
 powershell
 Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/joshmadakor1/lognpacific-public/refs/heads/main/cyber-range/entropy-gorilla/portscan.ps1' -OutFile 'C:\programdata\portscan.ps1';cmd /c powershell.exe -ExecutionPolicy Bypass -File C:\programdata\portscan.ps1
--------------------------------------------------------------------------
+-------------------------------------------------------
 
 This PowerShell command downloaded and executed a script that scanned a range of IPs within the 10.0.0.x subnet, sequentially probing ports on other devices. In a real enterprise setting, this would represent a potential reconnaissance operation, something commonly done by attackers or misconfigured tools trying to map network exposure.
 
@@ -53,12 +53,12 @@ Once the environment was prepared, the next phase involved verifying that teleme
 I began by executing a simple query to confirm that new logs were flowing in correctly. By ordering results by timestamp and taking the most recent entries, I could confirm that MDE was actively collecting data and that there were no ingestion delays.
 
 ### KQL Check for Recent Network Logs
-------------------------------------------------------------------------
+-------------------------------------------------------
 kql
 DeviceNetworkEvents
 | order by Timestamp desc
 | take 10
-------------------------------------------------------------------------
+-------------------------------------------------------
 
 The timestamps confirmed that logs were being generated in real time. Having verified the data sources, I was confident that the environment was providing the necessary visibility to conduct meaningful analysis.
 
@@ -69,27 +69,27 @@ In a real security operations environment, this phase mimics ensuring that senso
 The analysis phase began with looking for signs of network anomalies, specifically focusing on connection attempts that had either failed or succeeded in large quantities. A sudden burst of such activity could be indicative of scanning or enumeration attempts within the network.
 
 ### KQL – Count Failed Connections
-------------------------------------------------------------------------
+-------------------------------------------------------
 kql
 DeviceNetworkEvents
 | where ActionType == "ConnectionFailed"
 | summarize FailedConnectionsAttempts = count() by DeviceName, ActionType, LocalIP, RemoteIP
 | order by FailedConnectionsAttempts desc
-------------------------------------------------------------------------
+-------------------------------------------------------
 
 When the results came back, the data immediately pointed to samson-windows- as the primary contributor to abnormal connection failures. The logs revealed that the device had failed over a hundred connection attempts, some directed at its own IP address and others toward another host in the subnet. Such behavior was a strong indicator of either misconfiguration or automated probing.
 
 To further understand the scope of the activity, I drilled down into specific IP addresses that exhibited the highest failure rates. This approach mirrors a real-world scenario where analysts pivot from a general pattern to a specific anomaly for deeper inspection.
 
 ### KQL – Inspect All Failed Connections from a Specific IP
-------------------------------------------------------------------------
+-------------------------------------------------------
 kql
 let IPInQuestion = "10.0.0.5";
 DeviceNetworkEvents
 | where ActionType == "ConnectionFailed"
 | where LocalIP == IPInQuestion
 | order by Timestamp desc
-------------------------------------------------------------------------
+-------------------------------------------------------
 
 Upon reviewing the sequence of failed connection attempts, it became clear that the remote ports being contacted followed a sequential pattern: ports 21, 23, 25, 53, 80, 110, 443, and others. This pattern matched the signature of a port scanning activity, which is typically used to identify open services running across hosts. Sequential probing of well-known ports is rarely accidental and often indicates reconnaissance or mapping behavior within the network.
 
@@ -102,7 +102,7 @@ At this stage, I had high confidence that the slowdown was caused by internal sc
 To confirm the origin of this suspicious activity, I pivoted to the DeviceProcessEvents table to look for the process responsible for initiating these connections. By focusing on a specific time window surrounding the detected network anomalies, I aimed to identify any executable or script that matched the port scanning behavior.
 
 ### KQL – Correlate Process Activity around the Port Scan Time
-------------------------------------------------------------------------
+-------------------------------------------------------
 kql
 let VMName = "samson-windows-";
 let specificTime = datetime(2025-10-12T13:15:03.9576325Z);
@@ -111,19 +111,19 @@ DeviceProcessEvents
 | where DeviceName == VMName
 | order by Timestamp desc
 | project Timestamp, FileName, InitiatingProcessCommandLine
-------------------------------------------------------------------------
+-------------------------------------------------------
 
 The query output revealed that a PowerShell script named portscan.ps1 had been executed under the System account. This was a significant finding because the System account generally has administrative-level privileges and is not typically used to execute network scanning scripts.
 
 Upon logging into the VM, I located the file in C:\ProgramData\portscan.ps1 and reviewed its contents. The script was intentionally scanning hosts in the subnet, sequentially testing common ports. This confirmed that the slowdown was caused by repeated internal scanning initiated by the PowerShell script.
 
 ### Snippet of the observed PowerShell script:
-------------------------------------------------------------------------
+-------------------------------------------------------
 powershell
 for ($i=4; $i -le 10; $i++) {
    Test-NetConnection "10.0.0.$i" -Port 21,23,25,53,80,110,443
 }
-------------------------------------------------------------------------
+-------------------------------------------------------
 
 Since the script was running under the System account and not triggered by an identifiable user, I concluded that the activity was automated and potentially malicious. I proceeded to isolate the samson-windows- VM from the network using Defender for Endpoint's built-in Isolate Device feature.
 
@@ -165,4 +165,8 @@ The sudden network slowdown was traced to a PowerShell-based port scanning scrip
 This hunt demonstrated the power of Microsoft Defender for Endpoint in identifying behavioral anomalies, correlating telemetry across different data sources, and facilitating immediate containment actions.
 
 Through structured investigation and methodical documentation, this exercise emphasized how internal misconfigurations or unauthorized automation can lead to observable network symptoms, and how disciplined threat hunting can quickly uncover their root cause.
+
+## Important Link
+
+If you are interested in joining the [CYBER-RANGE COMMUNITY](https://www.skool.com/cyber-range/about?ref=b6e2c83b43e243d2b690aa6ea6c383b5) or following along with the labs, you can check it out here: [LINK](https://www.skool.com/cyber-range/about?ref=b6e2c83b43e243d2b690aa6ea6c383b5)
 

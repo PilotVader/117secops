@@ -1,4 +1,4 @@
-import { getProjectData, getAllProjectSlugs, getRelatedProjects, getProjectCategoryCounts } from "@/lib/project"
+import { getProjectData, getAllProjectSlugs, getRelatedProjects, getProjectCategoryCounts, getOldestProjects, getNewestProjects } from "@/lib/project"
 import ProjectClientPage from "./ProjectClientPage"
 import { notFound } from "next/navigation"
 
@@ -16,14 +16,22 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     notFound()
   }
 
-  // Fetch related projects and category counts on the server side
+  // Fetch all sidebar data on the server side with exclusion logic to prevent duplicates
   const relatedProjects = getRelatedProjects(slug, 3)
+  const relatedSlugs = relatedProjects.map(p => p.slug)
+  
+  const oldestProjects = getOldestProjects(slug, relatedSlugs, 3)
+  const oldestSlugs = oldestProjects.map(p => p.slug)
+  
+  const newestProjects = getNewestProjects(slug, [...relatedSlugs, ...oldestSlugs], 3)
   const categoryCounts = getProjectCategoryCounts()
 
   return (
     <ProjectClientPage 
       projectData={projectData}
       relatedProjects={relatedProjects}
+      oldestProjects={oldestProjects}
+      newestProjects={newestProjects}
       categoryCounts={categoryCounts}
     />
   )

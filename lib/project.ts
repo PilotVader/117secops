@@ -480,9 +480,27 @@ export function getProjectCategoryCounts(): { [key: string]: number } {
     
     // Count projects by category
     const categoryCounts: { [key: string]: number } = {}
+    
+    // Add "All" category with total count
+    categoryCounts["All"] = projects.length
+    
+    // Count by specific categories - check both category field and tags
     projects.forEach(project => {
       const category = project.category || "blue"
-      categoryCounts[category] = (categoryCounts[category] || 0) + 1
+      const tags = (project.tags || []).map(t => t.toLowerCase())
+      
+      // Determine the primary category based on category field and tags
+      let primaryCategory = "Blue Team"
+      
+      if (category === "red" || tags.includes("red team")) {
+        primaryCategory = "Red Team"
+      } else if (category === "Infrastructure" || tags.includes("infrastructure")) {
+        primaryCategory = "Infrastructure"
+      } else if (tags.includes("cloud") || tags.includes("aws") || tags.includes("azure") || tags.includes("gcp")) {
+        primaryCategory = "Cloud"
+      }
+      
+      categoryCounts[primaryCategory] = (categoryCounts[primaryCategory] || 0) + 1
     })
     
     return categoryCounts
@@ -490,5 +508,117 @@ export function getProjectCategoryCounts(): { [key: string]: number } {
   } catch (error) {
     console.error("Error getting project category counts:", error)
     return {}
+  }
+}
+
+// Get oldest projects
+export function getOldestProjects(currentSlug: string, excludeSlugs: string[] = [], limit: number = 3): Project[] {
+  try {
+    let projects: Project[] = []
+    
+    // Check if we're in production and have pre-generated data
+    if (process.env.NODE_ENV === "production" && fs.existsSync(path.join(dataDirectory, "projects.json"))) {
+      projects = JSON.parse(fs.readFileSync(path.join(dataDirectory, "projects.json"), "utf8"))
+    } else {
+      // Otherwise, read from the projects directory
+      if (!fs.existsSync(projectsDirectory)) {
+        return []
+      }
+      
+      const fileNames = fs.readdirSync(projectsDirectory)
+      const projectFiles = fileNames.filter((fileName) => fileName.endsWith(".md"))
+      
+      projects = projectFiles.map((fileName) => {
+        const slug = fileName.replace(/\.md$/, "")
+        const fullPath = path.join(projectsDirectory, fileName)
+        const fileContents = fs.readFileSync(fullPath, "utf8")
+        const matterResult = matter(fileContents)
+        
+        return {
+          slug,
+          title: matterResult.data.title || slug.replace(/-/g, " "),
+          description: matterResult.data.description || "",
+          date: matterResult.data.date || new Date().toISOString().split("T")[0],
+          author: matterResult.data.author || "Samson Otori",
+          client: matterResult.data.client || "Personal Project",
+          challenge: matterResult.data.challenge || "",
+          solution: matterResult.data.solution || "",
+          results: matterResult.data.results || [],
+          category: matterResult.data.category === "Infrastructure" ? "Infrastructure" as const : (matterResult.data.category === "red" ? "red" as const : "blue" as const),
+          tags: matterResult.data.tags || [],
+          content: matterResult.content,
+          image: matterResult.data.image || "/placeholder.svg?height=300&width=600",
+          technologies: matterResult.data.technologies || [],
+          images: matterResult.data.images || [],
+          series: matterResult.data.series,
+        }
+      })
+    }
+    
+    // Filter out the current project and excluded projects, then sort by date (oldest first)
+    return projects
+      .filter(p => p.slug !== currentSlug && !(excludeSlugs || []).includes(p.slug))
+      .sort((a, b) => new Date(a.date || "").getTime() - new Date(b.date || "").getTime())
+      .slice(0, limit)
+      
+  } catch (error) {
+    console.error("Error getting oldest projects:", error)
+    return []
+  }
+}
+
+// Get newest projects
+export function getNewestProjects(currentSlug: string, excludeSlugs: string[] = [], limit: number = 3): Project[] {
+  try {
+    let projects: Project[] = []
+    
+    // Check if we're in production and have pre-generated data
+    if (process.env.NODE_ENV === "production" && fs.existsSync(path.join(dataDirectory, "projects.json"))) {
+      projects = JSON.parse(fs.readFileSync(path.join(dataDirectory, "projects.json"), "utf8"))
+    } else {
+      // Otherwise, read from the projects directory
+      if (!fs.existsSync(projectsDirectory)) {
+        return []
+      }
+      
+      const fileNames = fs.readdirSync(projectsDirectory)
+      const projectFiles = fileNames.filter((fileName) => fileName.endsWith(".md"))
+      
+      projects = projectFiles.map((fileName) => {
+        const slug = fileName.replace(/\.md$/, "")
+        const fullPath = path.join(projectsDirectory, fileName)
+        const fileContents = fs.readFileSync(fullPath, "utf8")
+        const matterResult = matter(fileContents)
+        
+        return {
+          slug,
+          title: matterResult.data.title || slug.replace(/-/g, " "),
+          description: matterResult.data.description || "",
+          date: matterResult.data.date || new Date().toISOString().split("T")[0],
+          author: matterResult.data.author || "Samson Otori",
+          client: matterResult.data.client || "Personal Project",
+          challenge: matterResult.data.challenge || "",
+          solution: matterResult.data.solution || "",
+          results: matterResult.data.results || [],
+          category: matterResult.data.category === "Infrastructure" ? "Infrastructure" as const : (matterResult.data.category === "red" ? "red" as const : "blue" as const),
+          tags: matterResult.data.tags || [],
+          content: matterResult.content,
+          image: matterResult.data.image || "/placeholder.svg?height=300&width=600",
+          technologies: matterResult.data.technologies || [],
+          images: matterResult.data.images || [],
+          series: matterResult.data.series,
+        }
+      })
+    }
+    
+    // Filter out the current project and excluded projects, then sort by date (newest first)
+    return projects
+      .filter(p => p.slug !== currentSlug && !(excludeSlugs || []).includes(p.slug))
+      .sort((a, b) => new Date(b.date || "").getTime() - new Date(a.date || "").getTime())
+      .slice(0, limit)
+      
+  } catch (error) {
+    console.error("Error getting newest projects:", error)
+    return []
   }
 }

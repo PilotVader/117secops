@@ -41,12 +41,16 @@ const getCategoryColor = (category: string) => {
 interface ProjectClientPageProps {
   projectData: Project
   relatedProjects: Project[]
+  oldestProjects: Project[]
+  newestProjects: Project[]
   categoryCounts: { [key: string]: number }
 }
 
 export default function ProjectClientPage({ 
   projectData, 
   relatedProjects, 
+  oldestProjects,
+  newestProjects,
   categoryCounts 
 }: ProjectClientPageProps) {
   const params = useParams()
@@ -290,6 +294,8 @@ export default function ProjectClientPage({
           <div className="lg:col-span-1">
             <ProjectSidebar
               relatedProjects={relatedProjects}
+              oldestProjects={oldestProjects}
+              newestProjects={newestProjects}
               categoryCounts={categoryCounts}
             />
           </div>

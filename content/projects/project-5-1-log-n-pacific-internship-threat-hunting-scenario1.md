@@ -190,3 +190,7 @@ Regular hunts like this not only uncover potential misconfigurations but also bu
 This scenario provided valuable hands-on experience with enterprise-grade security tools and real-world threat hunting methodologies. The systematic approach to investigation, from initial discovery through detailed analysis and documentation, mirrors the processes used in professional SOC environments.
 
 The successful identification and analysis of the brute-force attempts, combined with the validation that no compromise occurred, demonstrates the importance of thorough investigation and proper security controls. This experience reinforces the value of continuous monitoring, proper network segmentation, and the application of structured frameworks like MITRE ATT&CK in cybersecurity investigations.
+
+## Important Link
+
+If you are interested in joining the [CYBER-RANGE COMMUNITY](https://www.skool.com/cyber-range/about?ref=b6e2c83b43e243d2b690aa6ea6c383b5) or following along with the labs, you can check it out here: [LINK](https://www.skool.com/cyber-range/about?ref=b6e2c83b43e243d2b690aa6ea6c383b5)
