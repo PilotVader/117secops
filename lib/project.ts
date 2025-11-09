@@ -622,3 +622,81 @@ export function getNewestProjects(currentSlug: string, excludeSlugs: string[] = 
     return []
   }
 }
+
+export interface ProjectNavigationItem {
+  slug: string
+  title: string
+  description?: string
+  image?: string
+  date?: string
+  category?: Project["category"]
+  series?: Project["series"]
+}
+
+export async function getAdjacentProjects(slug: string): Promise<{ previous?: ProjectNavigationItem; next?: ProjectNavigationItem }> {
+  const projects = await getSortedProjectsData()
+  if (!projects.length) {
+    return {}
+  }
+
+  const index = projects.findIndex((project) => project.slug === slug)
+  if (index === -1) {
+    return {}
+  }
+
+  const currentProject = projects[index]
+
+  const toNavigationItem = (project?: Project): ProjectNavigationItem | undefined => {
+    if (!project) return undefined
+    return {
+      slug: project.slug,
+      title: project.title,
+      description: project.description,
+      image: project.image,
+      date: project.date,
+      category: project.category,
+      series: project.series,
+    }
+  }
+
+  let previous: Project | undefined
+  let next: Project | undefined
+
+  if (currentProject.series?.name) {
+    const seriesProjects = projects
+      .filter((project) => project.series?.name === currentProject.series?.name)
+      .sort((a, b) => {
+        const partA = a.series?.part ?? 0
+        const partB = b.series?.part ?? 0
+        return partA - partB
+      })
+
+    const seriesIndex = seriesProjects.findIndex((project) => project.slug === slug)
+
+    if (seriesIndex > 0) {
+      previous = seriesProjects[seriesIndex - 1]
+    }
+    if (seriesIndex < seriesProjects.length - 1) {
+      next = seriesProjects[seriesIndex + 1]
+    }
+
+    if (!previous && index > 0) {
+      previous = projects[index - 1]
+    }
+    if (!next && index < projects.length - 1) {
+      next = projects[index + 1]
+    }
+  } else {
+    if (index > 0) {
+      previous = projects[index - 1]
+    }
+    if (index < projects.length - 1) {
+      next = projects[index + 1]
+    }
+  }
+
+  return {
+    previous: toNavigationItem(previous),
+    next: toNavigationItem(next),
+  }
+}

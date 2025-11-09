@@ -18,6 +18,11 @@ export interface BlogPost {
   readTime: number
   image: string
   tags?: string[]
+  series?: {
+    name: string
+    part: number
+    totalParts?: number
+  }
 }
 
 interface BlogCardProps {

@@ -1,4 +1,4 @@
-import { getProjectData, getAllProjectSlugs, getRelatedProjects, getProjectCategoryCounts, getOldestProjects, getNewestProjects } from "@/lib/project"
+import { getProjectData, getAllProjectSlugs, getRelatedProjects, getProjectCategoryCounts, getOldestProjects, getNewestProjects, getAdjacentProjects } from "@/lib/project"
 import ProjectClientPage from "./ProjectClientPage"
 import { notFound } from "next/navigation"
 import type { Metadata } from "next"
@@ -67,6 +67,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   
   const newestProjects = getNewestProjects(slug, [...relatedSlugs, ...oldestSlugs], 3)
   const categoryCounts = getProjectCategoryCounts()
+  const { previous: previousProject, next: nextProject } = await getAdjacentProjects(slug)
 
   return (
     <ProjectClientPage 
@@ -75,6 +76,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       oldestProjects={oldestProjects}
       newestProjects={newestProjects}
       categoryCounts={categoryCounts}
+      previousProject={previousProject}
+      nextProject={nextProject}
     />
   )
 }

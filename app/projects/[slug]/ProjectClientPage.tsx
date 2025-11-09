@@ -10,8 +10,9 @@ import { ArrowLeft, Calendar, User, Tag, Building, Shield, Terminal, Zap } from 
 import { BlogContentRenderer } from "@/components/blog-content-renderer"
 import { ImageGallery } from "@/components/ui/image-gallery"
 import { ProjectSidebar } from "@/components/projects/ProjectSidebar"
+import { PostNavigator, type NavigatorItem } from "@/components/navigation/PostNavigator"
 
-import type { Project } from "@/lib/project"
+import type { Project, ProjectNavigationItem } from "@/lib/project"
 
 
 
@@ -44,6 +45,8 @@ interface ProjectClientPageProps {
   oldestProjects: Project[]
   newestProjects: Project[]
   categoryCounts: { [key: string]: number }
+  previousProject?: ProjectNavigationItem
+  nextProject?: ProjectNavigationItem
 }
 
 export default function ProjectClientPage({ 
@@ -51,7 +54,9 @@ export default function ProjectClientPage({
   relatedProjects, 
   oldestProjects,
   newestProjects,
-  categoryCounts 
+  categoryCounts,
+  previousProject,
+  nextProject,
 }: ProjectClientPageProps) {
   const params = useParams()
   const slug = params?.slug
@@ -77,6 +82,24 @@ export default function ProjectClientPage({
 
   // Determine color scheme based on project category
   const colorScheme = project.category === "red" ? "red" : project.category === "Infrastructure" ? "green" : "blue"
+  const accent = colorScheme === "red" ? "red" : colorScheme === "green" ? "green" : "blue"
+
+  const mapProjectToNavigatorItem = (item?: ProjectNavigationItem): NavigatorItem | undefined => {
+    if (!item) return undefined
+    return {
+      slug: item.slug,
+      title: item.title,
+      summary: item.description,
+      image: item.image,
+      date: item.date,
+      seriesName: item.series?.name,
+      seriesPart: item.series?.part,
+      totalParts: item.series?.totalParts,
+    }
+  }
+
+  const previousNav = mapProjectToNavigatorItem(previousProject)
+  const nextNav = mapProjectToNavigatorItem(nextProject)
 
   return (
     <PageTransition>
@@ -288,6 +311,13 @@ export default function ProjectClientPage({
               </div>
             </div>
           )}
+
+          <PostNavigator
+            previous={previousNav}
+            next={nextNav}
+            basePath="/projects"
+            accent={accent}
+          />
           </div>
 
           {/* Sidebar */}

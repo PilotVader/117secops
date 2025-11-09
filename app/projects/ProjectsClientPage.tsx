@@ -1,7 +1,6 @@
 "use client"
 
-import { useState } from "react"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { useMemo, useState, useEffect, useRef } from "react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -15,43 +14,12 @@ import { ProjectSeriesModal } from "@/components/project-series-modal"
 import type { Project } from "@/lib/project"
 import { Shield, Terminal, Zap, ArrowRight } from "lucide-react"
 
-// Helper function to group projects by series
-function groupProjectsBySeries(projects: Project[]): {
-  series: Record<string, Project[]>;
-  standalone: Project[];
-} {
-  const seriesMap: Record<string, Project[]> = {};
-  const standalone: Project[] = [];
+const ITEMS_PER_PAGE = 12
 
-  projects.forEach(project => {
-    if (project.series?.name) {
-      if (!seriesMap[project.series.name]) {
-        seriesMap[project.series.name] = [];
-      }
-      seriesMap[project.series.name].push(project);
-    } else {
-      // Convert standalone projects into single-project series
-      const seriesName = project.title;
-      if (!seriesMap[seriesName]) {
-        seriesMap[seriesName] = [];
-      }
-      seriesMap[seriesName].push({
-        ...project,
-        series: {
-          name: seriesName,
-          part: 1,
-          totalParts: 1
-        }
-      });
-    }
-  });
-
-  // Sort projects within each series by part number
-  Object.values(seriesMap).forEach(seriesProjects => {
-    seriesProjects.sort((a, b) => (a.series?.part || 0) - (b.series?.part || 0));
-  });
-
-  return { series: seriesMap, standalone: [] };
+interface SeriesEntry {
+  name: string
+  projects: Project[]
+  latestDate: string
 }
 
 export default function ProjectsClientPage({ initialProjects }: { initialProjects: Project[] }) {
@@ -63,8 +31,55 @@ export default function ProjectsClientPage({ initialProjects }: { initialProject
   const [isSeriesModalOpen, setIsSeriesModalOpen] = useState(false)
   const [selectedSeriesName, setSelectedSeriesName] = useState("")
 
-  // Group projects by series
-  const { series: seriesMap } = groupProjectsBySeries(projects)
+  const [activeCategory, setActiveCategory] = useState("all")
+  const [currentPage, setCurrentPage] = useState(1)
+  const topRef = useRef<HTMLDivElement | null>(null)
+
+  const seriesEntries = useMemo<SeriesEntry[]>(() => {
+    const map = new Map<string, Project[]>()
+
+    projects.forEach((project) => {
+      const seriesName = project.series?.name || project.title
+      const seriesPart = project.series?.part ?? 1
+      const totalParts = project.series?.totalParts ?? 1
+
+      const normalizedProject: Project = project.series
+        ? project
+        : {
+            ...project,
+            series: {
+              name: seriesName,
+              part: seriesPart,
+              totalParts,
+            },
+          }
+
+      if (!map.has(seriesName)) {
+        map.set(seriesName, [])
+      }
+
+      map.get(seriesName)!.push(normalizedProject)
+    })
+
+    const entries: SeriesEntry[] = Array.from(map.entries()).map(([name, groupedProjects]) => {
+      const sortedByPart = [...groupedProjects].sort(
+        (a, b) => (a.series?.part || 0) - (b.series?.part || 0)
+      )
+
+      const latestDate = groupedProjects.reduce((latest, project) => {
+        const projectDate = project.date ? new Date(project.date).toISOString() : latest
+        return projectDate > latest ? projectDate : latest
+      }, "1970-01-01T00:00:00.000Z")
+
+      return {
+        name,
+        projects: sortedByPart,
+        latestDate,
+      }
+    })
+
+    return entries.sort((a, b) => (a.latestDate < b.latestDate ? 1 : -1))
+  }, [projects])
 
   // Function to open lightbox
   const openLightbox = (images: Array<{ src: string; alt: string }>, startIndex = 0) => {
@@ -83,10 +98,8 @@ export default function ProjectsClientPage({ initialProjects }: { initialProject
   // Filter projects by category (also consider tags like "Blue Team" / "Red Team")
   const filterProjects = (category: string) => {
     if (category === "all") {
-      return { seriesMap }
+      return seriesEntries
     }
-
-    const filteredSeries: Record<string, Project[]> = {}
 
     const matchesCategory = (project: Project) => {
       if (category === "Infrastructure") {
@@ -100,25 +113,50 @@ export default function ProjectsClientPage({ initialProjects }: { initialProject
         const tags = (project.tags || []).map((t) => t.toLowerCase())
         return project.category === "blue" || tags.includes("blue team")
       }
-      // Cloud is not a primary category in our schema; treat like strict tag-less match (no-op)
-      // Fallback strict match
+      if (category === "Cloud") {
+        const tags = (project.tags || []).map((t) => t.toLowerCase())
+        return tags.includes("cloud")
+      }
       return project.category === category
     }
 
-    // Filter series projects
-    Object.entries(seriesMap).forEach(([seriesName, seriesProjects]) => {
-      const filtered = seriesProjects.filter(matchesCategory)
-      if (filtered.length > 0) {
-        filteredSeries[seriesName] = filtered
-      }
-    })
-
-    return { seriesMap: filteredSeries }
+    return seriesEntries.filter((entry) => entry.projects.some(matchesCategory))
   }
+
+  const filteredEntries = useMemo(() => filterProjects(activeCategory), [activeCategory, seriesEntries])
+
+  useEffect(() => {
+    setCurrentPage(1)
+  }, [activeCategory])
+
+  useEffect(() => {
+    const totalPages = Math.max(1, Math.ceil(filteredEntries.length / ITEMS_PER_PAGE))
+    if (currentPage > totalPages) {
+      setCurrentPage(totalPages)
+    }
+  }, [filteredEntries, currentPage])
+
+  useEffect(() => {
+    if (typeof window === "undefined") return
+
+    if (topRef.current) {
+      topRef.current.scrollIntoView({ behavior: "smooth", block: "start" })
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+  }, [currentPage, activeCategory])
+
+  const paginatedEntries = useMemo(() => {
+    const start = (currentPage - 1) * ITEMS_PER_PAGE
+    const end = start + ITEMS_PER_PAGE
+    return filteredEntries.slice(start, end)
+  }, [filteredEntries, currentPage])
+
+  const totalPages = Math.max(1, Math.ceil(filteredEntries.length / ITEMS_PER_PAGE))
 
   return (
     <PageTransition>
-      <div className="container mx-auto px-4 md:px-6 py-12">
+      <div ref={topRef} className="container mx-auto px-4 md:px-6 py-12">
         <motion.div
           className="flex flex-col items-center text-center space-y-4 mb-12"
           variants={staggerContainer}
@@ -133,7 +171,11 @@ export default function ProjectsClientPage({ initialProjects }: { initialProject
           </motion.p>
         </motion.div>
 
-        <Tabs defaultValue="all" className="w-full mb-12">
+        <Tabs
+          value={activeCategory}
+          onValueChange={(value) => setActiveCategory(value)}
+          className="w-full mb-12"
+        >
           <motion.div
             className="flex justify-center mb-8"
             initial={{ opacity: 0, y: 20 }}
@@ -149,22 +191,43 @@ export default function ProjectsClientPage({ initialProjects }: { initialProject
             </TabsList>
           </motion.div>
 
-                     {["all", "blue", "red", "Cloud", "Infrastructure"].map((category) => (
-             <TabsContent key={category} value={category} className="space-y-8">
-               <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-8 items-stretch">
-                 {Object.entries(filterProjects(category).seriesMap).map(([seriesName, seriesProjects], index) => (
-                   <SeriesCard
-                     key={seriesName}
-                     seriesName={seriesName}
-                     projects={seriesProjects}
-                     index={index}
-                     openLightbox={openLightbox}
-                     openSeriesModal={openSeriesModal}
-                   />
-                 ))}
-               </div>
-             </TabsContent>
-           ))}
+          {["all", "blue", "red", "Cloud", "Infrastructure"].map((category) => {
+            const isActive = category === activeCategory
+            const allCategoryEntries = isActive ? filteredEntries : filterProjects(category)
+            const categoryEntries = isActive ? paginatedEntries : allCategoryEntries.slice(0, ITEMS_PER_PAGE)
+            const categoryTotalPages = Math.max(1, Math.ceil(allCategoryEntries.length / ITEMS_PER_PAGE))
+
+            return (
+              <TabsContent key={category} value={category} className="space-y-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-8 items-stretch">
+                  {categoryEntries.map((entry, index) => (
+                    <SeriesCard
+                      key={entry.name}
+                      seriesName={entry.name}
+                      projects={entry.projects}
+                      index={index}
+                      openLightbox={openLightbox}
+                      openSeriesModal={openSeriesModal}
+                    />
+                  ))}
+                </div>
+
+                {categoryTotalPages > 1 && isActive && (
+                  <PaginationControls
+                    currentPage={currentPage}
+                    totalPages={totalPages}
+                    onPageChange={(page) => {
+                      setCurrentPage(page)
+                      window.scrollTo({
+                        top: 0,
+                        behavior: "smooth",
+                      })
+                    }}
+                  />
+                )}
+              </TabsContent>
+            )
+          })}
         </Tabs>
 
         {/* Modals */}
@@ -184,6 +247,54 @@ export default function ProjectsClientPage({ initialProjects }: { initialProject
         />
       </div>
     </PageTransition>
+  )
+}
+
+interface PaginationControlsProps {
+  currentPage: number
+  totalPages: number
+  onPageChange: (page: number) => void
+}
+
+function PaginationControls({ currentPage, totalPages, onPageChange }: PaginationControlsProps) {
+  if (totalPages <= 1) return null
+
+  const pages = Array.from({ length: totalPages }, (_, index) => index + 1)
+
+  return (
+    <div className="flex justify-center">
+      <div className="flex items-center gap-2 rounded-full border border-border/60 bg-card/40 px-4 py-2 backdrop-blur">
+        <Button
+          variant="ghost"
+          size="sm"
+          className="hover:bg-primary/10"
+          onClick={() => onPageChange(Math.max(1, currentPage - 1))}
+          disabled={currentPage === 1}
+        >
+          Previous
+        </Button>
+        {pages.map((page) => (
+          <Button
+            key={page}
+            variant={page === currentPage ? "default" : "ghost"}
+            size="sm"
+            className={page === currentPage ? "bg-primary text-primary-foreground" : "hover:bg-primary/10"}
+            onClick={() => onPageChange(page)}
+          >
+            {page}
+          </Button>
+        ))}
+        <Button
+          variant="ghost"
+          size="sm"
+          className="hover:bg-primary/10"
+          onClick={() => onPageChange(Math.min(totalPages, currentPage + 1))}
+          disabled={currentPage === totalPages}
+        >
+          Next
+        </Button>
+      </div>
+    </div>
   )
 }
 

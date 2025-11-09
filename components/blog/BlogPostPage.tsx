@@ -6,11 +6,12 @@ import { Button } from "@/components/ui/button"
 import { ArrowLeft, Clock, Calendar, Eye, Share2, Linkedin, Twitter, Copy, Check, User } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { getBlogPostBySlug, getRelatedBlogPosts, getPopularBlogPosts, getCategoryCounts } from "@/lib/blog"
+import { getBlogPostBySlug, getRelatedBlogPosts, getPopularBlogPosts, getCategoryCounts, getAdjacentBlogPosts } from "@/lib/blog"
 import { BlogSidebar } from "./BlogSidebar"
 import { BlogCard } from "./BlogCard"
 import { BlogContentRenderer } from "@/components/blog-content-renderer"
 import type { BlogPost } from "./BlogCard"
+import { PostNavigator, type NavigatorItem } from "@/components/navigation/PostNavigator"
 
 interface BlogPostPageProps {
   slug: string
@@ -92,6 +93,25 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
       </div>
     )
   }
+
+  const { previous, next } = getAdjacentBlogPosts(slug)
+
+  const mapToNavigatorItem = (item?: BlogPost): NavigatorItem | undefined => {
+    if (!item) return undefined
+    return {
+      slug: item.slug,
+      title: item.title,
+      summary: item.excerpt,
+      image: item.image,
+      date: item.date,
+      seriesName: item.series?.name,
+      seriesPart: item.series?.part,
+      totalParts: item.series?.totalParts,
+    }
+  }
+
+  const previousNav = mapToNavigatorItem(previous)
+  const nextNav = mapToNavigatorItem(next)
 
   return (
     <div className="container mx-auto px-4 md:px-6 py-12">
@@ -200,6 +220,13 @@ export default function BlogPostPage({ slug }: BlogPostPageProps) {
               </div>
             </div>
           )}
+
+          <PostNavigator
+            previous={previousNav}
+            next={nextNav}
+            basePath="/blog"
+            accent="purple"
+          />
 
           {/* Related Posts */}
           {relatedPosts.length > 0 && (

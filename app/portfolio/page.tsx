@@ -8,11 +8,24 @@ import { motion } from "framer-motion"
 import { fadeIn, staggerContainer } from "@/lib/animations"
 import Background3D from "@/components/3d-background"
 import { Card } from "@/components/ui/card"
-import { useState } from "react"
+import { useMemo, useState } from "react"
 import { X } from "lucide-react"
 
 export default function PortfolioPage() {
   const [selectedCertificate, setSelectedCertificate] = useState<null | { name: string; image: string }>(null)
+
+  const sortedCertifications = useMemo(() => {
+    return [...certifications].sort((a, b) => {
+      const yearA = parseInt(a.year, 10)
+      const yearB = parseInt(b.year, 10)
+
+      if (isNaN(yearA) || isNaN(yearB)) {
+        return 0
+      }
+
+      return yearB - yearA
+    })
+  }, [])
 
   return (
     <PageTransition>
@@ -47,7 +60,7 @@ export default function PortfolioPage() {
 
           <TabsContent value="certifications" className="space-y-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
-              {certifications.map((cert, index) => (
+              {sortedCertifications.map((cert, index) => (
                 <CertificationCard
                   key={index}
                   certification={cert}
