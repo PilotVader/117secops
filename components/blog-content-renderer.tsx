@@ -415,7 +415,29 @@ export function BlogContentRenderer({
           "/images/projects/12 - confirming the presence of encrypted files in the target VM.png",
           "/images/projects/13 - confirming infection scope & origin (final KQL pivot).png",
           "/images/projects/14 - To confirm the link between powershell.exe and services.exe (and ensure it was not a legitimate service operation).png"
-        ]
+      ],
+      // Brute Force Detection Workflow (Project 5.5)
+      "brute-force-detection-workflow": [
+        "/images/projects/01-logon-events-defender.png",
+        "/images/projects/02-latest-logs.png",
+        "/images/projects/03-bruteforce-detection-query.png",
+        "/images/projects/04-create-analytics-rule.png",
+        "/images/projects/05-trigger-rule.png"
+      ],
+      // Brute Force Investigation Workflow (Project 5.5)
+      "brute-force-investigation-workflow": [
+        "/images/projects/06-incident-detected.png",
+        "/images/projects/07-incident-assigned.png",
+        "/images/projects/08-investigation-map.png",
+        "/images/projects/09-logon-success-check.png"
+      ],
+      // Brute Force Response and Closure (Project 5.5)
+      "brute-force-response-closure": [
+        "/images/projects/10-defender-scan or isolate device.png",
+        "/images/projects/11-nsg-lockdown.png",
+        "/images/projects/12-incident-documentation.png",
+        "/images/projects/13-incident-closed.png"
+      ]
      }
 
     return galleries[imagesKey] || []
@@ -674,7 +696,29 @@ export function BlogContentRenderer({
           "Confirming the presence of encrypted files in the target VM",
           "Confirming infection scope & origin (final KQL pivot)",
           "To confirm the link between powershell.exe and services.exe (and ensure it was not a legitimate service operation)"
-        ]
+      ],
+      // Brute Force Detection Workflow (Project 5.5) - concise, human-friendly titles
+      "brute-force-detection-workflow": [
+        "Reviewing Defender logon events for failed attempts",
+        "Inspecting latest login failure telemetry",
+        "Building Sentinel KQL query for brute-force detection",
+        "Creating scheduled analytics rule in Sentinel",
+        "Observing triggered incident from the analytics rule"
+      ],
+      // Brute Force Investigation Workflow (Project 5.5) - concise, human-friendly titles
+      "brute-force-investigation-workflow": [
+        "New Sentinel incident detected from analytics rule",
+        "Assigning the incident for triage",
+        "Visualizing entities on Sentinel investigation graph",
+        "Validating successful logons to confirm no compromise"
+      ],
+      // Brute Force Response and Closure (Project 5.5) - concise, human-friendly titles
+      "brute-force-response-closure": [
+        "Reviewing Defender response options for the device",
+        "Locking down Azure NSG to restrict RDP access",
+        "Documenting findings in Sentinel incident notes",
+        "Closing the incident after confirming containment"
+      ]
      }
 
     return imageNames[imagesKey] || []

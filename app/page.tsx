@@ -3,6 +3,20 @@ import { CyberFeaturedProjects } from "@/components/cyber-featured-projects"
 import { CyberFeaturedBlogPosts } from "@/components/cyber-featured-blog-posts"
 import { getSortedProjectsData } from "@/lib/project"
 import { getAllBlogPosts } from "@/lib/blog"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: 'Home',
+  description: 'Security analyst portfolio showcasing hands-on cybersecurity projects, threat hunting, DFIR, and homelab security infrastructure experiments. SOC analyst work, malware analysis, and documented security research.',
+  openGraph: {
+    title: 'Home | 117 SecOps - Cybersecurity Portfolio',
+    description: 'Security analyst portfolio showcasing hands-on cybersecurity projects, threat hunting, DFIR, and homelab security infrastructure experiments.',
+    url: 'https://www.117secops.com',
+  },
+  alternates: {
+    canonical: 'https://www.117secops.com',
+  },
+}
 
 export default async function Home() {
   // Get the 3 most recent projects
