@@ -7,7 +7,7 @@ author: "Samson Otori"
 image: "/images/projects/MDE image.png"
 technologies: ["Microsoft Defender for Endpoint", "Microsoft 365 Security", "Advanced Hunting Queries", "MITRE ATT&CK", "Threat Hunting", "Incident Response"]
 category: "blue"
-tags: ["Blue Team", "Threat Hunting", "Microsoft Security", "Incident Response", "Brute Force Analysis", "Security Investigation", "MDE"]
+tags: ["Blue Team", "Cloud", "Threat Hunting", "Microsoft Security", "Incident Response", "Brute Force Analysis", "Security Investigation", "MDE"]
 series:
   name: "Project 5.1: LOG(N) Pacific Internship: Threat Hunting Scenario 1: Devices Exposed to the Internet"
   part: 1

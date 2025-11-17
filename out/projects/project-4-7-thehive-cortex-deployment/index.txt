@@ -1,19 +1,19 @@
 1:"$Sreact.fragment"
-2:I[9304,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"ThemeProvider"]
-3:I[9241,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"CyberHeader"]
+2:I[9304,["328","static/chunks/328-e0dd5ab738b8ec3c.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-0ec117a2c7f3867d.js"],"ThemeProvider"]
+3:I[9241,["328","static/chunks/328-e0dd5ab738b8ec3c.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-0ec117a2c7f3867d.js"],"CyberHeader"]
 4:I[7555,[],""]
 5:I[1295,[],""]
-6:I[1024,["542","static/chunks/542-9c169102c7286aba.js","838","static/chunks/838-83c262eea6b250cb.js","345","static/chunks/app/not-found-f26a84874965db45.js"],"default"]
-7:I[3063,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],"Image"]
-8:I[6874,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-020809086aa700bb.js"],""]
+6:I[1024,["328","static/chunks/328-e0dd5ab738b8ec3c.js","838","static/chunks/838-83c262eea6b250cb.js","345","static/chunks/app/not-found-fdd87afd9808c272.js"],"default"]
+7:I[3063,["328","static/chunks/328-e0dd5ab738b8ec3c.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-0ec117a2c7f3867d.js"],"Image"]
+8:I[6874,["328","static/chunks/328-e0dd5ab738b8ec3c.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","52","static/chunks/52-dc2ebebf60073ec5.js","309","static/chunks/309-3e43f9b66d438df9.js","945","static/chunks/945-2a14fe9ed70b235a.js","916","static/chunks/916-d000ae8515890a43.js","794","static/chunks/794-40a14984f3a6b1a7.js","177","static/chunks/app/layout-0ec117a2c7f3867d.js"],""]
 a:I[9665,[],"OutletBoundary"]
 d:I[9665,[],"ViewportBoundary"]
 f:I[9665,[],"MetadataBoundary"]
 11:I[6614,[],""]
-:HL["/_next/static/css/4e66d2958142ccd3.css","style"]
+:HL["/_next/static/css/31f875e4f503689e.css","style"]
 :HL["/_next/static/css/b5c3a1bf19425f6c.css","style"]
-0:{"P":null,"b":"a8XRBT7zCFn5P9ILY3SzO","p":"","c":["","projects","project-4-7-thehive-cortex-deployment",""],"i":false,"f":[[["",{"children":["projects",{"children":[["slug","project-4-7-thehive-cortex-deployment","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/4e66d2958142ccd3.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b5c3a1bf19425f6c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"defer":true,"src":"https://cloud.umami.is/script.js","data-website-id":"1c0f224c-1fe0-4093-a4e2-c43cb8c84bfa"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"117 SecOps\",\"url\":\"https://www.117secops.com\",\"logo\":\"https://hebbkx1anhila5yf.public.blob.vercel-storage.com/117%20Corporation%20no%20bg-5VVBXF0igK8jcCo43su7cpA2isco7t.png\",\"sameAs\":[\"https://github.com/PilotVader\",\"https://www.linkedin.com/in/otori-samson/\"],\"description\":\"Cybersecurity portfolio showcasing hands-on SOC analyst, DFIR, and threat hunting projects.\"}"}}]]}],["$","body",null,{"className":"__className_f367f3","children":["$","$L2",null,{"attribute":"class","defaultTheme":"light","disableTransitionOnChange":true,"children":["$","div",null,{"className":"flex min-h-screen flex-col","children":[["$","$L3",null,{}],["$","main",null,{"className":"flex-1 pt-16","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L6",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-background py-5 border-t border-border","children":["$","div",null,{"className":"container mx-auto px-4 md:px-6","children":[["$","div",null,{"className":"grid grid-cols-1 md:grid-cols-3 gap-4","children":[["$","div",null,{"className":"space-y-2","children":[["$","div",null,{"className":"flex items-center","children":["$","div",null,{"className":"relative w-[3.6rem] h-[3.6rem]","children":["$","$L7",null,{"src":"https://hebbkx1anhila5yf.public.blob.vercel-storage.com/117%20Corporation%20no%20bg-5VVBXF0igK8jcCo43su7cpA2isco7t.png","alt":"117 SECOPS Logo","fill":true,"className":"object-contain"}]}]}],["$","p",null,{"className":"text-sm text-muted-foreground max-w-xs","children":"Cybersecurity professional specializing in protecting digital assets from evolving threats."}],["$","div",null,{"className":"pt-0","children":["$","a",null,{"href":"https://www.linkedin.com/in/otori-samson/","target":"_blank","rel":"noopener noreferrer","children":"Contact Me","className":"inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-9 rounded-md px-3 cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white","ref":null}]}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"font-medium text-sm mb-2 text-foreground","children":"Quick Links"}],["$","ul",null,{"className":"space-y-0.5","children":[["$","li",null,{"children":["$","$L8",null,{"href":"/","className":"text-sm text-muted-foreground hover:text-primary","children":"Home"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/blog","className":"text-sm text-muted-foreground hover:text-primary","children":"Blog"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/projects","className":"text-sm text-muted-foreground hover:text-primary","children":"Projects"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/portfolio","className":"text-sm text-muted-foreground hover:text-primary","children":"Portfolio"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/about","className":"text-sm text-muted-foreground hover:text-primary","children":"About"}]}]]}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"font-medium text-sm mb-2 text-foreground","children":"Areas of Expertise"}],["$","ul",null,{"className":"space-y-0.5","children":[["$","li",null,{"className":"text-sm text-muted-foreground","children":"Security Assessment"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Penetration Testing"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Secure Development"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Incident Response"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Compliance"}]]}]]}]]}],["$","div",null,{"className":"border-t border-border mt-5 pt-3 flex flex-col md:flex-row justify-between items-center","children":["$","p",null,{"className":"text-sm text-muted-foreground","children":["© ",2025," Samson's. Personal cybersecurity portfolio."]}]}]]}]}]]}]}]}]]}]]}],{"children":["projects",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","project-4-7-thehive-cortex-deployment","d"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9","$undefined",null,["$","$La",null,{"children":["$Lb","$Lc",null]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","rigiKzwuf0Phe0ywTGRFA",{"children":[["$","$Ld",null,{"children":"$Le"}],null]}],["$","$Lf",null,{"children":"$L10"}]]}],false]],"m":"$undefined","G":["$11","$undefined"],"s":false,"S":true}
-12:I[2238,["542","static/chunks/542-9c169102c7286aba.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","300","static/chunks/300-adf3865b7fb282df.js","672","static/chunks/672-6f004087c0cd2223.js","419","static/chunks/app/projects/%5Bslug%5D/page-e91dec3285251993.js"],"default"]
+0:{"P":null,"b":"9_vcHqn-LNSqmJzo4lQn1","p":"","c":["","projects","project-4-7-thehive-cortex-deployment",""],"i":false,"f":[[["",{"children":["projects",{"children":[["slug","project-4-7-thehive-cortex-deployment","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/31f875e4f503689e.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b5c3a1bf19425f6c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"defer":true,"src":"https://cloud.umami.is/script.js","data-website-id":"1c0f224c-1fe0-4093-a4e2-c43cb8c84bfa"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"117 SecOps\",\"url\":\"https://www.117secops.com\",\"logo\":\"https://hebbkx1anhila5yf.public.blob.vercel-storage.com/117%20Corporation%20no%20bg-5VVBXF0igK8jcCo43su7cpA2isco7t.png\",\"sameAs\":[\"https://github.com/PilotVader\",\"https://www.linkedin.com/in/otori-samson/\"],\"description\":\"Cybersecurity portfolio showcasing hands-on SOC analyst, DFIR, and threat hunting projects.\"}"}}]]}],["$","body",null,{"className":"__className_f367f3","children":["$","$L2",null,{"attribute":"class","defaultTheme":"light","disableTransitionOnChange":true,"children":["$","div",null,{"className":"flex min-h-screen flex-col","children":[["$","$L3",null,{}],["$","main",null,{"className":"flex-1 pt-16","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L6",null,{}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-background py-5 border-t border-border","children":["$","div",null,{"className":"container mx-auto px-4 md:px-6","children":[["$","div",null,{"className":"grid grid-cols-1 md:grid-cols-3 gap-4","children":[["$","div",null,{"className":"space-y-2","children":[["$","div",null,{"className":"flex items-center","children":["$","div",null,{"className":"relative w-[3.6rem] h-[3.6rem]","children":["$","$L7",null,{"src":"https://hebbkx1anhila5yf.public.blob.vercel-storage.com/117%20Corporation%20no%20bg-5VVBXF0igK8jcCo43su7cpA2isco7t.png","alt":"117 SECOPS Logo","fill":true,"className":"object-contain"}]}]}],["$","p",null,{"className":"text-sm text-muted-foreground max-w-xs","children":"Cybersecurity professional specializing in protecting digital assets from evolving threats."}],["$","div",null,{"className":"pt-0","children":["$","a",null,{"href":"https://www.linkedin.com/in/otori-samson/","target":"_blank","rel":"noopener noreferrer","children":"Contact Me","className":"inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-9 rounded-md px-3 cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white","ref":null}]}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"font-medium text-sm mb-2 text-foreground","children":"Quick Links"}],["$","ul",null,{"className":"space-y-0.5","children":[["$","li",null,{"children":["$","$L8",null,{"href":"/","className":"text-sm text-muted-foreground hover:text-primary","children":"Home"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/blog","className":"text-sm text-muted-foreground hover:text-primary","children":"Blog"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/projects","className":"text-sm text-muted-foreground hover:text-primary","children":"Projects"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/portfolio","className":"text-sm text-muted-foreground hover:text-primary","children":"Portfolio"}]}],["$","li",null,{"children":["$","$L8",null,{"href":"/about","className":"text-sm text-muted-foreground hover:text-primary","children":"About"}]}]]}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"font-medium text-sm mb-2 text-foreground","children":"Areas of Expertise"}],["$","ul",null,{"className":"space-y-0.5","children":[["$","li",null,{"className":"text-sm text-muted-foreground","children":"Security Assessment"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Penetration Testing"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Secure Development"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Incident Response"}],["$","li",null,{"className":"text-sm text-muted-foreground","children":"Compliance"}]]}]]}]]}],["$","div",null,{"className":"border-t border-border mt-5 pt-3 flex flex-col md:flex-row justify-between items-center","children":["$","p",null,{"className":"text-sm text-muted-foreground","children":["© ",2025," Samson's. Personal cybersecurity portfolio."]}]}]]}]}]]}]}]}]]}]]}],{"children":["projects",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","project-4-7-thehive-cortex-deployment","d"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L9","$undefined",null,["$","$La",null,{"children":["$Lb","$Lc",null]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","DCKaEVmFNtA6V49dqPYMN",{"children":[["$","$Ld",null,{"children":"$Le"}],null]}],["$","$Lf",null,{"children":"$L10"}]]}],false]],"m":"$undefined","G":["$11","$undefined"],"s":false,"S":true}
+12:I[2238,["328","static/chunks/328-e0dd5ab738b8ec3c.js","651","static/chunks/651-e2b53cfd6ab14c6d.js","838","static/chunks/838-83c262eea6b250cb.js","203","static/chunks/203-95f4be182b292072.js","672","static/chunks/672-d2a41d1139364a55.js","419","static/chunks/app/projects/%5Bslug%5D/page-29e7b4bf430f5545.js"],"default"]
 13:T150d,
 ## Project 4.7: TheHive & Cortex Deployment in My Cybersecurity Home Lab
 
@@ -117,268 +117,200 @@ The ultimate goal is to come out of this experience with practical, verifiable i
 ## Important Link
 
 If you are interested in joining the Cyber Range community or following along with the labs, you can check it out here: [Cyber Range Community](https://skool.com/cyber-range)
-15:T2201,
-# Introduction
+15:T1bbd,
+## Introduction
 
-As part of my continuous threat hunting practice, I conducted a scenario using Microsoft Defender for Endpoint (MDE) and the Microsoft 365 Security suite. The objective was to investigate devices that may have been unintentionally exposed to the public internet, assess potential brute-force attempts, and determine whether unauthorized access occurred.
+During this stage of my internship with LOG(N) Pacific, I focused on detecting and investigating anomalous Azure resource lifecycle operations using Microsoft Sentinel. This scenario simulated a condition where an identity performs an unusual number of resource creation (WRITE) or resource deletion (DELETE) events within a short time window. Such patterns are highly relevant in real enterprise environments because they may indicate unauthorized automation, compromised service principals, rogue provisioning scripts, or even malicious abuse of cloud resources.
 
-For this exercise, I worked with a VM in my environment, `nick-test-vm-md`, and the account of interest was `nick-labuser`. This project demonstrates my ability to use advanced hunting queries, analyze telemetry, apply the MITRE ATT&CK framework, and document findings in a professional format.
+The investigation was driven entirely by telemetry from the AzureActivity table, streamed into the Log Analytics Workspace that powers Microsoft Sentinel. The goal of the scenario was to build a scheduled detection rule that identifies any Caller who performs five or more successful WRITE/DELETE operations while excluding Sentinel-related administrative operations. After creating the analytics rule, I triggered the scenario by repeatedly creating and deleting virtual machines to populate the activity logs with the necessary events. The remainder of the workflow followed the NIST 800-61 incident response process.
 
-## Scenario Overview
+## Detection Engineering and Rule Deployment
 
-### Context
+The first step was validating that AzureActivity logs were flowing correctly into the workspace. Running a baseline activity query surfaced normal subscription activity, confirming that the ingestion pipeline was functioning. This baseline verification is shown in the Azure Logs interface below.
 
-During routine maintenance, the security team was tasked with investigating any VMs in the shared services cluster (DNS, Domain Services, DHCP, etc.) that were mistakenly exposed to the internet. The goal was to:
+With telemetry confirmed, I implemented the detection logic to identify Caller identities that exceeded the WRITE/DELETE activity threshold. The query output returned multiple identities with high creation and deletion counts, including several Callers performing upwards of twenty resource operations within the last 24 hours. The results validated that the environment contained sufficient activity to test the detection rule.
 
-- Identify misconfigured VMs exposed to the public internet
-- Investigate brute-force login attempts or successes
-- Validate whether unauthorized access took place
-- Document findings, map them to MITRE ATT&CK TTPs, and propose improvements
+Once the logic was tested, I configured the scheduled rule in Sentinel. In the rule creation wizard, I defined the name, severity, and MITRE ATT&CK mappings representing the potential impact of destructive cloud operations. Sentinel's rule builder captured the logic exactly, set to execute every four hours over a seven-day lookup period.
 
-## Investigation Process and Findings
+Entity mapping was configured to allow Sentinel to tie together ObjectIdentifier values (Azure AD SIDs) and Caller IP addresses. This mapping is essential for enabling the investigation graph to visualize relationships during analysis.
 
-### Internet-Facing Device Check
+The final review step confirmed that the rule was validated successfully and ready for deployment.
 
-The first step was to verify which devices were exposed to the internet. Using MDE's DeviceInfo table, I confirmed that the VM `nick-test-vm-md` had been internet-facing for several days.
+<InlineGallery images={excessive-azure-resource-detection} title="Detection Engineering and Rule Deployment for Excessive Azure Resource Operations" />
 
--------------------------------------------------------
+## Incident Creation and Triage
 
-kql
-DeviceInfo
-| where DeviceName == "nick-test-vm-md"
-| where IsInternetFacing == true
-| order by Timestamp desc
+Within minutes of saving the rule, Sentinel generated a new incident titled "Samson – Excessive Resource Creation or Deletion." The incident included one alert and more than two hundred correlated AzureActivity events, confirming that the scheduled rule had successfully identified the excessive operations.
 
+I assigned the incident to myself and moved it into Active status to begin the formal triage process.
 
--------------------------------------------------------
+<InlineGallery images={excessive-azure-resource-triage} title="Incident Creation and Triage" />
 
-**Result**: Confirmed that nick-test-vm-md was indeed internet-facing, which posed a significant security risk.
+## Investigation and Activity Reconstruction
 
-<InlineGallery images={internet-facing-device-investigation} title="Internet-Facing Device Investigation Process" />
+The Sentinel investigation graph highlighted a significant number of entities connected to the alert, including more than 200 IP addresses and over 140 distinct account references. This density is expected in large Azure environments where shared resource groups, automation accounts, and background processes interact with cloud assets.
 
-### Failed Login Attempts Analysis
+To understand the activity of the relevant Caller, I pivoted into Log Analytics to analyze the resource operations generated by the primary ObjectIdentifier surfaced by the rule. The identity 5deb2a08-7269-47d6-896b-8bc52d396466 stood out, associated with the IP address 4.153.100.136. Reconstructing the event trail showed this Caller repeatedly performing resource subgroup operations, primarily WRITE and DELETE actions, across multiple STUDENT-RG resource groups.
 
-Next, I investigated failed login attempts to identify potential brute-force attacks targeting the exposed VM.
+The targeted query revealed consistent patterns of VM provisioning, network rule creation, and resource group deletions. These operations were executed successfully and in rapid sequence, which is characteristic of automated orchestration rather than manual misuse.
 
--------------------------------------------------------
+<InlineGallery images={excessive-azure-resource-investigation} title="Investigation and Incident Closure" />
 
-kql
-DeviceLogonEvents
-| where DeviceName == "nick-test-vm-md"
-| where LogonType has_any("Network", "Interactive", "RemoteInteractive", "Unlock")
-| where ActionType == "LogonFailed"
-| where isnotempty(RemoteIP)
-| summarize Attempts = count() by ActionType, RemoteIP, DeviceName
-| order by Attempts desc
+The repetition and uniformity of these actions strongly indicated legitimate lab automation behavior, not malicious exploitation or unauthorized access.
 
+## Incident Classification and Closure
 
--------------------------------------------------------
+After reconstructing the user's activity, validating the telemetry, and reviewing the Caller's operational patterns, the event was confirmed to be harmless and expected within the cyber-range environment. The excessive operations originated from normal platform automation accounts responsible for provisioning and destroying ephemeral training resources.
 
-**Findings**: Multiple bad actors attempted to log into nick-test-vm-md from various external IP addresses, indicating clear evidence of brute-force attempts.
+No indicators of compromise or privilege abuse were detected throughout the investigation. There were no unexpected resource types, no suspicious IP pivots, and no deviation from standard lifecycle actions.
 
-<InlineGallery images={brute-force-analysis} title="Brute Force Attack Analysis" />
+The incident was therefore documented and classified as a Benign Positive, tied to expected platform behavior rather than an actual threat. The final comment added to the incident captured the findings:
 
-### Validation of Brute Force Success Attempts
+"Reviewed excessive resource creation/deletion activity associated with ObjectIdentifier 5deb2a08-7269-47d6-896b-8bc52d396466 from IP 4.153.100.136. Investigation confirmed thousands of legitimate WRITE/DELETE operations tied to automated resource lifecycle actions within the cyber-range lab. No indicators of compromise, unauthorized access, or abnormal privilege usage were identified. Activity is consistent with expected system-driven provisioning/deprovisioning. Classifying as Benign Positive and closing the incident."
 
-To determine if any of the persistent attackers succeeded, I checked whether the top malicious IPs were able to gain unauthorized access.
-
--------------------------------------------------------
-
-kql
-let RemoteIPsInQuestion = dynamic(["84.38.185.58","91.203.60.30", "171.254.92.66", "14.169.16.183", "185.243.96.107", "102.88.21.213", "62.60.136.105"]);
-DeviceLogonEvents
-| where LogonType has_any("Network","Interactive","RemoteInteractive","Unlock")
-| where ActionType == "LogonSuccess"
-| where RemoteIP has_any(RemoteIPsInQuestion)
-
-
--------------------------------------------------------
-
-**Result**: No successful logons were found from any of the malicious IP addresses.
-
-<InlineGallery images={malicious-ip-validation} title="Malicious IP Validation Analysis" />
-
-### Account-Specific Analysis
-
-I then focused on the legitimate account nick-labuser to analyze its authentication patterns.
-
-#### Failed Logons for nick-labuser
-
--------------------------------------------------------
-
-kql
-DeviceLogonEvents
-| where DeviceName == "nick-test-vm-md"
-| where LogonType == "Network"
-| where ActionType == "LogonFailed"
-| where AccountName == "nick-labuser"
-| summarize count()
-
-
--------------------------------------------------------
-
-**Result**: 0 failed logon attempts for the `nick-labuser` account, making brute-force success unlikely.
-
-<InlineGallery images={account-failed-logons} title="Account Failed Logons Analysis" />
-
-#### Successful Logons for nick-labuser
-
--------------------------------------------------------
-
-kql
-DeviceLogonEvents
-| where DeviceName == "nick-test-vm-md"
-| where LogonType == "Network"
-| where ActionType == "LogonSuccess"
-| where AccountName == "nick-labuser"
-| summarize LoginCount = count() by DeviceName, ActionType, AccountName, RemoteIP
-
-
--------------------------------------------------------
-
-**Findings**: 18 total successful logons, all from consistent, legitimate IP addresses with no signs of compromise.
-
-<InlineGallery images={account-successful-logons} title="Account Successful Logons Analysis" />
-
-## Analysis
-
-### Key Findings
-
-1. Device Exposure: The VM nick-test-vm-md was confirmed to be internet-facing for several days
-2. Brute Force Activity: Clear evidence of multiple failed login attempts from external malicious IPs
-3. No Successful Compromise: Despite persistent attacks, no unauthorized access was achieved
-4. Legitimate Account Security: The nick-labuser account showed no signs of compromise with 18 successful logons from legitimate IPs
-
-### Security Assessment
-
-Though nick-test-vm-md was internet-facing and subjected to clear brute-force attempts, there is no evidence of successful brute force or unauthorized access:
-
-1. The legitimate account nick-labuser showed 18 successful logins, all from valid IPs
-2. No failed logons were associated with nick-labuser
-3. No malicious IPs were able to gain access
-
-## MITRE ATT&CK Framework Mapping
-
-This investigation identified several relevant MITRE ATT&CK techniques:
-
-1. T1190 – Exploit Public-Facing Application: The internet-facing VM represented a potential attack vector
-2. T1078 – Valid Accounts: Legitimate logons by nick-labuser demonstrated normal account usage
-3. T1110 – Brute Force: Multiple failed attempts from external IPs constituted brute-force attacks
-4. T1587.001 – Develop Capabilities: Exploit Code: Inference from multiple bad actors attempting access suggests organized attack attempts
-
-## Response Recommendations
-
-If this were a real enterprise environment, the following actions should be implemented:
-
-1. Network Security: Restrict inbound access via Network Security Groups (NSGs) to only trusted IPs
-2. Multi-Factor Authentication: Enforce MFA on critical accounts such as nick-labuser
-3. Account Lockout Policy: Implement an account lockout policy to prevent unlimited login attempts
-4. Continuous Monitoring: Monitor failed login telemetry continuously for early detection
-
-## Improvement & Reflection
-
-### Lessons Learned
-
-1. VM Hardening: Strengthen VM hardening by default to avoid unnecessary public exposure
-2. Query Efficiency: Improve efficiency of hunting queries by pre-building templates for repeated use
-3. Investigation Workflow: Enhance investigation workflow with automated enrichment of IP reputation and geolocation
-
-### Professional Development
-
-This threat hunting exercise demonstrates the process of validating whether an exposed VM has been compromised. Even though nick-test-vm-md was subject to persistent brute-force attempts, proper analysis confirmed no successful intrusion.
-
-Regular hunts like this not only uncover potential misconfigurations but also build proactive defense habits, mapping every finding against MITRE ATT&CK to ensure structured threat coverage.
+With documentation complete, the incident was closed, concluding the analysis.
 
 ## Conclusion
 
-This scenario provided valuable hands-on experience with enterprise-grade security tools and real-world threat hunting methodologies. The systematic approach to investigation, from initial discovery through detailed analysis and documentation, mirrors the processes used in professional SOC environments.
-
-The successful identification and analysis of the brute-force attempts, combined with the validation that no compromise occurred, demonstrates the importance of thorough investigation and proper security controls. This experience reinforces the value of continuous monitoring, proper network segmentation, and the application of structured frameworks like MITRE ATT&CK in cybersecurity investigations.
+This project reinforced the importance of robust cloud activity monitoring, especially in environments where resource creation and deletion occur at scale. AzureActivity logs play a critical role in detecting unusual provisioning patterns, and Sentinel's analytics engine provides an effective layer for identifying potential misuse. While the alert in this case was benign, the workflow demonstrates how cloud misconfigurations, compromised automation accounts, or rogue provisioning scripts can be surfaced quickly when detection rules are properly engineered.
 
 ## Important Link
 
 If you are interested in joining the [CYBER-RANGE COMMUNITY](https://www.skool.com/cyber-range/about?ref=b6e2c83b43e243d2b690aa6ea6c383b5) or following along with the labs, you can check it out here: [LINK](https://www.skool.com/cyber-range/about?ref=b6e2c83b43e243d2b690aa6ea6c383b5)
-16:T1d16,
-## Project 4.5: Caldera & Security Onion Deployment in my Cybersecurity Home Lab
 
-### Overview
+16:T21a9,
+## Introduction
 
-Over the past few weeks, my home lab has been steadily evolving into a fully functional, segmented cybersecurity test environment. Following the blueprint from Gerard O'Brien's Building the Ultimate Cybersecurity Lab series, I've reached one of the most exciting milestones so far: deploying MITRE Caldera for adversary emulation and Security Onion for network-based detection and threat hunting.
+During this stage of my internship with LOG(N) Pacific, I focused on analysing an identity-based threat scenario centred around impossible travel detection within Microsoft Sentinel. Unlike host-level attacks that rely on endpoint telemetry, this scenario evaluates authentication patterns across Azure AD (Entra ID) and identifies logon behaviour that violates physical or policy-defined geographic constraints.
 
-Both tools play crucial roles in a mature SOC workflow, and getting them online was a mix of straightforward installs, unexpected technical snags, and valuable troubleshooting lessons.
+The objective of this project was to design and deploy a Sentinel analytics rule capable of detecting Azure sign-ins occurring from two or more distinct geographic regions within a short time window. This behaviour is often indicative of account compromise, unauthorized VPN usage, policy violations, or malicious session hijacking. Following detection, I executed a full investigation in Sentinel, pivoted through SigninLogs, validated the user's activity pattern, documented findings, and closed the incident in accordance with NIST 800-61.
 
-### Deploying MITRE Caldera
+## Baseline Reconnaissance & Understanding the Dataset
 
-Caldera is an adversary emulation platform developed by MITRE, designed to simulate real-world attacker behaviours and techniques in a controlled environment. The goal in my lab is to use it to generate realistic attack traffic and test detection capabilities across my monitoring stack.
+Before creating the detection logic, I validated that the environment was ingesting Azure identity telemetry correctly. The SigninLogs table served as the foundational dataset for this scenario, capturing every successful authentication event alongside its geographic metadata, including:
 
-While the transcript in the tutorial followed a clean, predictable installation of Caldera 4.2, my own journey involved a few detours.
+1. City
+2. State
+3. Country or region
+4. User Principal Name
+5. Azure AD User ID
+6. Timestamp
 
-### Initial Setup and Configuration
+Running the initial baseline query confirmed that the workspace was receiving steady, high-volume identity logs. From this point forward, the environment was ready for rule development.
 
-I provisioned a new Ubuntu Server VM in Proxmox with 8GB of RAM, two vCPUs, and a 50GB disk, connected to my VLAN 1 "Security Tools" network. This ensured that Caldera would have unrestricted communication with the rest of my detection infrastructure. The static IP for this server was set to **10.10.5.53**.
+<InlineGallery images={impossible-travel-query-results} title="Baseline Query Results for Impossible Travel Detection" />
 
-After cloning the Caldera repository from GitHub and moving into its directory, I attempted to install dependencies with the command `sudo pip3 install -r requirements.txt`.
+## Creating the Impossible Travel Analytics Rule
 
-### Overcoming Python Environment Issues
+Using the verified telemetry, I proceeded to create a scheduled analytics rule in Sentinel to detect suspicious multi-region authentication patterns.
 
-This is where I hit the first hurdle. Ubuntu 22.04 now ships with Python in a "externally managed" mode, meaning pip cannot directly install packages system-wide without bypassing the system package manager. The installation aborted with a message advising me to either use apt install for Debian packages or create a Python virtual environment.
+### General Configuration
 
-The latter was the more controlled option, so I created and activated a virtual environment using these commands:
+I titled the rule "Samson – Potential Impossible Travel", clearly identifying ownership and purpose. The description highlighted the behavioural deviation the rule intends to capture: single-user sign-ins from multiple distinct geographic locations within seven days, suggesting VPN abuse or account compromise. I mapped this activity to relevant MITRE ATT&CK tactics, including Credential Access and Initial Access.
 
-`python3 -m venv venv`
-`source venv/bin/activate`
+<InlineGallery images={impossible-travel-analytics-rule} title="Analytics Rule General Configuration for Impossible Travel Detection" />
 
-With the virtual environment active, pip installed the required packages cleanly. However, the next attempt to start Caldera using this command:
+### Rule Logic – Evaluating Geographic Divergence
 
-`python3 server.py --insecure --build`
+Within the rule logic section, I inserted the KQL used earlier in the Log Analytics workspace. The query analyses the SigninLogs table, enumerating distinct geographic regions per user.
 
-triggered another failure, this time related to a missing npm command. The --build flag instructs Caldera to compile its Vue.js frontend, but this requires Node.js and npm. Installing them inside the VM resolved the problem:
+Although the same query produced valid output in Log Analytics, the Scheduled Query UI initially highlighted the parsing of JSON fields. The parsing behaviour can sometimes be CPU expensive, but since the dataset was small and the function was already tested, I implemented it without further modification.
 
-`sudo apt install nodejs npm`
+Query scheduling was configured as follows:
 
-### Final Deployment and Verification
+1. Run frequency: every 4 hours
+2. Lookup period: last 7 hours
+3. Trigger threshold: more than 0 results
+4. Suppression enabled: stop running after the first alert within 24 hours
 
-Once Node.js was in place, I ran the build process again. The frontend compiled successfully, but npm threw network timeout errors at one point. This was due to npm's registry connection attempts failing intermittently, which I fixed by retrying the install after confirming the VM's DNS and gateway settings were correct.
+### Entity Mappings – Normalizing Identity for Investigation
 
-Finally, Caldera's web server launched without further issues, listening on port 8888. Accessing **http://10.10.5.53:8888** presented the login interface, where I could sign in as either the red team user (red:admin) or blue team user (blue:admin). This marked the successful deployment of Caldera 4.2, ready for later integration into attack simulation workflows.
+For Sentinel to stitch together entities in the investigation graph, I configured entity mappings for:
 
-<InlineGallery images={caldera-deployment} title="Caldera Deployment Walkthrough" />
+1. Account → AadUserId (UserId)
+2. Account → DisplayName (UserPrincipalName)
 
-### Installing Security Onion
+This allowed Sentinel to normalize authentication activity and map events, alerts, and users efficiently.
 
-Next came Security Onion, a full-featured open-source platform for network security monitoring, intrusion detection, and threat hunting. Unlike Caldera's lightweight footprint, Security Onion's requirements are substantial—the standalone deployment calls for at least 16GB of RAM, four vCPUs, 200GB of storage, and dual network interfaces.
+## Rule Deployment & Validation
 
-### System Requirements and Preparation
+After verifying that all configuration sections passed validation, I deployed the rule. Sentinel immediately began evaluating historical data using the configured parameters.
 
-I created a new Proxmox VM meeting these specs and uploaded the latest Security Onion ISO. The primary NIC was connected to VLAN 1 for management, while a second NIC was reserved for potential sniffing or monitoring duties. Initially, I left the second NIC disconnected during installation to avoid known setup errors.
+## Triggering the Alert
 
-### Installation Process
+Once the rule was active, I logged into Azure from a separate VM located in a different geographic region (East US). This generated the required multi-region sign-in pattern, allowing the analytics rule to fire.
 
-The installation process began with selecting "Install Security Onion" and providing a username, password, and other initial setup details. The configuration was set to STANDALONE mode, with the management interface assigned a static IP.
+Shortly afterward, a new incident appeared in Sentinel under Threat Management → Incidents.
 
-This is where an important adjustment was necessary. In the tutorial, the gateway was set to **10.10.1.254**, but in my network, the correct gateway for VLAN 1 is **10.10.5.254**. Using the wrong gateway would have left the system unable to route traffic correctly. DNS servers included my OPNsense firewall (**192.168.1.1**) and public resolvers (**8.8.8.8, 8.8.4.4**).
+<InlineGallery images={impossible-travel-rule-configuration} title="Rule Configuration, Deployment, and Incident Creation" />
 
-After confirming the settings, the installation began, and this was not a quick process. Despite being on modern hardware, Security Onion's post-install configuration took over two hours to complete, performing extensive service installations, database setups, and Elastic Stack provisioning. Patience was essential here.
+## Investigating the Impossible Travel Incident
 
-### Accessing the Platform
+Opening the incident revealed two distinct accounts and multiple sign-in events associated with widely separated geographic regions. The overview pane provided:
 
-When the setup finally completed, I accessed the web interface by navigating to **https://10.10.5.54** from a browser on my management network. Logging in with the credentials created earlier presented the full Security Onion dashboard, ready to begin ingesting data from across the lab.
+1. The first alert timestamp
+2. Two mapped identity entities
+3. Severity classification: Medium
+4. MITRE mappings
+5. The associated analytics rule
 
-<InlineGallery images={security-onion-deployment} title="Security Onion Deployment Walkthrough" />
+I then assigned the incident to myself, moving it into Active status to begin the analysis stage.
 
-### Conclusion
+## Graph-Level Correlation & Behavioural Patterning
 
-<p class="mb-4 leading-relaxed">At this point, I had successfully deployed both Caldera and Security Onion in my cybersecurity home lab. Caldera was operational and ready for adversary emulation, while Security Onion was configured for network-based detection and threat hunting. Both tools were integrated within my segmented VLAN architecture, providing a solid foundation for advanced security testing and monitoring.</p>
+Launching the investigation graph offered a visual representation of how the entities, alerts, and the detection rule were linked. Although this scenario did not include device involvement, the correlation graph still provided a clean mapping between the alert logic and the identities involved.
 
-<p class="mb-4 leading-relaxed">This project showcases the real-world challenges of deploying complex security tools in a home lab environment. The dependency issues with Python's managed mode and the resource-intensive nature of Security Onion highlighted the importance of proper planning and patience in cybersecurity engineering. The next phase will involve integrating these tools with Wazuh, running simulated attack campaigns, and validating that alerts are generated and correlated correctly.</p>
+<InlineGallery images={impossible-travel-incident-investigation} title="Incident Investigation and Graph Analysis" />
 
-<p class="mb-4 leading-relaxed">Stay tuned for the next stage of this project as we include our Windows Server and Windows 10 environment.</p>
+## Deep-Dive: Validating Multi-Region Logons
 
-<p class="mb-4 leading-relaxed"><strong class="font-semibold">Credits:</strong> This walkthrough is based on Episode 4 of the Ultimate Cybersecurity Lab YouTube series by Gerard O'Brien. While the steps closely followed his guidance, the project was independently implemented by Samson Otori, with custom network configurations and host assignments tailored to fit a pre-existing VLAN-segmented lab environment.</p>
+The next step was manual validation. I pivoted back into Log Analytics and executed a user-targeted KQL query to enumerate all sign-ins associated with the impacted user identities within the 7-day threshold.
 
-<p class="mb-4 leading-relaxed">Here's a link to his YouTube channels:</p>
+### User A Analysis
 
-<p class="mb-4 leading-relaxed"><a href="https://www.youtube.com/watch?v=ej6iBrBqZEo" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Gerard O'Brien's Channel</a></p>
+User A displayed a pattern of authentication across two geographically distant regions:
+
+1. Barton-Upon-Humber (United Kingdom)
+2. Boydton, Virginia (United States)
+
+This transition could be legitimate depending on corporate policy, travel, or approved remote work. The travel gap was realistic and not indicative of compromise.
+
+### User B Analysis
+
+User B showed an even more interesting pattern:
+
+1. Da Nang, Vietnam
+2. Tokyo, Japan
+3. Miami, Florida, United States
+
+These regions spanned multiple continents within short time intervals. While this can occur through VPN chaining or cloud-based infrastructure, it exceeds what would typically be considered business-as-usual authentication behaviour.
+
+However, for this training lab environment, these patterns are expected and benign.
+
+<InlineGallery images={impossible-travel-user-analysis} title="User Signin Pattern Analysis and Incident Closure" />
+
+## Documenting Findings in the Incident
+
+I added a final analyst comment summarizing the investigation:
+
+"Final Review: The detection surfaced multiple multi-region authentication instances across two user accounts. After reviewing SigninLogs for both identities, the behaviour was determined to be benign and consistent with expected lab activity. No evidence of account compromise or malicious lateral movement was identified. Incident classified as Benign Positive."
+
+This aligned with the NIST 800-61 guidelines for the Post-Incident Activity phase, ensuring all evidence and reasoning were preserved in the incident timeline.
+
+## Closing the Case
+
+With analysis complete and no malicious indicators identified, I closed the incident as a Benign Positive, finalizing the response cycle for this identity-centric investigation.
+
+## Conclusion & Reflections
+
+This project reinforced the importance of identity telemetry in cloud-focused SOC workflows. Unlike endpoint attacks, identity-based threats require a deep understanding of authentication geography, session behaviour, user patterns, and environmental norms. Microsoft Sentinel's ability to correlate geographic data across SigninLogs and build entity relationships through analytics rules made it possible to identify anomalies rapidly and evaluate them with precision.
+
+The exercise highlighted how behavioural analytics, even when triggered by benign conditions, can surface valuable insights into user activity patterns. More importantly, it emphasised the significance of establishing strong baselines, understanding normal authentication geography, and using KQL to validate identity anomalies before making any containment decisions such as disabling accounts or enforcing geo-fencing.
+
+## Important Link
+
+If you are interested in joining the [CYBER-RANGE COMMUNITY](https://www.skool.com/cyber-range/about?ref=b6e2c83b43e243d2b690aa6ea6c383b5) or following along with the labs, you can check it out here: [LINK](https://www.skool.com/cyber-range/about?ref=b6e2c83b43e243d2b690aa6ea6c383b5)
+
 17:T4f0,
 # Introduction to the 30-Days MYDFIR SOC Analyst Challenge
 
@@ -448,7 +380,238 @@ Here's the link to follow along: [30-Day MYDFIR SOC Analyst Challenge](https://w
 
 *Credit: This project was originally created by the MYDFIR YouTube channel. All structure and content was inspired by MYDFIR. Check his channel out: [@MyDFIR](https://www.youtube.com/@MyDFIR)*
 
-#CyberSecurity #SOCAnalyst #MYDFIRChallenge #HandsOnExperience #Day2 1a:T3749,
+#CyberSecurity #SOCAnalyst #MYDFIRChallenge #HandsOnExperience #Day2 1a:T1f20,
+## Introduction
+
+During this stage of my internship with LOG(N) Pacific, I carried out a full threat-hunting investigation focused on identifying potential misuse of the Tor Browser on a corporate endpoint. The scenario originated from management concerns after encrypted outbound traffic patterns were observed, as well as anonymous reports of employees discussing ways to bypass security controls. Tor is explicitly prohibited on corporate networks, so my task was to determine whether the browser had been downloaded, installed, launched, and actively used on my assigned endpoint.
+
+All hunting activities were limited strictly to my virtual machine samson-windows- to avoid pulling in telemetry from other student environments. Using Microsoft Defender's Advanced Hunting engine, I reconstructed the entire activity chain, from initial file creation, to silent installation, to browser execution, and finally the Tor network traffic itself.
+
+This investigation is strictly for educational, homelab, and professional training purposes only.
+
+## Initial File Discovery – Indicators of Tor-Related Artifacts
+
+My first step was to hunt for filesystem traces of Tor. Using DeviceFileEvents, I filtered for filenames containing the string "tor", which immediately surfaced a long list of Tor-related artifacts, including tor.exe, extracted Tor Browser folders, and the suspicious tor-shopping-list.txt file on the Desktop.
+
+<InlineGallery images={tor-threat-hunt-file-discovery} title="DeviceFileEvents Tor File Discovery" />
+
+The density of file creation, modification, and rename operations showed that the Tor Browser had not only been downloaded but fully unpacked and interacted with.
+
+## Silent Installation – Evidence of Intentional Execution
+
+Next, I pivoted into DeviceProcessEvents, this time searching for Tor-related process command lines.
+
+This revealed the most critical early-stage indicator: the installer was executed with a silent install flag.
+
+<InlineGallery images={tor-threat-hunt-installation} title="DeviceProcessEvents Silent Installation Detection" />
+
+A silent installation demonstrates deliberate intent to install the browser without drawing attention, reinforcing that the behavior was intentional rather than accidental.
+
+## Browser Launch – Successful Tor Browser Execution
+
+With installation confirmed, I searched process telemetry for Tor's executable variants (tor.exe, firefox.exe, and tor-browser.exe). The results clearly showed that the browser was launched several times from within the Tor Browser directory.
+
+<InlineGallery images={tor-threat-hunt-browser-launch} title="DeviceProcessEvents Tor Browser Launch" />
+
+Multiple subprocesses were spawned, consistent with Tor's hardened Firefox-based architecture. This confirmed that the browser was not only installed but actively launched.
+
+## Network Activity – Verified Connections to Tor Network
+
+To confirm live network use, I investigated DeviceNetworkEvents filtered by Tor-related ports (9001, 9030, 9050, 9051, 9150) and Tor-associated executable names.
+
+<InlineGallery images={tor-threat-hunt-network} title="DeviceNetworkEvents Tor Network Connections" />
+
+The results showed successful outbound connections on port 9150 to Tor-related IP ranges, as well as additional HTTPS traffic tied to Tor processes. These connections confirmed actual Tor-network usage, not just installation.
+
+## User Intent – Creation and Deletion of the Tor Shopping List File
+
+Finally, I examined the suspicious tor-shopping-list.txt file using a targeted search for filenames containing "shopping".
+
+<InlineGallery images={tor-threat-hunt-shopping-list} title="DeviceFileEvents Shopping List File Activity" />
+
+The logs showed repeated creation and modification events, followed by deletion into the Recycle Bin. This file appeared to contain a mock list of "dark web purchases" created for lab simulation. Regardless, the behavior mimicked evidence-removal actions often seen in real insider threat cases.
+
+## Chronological Event Timeline
+
+Below is a clear timeline reconstruction of the user's activity based entirely on Defender telemetry from your system:
+
+### 1. File Download – Tor Installer
+
+**Timestamp:** Nov 16, 2025 – 1:53 PM
+
+**Event:** User "samson" downloaded the Tor Browser installer into the Downloads folder.
+
+**Action:** File download detected.
+
+**File Path:**
+`C:\Users\samson\Downloads\tor-browser-windows-x86_64-portable-15.0.1.exe`
+
+### 2. Process Execution – Silent Tor Installation
+
+**Timestamp:** Nov 16, 2025 – 1:56 PM
+
+**Event:** The employee executed the Tor installer using a silent installation command.
+
+**Action:** Process creation detected.
+
+**Command:**
+`tor-browser-windows-x86_64-portable-15.0.1.exe /S`
+
+**File Path:**
+`C:\Users\samson\Downloads\tor-browser-windows-x86_64-portable-15.0.1.exe`
+
+### 3. Process Execution – Tor Browser Launch
+
+**Timestamp:** Nov 16, 2025 – 2:01–2:02 PM
+
+**Event:** Multiple Tor Browser processes (firefox.exe, tor.exe) were created, indicating the browser launched successfully.
+
+**Action:** Process creation of Tor Browser–related executables.
+
+**File Path:**
+`C:\Users\samson\Desktop\Tor Browser\Browser\TorBrowser\Tor\tor.exe`
+
+and
+
+`C:\Users\samson\Desktop\Tor Browser\Browser\firefox.exe`
+
+### 4. Network Connection – Tor Network Activity
+
+**Timestamp:** Nov 16, 2025 – 1:58:57 PM
+
+**Event:** A successful network connection to 5.2.79.190 over port 9001 was made using a Tor-related process.
+
+**Action:** ConnectionSuccess
+
+**Process:** firefox.exe
+
+**File Path:**
+`C:\Users\samson\Desktop\Tor Browser\Browser\firefox.exe`
+
+### 5. Additional Network Connections – Extended Tor Usage
+
+**Timestamps & Connections:**
+
+1. 1:59:00 PM – 185.129.61.6:443
+2. 1:59:02 PM – 96.9.98.70:443
+3. 1:59:58 PM – 87.118.88.94:443
+4. 2:00:00 PM – 127.0.0.1:9150 (Tor local SOCKS proxy)
+
+**Event:** Multiple outbound HTTPS and Tor-port connections were established.
+
+**Action:** ConnectionSuccess
+
+These confirm ongoing Tor network activity.
+
+### 6. File Creation – The Tor Shopping List
+
+**Timestamp:** Nov 16, 2025 – 3:07–3:08 PM
+
+**Event:** The user created and repeatedly modified tor-shopping-list.txt on the Desktop.
+
+**Action:** File creation & modification.
+
+**File Path:**
+`C:\Users\samson\Desktop\tor-shopping-list.txt`
+
+## Summary
+
+The user on the endpoint samson-windows- downloaded, silently installed, launched, and actively used the Tor Browser. Network telemetry confirmed real connections to Tor relays, and a Tor-related document was created and later deleted.
+
+This sequence demonstrates intentional Tor usage, anonymized browsing, and file activity indicating user intent.
+
+## Response Taken
+
+Tor usage was successfully confirmed. In a real corporate environment, the device would be isolated, SOC leadership notified, and HR engaged for policy violation review.
+
+## Conclusion
+
+This threat hunt provided a full end-to-end reconstruction of Tor Browser misuse on a corporate endpoint. By correlating file system activity, process execution logs, and network telemetry, the investigation produced a clear narrative showing intentional installation, execution, and use of Tor for anonymized browsing activity.
+
+While this scenario was fully simulated in a controlled cyber-range environment, the workflow mirrors real-world SOC and IR processes for insider misuse detection. It strengthened my expertise in KQL pivoting, threat-hunting methodology, evidence correlation, and professional incident documentation.
+
+## Important Link
+
+If you are interested in joining the [CYBER-RANGE COMMUNITY](https://www.skool.com/cyber-range/about?ref=b6e2c83b43e243d2b690aa6ea6c383b5) or following along with the labs, you can check it out here: [LINK](https://www.skool.com/cyber-range/about?ref=b6e2c83b43e243d2b690aa6ea6c383b5)
+
+1b:T1a74,
+## Introduction
+
+During this stage of my internship with LOG(N) Pacific, I focused on generating real-world malicious behaviour inside a controlled cyber-range environment to prepare for the threat-hunting phase of the final project. This scenario simulated an employee intentionally downloading, installing, and using the TOR Browser on a corporate workstation, an activity that violates enterprise security policy and often signals attempts to bypass monitoring controls or access high-risk resources such as dark-web marketplaces.
+
+The purpose of this part of the project was not to detect or investigate the activity yet, but to intentionally create telemetry across device process logs, file modifications, browser activity, and network connections. All this data would later be used in Part 2 to conduct a full hunting operation inside Microsoft Defender.
+
+Every action taken during this simulation from downloading TOR to accessing onion-based dark-web sites was performed strictly for educational and defensive research purposes inside an isolated lab machine that was already onboarded to Microsoft Defender for Endpoint.
+
+## Simulating Malicious Employee Behaviour
+
+The simulation began by visiting the TOR Project website and downloading the Windows portable installer. This action alone generates Defender browser events, network logs, and file-write operations on the endpoint, forming the foundation for later threat hunts.
+
+<InlineGallery images={tor-simulation-downloading} title="Downloading TOR Browser" />
+
+After the download completed, I opened an elevated command prompt and navigated to the user's Downloads directory. This is an important detail in a threat-hunting scenario because command-line execution often provides defenders with clearer indicators of intent.
+
+<InlineGallery images={tor-simulation-cmd} title="Navigating to TOR App in Command Prompt" />
+
+From there, I initiated a silent installation of the TOR Browser by calling the executable directly through CMD. This method avoids the typical GUI installer and often appears suspicious when observed in process-execution logs.
+
+<InlineGallery images={tor-simulation-installation} title="Silent Installation of TOR Browser" />
+
+Once the installation completed, a TOR Browser folder appeared on the desktop. Opening it and launching the browser immediately generated additional execution and network telemetry within Defender.
+
+<InlineGallery images={tor-simulation-opening} title="Opening TOR Browser from Desktop" />
+
+After launching the browser, I established a connection to the TOR network. This stage triggers unique patterns of encrypted outbound connections that are very distinct from normal enterprise traffic.
+
+<InlineGallery images={tor-simulation-connection} title="Establishing TOR Network Connection" />
+
+To confirm the anonymized routing behaviour of TOR, I checked my geolocation via a public IP-lookup website. The TOR exit node placed the system in Stockholm, Sweden, which contrasted sharply with the actual geographic region tied to the device, an important indicator in any impossible-travel or suspicious browsing investigation.
+
+<InlineGallery images={tor-simulation-location} title="Checking Geolocation via TOR Exit Node" />
+
+Next, I accessed the official onion link for Dread, a well-known dark-web community. This action is logged as network traffic to an '.onion' endpoint, another high-value indicator for threat hunters.
+
+<InlineGallery images={tor-simulation-dread-url} title="Checking Dread Onion URL" />
+
+After confirming the correct URL, I proceeded into the Dread forum homepage. This provided a realistic browsing pattern for later hunting, ensuring Defender captured page loads, process interactions, and encrypted traffic.
+
+<InlineGallery images={tor-simulation-darkweb} title="Accessing Dread Dark Web Forum" />
+
+To further diversify the telemetry, I navigated through multiple sections of the dark-web platform, generating additional resource loads and interaction data that would later be visible in the DeviceNetworkEvents and BrowserEvents tables.
+
+<InlineGallery images={tor-simulation-navigating} title="Navigating Dark Web Pages" />
+
+To simulate intent, I created a text file on the desktop titled "tor-shopping-list.txt," listing various items as if the user planned to purchase illicit products. This file creation, modification, and eventual deletion would later appear in Defender's DeviceFileEvents table.
+
+<InlineGallery images={tor-simulation-shopping-list} title="Creating Shopping List File" />
+
+Once the browsing activity was complete, I deleted the file and confirmed it appeared in the Recycle Bin. This sequence of create → modify → delete produces a clear chain of file events, valuable for detection engineering.
+
+<InlineGallery images={tor-simulation-deleting} title="Deleting Shopping List File" />
+
+Finally, I validated that Defender for Endpoint was successfully ingesting the activity. Reviewing the DeviceFileEvents table showed multiple entries associated with TOR-related processes, including file creation, renaming, and deletion events. This confirmed that the environment had captured enough telemetry to support Part 2 of the project (the threat hunt).
+
+<InlineGallery images={tor-simulation-validation} title="Validating Microsoft Defender Log Ingestion" />
+
+## Important Ethical Note
+
+All actions performed in this scenario were executed strictly for cybersecurity learning purposes inside a controlled, isolated lab environment.
+
+No real dark-web purchases were made, and no illegal activity was conducted.
+
+The intent of this exercise was to generate realistic indicators of compromise so they can be analyzed, hunted, and documented professionally in the next stage of the internship project.
+
+## Conclusion
+
+This phase of the project successfully generated a complete trail of suspicious endpoint activity: downloading unauthorized software, executing it through the command line, visiting dark-web onion sites, interacting with TOR-routed IP addresses, and creating and deleting files related to illicit activity. All of this telemetry now exists inside Microsoft Defender and will be used in the upcoming threat-hunting stage.
+
+Part 2 will focus entirely on analyzing this telemetry, reconstructing the user's behaviour, identifying the IOCs created during this simulation, and producing a full threat-hunting report.
+
+## Important Link
+
+If you are interested in joining the [CYBER-RANGE COMMUNITY](https://www.skool.com/cyber-range/about?ref=b6e2c83b43e243d2b690aa6ea6c383b5) or following along with the labs, you can check it out here: [LINK](https://www.skool.com/cyber-range/about?ref=b6e2c83b43e243d2b690aa6ea6c383b5)
+
+1c:T3749,
 ## Introduction
 
 Project 5.6: LOG(N) Pacific Internship – Incident Response Scenario 2: PowerShell Suspicious Web Request with Microsoft Sentinel
@@ -531,264 +694,7 @@ Finally, by following the NIST 800-61 lifecycle end-to-end verification of telem
 
 If you are interested in joining the [CYBER-RANGE COMMUNITY](https://www.skool.com/cyber-range/about?ref=b6e2c83b43e243d2b690aa6ea6c383b5) or following along with these labs, you can check it out here: [LINK](https://www.skool.com/cyber-range/about?ref=b6e2c83b43e243d2b690aa6ea6c383b5)
 
-1b:T1c8d,
-## Introduction
-
-Project 5.5: LOG(N) Pacific Internship – Incident Response Scenario 1: Brute Force Attack Detection with Microsoft Sentinel
-During this phase of my internship with LOG(N) Pacific, I focused on investigating a simulated brute-force attack scenario against a Windows virtual machine using Microsoft Sentinel and Defender for Endpoint. This project was designed to replicate a real-world incident response workflow from detection and alerting to analysis, containment, and closure following the NIST 800-61 Incident Response Lifecycle.
-
-## Scenario Overview
-
-The lab environment was already integrated between Microsoft Defender for Endpoint (MDE) and Microsoft Sentinel, ensuring telemetry from all onboarded virtual machines was ingested into the DeviceLogonEvents table. My goal was to detect and respond to repeated login failures indicative of brute-force activity, correlate them to source IP addresses, and ensure proper mitigations were in place to prevent unauthorized access.
-
-## Detecting the Brute Force Attempt
-
-To begin, I crafted a KQL query in Sentinel to identify repeated failed login attempts originating from the same remote IP against the same VM within a defined time window. The query looked for events where the ActionType was "LogonFailed", counted occurrences per Remote IP and Device Name, and filtered for instances exceeding ten failures within five hours. Once validated, I turned this query into an Analytics Rule under Sentinel → Analytics → Scheduled Query Rules, configuring it to run every 4 hours, check data from the past 5 hours, and automatically generate incidents whenever triggered.
-As shown in the Sentinel dashboard below, the rule titled “Samson – Brute Force Detection” successfully mapped to MITRE ATT&CK tactics of Initial Access (T1078), Credential Access (T1110), and Discovery (T1082). It was set to medium severity, enabled automatic incident creation, and mapped the entity relationships for the host and remote IPs.
-After deploying the rule, I simulated multiple failed RDP login attempts to trigger it. Within minutes, Sentinel’s Incidents panel reflected a new alert under my workspace, confirming that the rule had successfully detected multiple failed logons from several external IP addresses targeting my VM (samson-windows).
-
-<InlineGallery images={brute-force-detection-workflow} title="Brute Force Detection Workflow in Microsoft Sentinel" />
-
-## Investigating the Incident
-
-Clicking into the incident revealed useful context: Sentinel automatically grouped failed logon attempts from multiple IP addresses against a collection of VMs, with my host samson-windows among them. The Investigation Graph, as shown in the Sentinel interface, provided a visual correlation of all the entities remote IPs, devices, and associated alert data linked through the incident.
-At this stage, I assigned the incident to myself and marked its status as Active, beginning the investigation phase. Using Microsoft Defender for Endpoint, I cross-referenced the host’s activity timeline. The Defender timeline displayed expected legitimate system activities DLL loads, Explorer executions, and normal agent cleanup confirming there were no malicious payloads or unauthorized processes spawned as a result of the failed logons.
-To confirm there had been no successful compromises, I ran another query in Sentinel against the DeviceLogonEvents table, this time filtering for "LogonSuccess" actions on the target device (samson-windows). The result confirmed that only legitimate user accounts (my own) had successfully authenticated to the VM while the external IPs only produced failed logons. This validation step was essential to ensure that while the brute-force attempts were real, they had not succeeded in breaching the system.
-
-<InlineGallery images={brute-force-investigation-workflow} title="Sentinel Incident Investigation and Validation" />
-
-## Containment and Mitigation
-
-Following proper incident response practice, I simulated containment actions. Within Microsoft Defender for Endpoint, the Device actions menu provided several response capabilities, including Isolate Device, Restrict App Execution, Initiate Antivirus Scan, and Collect Investigation Package. In a real-world scenario, these options would be critical in stopping lateral movement or data exfiltration if the host had been compromised.
-Since this was a simulated attack, I applied containment at the network level instead. In the Azure portal, I accessed the Network Security Group (NSG) associated with the VM and modified the inbound rule set. Previously, the NSG allowed wide-open inbound RDP access from any source, a serious misconfiguration often exploited in brute-force attacks. I locked down the NSG to only permit TCP port 3389 (RDP) connections from my specific IP address, effectively restricting all public access to the virtual machine.
-This remediation step mirrors how a security team would respond in production: isolating exposure points, updating access policies, and implementing least-privilege network design.
-
-## Documenting and Closing the Incident
-
-Once the threat was contained, I recorded my findings directly in the Microsoft Sentinel incident pane. The summary comment captured key details:
-“Incident Summary: Multiple failed RDP logins detected from 6 IPs targeting samson-windows-. No successful logins confirmed. Mitigation included NSG hardening and simulated AV scan. Recommended enforcing NSG restrictions by default.”
-The incident was then classified as True Positive – Suspicious Activity, with the following closing note:
-“Confirmed true brute-force activity. No compromise detected. Preventive NSG policy recommended.”
-After documentation, the incident was closed, completing the Detection, Analysis, and Containment phases of the NIST incident response lifecycle.
-
-<InlineGallery images={brute-force-response-closure} title="Response Actions, Documentation, and Closure" />
-
-## Conclusion
-
-This simulation reinforced the importance of layered detection and automated response mechanisms in a SOC workflow. Sentinel’s ability to correlate multiple failed logon events across devices and visualize attack sources made it easy to distinguish between random noise and coordinated brute-force activity.
-By pairing Defender for Endpoint telemetry with Sentinel analytics rules, it becomes possible not only to detect early brute-force attempts but also to automate future responses such as isolating the VM or applying adaptive network restrictions.
-From a prevention standpoint, this exercise highlighted the criticality of secure NSG configurations, limited RDP exposure, and continuous log monitoring. While brute-force attacks are common, their success depends heavily on weak authentication practices and permissive access controls. Hardening policies, enforcing MFA, and reducing external attack surfaces remain fundamental defense strategies.
-
-## Important Link
-
-If you are interested in joining the [CYBER-RANGE COMMUNITY](https://www.skool.com/cyber-range/about?ref=b6e2c83b43e243d2b690aa6ea6c383b5) or following along with the labs, you can check it out here: [LINK](https://www.skool.com/cyber-range/about?ref=b6e2c83b43e243d2b690aa6ea6c383b5)
-
-1c:T2e31,
-## Introduction
-
-This investigation was conducted to examine suspicious file activity observed within the virtual machine samson-windows-, which was onboarded to Microsoft Defender for Endpoint (MDE). The objective was to determine whether abnormal file modification behaviour and ransom instructions on the desktop were the result of ransomware execution, and if so, to identify its origin, propagation chain, and indicators of compromise.
-
-Using Microsoft Defender's advanced hunting capabilities, telemetry from multiple tables — DeviceFileEvents and DeviceProcessEvents — was analyzed to reconstruct the attack sequence.
-
-## Scenario Overview
-
-A new ransomware strain, internally referred to as PwnCrypt, had been reported as circulating in the wild. It leverages a PowerShell-based payload that encrypts local files using AES-256 encryption, appending the custom extension .pwncrypt. The strain also leaves ransom instructions in a desktop file demanding Bitcoin payment for decryption.
-
-During lab testing, the same behaviour appeared on samson-windows-: three files on the Desktop were encrypted, and a text file appeared reading:
-
-"Your files have been encrypted. To get a decryption key, send this amount of Bitcoin to…"
-
-The task was to confirm the root cause of this encryption, identify the executing process chain, and determine whether any persistence or lateral movement mechanisms were present.
-
-## Preparation
-
-Prior to the hunt, the samson-windows- VM was successfully onboarded to MDE, ensuring telemetry ingestion from endpoint sensors. A PowerShell script named pwncrypt.ps1 was executed in the background to simulate a real ransomware infection, but the analysis was performed as if the infection were unknown.
-
-The first step was to establish a baseline of file activity to identify when the anomaly began.
-
-## Data Collection
-
-The analyst verified active log collection across Defender's telemetry tables. Using DeviceFileEvents, all file operations within the last 30 minutes were grouped by timestamp to visualize spikes in file write volume:
-
--------------------------------------------------------
-kql
-let VMName = "samson-windows-";
-DeviceFileEvents
-| where DeviceName == VMName
-| where Timestamp >= ago(30m)
-| summarize FileEvents = count() by bin(Timestamp, 5m)
-| order by Timestamp asc
--------------------------------------------------------
-
-Result: Three distinct spikes appeared within a short interval, suggesting a mass file modification event, the initial indicator of ransomware behavior.
-
-## Data Analysis
-
-### A. Mass File Modification and Extension Changes
-
-To examine which file types were most affected, the following query was run:
-
--------------------------------------------------------
-kql
-DeviceFileEvents
-| where DeviceName == VMName
-| where ActionType in ("FileRenamed","FileCreated","FileModified")
-| extend ext = tostring(split(FileName,".")[-1])
-| summarize Count = count() by ext
-| order by Count desc
--------------------------------------------------------
-
-Observation: Extensions such as .dll, .mui, .xml, and .png appeared frequently normal for background Windows processes — but hidden within the logs were sudden surges of renamed files later correlated with the encryption timestamps.
-
-### B. Folder-Level Analysis (Staging Behaviour)
-
-To determine where encryption occurred:
-
--------------------------------------------------------
-kql
-let VMName = "samson-windows-";
-DeviceFileEvents
-| where DeviceName == VMName and Timestamp >= ago(30m)
-| where ActionType == "FileCreated"
-| summarize count() by Folder = extract(@"^(.*)\\[^\\]+$",1,FileName)
-| order by count_ desc
--------------------------------------------------------
-
-Result: High activity was isolated to a single user folder — C:\Users\samson\Desktop — confirming that encryption primarily targeted the Desktop directory.
-
-### C. Identifying Script Execution
-
-The next step was to look for evidence of any scripts or command-line interpreters responsible for the mass file actions:
-
--------------------------------------------------------
-kql
-let VMName = "samson-windows-";
-DeviceProcessEvents
-| where DeviceName == VMName and Timestamp >= ago(30m)
-| where FileName has_any ("powershell","pwsh","cmd.exe","wscript.exe","cscript.exe","wmic.exe")
-| project Timestamp, FileName, ProcessCommandLine, InitiatingProcessFileName, InitiatingProcessCommandLine
-| order by Timestamp desc
--------------------------------------------------------
-
-Result: Two instances of PowerShell.exe were identified, both launched non-interactively with the parameters:
-
-ExecutionPolicy AllSigned -NoProfile -NonInteractive -Command "& {...}"
-
-The initiator process was senseir.exe, a legitimate Windows background service that had been abused to execute PowerShell. This discovery confirmed that PowerShell was used to deploy or execute the encryption payload.
-
-### D. Tracing Child Processes and Persistence Mechanisms
-
-To verify what PowerShell spawned:
-
--------------------------------------------------------
-kql
-DeviceProcessEvents
-| where DeviceName == VMName
-| where InitiatingProcessFileName == "powershell.exe"
-| project Timestamp, FileName, ProcessCommandLine, InitiatingProcessFileName, InitiatingProcessCommandLine
-| order by Timestamp desc
--------------------------------------------------------
-
-Result: PowerShell launched several cmd.exe and svchost.exe instances. These, in turn, executed processes such as python.exe, GameBarElevatedFT_Alias.exe, and MediaPlayer.exe, which were all generated within C:\Users\samson\AppData\Local\Temp — a common ransomware staging area.
-
-### E. File Events Linked to User Folders
-
-To focus on desktop encryption evidence:
-
--------------------------------------------------------
-kql
-let VMName = "samson-windows-";
-DeviceFileEvents
-| where DeviceName == VMName
-| where Timestamp >= ago(24h)
-| where ActionType in ("FileCreated","FileRenamed","FileModified")
-| where FolderPath has_any("Desktop","\\Users\\")
-| project Timestamp, ActionType, FileName, FolderPath, InitiatingProcessFileName
-| order by Timestamp desc
--------------------------------------------------------
-
-Result:
-
-A file named __decryption-instructions.lnk appeared on the desktop immediately after hundreds of file renames and creations, confirming the delivery of the ransom note. The parent process was explorer.exe, which executed after system encryption had completed, a typical behaviour of ransomware scripts displaying ransom messages post-infection.
-
-### F. Process Chain Correlation – Root Cause Determination
-
-Finally, to reconstruct the infection path:
-
--------------------------------------------------------
-kql
-let VMName = "samson-windows-";
-DeviceProcessEvents
-| where DeviceName == VMName
-| where Timestamp between (ago(120m) .. now())
-| where FileName in~ ("powershell.exe","cmd.exe","services.exe","svchost.exe")
-| project Timestamp, FileName, ProcessCommandLine, InitiatingProcessFileName, InitiatingProcessCommandLine, AccountName
-| order by Timestamp asc
--------------------------------------------------------
-
-Findings:
-
-1. powershell.exe (initiated by senseir.exe) executed a hidden script with an AllSigned policy bypass.
-2. This instance spawned cmd.exe, which registered background services.
-3. services.exe then created multiple svchost.exe processes running under SYSTEM and Network Service accounts.
-4. These service-hosted processes performed the encryption routines on user data.
-
-<InlineGallery images={pwncrypt-ransomware-investigation} title="PwnCrypt Ransomware Investigation and Analysis Process" />
-
-## Investigation Summary
-
-The analysis confirmed that samson-windows- was infected with PwnCrypt ransomware delivered via a PowerShell payload. The encryption occurred under SYSTEM privileges, appending custom extensions to files and generating a ransom note on the desktop.
-
-Execution Chain:
-senseir.exe → powershell.exe → cmd.exe → services.exe → svchost.exe → file encryption (.pwncrypt)
-
-## Response and Containment
-
-1. Isolated the compromised VM from the network using Defender's Isolate Device function.
-2. Conducted a full antivirus and Defender scan; confirmed malicious artifacts were limited to the VM.
-3. Recommended a complete VM rebuild to remove any residual persistence.
-4. Captured SHA-1 hashes of key malicious files (__decryption-instructions.lnk, encrypted files) for threat-intel reference.
-5. Logged the incident for follow-up reporting to management and for potential YARA-rule creation.
-
-## Documentation
-
-Each phase of this investigation — preparation, data collection, analysis, and response — was recorded within Microsoft Defender's query history and screenshots for audit and learning purposes.
-
-All queries were executed methodically to trace the incident from initial file-system anomalies to the responsible process hierarchy.
-
-## MITRE ATT&CK Mapping
-
-The PwnCrypt ransomware activity observed in samson-windows- aligns with several stages of the MITRE ATT&CK framework.
-
-1. **Initial Access (T1204.002 – User Execution)**: Infection began through manual execution of a malicious PowerShell script.
-2. **Execution (T1059.001 / T1059.003)**: PowerShell and CMD were used to run the payload and supporting commands.
-3. **Persistence (T1543.003)**: New service-host processes were created to maintain execution.
-4. **Privilege Escalation & Defense Evasion (T1569.002 / T1562.001 / T1036.005)**: Ransomware leveraged elevated service contexts, bypassed PowerShell policies, and masqueraded as legitimate Windows binaries.
-5. **Discovery (T1082)**: Enumerated user directories such as C:\Users\samson\Desktop before encryption.
-6. **Impact (T1486 / T1491.001)**: Encrypted user files with the .pwncrypt extension and dropped a ransom note (__decryption-instructions.lnk).
-
-Overall, the attack followed a full ransomware kill chain — Execution → Persistence → Privilege Escalation → Defence Evasion → Impact — demonstrating how PowerShell abuse and service creation can rapidly lead to data encryption and ransom deployment.
-
-## Improvement and Lessons Learned
-
-1. **Restrict PowerShell usage**: Configure Constrained Language Mode and allow only signed scripts.
-2. **Implement application whitelisting**: Block unauthorized interpreters (cmd.exe, powershell.exe, etc.) in user space.
-3. **Monitor mass file modifications**: Create a detection rule for spikes in FileModified and FileRenamed actions per host.
-4. **Enhance user awareness**: Ransomware often enters through phishing or drive-by downloads; continuous education is essential.
-5. **Segment the network**: Prevent lateral propagation between machines by enforcing least-privilege access controls.
-
-## Conclusion
-
-The investigation conclusively determined that the observed encryption on samson-windows- was caused by the PwnCrypt ransomware, executed via a PowerShell-based payload with SYSTEM privileges.
-
-Although contained within the lab environment, the event accurately simulated a real-world ransomware outbreak and demonstrated how rapid detection through telemetry correlation from file anomalies to process hierarchies enables timely containment.
-
-Through disciplined analysis and structured response, this project reinforced the value of proactive threat-hunting practices using Microsoft Defender for Endpoint.
-
-## Important Link
-
-If you are interested in joining the [CYBER-RANGE COMMUNITY](https://www.skool.com/cyber-range/about?ref=b6e2c83b43e243d2b690aa6ea6c383b5) or following along with the labs, you can check it out here: [LINK](https://www.skool.com/cyber-range/about?ref=b6e2c83b43e243d2b690aa6ea6c383b5)
-9:["$","$L12",null,{"projectData":{"slug":"project-4-7-thehive-cortex-deployment","title":"Project 4.7: TheHive & Cortex Deployment in My Cybersecurity Home Lab","description":"Deploying TheHive incident response platform and Cortex automated analysis engine in my segmented cybersecurity home lab for enhanced SOC workflow capabilities.","date":"2025-08-15","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["TheHive","Cortex","Incident Response","SOC","Docker","Portainer","Cassandra","Elasticsearch","Case Management","Automated Analysis","Blue Team","Incident Management"],"content":"$13","image":"/images/projects/hardware-lab/The-Hive-and-Cortex.png","technologies":[],"images":[],"series":"hardware-lab"},"relatedProjects":[{"slug":"project-5-cyber-range-internship-journey","title":"Project 5: LOG(N) Pacific Internship: Cyber Range Journey","description":"An immersive journey into enterprise-grade cybersecurity tools through the Cyber Range internship program, focusing on Microsoft Azure, Sentinel, Defender for Endpoint, and Tenable vulnerability management.","date":"2025-08-28","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Blue Team","SOC","Internship","Microsoft Security","Enterprise Tools","Threat Hunting","Incident Response"],"content":"$14","image":"/images/projects/cyber-range-image.jpg","technologies":["Microsoft Azure","Microsoft Sentinel","Microsoft Defender for Endpoint","Tenable","SIEM","EDR","Vulnerability Management"],"images":[],"series":{"name":"Project 5: LOG(N) Pacific Internship: Cyber Range Journey","part":1,"totalParts":1}},{"slug":"project-5-1-log-n-pacific-internship-threat-hunting-scenario1","title":"Project 5.1: LOG(N) Pacific Internship: Threat Hunting Scenario 1: Devices Exposed to the Internet","description":"A comprehensive threat hunting exercise investigating devices accidentally exposed to the internet, using Microsoft Defender for Endpoint and Microsoft 365 Security suite to analyze brute-force attempts and validate unauthorized access.","date":"2025-09-14","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Blue Team","Threat Hunting","Microsoft Security","Incident Response","Brute Force Analysis","Security Investigation","MDE"],"content":"$15","image":"/images/projects/MDE image.png","technologies":["Microsoft Defender for Endpoint","Microsoft 365 Security","Advanced Hunting Queries","MITRE ATT&CK","Threat Hunting","Incident Response"],"images":[],"series":{"name":"Project 5.1: LOG(N) Pacific Internship: Threat Hunting Scenario 1: Devices Exposed to the Internet","part":1,"totalParts":1}},{"slug":"project-4-5-caldera-security-onion-deployment","title":"Project 4.5: Caldera & Security Onion Deployment in my Cybersecurity Home Lab","description":"Deploying MITRE Caldera for adversary emulation and Security Onion for network-based detection and threat hunting in my cybersecurity home lab.","date":"2025-08-08","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Caldera","Security Onion","MITRE","Adversary Emulation","Threat Hunting","SOC","Network Security","Blue Team","Red Team"],"content":"$16","image":"/images/projects/hardware-lab/Caldera and security onion.png","technologies":[],"images":[],"series":"hardware-lab"}],"oldestProjects":[{"slug":"30-day-mydfir-soc-analyst-challenge-part0","title":"Introduction to the MYDFIR SOC Analyst Challenge","description":"An introduction to the comprehensive 30-day challenge for aspiring SOC analysts.","date":"2024-10-31","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Blue Team","SOC","Security Monitoring","Training"],"content":"$17","image":"/images/projects/Mydfir 30 day challenge.png","technologies":["ELK Stack","SIEM","Security Tools","Monitoring"],"images":[{"src":"/images/projects/30-day-challenge/30Days-MYDFIR-Challenge.png","alt":"30 Days MYDFIR SOC Analyst Challenge Overview"}],"series":{"name":"Project 3: 30-Day MYDFIR SOC Analyst Challenge","part":0,"totalParts":30}},{"slug":"30-day-soc-analyst-challenge-part1","title":"Part 1: Foundation, A Logical Network Diagram","description":"Learn how to create a comprehensive logical network diagram for your SOC environment, establishing the foundation for my 30-day security monitoring journey.","date":"2024-11-01","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Network Diagram","SOC","Architecture","Documentation"],"content":"$18","image":"/images/projects/Mydfir 30 day challenge.png","technologies":[],"images":[{"src":"/images/projects/30-day-challenge/1-30Days-MYDFIR-Day-1.png","alt":"30 Days MYDFIR Challenge Day 1"},{"src":"/images/projects/30-day-challenge/2-Day-1-work-with-draw-io.png","alt":"Working with Draw.io on Day 1"}],"series":{"name":"Project 3: 30-Day MYDFIR SOC Analyst Challenge","part":1,"totalParts":30}},{"slug":"30-day-soc-analyst-challenge-part2","title":"Part 2: Diving into the ELK Stack","description":"Explore the powerful ELK stack—Elasticsearch, Logstash, and Kibana—and understand their crucial roles in security operations and log management.","date":"2024-11-02","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["ELK Stack","Elasticsearch","Logstash","Kibana","Log Management"],"content":"$19","image":"/images/projects/Mydfir 30 day challenge.png","technologies":[],"images":[{"src":"/images/projects/30-day-challenge/Day-2-mydfir-soc-analyst-challenge.png","alt":"Day 2 MYDFIR SOC Analyst Challenge"}],"series":{"name":"Project 3: 30-Day MYDFIR SOC Analyst Challenge","part":2,"totalParts":30}}],"newestProjects":[{"slug":"project-5-6-log-n-pacific-internship-incident-response-scenario2","title":"Project 5.6: LOG(N) Pacific Internship – Incident Response Scenario 2: PowerShell Suspicious Web Request with Microsoft Sentinel","description":"Detecting PowerShell-based web payload staging, building Sentinel analytics for Invoke-WebRequest abuse, and walking through end-to-end incident response with Microsoft Defender for Endpoint and Sentinel.","date":"2025-11-10","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Incident Response","Microsoft Sentinel","Microsoft Defender for Endpoint","PowerShell","SOC Operations","KQL","Post-Exploitation Detection"],"content":"$1a","image":"/images/projects/invoke web request.png","technologies":["Microsoft Sentinel","Microsoft Defender for Endpoint","PowerShell","KQL","Windows"],"images":[],"series":{"name":"Project 5.6: LOG(N) Pacific Internship – Incident Response Scenario 2: PowerShell Suspicious Web Request with Microsoft Sentinel","order":6}},{"slug":"project-5-5-log-n-pacific-internship-incident-response-scenario1","title":"Project 5.5: LOG(N) Pacific Internship – Incident Response Scenario 1: Brute Force Attack Detection with Microsoft Sentinel","description":"Investigating a simulated brute-force attack scenario using Microsoft Sentinel and Defender for Endpoint, following the NIST 800-61 incident response lifecycle.","date":"2025-11-08","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Incident Response","Microsoft Sentinel","Microsoft Defender for Endpoint","KQL","SOC Operations","Azure","Brute Force Detection"],"content":"$1b","image":"/images/projects/detection-brute-force.png","technologies":["Microsoft Sentinel","Microsoft Defender for Endpoint","KQL","Azure","Windows"],"images":[],"series":{"name":"Project 5.5: LOG(N) Pacific Internship – Incident Response Scenario 1: Brute Force Attack Detection with Microsoft Sentinel","order":5}},{"slug":"project-5-4-log-n-pacific-internship-threat-hunting-scenario4","title":"Project 5.4: LOG(N) Pacific Internship: Threat Hunting Scenario 4: PwnCrypt Ransomware Outbreak","description":"A comprehensive threat hunting exercise investigating a PwnCrypt ransomware outbreak, using Microsoft Defender for Endpoint to analyze file encryption activities, process execution chains, and ransomware indicators of compromise.","date":"2025-10-24","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Threat Hunting","Microsoft Defender for Endpoint","Ransomware Analysis","Incident Response","EDR","KQL","PowerShell"],"content":"$1c","image":"/images/projects/Zero-day-red.jpg","technologies":["Microsoft Defender for Endpoint","KQL","PowerShell","Windows"],"images":[],"series":{"name":"Project 5.4: LOG(N) Pacific Internship: Threat Hunting Scenario 4: PwnCrypt Ransomware Outbreak","order":4}}],"categoryCounts":{"All":52,"Blue Team":45,"Cloud":2,"Red Team":2,"Infrastructure":3},"previousProject":{"slug":"project-5-cyber-range-internship-journey","title":"Project 5: LOG(N) Pacific Internship: Cyber Range Journey","description":"An immersive journey into enterprise-grade cybersecurity tools through the Cyber Range internship program, focusing on Microsoft Azure, Sentinel, Defender for Endpoint, and Tenable vulnerability management.","image":"/images/projects/cyber-range-image.jpg","date":"2025-08-28","category":"blue","series":{"name":"Project 5: LOG(N) Pacific Internship: Cyber Range Journey","part":1,"totalParts":1}},"nextProject":{"slug":"project-4-6-windows-server-2022-windows-10-domain-integration","title":"Project 4.6: Windows Server 2022 & Windows 10 Domain Integration in My Cybersecurity Home Lab","description":"Deploying Windows Server 2022 domain controller and integrating Windows 10 workstation into Active Directory domain within my segmented cybersecurity home lab.","image":"/images/projects/hardware-lab/windows server.jpeg","date":"2025-08-08","category":"blue","series":"hardware-lab"}}]
+9:["$","$L12",null,{"projectData":{"slug":"project-4-7-thehive-cortex-deployment","title":"Project 4.7: TheHive & Cortex Deployment in My Cybersecurity Home Lab","description":"Deploying TheHive incident response platform and Cortex automated analysis engine in my segmented cybersecurity home lab for enhanced SOC workflow capabilities.","date":"2025-08-15","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["TheHive","Cortex","Incident Response","SOC","Docker","Portainer","Cassandra","Elasticsearch","Case Management","Automated Analysis","Blue Team","Incident Management"],"content":"$13","image":"/images/projects/hardware-lab/The-Hive-and-Cortex.png","technologies":[],"images":[],"series":"hardware-lab"},"relatedProjects":[{"slug":"project-5-cyber-range-internship-journey","title":"Project 5: LOG(N) Pacific Internship: Cyber Range Journey","description":"An immersive journey into enterprise-grade cybersecurity tools through the Cyber Range internship program, focusing on Microsoft Azure, Sentinel, Defender for Endpoint, and Tenable vulnerability management.","date":"2025-08-28","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Blue Team","Cloud","SOC","Internship","Microsoft Security","Enterprise Tools","Threat Hunting","Incident Response"],"content":"$14","image":"/images/projects/cyber-range-image.jpg","technologies":["Microsoft Azure","Microsoft Sentinel","Microsoft Defender for Endpoint","Tenable","SIEM","EDR","Vulnerability Management"],"images":[],"series":{"name":"Project 5: LOG(N) Pacific Internship: Cyber Range Journey","part":1,"totalParts":1}},{"slug":"project-5-8-log-n-pacific-internship-incident-response-scenario-excessive-azure-resource-creation-deletion","title":"Project 5.8: LOG(N) Pacific Internship – Incident Response Scenario: Excessive Azure Resource Creation or Deletion","description":"Detecting and investigating anomalous Azure resource lifecycle operations using Microsoft Sentinel, identifying excessive resource creation and deletion patterns that may indicate unauthorized automation or compromised service principals.","date":"2025-11-16","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Blue Team","Cloud","Incident Response","Microsoft Sentinel","Azure","SOC Operations","KQL","Cloud Security","Resource Management"],"content":"$15","image":"/images/projects/azure resource group.jpg","technologies":["Microsoft Sentinel","Azure","KQL","Cloud Security","Azure Activity Logs"],"images":[],"series":{"name":"Project 5.8: LOG(N) Pacific Internship – Incident Response Scenario: Excessive Azure Resource Creation or Deletion","order":8}},{"slug":"project-5-7-log-n-pacific-internship-incident-response-scenario-impossible-travel-detection","title":"Project 5.7: LOG(N) Pacific Internship – Incident Response Scenario: Impossible Travel Detection with Microsoft Sentinel","description":"Analysing identity-based threat scenarios through impossible travel detection in Microsoft Sentinel, evaluating Azure AD authentication patterns, and executing full incident response following NIST 800-61 guidelines.","date":"2025-11-15","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Blue Team","Cloud","Incident Response","Microsoft Sentinel","Azure AD","Entra ID","Identity Security","SOC Operations","KQL","Impossible Travel","Geographic Detection"],"content":"$16","image":"/images/projects/impossible-travel-detection.jpg","technologies":["Microsoft Sentinel","Azure AD","Entra ID","KQL","Identity Security"],"images":[],"series":{"name":"Project 5.7: LOG(N) Pacific Internship – Incident Response Scenario: Impossible Travel Detection with Microsoft Sentinel","order":7}}],"oldestProjects":[{"slug":"30-day-mydfir-soc-analyst-challenge-part0","title":"Introduction to the MYDFIR SOC Analyst Challenge","description":"An introduction to the comprehensive 30-day challenge for aspiring SOC analysts.","date":"2024-10-31","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Blue Team","SOC","Security Monitoring","Training"],"content":"$17","image":"/images/projects/Mydfir 30 day challenge.png","technologies":["ELK Stack","SIEM","Security Tools","Monitoring"],"images":[{"src":"/images/projects/30-day-challenge/30Days-MYDFIR-Challenge.png","alt":"30 Days MYDFIR SOC Analyst Challenge Overview"}],"series":{"name":"Project 3: 30-Day MYDFIR SOC Analyst Challenge","part":0,"totalParts":30}},{"slug":"30-day-soc-analyst-challenge-part1","title":"Part 1: Foundation, A Logical Network Diagram","description":"Learn how to create a comprehensive logical network diagram for your SOC environment, establishing the foundation for my 30-day security monitoring journey.","date":"2024-11-01","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Network Diagram","SOC","Architecture","Documentation"],"content":"$18","image":"/images/projects/Mydfir 30 day challenge.png","technologies":[],"images":[{"src":"/images/projects/30-day-challenge/1-30Days-MYDFIR-Day-1.png","alt":"30 Days MYDFIR Challenge Day 1"},{"src":"/images/projects/30-day-challenge/2-Day-1-work-with-draw-io.png","alt":"Working with Draw.io on Day 1"}],"series":{"name":"Project 3: 30-Day MYDFIR SOC Analyst Challenge","part":1,"totalParts":30}},{"slug":"30-day-soc-analyst-challenge-part2","title":"Part 2: Diving into the ELK Stack","description":"Explore the powerful ELK stack—Elasticsearch, Logstash, and Kibana—and understand their crucial roles in security operations and log management.","date":"2024-11-02","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["ELK Stack","Elasticsearch","Logstash","Kibana","Log Management"],"content":"$19","image":"/images/projects/Mydfir 30 day challenge.png","technologies":[],"images":[{"src":"/images/projects/30-day-challenge/Day-2-mydfir-soc-analyst-challenge.png","alt":"Day 2 MYDFIR SOC Analyst Challenge"}],"series":{"name":"Project 3: 30-Day MYDFIR SOC Analyst Challenge","part":2,"totalParts":30}}],"newestProjects":[{"slug":"project-5-9-log-n-pacific-internship-final-project-detecting-tor-browser-usage-threat-hunting-part2","title":"Project 5.9: LOG(N) Pacific Internship Final Project – Detecting Tor Browser Usage on Corporate Endpoint - Threat Hunting Scenario (Part 2: The Threat Hunt)","description":"Conducting a full threat-hunting investigation using Microsoft Defender for Endpoint to identify and reconstruct Tor Browser misuse on a corporate endpoint, correlating file system activity, process execution logs, and network telemetry.","date":"2025-11-17","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Blue Team","Cloud","Threat Hunting","Microsoft Defender for Endpoint","TOR Browser","KQL","SOC Operations","Endpoint Security","Advanced Hunting"],"content":"$1a","image":"/images/projects/MDE VS TOR.png","technologies":["Microsoft Defender for Endpoint","KQL","Windows","Endpoint Security","Advanced Hunting"],"images":[],"series":{"name":"Project 5.9: LOG(N) Pacific Internship Final Project – Detecting Tor Browser Usage on Corporate Endpoint - Threat Hunting Scenario","part":2,"totalParts":2}},{"slug":"project-5-9-log-n-pacific-internship-final-project-detecting-tor-browser-usage-threat-hunting-part1","title":"Project 5.9: LOG(N) Pacific Internship Final Project – Detecting Tor Browser Usage on Corporate Endpoint - Threat Hunting Scenario (Part 1: Malicious Activity Simulation)","description":"Simulating malicious employee behaviour in a controlled cyber-range environment by downloading and using TOR Browser on a corporate workstation, generating telemetry for threat hunting analysis in Microsoft Defender for Endpoint.","date":"2025-11-17","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Blue Team","Cloud","Threat Hunting","Microsoft Defender for Endpoint","TOR Browser","Dark Web","SOC Operations","KQL","Endpoint Security"],"content":"$1b","image":"/images/projects/MDE VS TOR.png","technologies":["Microsoft Defender for Endpoint","TOR Browser","KQL","Windows","Endpoint Security"],"images":[],"series":{"name":"Project 5.9: LOG(N) Pacific Internship Final Project – Detecting Tor Browser Usage on Corporate Endpoint - Threat Hunting Scenario","part":1,"totalParts":2}},{"slug":"project-5-6-log-n-pacific-internship-incident-response-scenario2","title":"Project 5.6: LOG(N) Pacific Internship – Incident Response Scenario 2: PowerShell Suspicious Web Request with Microsoft Sentinel","description":"Detecting PowerShell-based web payload staging, building Sentinel analytics for Invoke-WebRequest abuse, and walking through end-to-end incident response with Microsoft Defender for Endpoint and Sentinel.","date":"2025-11-10","author":"Samson Otori","client":"Personal Project","challenge":"","solution":"","results":[],"category":"blue","tags":["Blue Team","Cloud","Incident Response","Microsoft Sentinel","Microsoft Defender for Endpoint","PowerShell","SOC Operations","KQL","Post-Exploitation Detection"],"content":"$1c","image":"/images/projects/invoke web request.png","technologies":["Microsoft Sentinel","Microsoft Defender for Endpoint","PowerShell","KQL","Windows"],"images":[],"series":{"name":"Project 5.6: LOG(N) Pacific Internship – Incident Response Scenario 2: PowerShell Suspicious Web Request with Microsoft Sentinel","order":6}}],"categoryCounts":{"All":56,"Cloud":12,"Blue Team":39,"Red Team":2,"Infrastructure":3},"previousProject":{"slug":"project-5-cyber-range-internship-journey","title":"Project 5: LOG(N) Pacific Internship: Cyber Range Journey","description":"An immersive journey into enterprise-grade cybersecurity tools through the Cyber Range internship program, focusing on Microsoft Azure, Sentinel, Defender for Endpoint, and Tenable vulnerability management.","image":"/images/projects/cyber-range-image.jpg","date":"2025-08-28","category":"blue","series":{"name":"Project 5: LOG(N) Pacific Internship: Cyber Range Journey","part":1,"totalParts":1}},"nextProject":{"slug":"project-4-6-windows-server-2022-windows-10-domain-integration","title":"Project 4.6: Windows Server 2022 & Windows 10 Domain Integration in My Cybersecurity Home Lab","description":"Deploying Windows Server 2022 domain controller and integrating Windows 10 workstation into Active Directory domain within my segmented cybersecurity home lab.","image":"/images/projects/hardware-lab/windows server.jpeg","date":"2025-08-08","category":"blue","series":"hardware-lab"}}]
 e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 b:null
 c:null

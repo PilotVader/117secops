@@ -8,7 +8,7 @@ challenge: ""
 solution: ""
 results: []
 category: "blue"
-tags: ["Threat Hunting", "Microsoft Defender for Endpoint", "Ransomware Analysis", "Incident Response", "EDR", "KQL", "PowerShell"]
+tags: ["Blue Team", "Cloud", "Threat Hunting", "Microsoft Defender for Endpoint", "Ransomware Analysis", "Incident Response", "EDR", "KQL", "PowerShell"]
 image: "/images/projects/Zero-day-red.jpg"
 technologies: ["Microsoft Defender for Endpoint", "KQL", "PowerShell", "Windows"]
 series:

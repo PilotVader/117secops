@@ -7,7 +7,7 @@ author: "Samson Otori"
 image: "/images/projects/cyber-range-image.jpg"
 technologies: ["Microsoft Azure", "Microsoft Sentinel", "Microsoft Defender for Endpoint", "Tenable", "SIEM", "EDR", "Vulnerability Management"]
 category: "blue"
-tags: ["Blue Team", "SOC", "Internship", "Microsoft Security", "Enterprise Tools", "Threat Hunting", "Incident Response"]
+tags: ["Blue Team", "Cloud", "SOC", "Internship", "Microsoft Security", "Enterprise Tools", "Threat Hunting", "Incident Response"]
 series:
   name: "Project 5: LOG(N) Pacific Internship: Cyber Range Journey"
   part: 1

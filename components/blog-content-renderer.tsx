@@ -469,6 +469,121 @@ export function BlogContentRenderer({
       "powershell-closure-documentation": [
         "/images/projects/16 – Incident activity log with notes Documenting investigation findings, containment actions, and lessons learned directly in the Sentinel incident..png",
         "/images/projects/17 – Incident closed as true positive Closing the PowerShell Suspicious Web Request incident as a true positive after completing investigation and response..png"
+      ],
+      // Impossible Travel Query Results (Project 5.7)
+      "impossible-travel-query-results": [
+        "/images/projects/2 – Potential impossible travel query results.png"
+      ],
+      // Impossible Travel Analytics Rule General Settings (Project 5.7)
+      "impossible-travel-analytics-rule": [
+        "/images/projects/3 – Analytics rule general settings.png"
+      ],
+      // Impossible Travel Rule Configuration and Incident (Project 5.7)
+      "impossible-travel-rule-configuration": [
+        "/images/projects/4 – Rule logic with KQL.png",
+        "/images/projects/5 – Entity mappings for account.png",
+        "/images/projects/6 – Rule summary before creation.png",
+        "/images/projects/7 – Incident created from Potential Impossible Travel rule.png"
+      ],
+      // Impossible Travel Incident Investigation (Project 5.7)
+      "impossible-travel-incident-investigation": [
+        "/images/projects/8 – Incident details overview.png",
+        "/images/projects/9 – Incident assigned and set to Active.png",
+        "/images/projects/10 – Investigation graph for impossible travel.png"
+      ],
+      // Impossible Travel User Analysis and Closure (Project 5.7)
+      "impossible-travel-user-analysis": [
+        "/images/projects/11 – Detailed signin pattern for User A.png",
+        "/images/projects/12 – Detailed signin pattern for User B.png",
+        "/images/projects/16 – Incident closed with classification.png"
+      ],
+      // Excessive Azure Resource Creation/Deletion Detection Engineering (Project 5.8)
+      "excessive-azure-resource-detection": [
+        "/images/projects/2-azureactivity-baseline.png",
+        "/images/projects/3-excessive-write-delete-query.png",
+        "/images/projects/4-analytics-rule-general.png",
+        "/images/projects/5-rule-logic-kql.png",
+        "/images/projects/6-entity-mapping.png",
+        "/images/projects/7-rule-summary-before-save.png"
+      ],
+      // Excessive Azure Resource Incident Triage (Project 5.8)
+      "excessive-azure-resource-triage": [
+        "/images/projects/8-incident-created.png",
+        "/images/projects/9-incident-assigned-active.png"
+      ],
+      // Excessive Azure Resource Investigation and Closure (Project 5.8)
+      "excessive-azure-resource-investigation": [
+        "/images/projects/10-investigation-graph.png",
+        "/images/projects/11-user-activity-pattern.png",
+        "/images/projects/13-the-incident-closed.png"
+      ],
+      // TOR Browser Simulation - Downloading (Project 5.9)
+      "tor-simulation-downloading": [
+        "/images/projects/1 - downoloading tor with the office system.png"
+      ],
+      // TOR Browser Simulation - CMD Navigation (Project 5.9)
+      "tor-simulation-cmd": [
+        "/images/projects/2 - Navigate to the downloaded tor app in cmd .png"
+      ],
+      // TOR Browser Simulation - Silent Installation (Project 5.9)
+      "tor-simulation-installation": [
+        "/images/projects/3 - silently installing the tor browser on the system which creates a folder on the desktop.png"
+      ],
+      // TOR Browser Simulation - Opening Browser (Project 5.9)
+      "tor-simulation-opening": [
+        "/images/projects/4 - opening the tor browser from the folder in the desktop.png"
+      ],
+      // TOR Browser Simulation - Establishing Connection (Project 5.9)
+      "tor-simulation-connection": [
+        "/images/projects/5 - establishing connection.png"
+      ],
+      // TOR Browser Simulation - Location Check (Project 5.9)
+      "tor-simulation-location": [
+        "/images/projects/6 - checking current location through the the tor browser and seeing sweden.png"
+      ],
+      // TOR Browser Simulation - Dread URL (Project 5.9)
+      "tor-simulation-dread-url": [
+        "/images/projects/7 - checking to see the current dread url link .png"
+      ],
+      // TOR Browser Simulation - Accessing Dark Web (Project 5.9)
+      "tor-simulation-darkweb": [
+        "/images/projects/8 - accessing the dark web.png"
+      ],
+      // TOR Browser Simulation - Navigating Dark Web (Project 5.9)
+      "tor-simulation-navigating": [
+        "/images/projects/9 - another page within the dark web just to generate logs.png"
+      ],
+      // TOR Browser Simulation - Shopping List (Project 5.9)
+      "tor-simulation-shopping-list": [
+        "/images/projects/10 - list of drugs user bought from the darkweb.png"
+      ],
+      // TOR Browser Simulation - Deleting File (Project 5.9)
+      "tor-simulation-deleting": [
+        "/images/projects/11 - user deleting the list of drugs purchased made from the computer.png"
+      ],
+      // TOR Browser Simulation - Validating Logs (Project 5.9)
+      "tor-simulation-validation": [
+        "/images/projects/12 - just checking Microsoft defender to see if logs are coming in.png"
+      ],
+      // TOR Threat Hunt - File Discovery (Project 5.9 Part 2)
+      "tor-threat-hunt-file-discovery": [
+        "/images/projects/2-devicefileevents-tor-file-hits.png"
+      ],
+      // TOR Threat Hunt - Silent Installation (Project 5.9 Part 2)
+      "tor-threat-hunt-installation": [
+        "/images/projects/3-deviceprocessevents-silent-install.png"
+      ],
+      // TOR Threat Hunt - Browser Launch (Project 5.9 Part 2)
+      "tor-threat-hunt-browser-launch": [
+        "/images/projects/4-deviceprocessevents-tor-browser-launch.png"
+      ],
+      // TOR Threat Hunt - Network Activity (Project 5.9 Part 2)
+      "tor-threat-hunt-network": [
+        "/images/projects/6-networkevents-tor-ip-connection.png"
+      ],
+      // TOR Threat Hunt - Shopping List (Project 5.9 Part 2)
+      "tor-threat-hunt-shopping-list": [
+        "/images/projects/7-devicefileevents-shopping-list.png"
       ]
      }
 
@@ -782,6 +897,121 @@ export function BlogContentRenderer({
       "powershell-closure-documentation": [
         "Documenting investigation and response notes",
         "Closing incident as true positive"
+      ],
+      // Impossible Travel Query Results (Project 5.7) - concise, human-friendly titles
+      "impossible-travel-query-results": [
+        "Potential impossible travel query results showing multi-region authentication patterns"
+      ],
+      // Impossible Travel Analytics Rule General Settings (Project 5.7) - concise, human-friendly titles
+      "impossible-travel-analytics-rule": [
+        "Analytics rule general settings for impossible travel detection"
+      ],
+      // Impossible Travel Rule Configuration and Incident (Project 5.7) - concise, human-friendly titles
+      "impossible-travel-rule-configuration": [
+        "Rule logic with KQL query for geographic divergence detection",
+        "Entity mappings for account normalization",
+        "Rule summary before deployment",
+        "Incident created from Potential Impossible Travel rule"
+      ],
+      // Impossible Travel Incident Investigation (Project 5.7) - concise, human-friendly titles
+      "impossible-travel-incident-investigation": [
+        "Incident details overview showing multi-region authentication",
+        "Incident assigned and set to Active status",
+        "Investigation graph visualizing entity relationships"
+      ],
+      // Impossible Travel User Analysis and Closure (Project 5.7) - concise, human-friendly titles
+      "impossible-travel-user-analysis": [
+        "Detailed signin pattern analysis for User A",
+        "Detailed signin pattern analysis for User B",
+        "Incident closed with final classification"
+      ],
+      // Excessive Azure Resource Creation/Deletion Detection Engineering (Project 5.8) - concise, human-friendly titles
+      "excessive-azure-resource-detection": [
+        "AzureActivity baseline query validation",
+        "Excessive write/delete query results",
+        "Analytics rule general configuration",
+        "Rule logic with KQL query",
+        "Entity mapping configuration",
+        "Rule summary before deployment"
+      ],
+      // Excessive Azure Resource Incident Triage (Project 5.8) - concise, human-friendly titles
+      "excessive-azure-resource-triage": [
+        "Incident created from analytics rule",
+        "Incident assigned and set to Active status"
+      ],
+      // Excessive Azure Resource Investigation and Closure (Project 5.8) - concise, human-friendly titles
+      "excessive-azure-resource-investigation": [
+        "Investigation graph showing entity relationships",
+        "User activity pattern analysis",
+        "Incident closed with final classification"
+      ],
+      // TOR Browser Simulation - Downloading (Project 5.9) - concise, human-friendly titles
+      "tor-simulation-downloading": [
+        "Downloading TOR Browser from official website"
+      ],
+      // TOR Browser Simulation - CMD Navigation (Project 5.9) - concise, human-friendly titles
+      "tor-simulation-cmd": [
+        "Navigating to downloaded TOR app in command prompt"
+      ],
+      // TOR Browser Simulation - Silent Installation (Project 5.9) - concise, human-friendly titles
+      "tor-simulation-installation": [
+        "Silently installing TOR Browser creating desktop folder"
+      ],
+      // TOR Browser Simulation - Opening Browser (Project 5.9) - concise, human-friendly titles
+      "tor-simulation-opening": [
+        "Opening TOR Browser from desktop folder"
+      ],
+      // TOR Browser Simulation - Establishing Connection (Project 5.9) - concise, human-friendly titles
+      "tor-simulation-connection": [
+        "Establishing connection to TOR network"
+      ],
+      // TOR Browser Simulation - Location Check (Project 5.9) - concise, human-friendly titles
+      "tor-simulation-location": [
+        "Checking geolocation showing Sweden exit node"
+      ],
+      // TOR Browser Simulation - Dread URL (Project 5.9) - concise, human-friendly titles
+      "tor-simulation-dread-url": [
+        "Checking Dread onion URL link"
+      ],
+      // TOR Browser Simulation - Accessing Dark Web (Project 5.9) - concise, human-friendly titles
+      "tor-simulation-darkweb": [
+        "Accessing Dread dark web forum homepage"
+      ],
+      // TOR Browser Simulation - Navigating Dark Web (Project 5.9) - concise, human-friendly titles
+      "tor-simulation-navigating": [
+        "Navigating through dark web pages to generate logs"
+      ],
+      // TOR Browser Simulation - Shopping List (Project 5.9) - concise, human-friendly titles
+      "tor-simulation-shopping-list": [
+        "Creating shopping list file on desktop"
+      ],
+      // TOR Browser Simulation - Deleting File (Project 5.9) - concise, human-friendly titles
+      "tor-simulation-deleting": [
+        "Deleting shopping list file and confirming in Recycle Bin"
+      ],
+      // TOR Browser Simulation - Validating Logs (Project 5.9) - concise, human-friendly titles
+      "tor-simulation-validation": [
+        "Validating Microsoft Defender logs are being ingested"
+      ],
+      // TOR Threat Hunt - File Discovery (Project 5.9 Part 2) - concise, human-friendly titles
+      "tor-threat-hunt-file-discovery": [
+        "DeviceFileEvents query results showing Tor-related artifacts"
+      ],
+      // TOR Threat Hunt - Silent Installation (Project 5.9 Part 2) - concise, human-friendly titles
+      "tor-threat-hunt-installation": [
+        "DeviceProcessEvents showing silent installation command"
+      ],
+      // TOR Threat Hunt - Browser Launch (Project 5.9 Part 2) - concise, human-friendly titles
+      "tor-threat-hunt-browser-launch": [
+        "DeviceProcessEvents showing Tor Browser launch processes"
+      ],
+      // TOR Threat Hunt - Network Activity (Project 5.9 Part 2) - concise, human-friendly titles
+      "tor-threat-hunt-network": [
+        "DeviceNetworkEvents showing Tor IP connections"
+      ],
+      // TOR Threat Hunt - Shopping List (Project 5.9 Part 2) - concise, human-friendly titles
+      "tor-threat-hunt-shopping-list": [
+        "DeviceFileEvents showing shopping list file activity"
       ]
      }
 

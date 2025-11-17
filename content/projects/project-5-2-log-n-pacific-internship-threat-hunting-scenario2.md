@@ -8,7 +8,7 @@ challenge: ""
 solution: ""
 results: []
 category: "blue"
-tags: ["Threat Hunting", "Microsoft Defender for Endpoint", "Network Security", "Port Scanning", "EDR", "KQL", "PowerShell"]
+tags: ["Blue Team", "Cloud", "Threat Hunting", "Microsoft Defender for Endpoint", "Network Security", "Port Scanning", "EDR", "KQL", "PowerShell"]
 image: "/images/projects/Windows Defender Fir..._imresizer.jpg"
 technologies: ["Microsoft Defender for Endpoint", "KQL", "PowerShell", "Windows"]
 series:

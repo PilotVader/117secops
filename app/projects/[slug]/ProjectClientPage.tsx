@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import PageTransition from "@/components/page-transition"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, Calendar, User, Tag, Building, Shield, Terminal, Zap } from "lucide-react"
+import { ArrowLeft, Calendar, User, Tag, Building, Shield, Terminal, Zap, Cloud } from "lucide-react"
 import { BlogContentRenderer } from "@/components/blog-content-renderer"
 import { ImageGallery } from "@/components/ui/image-gallery"
 import { ProjectSidebar } from "@/components/projects/ProjectSidebar"
@@ -23,6 +23,8 @@ const getCategoryIcon = (category: string) => {
       return <Zap className="w-4 h-4" />
     case "Infrastructure":
       return <Shield className="w-4 h-4" />
+    case "cloud":
+      return <Cloud className="w-4 h-4" />
     default:
       return <Terminal className="w-4 h-4" />
   }
@@ -34,6 +36,8 @@ const getCategoryColor = (category: string) => {
       return { color: '#dc2626' } // red-600
     case "Infrastructure":
       return { color: '#16a34a' } // green-600
+    case "cloud":
+      return { color: '#7c3aed' } // purple-600
     default:
       return { color: '#2563eb' } // blue-600
   }
@@ -144,6 +148,7 @@ export default function ProjectClientPage({
                 const teamBadges: string[] = []
                 if (normalizedTags.includes("blue team")) teamBadges.push("Blue Team")
                 if (normalizedTags.includes("red team")) teamBadges.push("Red Team")
+                if (normalizedTags.includes("cloud")) teamBadges.push("Cloud")
 
                 const labels = teamBadges.length > 0
                   ? teamBadges
@@ -156,9 +161,9 @@ export default function ProjectClientPage({
                     ]
 
                 const labelToCategory = (label: string) =>
-                  label === "Red Team" ? "red" : label === "Infrastructure" ? "Infrastructure" : "blue"
+                  label === "Red Team" ? "red" : label === "Infrastructure" ? "Infrastructure" : label === "Cloud" ? "cloud" : "blue"
 
-                return labels.slice(0, 2).map((label) => {
+                return labels.slice(0, 3).map((label) => {
                   const cat = labelToCategory(label)
                   return (
                     <Badge key={label} variant="outline" className="cyber-border bg-card/30">

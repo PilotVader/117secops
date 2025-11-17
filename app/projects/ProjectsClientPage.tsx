@@ -12,7 +12,7 @@ import { fadeIn, staggerContainer } from "@/lib/animations"
 import { ProjectLightbox } from "@/components/project-lightbox"
 import { ProjectSeriesModal } from "@/components/project-series-modal"
 import type { Project } from "@/lib/project"
-import { Shield, Terminal, Zap, ArrowRight } from "lucide-react"
+import { Shield, Terminal, Zap, ArrowRight, Cloud } from "lucide-react"
 
 const ITEMS_PER_PAGE = 12
 
@@ -316,6 +316,8 @@ function SeriesCard({ seriesName, projects, index, openLightbox, openSeriesModal
         return <Zap className="w-4 h-4" />
       case "Infrastructure":
         return <Shield className="w-4 h-4" />
+      case "cloud":
+        return <Cloud className="w-4 h-4" />
       default:
         return <Terminal className="w-4 h-4" />
     }
@@ -327,6 +329,8 @@ function SeriesCard({ seriesName, projects, index, openLightbox, openSeriesModal
         return { color: '#dc2626' } // red-600
       case "Infrastructure":
         return { color: '#16a34a' } // green-600
+      case "cloud":
+        return { color: '#7c3aed' } // purple-600
       default:
         return { color: '#2563eb' } // blue-600
     }
@@ -355,12 +359,13 @@ function SeriesCard({ seriesName, projects, index, openLightbox, openSeriesModal
          
          {/* Project Content */}
          <div className="p-6 flex flex-col flex-1">
-           {/* Team Badges (prioritize Blue/Red if present in tags) */}
+           {/* Team Badges (prioritize Blue/Red/Cloud if present in tags) */}
            {(() => {
              const normalizedTags = (firstProject.tags || []).map((t) => t.toLowerCase())
              const teamBadges: string[] = []
              if (normalizedTags.includes("blue team")) teamBadges.push("Blue Team")
              if (normalizedTags.includes("red team")) teamBadges.push("Red Team")
+             if (normalizedTags.includes("cloud")) teamBadges.push("Cloud")
 
              const labels = teamBadges.length > 0
                ? teamBadges
@@ -373,11 +378,11 @@ function SeriesCard({ seriesName, projects, index, openLightbox, openSeriesModal
                  ]
 
              const labelToCategory = (label: string) =>
-               label === "Red Team" ? "red" : label === "Infrastructure" ? "Infrastructure" : "blue"
+               label === "Red Team" ? "red" : label === "Infrastructure" ? "Infrastructure" : label === "Cloud" ? "cloud" : "blue"
 
              return (
                <div className="flex items-center gap-2 mb-3">
-                 {labels.slice(0, 2).map((label) => {
+                 {labels.slice(0, 3).map((label) => {
                    const cat = labelToCategory(label)
                    return (
                      <Badge key={label} variant="outline" className="cyber-border bg-card/30">

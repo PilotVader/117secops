@@ -8,7 +8,7 @@ challenge: ""
 solution: ""
 results: []
 category: "blue"
-tags: ["Incident Response", "Microsoft Sentinel", "Microsoft Defender for Endpoint", "KQL", "SOC Operations", "Azure", "Brute Force Detection"]
+tags: ["Blue Team", "Cloud", "Incident Response", "Microsoft Sentinel", "Microsoft Defender for Endpoint", "KQL", "SOC Operations", "Azure", "Brute Force Detection"]
 image: "/images/projects/detection-brute-force.png"
 technologies: ["Microsoft Sentinel", "Microsoft Defender for Endpoint", "KQL", "Azure", "Windows"]
 series:

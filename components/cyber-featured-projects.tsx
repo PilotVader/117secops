@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import Image from "next/image"
 import { Project } from "@/lib/project"
-import { Shield, Terminal, Zap, ArrowRight } from "lucide-react"
+import { Shield, Terminal, Zap, ArrowRight, Cloud } from "lucide-react"
 
 interface CyberFeaturedProjectsProps {
   projects: Project[]
@@ -19,6 +19,8 @@ export function CyberFeaturedProjects({ projects }: CyberFeaturedProjectsProps) 
         return <Zap className="w-4 h-4" />
       case "Infrastructure":
         return <Shield className="w-4 h-4" />
+      case "cloud":
+        return <Cloud className="w-4 h-4" />
       default:
         return <Terminal className="w-4 h-4" />
     }
@@ -30,6 +32,8 @@ export function CyberFeaturedProjects({ projects }: CyberFeaturedProjectsProps) 
         return { color: '#dc2626' } // red-600
       case "Infrastructure":
         return { color: '#16a34a' } // green-600
+      case "cloud":
+        return { color: '#7c3aed' } // purple-600
       default:
         return { color: '#2563eb' } // blue-600
     }
@@ -101,12 +105,13 @@ export function CyberFeaturedProjects({ projects }: CyberFeaturedProjectsProps) 
                   
                   {/* Project Content */}
                   <div className="p-6 flex-1 flex flex-col">
-                    {/* Team Badges (prioritize Blue/Red if present in tags) */}
+                    {/* Team Badges (prioritize Blue/Red/Cloud if present in tags) */}
                     {(() => {
                       const normalizedTags = (project.tags || []).map((t) => t.toLowerCase())
                       const teamBadges: string[] = []
                       if (normalizedTags.includes("blue team")) teamBadges.push("Blue Team")
                       if (normalizedTags.includes("red team")) teamBadges.push("Red Team")
+                      if (normalizedTags.includes("cloud")) teamBadges.push("Cloud")
 
                       const labels = teamBadges.length > 0
                         ? teamBadges
@@ -119,11 +124,11 @@ export function CyberFeaturedProjects({ projects }: CyberFeaturedProjectsProps) 
                           ]
 
                       const labelToCategory = (label: string) =>
-                        label === "Red Team" ? "red" : label === "Infrastructure" ? "Infrastructure" : "blue"
+                        label === "Red Team" ? "red" : label === "Infrastructure" ? "Infrastructure" : label === "Cloud" ? "cloud" : "blue"
 
                       return (
                         <div className="flex items-center gap-2 mb-3">
-                          {labels.slice(0, 2).map((label) => {
+                          {labels.slice(0, 3).map((label) => {
                             const cat = labelToCategory(label)
                             return (
                               <Badge key={label} variant="outline" className="cyber-border bg-card/30">

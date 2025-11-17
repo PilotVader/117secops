@@ -8,7 +8,7 @@ challenge: ""
 solution: ""
 results: []
 category: "blue"
-tags: ["Threat Hunting", "Microsoft Defender for Endpoint", "Data Exfiltration", "Insider Threat", "EDR", "KQL", "PowerShell"]
+tags: ["Blue Team", "Cloud", "Threat Hunting", "Microsoft Defender for Endpoint", "Data Exfiltration", "Insider Threat", "EDR", "KQL", "PowerShell"]
 image: "/images/projects/Suspected Data Exfiltration.jpeg"
 technologies: ["Microsoft Defender for Endpoint", "KQL", "PowerShell", "Windows"]
 series:

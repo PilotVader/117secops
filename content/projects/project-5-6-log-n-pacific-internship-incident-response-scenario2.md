@@ -8,7 +8,7 @@ challenge: ""
 solution: ""
 results: []
 category: "blue"
-tags: ["Incident Response", "Microsoft Sentinel", "Microsoft Defender for Endpoint", "PowerShell", "SOC Operations", "KQL", "Post-Exploitation Detection"]
+tags: ["Blue Team", "Cloud", "Incident Response", "Microsoft Sentinel", "Microsoft Defender for Endpoint", "PowerShell", "SOC Operations", "KQL", "Post-Exploitation Detection"]
 image: "/images/projects/invoke web request.png"
 technologies: ["Microsoft Sentinel", "Microsoft Defender for Endpoint", "PowerShell", "KQL", "Windows"]
 series:
