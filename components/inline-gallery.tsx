@@ -9,12 +9,13 @@ interface InlineGalleryProps {
   images: string[]
   imageNames?: string[]
   title?: string
+  onImageClick?: (index: number) => void
 }
 
-export function InlineGallery({ images, imageNames, title }: InlineGalleryProps) {
+export function InlineGallery({ images, imageNames, title, onImageClick }: InlineGalleryProps) {
   // Debug: Log the props to see what's being received
   console.log('InlineGallery Props:', { images: images?.length, imageNames: imageNames?.length, title })
-  
+
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isFullscreen, setIsFullscreen] = useState(false)
   const [zoomLevel, setZoomLevel] = useState(1)
@@ -163,9 +164,9 @@ export function InlineGallery({ images, imageNames, title }: InlineGalleryProps)
 
   return (
     <>
-             {/* Inline Gallery */}
-       <div className="my-8">
-         <div className="relative bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden border-4 border-purple-500">
+      {/* Inline Gallery */}
+      <div className="my-8">
+        <div className="relative bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden border-4 border-purple-500">
           {/* Main Image */}
           <div className="relative aspect-video">
             <Image
@@ -175,7 +176,7 @@ export function InlineGallery({ images, imageNames, title }: InlineGalleryProps)
               className="object-cover"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
             />
-            
+
             {/* Navigation Arrows */}
             <button
               className="absolute left-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-purple-600 text-white hover:bg-purple-600 focus:bg-purple-600 active:bg-purple-600 transition-none"
@@ -183,7 +184,7 @@ export function InlineGallery({ images, imageNames, title }: InlineGalleryProps)
             >
               <ChevronLeft className="h-5 w-5 mx-auto" />
             </button>
-            
+
             <button
               className="absolute right-2 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-purple-600 text-white hover:bg-purple-600 focus:bg-purple-600 active:bg-purple-600 transition-none"
               onClick={nextImage}
@@ -199,17 +200,17 @@ export function InlineGallery({ images, imageNames, title }: InlineGalleryProps)
               <Expand className="h-4 w-4 mx-auto" />
             </button>
 
-                         {/* Image Counter and Name */}
-             <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1">
-               <div className="bg-black/90 dark:bg-black/90 bg-white/90 dark:bg-black/90 backdrop-blur-md text-black dark:text-white text-sm px-3 py-1 rounded-full font-medium">
-                 {currentIndex + 1} of {images.length}
-               </div>
-               {imageNames?.[currentIndex] && (
-                 <div className="bg-black/95 dark:bg-black/95 bg-white/95 dark:bg-black/95 backdrop-blur-md text-black dark:text-white text-sm px-3 py-1 rounded-lg max-w-xs text-center font-medium shadow-lg">
-                   {imageNames[currentIndex]}
-                 </div>
-               )}
-             </div>
+            {/* Image Counter and Name */}
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1">
+              <div className="bg-black/90 dark:bg-black/90 bg-white/90 dark:bg-black/90 backdrop-blur-md text-black dark:text-white text-sm px-3 py-1 rounded-full font-medium">
+                {currentIndex + 1} of {images.length}
+              </div>
+              {imageNames?.[currentIndex] && (
+                <div className="bg-black/95 dark:bg-black/95 bg-white/95 dark:bg-black/95 backdrop-blur-md text-black dark:text-white text-sm px-3 py-1 rounded-lg max-w-xs text-center font-medium shadow-lg">
+                  {imageNames[currentIndex]}
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Thumbnail Strip */}
@@ -221,11 +222,10 @@ export function InlineGallery({ images, imageNames, title }: InlineGalleryProps)
               {images.map((image, index) => (
                 <div
                   key={index}
-                  className={`flex-shrink-0 w-28 h-20 rounded-md transition-all duration-200 bg-gray-200 dark:bg-gray-700 ${
-                    index === currentIndex
+                  className={`flex-shrink-0 w-28 h-20 rounded-md transition-all duration-200 bg-gray-200 dark:bg-gray-700 ${index === currentIndex
                       ? "ring-2 ring-purple-500 ring-offset-2"
                       : "ring-1 ring-gray-300 dark:ring-gray-600"
-                  }`}
+                    }`}
                 >
                   <Image
                     src={image}
@@ -276,7 +276,7 @@ export function InlineGallery({ images, imageNames, title }: InlineGalleryProps)
             >
               <ChevronLeft className="h-6 w-6 mx-auto" />
             </button>
-            
+
             <button
               className="absolute right-4 top-1/2 -translate-y-1/2 h-12 w-12 rounded-full bg-purple-600 text-white hover:bg-purple-600 focus:bg-purple-600 active:bg-purple-600 transition-none"
               onClick={nextImage}
@@ -321,20 +321,20 @@ export function InlineGallery({ images, imageNames, title }: InlineGalleryProps)
               </div>
             )}
 
-                         {/* Image Counter and Name */}
-             <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-               <div className="bg-white/90 dark:bg-black/80 backdrop-blur-md text-black dark:text-white text-sm px-4 py-2 rounded-full font-medium">
-                 {currentIndex + 1} of {images.length}
-               </div>
-               {imageNames?.[currentIndex] && (
-                 <div className="bg-white/95 dark:bg-black/90 backdrop-blur-md text-black dark:text-white text-base px-4 py-2 rounded-lg max-w-lg text-center font-medium shadow-lg">
-                   {imageNames[currentIndex]}
-                 </div>
-               )}
-             </div>
+            {/* Image Counter and Name */}
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+              <div className="bg-white/90 dark:bg-black/80 backdrop-blur-md text-black dark:text-white text-sm px-4 py-2 rounded-full font-medium">
+                {currentIndex + 1} of {images.length}
+              </div>
+              {imageNames?.[currentIndex] && (
+                <div className="bg-white/95 dark:bg-black/90 backdrop-blur-md text-black dark:text-white text-base px-4 py-2 rounded-lg max-w-lg text-center font-medium shadow-lg">
+                  {imageNames[currentIndex]}
+                </div>
+              )}
+            </div>
 
             {/* Fullscreen Thumbnails with Hover Effect */}
-            <div 
+            <div
               className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/80 to-transparent transition-transform duration-300 ease-in-out"
               style={{
                 transform: showThumbnails ? 'translateY(0)' : 'translateY(100%)'
@@ -347,11 +347,10 @@ export function InlineGallery({ images, imageNames, title }: InlineGalleryProps)
                   {images.map((image, index) => (
                     <div
                       key={index}
-                      className={`flex-shrink-0 w-24 h-18 rounded-md transition-all duration-200 bg-gray-800 ${
-                        index === currentIndex
+                      className={`flex-shrink-0 w-24 h-18 rounded-md transition-all duration-200 bg-gray-800 ${index === currentIndex
                           ? "ring-2 ring-white/50"
                           : "ring-1 ring-white/30"
-                      }`}
+                        }`}
                     >
                       <Image
                         src={image}

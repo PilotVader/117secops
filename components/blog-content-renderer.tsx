@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react"
 import { InlineGallery } from "./inline-gallery"
+import { CyberTerminalCodeBlock } from "./cyber-terminal-code-block"
 
 interface BlogContentRendererProps {
   content: string
@@ -30,6 +31,7 @@ export function BlogContentRenderer({
     let newContent = content
       // Process InlineGallery components first
       .replace(/<InlineGallery images=\{([^}]+)\} title="([^"]*)" \/>/g, '{{INLINE_COMPONENT:$1:$2}}')
+      .replace(/<CyberTerminalCodeBlock code="([^"]*)"(?: title="([^"]*)")? \/>/g, '{{CYBER_TERMINAL:$1:$2}}')
 
       // Headers with proper spacing
       .replace(/^### (.*$)/gim, '\n<h3 class="text-xl font-semibold mt-6 mb-3 text-gray-900 dark:text-gray-100">$1</h3>\n')
@@ -124,47 +126,75 @@ export function BlogContentRenderer({
     if (!processedContent) return null
 
     // Split content by component markers
-    const parts = processedContent.split(/{{INLINE_COMPONENT:([^}]+)}}/)
+    const parts = processedContent.split(/{{(INLINE_COMPONENT|CYBER_TERMINAL):([^}]+)}}/)
     const elements = []
 
-    for (let i = 0; i < parts.length; i++) {
-      if (i % 2 === 0) {
-        // Regular content
-        if (parts[i].trim()) {
+    for (let i = 0; i < parts.length; i += 3) {
+      // 1. Regular HTML Content (at part i)
+      if (parts[i] && parts[i].trim()) {
+        elements.push(
+          <div
+            key={`content-${i}`}
+            dangerouslySetInnerHTML={{ __html: parts[i] }}
+          />
+        )
+      }
+
+      // If we are at the end, stop (captured parts are ahead)
+      if (i + 2 >= parts.length) break
+
+      const type = parts[i + 1]
+      const data = parts[i + 2]
+
+      if (type === "INLINE_COMPONENT") {
+        const [imagesKey, ...titleParts] = data.split(':')
+        const title = titleParts.join(':')
+        const galleryImages = getGalleryImages(imagesKey)
+        const galleryImageNames = getImageNames(imagesKey)
+
+        if (galleryImages.length > 0) {
           elements.push(
-            <div
-              key={`content-${i}`}
-              dangerouslySetInnerHTML={{ __html: parts[i] }}
+            <InlineGallery
+              key={`gallery-${i}`}
+              images={galleryImages}
+              title={title}
+              imageNames={galleryImageNames}
+              onImageClick={(imgIndex: number) => {
+                // If onImageClick is provided (for lightbox), we just pass the local index for now
+                // to avoid the complex global index calculation which is missing
+                if (onImageClick) {
+                  onImageClick(imgIndex)
+                }
+              }}
             />
           )
         }
-      } else {
-        // Component marker
-        const [imagesKey, title] = parts[i].split(':')
+      }
+      else if (type === "CYBER_TERMINAL") {
+        // Data format: "code:title" regex replaced with $1:$2
+        const lastColonIndex = data.lastIndexOf(':')
+        let code = data
+        let title = ""
 
-        if (imagesKey) {
-          // Get images from the predefined galleries
-          const galleryImages = getGalleryImages(imagesKey)
-
-          if (galleryImages) {
-            // Get descriptive image names
-            const imageNames = getImageNames(imagesKey)
-
-            elements.push(
-              <InlineGallery
-                key={`component-${i}`}
-                images={galleryImages}
-                imageNames={imageNames}
-                title={title || undefined}
-              />
-            )
-          }
+        if (lastColonIndex !== -1) {
+          code = data.substring(0, lastColonIndex)
+          title = data.substring(lastColonIndex + 1)
         }
+
+        elements.push(
+          <CyberTerminalCodeBlock
+            key={`terminal-${i}`}
+            code={code}
+            title={title || "~/cyber-lab"}
+          />
+        )
       }
     }
 
     return elements
   }
+
+
 
   // Function to get gallery images based on key
   const getGalleryImages = (imagesKey: string) => {
