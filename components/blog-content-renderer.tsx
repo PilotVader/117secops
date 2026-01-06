@@ -631,6 +631,52 @@ export function BlogContentRenderer({
       ],
       "tenable-comparison": [
         "/images/projects/project-6-0/17 - Side-by-Side Comparison — Auth vs Unauth.png"
+      ],
+      // Tenable Vulnerability Management - Linux (Project 6.1)
+      "tenable-linux-dashboard": [
+        "/images/projects/project-6-1/5 - Tenable Dashboard Login.png"
+      ],
+      "tenable-linux-vm-created": [
+        "/images/projects/project-6-1/1 - Linux VM Created.png"
+      ],
+      "tenable-linux-nsg": [
+        "/images/projects/project-6-1/2 - NSG Allow All Inbound.png"
+      ],
+      "tenable-linux-ping": [
+        "/images/projects/project-6-1/3 - Ping Test to Linux VM.png"
+      ],
+      "tenable-linux-ssh": [
+        "/images/projects/project-6-1/4 - SSH Logged Into Linux VM.png"
+      ],
+      "tenable-linux-basic-config": [
+        "/images/projects/project-6-1/6 - Tenable Basic Config for Linux.png"
+      ],
+      "tenable-linux-discovery-config": [
+        "/images/projects/project-6-1/7 - Tenable Discovery Config Linux.png"
+      ],
+      "tenable-linux-unauth-running": [
+        "/images/projects/project-6-1/8 - Linux Unauthenticated Scan Running.png"
+      ],
+      "tenable-linux-unauth-results": [
+        "/images/projects/project-6-1/9 - Linux Unauthenticated Scan Results.png"
+      ],
+      "tenable-linux-unauth-export": [
+        "/images/projects/project-6-1/10 - Linux Unauthenticated PDF Export.png"
+      ],
+      "tenable-linux-root-login": [
+        "/images/projects/project-6-1/11 - Root SSH Login Successful.png"
+      ],
+      "tenable-linux-creds": [
+        "/images/projects/project-6-1/12 - Tenable Linux SSH Credentials Added.png"
+      ],
+      "tenable-linux-auth-running": [
+        "/images/projects/project-6-1/13 - Linux Authenticated Scan Running.png"
+      ],
+      "tenable-linux-auth-results": [
+        "/images/projects/project-6-1/14 - Linux Authenticated Scan Results.png"
+      ],
+      "tenable-linux-auth-export": [
+        "/images/projects/project-6-1/15 - Linux Authenticated PDF Export.png"
       ]
     }
 
@@ -896,6 +942,52 @@ export function BlogContentRenderer({
       ],
       "tenable-comparison": [
         "Side-by-Side Comparison: Authenticated vs Unauthenticated"
+      ],
+      // Tenable Vulnerability Management - Linux (Project 6.1)
+      "tenable-linux-dashboard": [
+        "Tenable Dashboard View"
+      ],
+      "tenable-linux-vm-created": [
+        "Ubuntu 22.04 VM Created in Azure"
+      ],
+      "tenable-linux-nsg": [
+        "NSG Configuration - Allow All Inbound"
+      ],
+      "tenable-linux-ping": [
+        "Ping Test - Verifying Connectivity"
+      ],
+      "tenable-linux-ssh": [
+        "SSH Connection to Linux VM"
+      ],
+      "tenable-linux-basic-config": [
+        "Tenable Basic Scan Configuration"
+      ],
+      "tenable-linux-discovery-config": [
+        "Tenable Discovery Tab Configuration"
+      ],
+      "tenable-linux-unauth-running": [
+        "Unauthenticated Scan In Progress"
+      ],
+      "tenable-linux-unauth-results": [
+        "Unauthenticated Scan Results Summary"
+      ],
+      "tenable-linux-unauth-export": [
+        "Exporting Unauthenticated Results to PDF"
+      ],
+      "tenable-linux-root-login": [
+        "Root SSH Login Successfully Enabled"
+      ],
+      "tenable-linux-creds": [
+        "SSH Credentials Added to Tenable"
+      ],
+      "tenable-linux-auth-running": [
+        "Authenticated Scan In Progress"
+      ],
+      "tenable-linux-auth-results": [
+        "Authenticated Scan Results Summary"
+      ],
+      "tenable-linux-auth-export": [
+        "Exporting Authenticated Results to PDF"
       ],
       // Network Investigation Analysis (Project 5.2) - concise, human-friendly titles
       "network-investigation-analysis": [
