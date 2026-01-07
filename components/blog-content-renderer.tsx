@@ -31,7 +31,9 @@ export function BlogContentRenderer({
     let newContent = content
       // Process InlineGallery components first
       .replace(/<InlineGallery images=\{([^}]+)\} title="([^"]*)" \/>/g, '{{INLINE_COMPONENT:$1:$2}}')
-      .replace(/<CyberTerminalCodeBlock code=(["'])(.*?)\1(?: title=(["'])(.*?)\3)? \/>/g, '{{CYBER_TERMINAL:$2:$4}}')
+      .replace(/<CyberTerminalCodeBlock code=(["'])(.*?)\1(?: title=(["'])(.*?)\3)? \/>/g, (match, q1, code, q2, title) => {
+        return `{{CYBER_TERMINAL:${encodeURIComponent(code)}:${encodeURIComponent(title || "")}}}`
+      })
 
       // Headers with proper spacing
       .replace(/^### (.*$)/gim, '\n<h3 class="text-xl font-semibold mt-6 mb-3 text-gray-900 dark:text-gray-100">$1</h3>\n')
@@ -171,15 +173,14 @@ export function BlogContentRenderer({
         }
       }
       else if (type === "CYBER_TERMINAL") {
-        // Data format: "code:title" regex replaced with $1:$2
-        const lastColonIndex = data.lastIndexOf(':')
-        let code = data
-        let title = ""
+        // Data is now colon-separated encoded strings: encodedCode:encodedTitle
+        const parts = data.split(':')
+        const encodedCode = parts[0]
+        const encodedTitle = parts[1]
 
-        if (lastColonIndex !== -1) {
-          code = data.substring(0, lastColonIndex)
-          title = data.substring(lastColonIndex + 1)
-        }
+        const code = decodeURIComponent(encodedCode || "")
+        // Handle cases where encodedTitle might be empty or undefined
+        const title = encodedTitle ? decodeURIComponent(encodedTitle) : ""
 
         elements.push(
           <CyberTerminalCodeBlock
