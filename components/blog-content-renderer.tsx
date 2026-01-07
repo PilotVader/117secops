@@ -31,7 +31,7 @@ export function BlogContentRenderer({
     let newContent = content
       // Process InlineGallery components first
       .replace(/<InlineGallery images=\{([^}]+)\} title="([^"]*)" \/>/g, '{{INLINE_COMPONENT:$1:$2}}')
-      .replace(/<CyberTerminalCodeBlock code="([^"]*)"(?: title="([^"]*)")? \/>/g, '{{CYBER_TERMINAL:$1:$2}}')
+      .replace(/<CyberTerminalCodeBlock code=(["'])(.*?)\1(?: title=(["'])(.*?)\3)? \/>/g, '{{CYBER_TERMINAL:$2:$4}}')
 
       // Headers with proper spacing
       .replace(/^### (.*$)/gim, '\n<h3 class="text-xl font-semibold mt-6 mb-3 text-gray-900 dark:text-gray-100">$1</h3>\n')
