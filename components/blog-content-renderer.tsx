@@ -31,8 +31,22 @@ export function BlogContentRenderer({
     let newContent = content
       // Process InlineGallery components first
       .replace(/<InlineGallery images=\{([^}]+)\} title="([^"]*)" \/>/g, '{{INLINE_COMPONENT:$1:$2}}')
-      .replace(/<CyberTerminalCodeBlock code=(["'])(.*?)\1(?: title=(["'])(.*?)\3)? \/>/g, (match, q1, code, q2, title) => {
-        return `{{CYBER_TERMINAL:${encodeURIComponent(code)}:${encodeURIComponent(title || "")}}}`
+      // Improved regex to handle multi-line attributes and different quote styles including JSX-like backticks
+      .replace(/<CyberTerminalCodeBlock\s+([\s\S]*?)\/>/g, (match, attributes) => {
+        // Try to match code prop with curly braces and backticks first: code={`...`}
+        let codeMatch = attributes.match(/code=\{`([\s\S]*?)`\}/)
+
+        // If not found, try standard quotes: code="..." or code='...'
+        if (!codeMatch) {
+          codeMatch = attributes.match(/code=(["'])([\s\S]*?)\1/)
+        }
+
+        const code = codeMatch ? (codeMatch.length > 2 ? codeMatch[2] : codeMatch[1]) : ""
+
+        const titleMatch = attributes.match(/title=(["'])(.*?)\1/)
+        const title = titleMatch ? titleMatch[2] : ""
+
+        return `{{CYBER_TERMINAL:${encodeURIComponent(code)}:${encodeURIComponent(title)}}}`
       })
 
       // Headers with proper spacing
@@ -707,7 +721,98 @@ export function BlogContentRenderer({
         "/images/projects/project-6-1/14 - Linux Authenticated Scan Results.png"
       ],
       "tenable-linux-auth-export": [
-        "/images/projects/project-6-1/15 - Linux Authenticated PDF Export.png"
+      ],
+      // Tenable Windows 11 Compliance Scanning (Project 6.2)
+      "win11-deployment": [
+        "/images/projects/project-6-2/4 - Windows10 VM Deployment Complete.png"
+      ],
+      "win11-firewall": [
+        "/images/projects/project-6-2/5 - Firewall Disabled.png"
+      ],
+      "win11-misconfigurations": [
+        "/images/projects/project-6-2/6 - Admin Account Creation.png",
+        "/images/projects/project-6-2/7 - Guest Account Elevated.png"
+      ],
+      "win11-network": [
+        "/images/projects/project-6-2/8 - NSG Allow All Inbound.png",
+        "/images/projects/project-6-2/9 - Ping Test Successful.png"
+      ],
+      "win11-tenable-dashboard": [
+        "/images/projects/project-6-2/10 - Tenable Dashboard Logged In.png"
+      ],
+      "win11-template-config": [
+        "/images/projects/project-6-2/11 - Template Basic Tab.png",
+        "/images/projects/project-6-2/12 - Template Discovery Tab.png",
+        "/images/projects/project-6-2/13 - Template Assessment Tab.png"
+      ],
+      "win11-creds-compliance": [
+        "/images/projects/project-6-2/14 - Template Credentials Added.png",
+        "/images/projects/project-6-2/15 - DISA STIG Compliance Added.png"
+      ],
+      "win11-scan-execution": [
+        "/images/projects/project-6-2/17 - Scan Created From Template.png",
+        "/images/projects/project-6-2/18 - Scan Running.png",
+        "/images/projects/project-6-2/19 - Scan Summary Completed.png"
+      ],
+      "win11-compliance-failures": [
+        "/images/projects/project-6-2/21 - Compliance Failures.png"
+      ],
+      "win11-remediation": [
+        "/images/projects/project-6-2/22 - Remediation Suggestions.png"
+      ],
+      "win11-export": [
+        "/images/projects/project-6-2/23 - Exporting Scan Results.png"
+      ],
+      // Tenable Nessus Agent Scanning (Project 6.3)
+      "nessus-agent-vm-deploy": [
+        "/images/projects/project-6-3/1 – VM Deployment Started.png",
+        "/images/projects/project-6-3/2 – VM Deployment Complete.png"
+      ],
+      "nessus-agent-firewall": [
+        "/images/projects/project-6-3/3 – Firewall Disabled on VM.png"
+      ],
+      "nessus-agent-dashboard": [
+        "/images/projects/project-6-3/4 – Tenable Dashboard Logged In.png"
+      ],
+      "nessus-agent-group": [
+        "/images/projects/project-6-3/5 – Agent Group Created.png"
+      ],
+      "nessus-agent-scan-config": [
+        "/images/projects/project-6-3/6 – Agent Scan Config (Triggered).png"
+      ],
+      "nessus-agent-install-cmd": [
+        "/images/projects/project-6-3/7 – Nessus Agent Install Command Displayed.png"
+      ],
+      "nessus-agent-install-edit": [
+        "/images/projects/project-6-3/8 – Edited Agent Install Command.png"
+      ],
+      "nessus-agent-installation": [
+        "/images/projects/project-6-3/8.5 - agent installation in progress.png",
+        "/images/projects/project-6-3/9 – Agent Install Successful.png"
+      ],
+      "nessus-agent-trigger-dir": [
+        "/images/projects/project-6-3/10 – Trigger Directory Located.png"
+      ],
+      "nessus-agent-trigger-file": [
+        "/images/projects/project-6-3/11 – start.txt Created.png"
+      ],
+      "nessus-agent-portal": [
+        "/images/projects/project-6-3/13 – Agent Listed in Portal.png"
+      ],
+      "nessus-agent-summary": [
+        "/images/projects/project-6-3/14 – Scan Summary Completed.png"
+      ],
+      "nessus-agent-severity": [
+        "/images/projects/project-6-3/15 – Severity Breakdown.png"
+      ],
+      "nessus-agent-vuln-list": [
+        "/images/projects/project-6-3/16 – Vulnerability List Populated.png"
+      ],
+      "nessus-agent-compliance": [
+        "/images/projects/project-6-3/17 – Compliance Failures.png"
+      ],
+      "nessus-agent-export": [
+        "/images/projects/project-6-3/19 – Exporting Scan Results.png"
       ]
     }
 
@@ -1229,6 +1334,98 @@ export function BlogContentRenderer({
       // TOR Threat Hunt - Shopping List (Project 5.9 Part 2) - concise, human-friendly titles
       "tor-threat-hunt-shopping-list": [
         "DeviceFileEvents showing shopping list file activity"
+      ],
+      // Tenable Windows 11 Compliance Scanning (Project 6.2)
+      "win11-deployment": [
+        "Windows 11 VM Deployment Complete"
+      ],
+      "win11-firewall": [
+        "Firewall Disabled"
+      ],
+      "win11-misconfigurations": [
+        "Administrator Account Creation",
+        "Guest Account Elevated"
+      ],
+      "win11-network": [
+        "NSG Allow All Inbound",
+        "Ping Test Successful"
+      ],
+      "win11-tenable-dashboard": [
+        "Tenable Dashboard Logged In"
+      ],
+      "win11-template-config": [
+        "Template: Basic Tab",
+        "Template: Discovery Tab",
+        "Template: Assessment Tab"
+      ],
+      "win11-creds-compliance": [
+        "Credentials Added",
+        "DISA STIG Compliance Added"
+      ],
+      "win11-scan-execution": [
+        "Scan Created Using Template",
+        "Scan Running",
+        "Scan Summary Completed"
+      ],
+      "win11-compliance-failures": [
+        "Compliance Failures Overview"
+      ],
+      "win11-remediation": [
+        "Remediation Suggestions"
+      ],
+      "win11-export": [
+        "Exporting Scan Results"
+      ],
+      // Tenable Nessus Agent Scanning (Project 6.3)
+      "nessus-agent-vm-deploy": [
+        "VM Deployment Started",
+        "VM Deployment Complete"
+      ],
+      "nessus-agent-firewall": [
+        "Firewall Disabled on VM"
+      ],
+      "nessus-agent-dashboard": [
+        "Tenable Dashboard Logged In"
+      ],
+      "nessus-agent-group": [
+        "Agent Group Created"
+      ],
+      "nessus-agent-scan-config": [
+        "Agent Scan Config (Triggered)"
+      ],
+      "nessus-agent-install-cmd": [
+        "Nessus Agent Install Command Displayed"
+      ],
+      "nessus-agent-install-edit": [
+        "Edited Agent Install Command"
+      ],
+      "nessus-agent-installation": [
+        "Agent Installation in Progress",
+        "Agent Install Successful"
+      ],
+      "nessus-agent-trigger-dir": [
+        "Trigger Directory Located"
+      ],
+      "nessus-agent-trigger-file": [
+        "start.txt Created"
+      ],
+      "nessus-agent-portal": [
+        "Agent Listed in Portal"
+      ],
+      "nessus-agent-summary": [
+        "Scan Summary Completed"
+      ],
+      "nessus-agent-severity": [
+        "Severity Breakdown"
+      ],
+      "nessus-agent-vuln-list": [
+        "Vulnerability List Populated"
+      ],
+      "nessus-agent-compliance": [
+        "Compliance Failures"
+      ],
+      "nessus-agent-export": [
+        "Exporting Scan Results"
       ]
     }
 

@@ -10,7 +10,7 @@ import type { BlogPost } from "./BlogCard"
 
 export function BlogHomePage() {
   const [selectedCategory, setSelectedCategory] = useState("All")
-  
+
   const allPosts = getAllBlogPosts()
   const categoryCounts = getCategoryCounts()
 
@@ -104,7 +104,7 @@ export function BlogHomePage() {
                   </button>
                 </motion.div>
               ) : (
-                <div className="space-y-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
                   {filteredPosts.map((post, index) => (
                     <BlogCard
                       key={post.slug}
