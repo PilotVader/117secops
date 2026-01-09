@@ -129,38 +129,46 @@ export function BlogCard({ post, variant = "featured", index = 0 }: BlogCardProp
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300" />
 
               {/* Category Badge - Overlay on Image Top Left */}
-              <div className="absolute top-3 left-3 z-10">
+              <div className="absolute top-2 left-2 z-10">
                 <Badge
                   variant="outline"
-                  className={`${getCategoryColor(post.category)} bg-black/50 backdrop-blur-md border-opacity-50`}
+                  className={`${getCategoryColor(post.category)} bg-black/60 backdrop-blur-md border-opacity-50 text-[10px] md:text-xs px-1.5 py-0 h-5 md:h-6 md:px-2.5 md:py-0.5`}
                 >
                   {post.category}
                 </Badge>
               </div>
+
+              {/* Mobile Metadata Overlay (Bottom Left of Image) */}
+              <div className="absolute bottom-2 left-2 z-10 md:hidden flex items-center gap-2 text-[10px] text-white/90 font-mono">
+                <span className="flex items-center gap-1">
+                  <Calendar className="w-3 h-3" />
+                  {formatDate(post.date)}
+                </span>
+              </div>
             </div>
 
             {/* Content */}
-            <div className="p-5 flex flex-col flex-1">
+            <div className="p-2 md:p-5 flex flex-col flex-1">
               {/* Title */}
-              <h3 className="text-lg md:text-xl font-bold text-foreground group-hover:text-primary transition-colors mb-3 line-clamp-2 leading-snug">
+              <h3 className="text-xs md:text-xl font-bold text-foreground group-hover:text-primary transition-colors mb-1 md:mb-3 line-clamp-3 md:line-clamp-2 leading-tight">
                 {post.title}
               </h3>
 
-              {/* Excerpt */}
-              <p className="text-sm text-muted-foreground mb-4 line-clamp-3 flex-1">
+              {/* Excerpt - HIDE ON MOBILE */}
+              <p className="text-sm text-muted-foreground mb-4 line-clamp-3 flex-1 hidden md:block">
                 {post.excerpt}
               </p>
 
-              {/* Tags */}
+              {/* Tags - HIDE ON MOBILE */}
               {post.tags && post.tags.length > 0 && (
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="hidden md:flex flex-wrap gap-1 md:gap-2 mb-2 md:mb-4">
                   {post.tags.slice(0, 3).map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="text-[10px] uppercase tracking-wider px-2 py-1 bg-muted/50 rounded border border-border text-muted-foreground"
+                      className="text-[9px] md:text-[10px] uppercase tracking-wider px-1.5 md:px-2 py-0.5 md:py-1 bg-muted/50 rounded border border-border text-muted-foreground"
                     >
                       {tag}
                     </span>
@@ -168,14 +176,14 @@ export function BlogCard({ post, variant = "featured", index = 0 }: BlogCardProp
                 </div>
               )}
 
-              {/* Metadata */}
-              <div className="flex items-center justify-between text-xs text-muted-foreground pt-4 border-t border-border/50 mt-auto">
+              {/* Metadata - Desktop Only */}
+              <div className="hidden md:flex items-center justify-between text-[10px] md:text-xs text-muted-foreground pt-2 md:pt-4 border-t border-border/50 mt-auto">
                 <span className="flex items-center gap-1">
-                  <Calendar className="w-3.5 h-3.5" />
+                  <Calendar className="w-3 h-3 md:w-3.5 md:h-3.5" />
                   {formatDate(post.date)}
                 </span>
                 <span className="flex items-center gap-1">
-                  <Clock className="w-3.5 h-3.5" />
+                  <Clock className="w-3 h-3 md:w-3.5 md:h-3.5" />
                   {post.readTime} min
                 </span>
               </div>

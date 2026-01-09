@@ -104,14 +104,15 @@ export function BlogHomePage() {
                   </button>
                 </motion.div>
               ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+                <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-3 md:gap-6 items-stretch">
                   {filteredPosts.map((post, index) => (
-                    <BlogCard
-                      key={post.slug}
-                      post={post}
-                      variant="featured"
-                      index={index}
-                    />
+                    <div key={post.slug} className="h-full">
+                      <BlogCard
+                        post={post}
+                        variant="featured"
+                        index={index}
+                      />
+                    </div>
                   ))}
                 </div>
               )}

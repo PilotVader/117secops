@@ -34,7 +34,7 @@ export function CyberFeaturedBlogPosts({ blogPosts }: CyberFeaturedBlogPostsProp
     <section className="py-20 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 matrix-bg opacity-30" />
-      
+
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <motion.div
@@ -48,7 +48,7 @@ export function CyberFeaturedBlogPosts({ blogPosts }: CyberFeaturedBlogPostsProp
               Featured Posts
             </Badge>
           </motion.div>
-          
+
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -61,7 +61,7 @@ export function CyberFeaturedBlogPosts({ blogPosts }: CyberFeaturedBlogPostsProp
               Blog
             </span>
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -72,7 +72,7 @@ export function CyberFeaturedBlogPosts({ blogPosts }: CyberFeaturedBlogPostsProp
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 mb-12">
           {blogPosts.map((post, index) => (
             <motion.div
               key={post.slug}
@@ -82,67 +82,76 @@ export function CyberFeaturedBlogPosts({ blogPosts }: CyberFeaturedBlogPostsProp
               className="relative h-full"
             >
               <Link href={`/blog/${post.slug}`}>
-                <div className="cyber-border bg-card/50 backdrop-blur-sm rounded-lg overflow-hidden h-full flex flex-col min-h-[500px] hover:bg-card/70 transition-all duration-300 group cursor-pointer">
-                  {/* Blog Post Image */}
+                <div className="cyber-border bg-card/50 backdrop-blur-sm rounded-lg overflow-hidden h-full flex flex-col min-h-0 md:min-h-[500px] hover:bg-card/70 transition-all duration-300 group cursor-pointer">
+                  {/* Blog Image */}
                   <div className="aspect-video relative overflow-hidden">
+                    {/* Mobile Badge Overlay */}
+                    <div className="absolute top-2 left-2 z-10 md:hidden">
+                      <Badge variant="outline" className="cyber-border bg-black/60 backdrop-blur-md text-[10px] px-1.5 py-0 border-opacity-50 h-5">
+                        <span style={getCategoryColor(post.category)} className="flex items-center">
+                          {post.category}
+                        </span>
+                      </Badge>
+                    </div>
+
                     <Image
-                      src={post.image || "/images/blog-placeholder.svg"}
+                      src={post.image}
                       alt={post.title}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
-                  
+
                   {/* Blog Post Content */}
-                  <div className="p-6 flex-1 flex flex-col">
-                    {/* Category Badge */}
-                    <div className="flex items-center gap-2 mb-3">
-                      <Badge variant="outline" className="cyber-border bg-card/30">
+                  <div className="p-2 md:p-6 flex-1 flex flex-col">
+                    {/* Desktop Category Badge */}
+                    <div className="hidden md:flex items-center gap-1.5 md:gap-2 mb-2 md:mb-3">
+                      <Badge variant="outline" className="cyber-border bg-card/30 text-[10px] md:text-xs">
                         <span style={getCategoryColor(post.category)} className="flex items-center">
                           {post.category}
                         </span>
                       </Badge>
                     </div>
-                    
+
                     {/* Title */}
-                    <h3 className="text-xl font-semibold mb-3 font-mono text-foreground group-hover:text-primary transition-colors">
+                    <h3 className="text-xs md:text-xl font-semibold mb-1 md:mb-3 font-mono text-foreground group-hover:text-primary transition-colors leading-tight line-clamp-3 md:line-clamp-none">
                       {post.title}
                     </h3>
-                    
-                    {/* Excerpt */}
-                    <p className="text-muted-foreground mb-4 line-clamp-2 flex-1">
+
+                    {/* Excerpt - HIDE ON MOBILE */}
+                    <p className="text-muted-foreground mb-4 line-clamp-2 flex-1 hidden md:block">
                       {post.excerpt}
                     </p>
-                    
-                    {/* Tags */}
+
+                    {/* Tags - HIDE ON MOBILE */}
                     {post.tags && post.tags.length > 0 && (
-                      <div className="flex flex-wrap gap-1 mb-4 flex-shrink-0">
+                      <div className="hidden md:flex flex-wrap gap-1 mb-2 md:mb-4 flex-shrink-0">
                         {post.tags.slice(0, 3).map((tag, tagIndex) => (
                           <span
                             key={`${tag}-${tagIndex}`}
-                            className="text-xs px-2 py-1 bg-gray-100 dark:bg-muted/50 rounded border border-gray-200 dark:border-border text-gray-800 dark:text-muted-foreground"
+                            className="text-[10px] md:text-xs px-1.5 md:px-2 py-0.5 md:py-1 bg-gray-100 dark:bg-muted/50 rounded border border-gray-200 dark:border-border text-gray-800 dark:text-muted-foreground"
                           >
                             {tag}
                           </span>
                         ))}
                         {post.tags.length > 3 && (
-                          <span className="text-xs px-2 py-1 bg-gray-100 dark:bg-muted/50 rounded border border-gray-200 dark:border-border text-gray-800 dark:text-muted-foreground">
+                          <span className="text-[10px] md:text-xs px-1.5 md:px-2 py-0.5 md:py-1 bg-gray-100 dark:bg-muted/50 rounded border border-gray-200 dark:border-border text-gray-800 dark:text-muted-foreground">
                             +{post.tags.length - 3}
                           </span>
                         )}
                       </div>
                     )}
-                    
-                    {/* Read More Button */}
-                    <div className="flex-shrink-0">
+
+                    {/* Read More Button - HIDE ON MOBILE */}
+                    <div className="flex-shrink-0 mt-auto hidden md:block">
                       <Button
                         variant="outline"
                         size="sm"
-                        className="w-full cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white"
+                        className="w-full cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white h-8 text-xs md:h-9 md:text-sm"
                       >
-                        <span>Read More</span>
-                        <ArrowRight className="w-4 h-4 ml-2" />
+                        <span>Read</span>
+                        <ArrowRight className="w-3 h-3 md:w-4 md:h-4 ml-2" />
                       </Button>
                     </div>
                   </div>

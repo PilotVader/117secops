@@ -46,13 +46,13 @@ export default function ProjectsClientPage({ initialProjects }: { initialProject
       const normalizedProject: Project = project.series
         ? project
         : {
-            ...project,
-            series: {
-              name: seriesName,
-              part: seriesPart,
-              totalParts,
-            },
-          }
+          ...project,
+          series: {
+            name: seriesName,
+            part: seriesPart,
+            totalParts,
+          },
+        }
 
       if (!map.has(seriesName)) {
         map.set(seriesName, [])
@@ -199,7 +199,7 @@ export default function ProjectsClientPage({ initialProjects }: { initialProject
 
             return (
               <TabsContent key={category} value={category} className="space-y-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-8 items-stretch">
+                <div className="grid grid-cols-2 md:grid-cols-2 2xl:grid-cols-3 gap-4 md:gap-8 items-stretch">
                   {categoryEntries.map((entry, index) => (
                     <SeriesCard
                       key={entry.name}
@@ -336,117 +336,143 @@ function SeriesCard({ seriesName, projects, index, openLightbox, openSeriesModal
     }
   }
 
+  const getTeamBadges = (project: Project) => {
+    const normalizedTags = (project.tags || []).map((t) => t.toLowerCase())
+    const teamBadges: string[] = []
+    if (normalizedTags.includes("blue team")) teamBadges.push("Blue")
+    if (normalizedTags.includes("red team")) teamBadges.push("Red")
+    if (normalizedTags.includes("cloud")) teamBadges.push("Cloud")
+
+    return teamBadges.length > 0 ? teamBadges : [project.category === "red" ? "Red" : project.category === "Infrastructure" ? "Infra" : "Blue"]
+  }
+
+  const labelToCategory = (label: string) =>
+    label === "Red" || label === "Red Team" ? "red" :
+      label === "Infra" || label === "Infrastructure" ? "Infrastructure" :
+        label === "Cloud" ? "cloud" : "blue"
+
+  // Helper to render badges
+  const renderBadges = (isMobile: boolean) => {
+    const labels = getTeamBadges(firstProject);
+    const displayLabels = isMobile ? labels.slice(0, 1) : labels.slice(0, 3);
+
+    return displayLabels.map((label) => {
+      // Adjust label for desktop if needed (e.g. "Blue" -> "Blue Team")
+      // But for simplicity let's stick to the short ones or simple logic
+      const fullLabel = !isMobile && label === "Blue" ? "Blue Team" :
+        !isMobile && label === "Red" ? "Red Team" :
+          !isMobile && label === "Infra" ? "Infrastructure" : label;
+
+      const cat = labelToCategory(label);
+
+      return (
+        <Badge key={label} variant="outline" className={`cyber-border ${isMobile ? 'bg-black/60 backdrop-blur-md text-[10px] px-1.5 py-0 border-opacity-50 h-5' : 'bg-card/30 text-[10px] md:text-xs'}`}>
+          <span style={getCategoryColor(cat)} className="flex items-center">
+            {getCategoryIcon(cat)}
+            <span className="ml-1">{fullLabel}</span>
+          </span>
+        </Badge>
+      )
+    })
+  }
+
   return (
-         <motion.div
-       key={seriesName}
-       initial={{ opacity: 0, y: 30 }}
-       animate={{ opacity: 1, y: 0 }}
-       transition={{ duration: 0.5, delay: index * 0.1 }}
-       className="relative h-full"
-     >
-       <div className="cyber-border bg-card/50 backdrop-blur-sm rounded-lg overflow-hidden h-full flex flex-col min-h-[500px]">
-         {/* Project Image */}
-         <div className="aspect-video relative overflow-hidden">
-           <Link href={`/projects/${firstProject.slug}/`}>
-             <Image
-               src={firstProject.image || "/images/project-placeholder.svg"}
-               alt={firstProject.title}
-               fill
-               className="object-cover"
-             />
-           </Link>
-         </div>
-         
-         {/* Project Content */}
-         <div className="p-6 flex flex-col flex-1">
-           {/* Team Badges (prioritize Blue/Red/Cloud if present in tags) */}
-           {(() => {
-             const normalizedTags = (firstProject.tags || []).map((t) => t.toLowerCase())
-             const teamBadges: string[] = []
-             if (normalizedTags.includes("blue team")) teamBadges.push("Blue Team")
-             if (normalizedTags.includes("red team")) teamBadges.push("Red Team")
-             if (normalizedTags.includes("cloud")) teamBadges.push("Cloud")
+    <motion.div
+      key={seriesName}
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className="relative h-full"
+    >
+      <div className="cyber-border bg-card/50 backdrop-blur-sm rounded-lg overflow-hidden h-full flex flex-col md:min-h-[500px] cursor-pointer" onClick={() => openSeriesModal(seriesName, projects)}>
+        {/* Project Image */}
+        <div className="aspect-video relative overflow-hidden">
+          {/* Mobile Badge Overlay */}
+          <div className="absolute top-2 left-2 z-10 md:hidden flex flex-wrap gap-1">
+            {renderBadges(true)}
+          </div>
 
-             const labels = teamBadges.length > 0
-               ? teamBadges
-               : [
-                   firstProject.category === "red"
-                     ? "Red Team"
-                     : firstProject.category === "Infrastructure"
-                       ? "Infrastructure"
-                       : "Blue Team",
-                 ]
+          <Link href={`/projects/${firstProject.slug}/`}>
+            <Image
+              src={firstProject.image || "/images/project-placeholder.svg"}
+              alt={firstProject.title}
+              fill
+              className="object-cover"
+            />
+          </Link>
+        </div>
 
-             const labelToCategory = (label: string) =>
-               label === "Red Team" ? "red" : label === "Infrastructure" ? "Infrastructure" : label === "Cloud" ? "cloud" : "blue"
+        {/* Project Content */}
+        <div className="p-3 md:p-6 flex flex-col flex-1">
+          {/* Desktop Team Badges */}
+          <div className="hidden md:flex items-center gap-2 mb-3">
+            {renderBadges(false)}
+          </div>
 
-             return (
-               <div className="flex items-center gap-2 mb-3">
-                 {labels.slice(0, 3).map((label) => {
-                   const cat = labelToCategory(label)
-                   return (
-                     <Badge key={label} variant="outline" className="cyber-border bg-card/30">
-                       <span style={getCategoryColor(cat)} className="flex items-center">
-                         {getCategoryIcon(cat)}
-                         {label}
-                       </span>
-                     </Badge>
-                   )
-                 })}
-               </div>
-             )
-           })()}
-           
-           {/* Title */}
-           <h3 className="text-xl font-semibold mb-3 font-mono text-foreground">
-             {seriesName}
-           </h3>
-           
-           {/* Description */}
-           <p className="text-muted-foreground mb-4 line-clamp-2 flex-1">
-             {firstProject.description}
-           </p>
-           
-           {/* Part Number */}
-           <div className="mb-4">
-             <p className="text-sm text-muted-foreground font-mono">
-               {totalParts} {totalParts === 1 ? 'Part' : 'Parts'}
-             </p>
-           </div>
-           
-           {/* Tags */}
-           {firstProject.tags && firstProject.tags.length > 0 && (
-             <div className="flex flex-wrap gap-1 mb-4">
-               {firstProject.tags.filter(tag => tag).slice(0, 3).map((tag, tagIndex) => (
-                 <span
-                   key={`${tag}-${tagIndex}`}
-                   className="text-xs px-2 py-1 bg-gray-100 dark:bg-muted/50 rounded border border-gray-200 dark:border-border text-gray-800 dark:text-muted-foreground"
-                 >
-                   {tag}
-                 </span>
-               ))}
-               {firstProject.tags.filter(tag => tag).length > 3 && (
-                 <span className="text-xs px-2 py-1 bg-gray-100 dark:bg-muted/50 rounded border border-gray-200 dark:border-border text-gray-800 dark:text-muted-foreground">
-                   +{firstProject.tags.filter(tag => tag).length - 3}
-                 </span>
-               )}
-             </div>
-           )}
-           
-           {/* Read More Button */}
-           <div className="mt-auto">
-             <Button
-               variant="outline"
-               size="sm"
-               className="w-full cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white"
-               onClick={() => openSeriesModal(seriesName, projects)}
-             >
-               <span>View All Parts</span>
-               <ArrowRight className="w-4 h-4 ml-2" />
-             </Button>
-           </div>
-         </div>
-       </div>
-     </motion.div>
+          {/* Title */}
+          <h3 className="text-xs md:text-xl font-semibold mb-1 md:mb-3 font-mono text-foreground leading-tight">
+            {(() => {
+              const projectBoxMatch = seriesName.match(/^(Project\s+\d+(\.\d+)?)/i);
+              if (projectBoxMatch) {
+                return (
+                  <>
+                    <span className="block md:hidden">{projectBoxMatch[1]}</span>
+                    <span className="hidden md:block">{seriesName}</span>
+                  </>
+                )
+              }
+              return <span className="line-clamp-2">{seriesName}</span>
+            })()}
+          </h3>
+
+          {/* Description - HIDE ON MOBILE */}
+          <p className="text-muted-foreground mb-4 line-clamp-2 flex-1 hidden md:block">
+            {firstProject.description}
+          </p>
+
+          {/* Part Number - HIDE ON MOBILE */}
+          <div className="mb-2 md:mb-4 hidden md:block">
+            <p className="text-[10px] md:text-sm text-muted-foreground font-mono">
+              {totalParts} {totalParts === 1 ? 'Part' : 'Parts'}
+            </p>
+          </div>
+
+          {/* Tags - HIDE ON MOBILE */}
+          {firstProject.tags && firstProject.tags.length > 0 && (
+            <div className="hidden md:flex flex-wrap gap-1 mb-2 md:mb-4">
+              {firstProject.tags.filter(tag => tag).slice(0, 3).map((tag, tagIndex) => (
+                <span
+                  key={`${tag}-${tagIndex}`}
+                  className="text-[10px] md:text-xs px-1.5 md:px-2 py-0.5 md:py-1 bg-gray-100 dark:bg-muted/50 rounded border border-gray-200 dark:border-border text-gray-800 dark:text-muted-foreground"
+                >
+                  {tag}
+                </span>
+              ))}
+              {firstProject.tags.filter(tag => tag).length > 3 && (
+                <span className="text-[10px] md:text-xs px-1.5 md:px-2 py-0.5 md:py-1 bg-gray-100 dark:bg-muted/50 rounded border border-gray-200 dark:border-border text-gray-800 dark:text-muted-foreground">
+                  +{firstProject.tags.filter(tag => tag).length - 3}
+                </span>
+              )}
+            </div>
+          )}
+
+          {/* Read More Button - HIDE ON MOBILE */}
+          <div className="mt-auto hidden md:block">
+            <Button
+              variant="outline"
+              size="sm"
+              className="w-full cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white h-8 text-xs md:h-9 md:text-sm"
+              onClick={(e) => {
+                e.stopPropagation();
+                openSeriesModal(seriesName, projects);
+              }}
+            >
+              <span>View Parts</span>
+              <ArrowRight className="w-3 h-3 md:w-4 md:h-4 ml-2" />
+            </Button>
+          </div>
+        </div>
+      </div>
+    </motion.div>
   )
 }
