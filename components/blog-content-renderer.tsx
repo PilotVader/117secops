@@ -812,7 +812,56 @@ export function BlogContentRenderer({
         "/images/projects/project-6-3/17 – Compliance Failures.png"
       ],
       "nessus-agent-export": [
-        "/images/projects/project-6-3/19 – Exporting Scan Results.png"
+        "/images/projects/project-6-3/18 – Exporting Scan Results.png"
+      ],
+      // Tenable Nessus Agent Scanning - Linux (Project 6.4)
+      "linux-agent-vm-deploy": [
+        "/images/projects/project-6-4/2 – Linux VM Deployment Complete.png"
+      ],
+      "linux-agent-group": [
+        "/images/projects/project-6-4/3 – Linux Agent Group Created.png"
+      ],
+      "linux-agent-scan-config": [
+        "/images/projects/project-6-4/4 – Linux Agent Scan Trigger Configured.png"
+      ],
+      "linux-agent-ssh": [
+        "/images/projects/project-6-4/5 – SSH Logged Into Linux VM.png"
+      ],
+      "linux-agent-install-cmd": [
+        "/images/projects/project-6-4/5.1 - copying Linux Agent Install Command.png"
+      ],
+      "linux-agent-install-edit": [
+        "/images/projects/project-6-4/6 – Edited Linux Agent Install Command.png"
+      ],
+      "linux-agent-installation": [
+        "/images/projects/project-6-4/7 – Linux Agent Installation In Progress.png"
+      ],
+      "linux-agent-install-success": [
+        "/images/projects/project-6-4/8 – Linux Agent Installation Successful.png"
+      ],
+      "linux-agent-trigger-dir": [
+        "/images/projects/project-6-4/9 – Linux Trigger Directory Located.png"
+      ],
+      "linux-agent-trigger-mistake": [
+        "/images/projects/project-6-4/10 – start.txt Trigger File Created.png"
+      ],
+      "linux-agent-trigger-fixed": [
+        "/images/projects/project-6-4/11 – Trigger File Disappeared.png"
+      ],
+      "linux-agent-portal": [
+        "/images/projects/project-6-4/12 – Linux Agent Appearing in Portal.png"
+      ],
+      "linux-agent-results": [
+        "/images/projects/project-6-4/13 – Linux Scan Summary Completed.png"
+      ],
+      "linux-agent-vuln-list": [
+        "/images/projects/project-6-4/14 – Linux Vulnerability List Populated.png"
+      ],
+      "linux-agent-compliance": [
+        "/images/projects/project-6-4/15 – Linux Compliance - Host Audits.png"
+      ],
+      "linux-agent-export": [
+        "/images/projects/project-6-4/16 – Exporting Linux Scan Results.png"
       ]
     }
 
