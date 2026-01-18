@@ -17,9 +17,9 @@ In 2026, that logic is outdated and dangerous. It is not that prevention no long
 
 The difference between a minor security incident and a catastrophic headline is no longer about "perfect blocking," but about the speed of detection and response. This shift from prevention-focused to detection-focused security represents the most significant mindset change in cybersecurity since the introduction of firewalls.
 
-According to CrowdStrike's 2025 Global Threat Report, the fastest recorded eCrime breakout time was 51 seconds, while the average was just 48 minutes.
+According to [CrowdStrike's 2025 Global Threat Report](https://www.crowdstrike.com/global-threat-report/), the fastest recorded eCrime breakout time was 51 seconds, while the average was just 48 minutes.
 
-Meanwhile, Mandiant's M-Trends 2025 reports a global median dwell time of 11 days. That's 11 days where attackers roam networks undetected, exfiltrating data, escalating privileges, and establishing persistence.
+Meanwhile, [Mandiant's M-Trends 2025](https://www.mandiant.com/resources/m-trends) reports a global median dwell time of 11 days. That's 11 days where attackers roam networks undetected, exfiltrating data, escalating privileges, and establishing persistence.
 
 
 <div class="my-10">
@@ -33,9 +33,9 @@ Meanwhile, Mandiant's M-Trends 2025 reports a global median dwell time of 11 day
 
 The failure of prevention-first security is a direct result of how modern IT environments now operate. Let’s explore the “how”.
 
--   **Cloud sprawl**: According to the 2025 Verizon DBIR, 30% of breaches involved third-party software or services. Organisations no longer operate within defined network perimeters. The traditional concept of inside the network versus outside the network has collapsed. Applications, data, and identities are scattered across multiple cloud providers, SaaS platforms, and hybrid environments. There is no single edge to defend anymore, only a constantly shifting collection of services and access paths.
+-   **Cloud sprawl**: According to the [2025 Verizon DBIR](https://www.verizon.com/business/resources/reports/dbir/), 30% of breaches involved third-party software or services. Organisations no longer operate within defined network perimeters. The traditional concept of inside the network versus outside the network has collapsed. Applications, data, and identities are scattered across multiple cloud providers, SaaS platforms, and hybrid environments. There is no single edge to defend anymore, only a constantly shifting collection of services and access paths.
 
--   **Identity-centric attacks** have become the default. This shift to identity-centric attacks has fundamentally changed the threat landscape. Attackers have learned that stealing credentials is easier than bypassing technical controls. And from the system’s point of view, these actions often look legitimate because when attackers use legitimate credentials, they aren't breaking in, they're logging in. CrowdStrike’s 2025 Global Threat Report shows that 79% of detections are now malware-free, relying instead on stolen credentials and legitimate administration tools that traditional antivirus prevention layers naturally trust. This implies that traditional prevention tools struggle to distinguish between a legitimate administrator and an attacker using stolen administrator credentials.
+-   **Identity-centric attacks** have become the default. This shift to identity-centric attacks has fundamentally changed the threat landscape. Attackers have learned that stealing credentials is easier than bypassing technical controls. And from the system’s point of view, these actions often look legitimate because when attackers use legitimate credentials, they aren't breaking in, they're logging in. [CrowdStrike’s 2025 Global Threat Report](https://www.crowdstrike.com/global-threat-report/) shows that 79% of detections are now malware-free, relying instead on stolen credentials and legitimate administration tools that traditional antivirus prevention layers naturally trust. This implies that traditional prevention tools struggle to distinguish between a legitimate administrator and an attacker using stolen administrator credentials.
 
 -   **Zero-day exploitation** ensures that even well-patched organisations cannot rely solely on known-bad signatures and rules. By definition, prevention tools cannot block what they do not yet recognise.
 
@@ -62,7 +62,7 @@ As prevention cannot stop every attack, and time has become the critical variabl
 
 Industry reports consistently show that attackers do not rely on time. The longer they remain undetected, the more access they gain, the more systems they map, and the more damage they can prepare. 
 
-This pattern is repeatedly documented in Verizon’s Data Breach Investigations Report and Google Mandiant’s M-Trends reporting, both of which track global dwell time and discovery timelines across thousands of incidents.
+This pattern is repeatedly documented in [Verizon’s Data Breach Investigations Report](https://www.verizon.com/business/resources/reports/dbir/) and [Google Mandiant’s M-Trends](https://www.mandiant.com/resources/m-trends) reporting, both of which track global dwell time and discovery timelines across thousands of incidents.
 
 Fast detection doesn't prevent the initial compromise. It prevents the initial compromise from becoming a catastrophic breach. Shortening detection and response time directly reduces blast radius. An attacker discovered in hours can do vastly less harm than one discovered in months. 
 
@@ -96,7 +96,7 @@ A small number of high-confidence, well contextualized detection is worth more t
 
 ### What Incident Data Keeps Showing Us
 
-Across major industry reports, including the Verizon Data Breach Investigations Report, Google Mandiant’s M-Trends, and the CrowdStrike Global Threat Report, the same patterns appear again and again:
+Across major industry reports, including the [Verizon Data Breach Investigations Report](https://www.verizon.com/business/resources/reports/dbir/), [Google Mandiant’s M-Trends](https://www.mandiant.com/resources/m-trends), and the [CrowdStrike Global Threat Report](https://www.crowdstrike.com/global-threat-report/), the same patterns appear again and again:
 
 -   **Most breaches are not discovered quickly.** Many persist for weeks or months before detection.
 
@@ -148,4 +148,4 @@ In 2026, the most honest and effective security teams operate on the clear-eyed 
 Mature organisations plan for compromise, build for visibility, train for response, and they measure success not by the absence of intrusions, but by how quickly and decisively they can find and contain them.
 
 For a deeper visual understanding of these concepts, the following video is recommended:
-**Understanding the breach lifecycle:** "The Silent Breach: Why Your Cybersecurity is Failing."
+**Understanding the breach lifecycle:** ["The Silent Breach: Why Your Cybersecurity is Failing."](https://www.youtube.com/watch?v=i_b8n_xottk)
