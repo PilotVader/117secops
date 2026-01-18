@@ -36,12 +36,12 @@ Public reporting indicates that Goshen Medical Centre detected suspicious activi
 But here's what makes this case particularly concerning: the investigation concluded that an unauthorised party had accessed and potentially exfiltrated files in mid-February 2025, but patients weren't notified until September.
 
 According to [CyberNews’ coverage](https://cybernews.com/cybercrime/us-healthcare-center-notifies-456k-people-of-data-breach/), the compromised data set included a mix of personally identifiable information (PII) and protected health information (PHI): 
-*   Names
-*   Addresses
-*   Dates of birth
-*   Social Security numbers
-*   Driver’s license numbers
-*   Medical record numbers
+-   Names
+-   Addresses
+-   Dates of birth
+-   Social Security numbers
+-   Driver’s license numbers
+-   Medical record numbers
 
 This combination is dangerous because it enables durable identity fraud and medical identity abuse.
 
@@ -119,8 +119,8 @@ Under HIPAA, Goshen was required to notify the Secretary of HHS and affected ind
 The notification must explain what happened, what information was involved, and what the entity is doing to investigate and mitigate harm.
 
 The Office for Civil Rights (OCR) issues fines based on the level of culpability. HIPAA penalties are tiered based on culpability, with annual caps that can exceed $2 million depending on severity and corrective action.
-*   If the investigation reveals that Goshen failed to patch a known vulnerability for months (Willful Neglect), they could face **Tier 3 or Tier 4 penalties**.
-*   If the breach originated from a third-party vendor (a common vector), the liability often hinges on the BAA. This contract dictates who is responsible for security. Organisations must audit their vendors annually; simply having a signed piece of paper is no longer a defence in court.
+-   If the investigation reveals that Goshen failed to patch a known vulnerability for months (Willful Neglect), they could face **Tier 3 or Tier 4 penalties**.
+-   If the breach originated from a third-party vendor (a common vector), the liability often hinges on the BAA. This contract dictates who is responsible for security. Organisations must audit their vendors annually; simply having a signed piece of paper is no longer a defence in court.
 
 
 <br>
