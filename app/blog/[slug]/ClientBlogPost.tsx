@@ -33,55 +33,61 @@ export function ClientBlogPost({ postData }: { postData: BlogPost }) {
 
   return (
     <PageTransition>
-      <div className="container mx-auto px-4 md:px-6 py-12">
+      <div className="container mx-auto px-4 md:px-6 py-16 md:py-24">
         <div className="max-w-3xl mx-auto">
           <Link
             href="/blog/"
-            className="inline-flex items-center text-primary hover:text-primary/80 mb-8 transition-colors duration-400"
+            className="inline-flex items-center text-slate-500 hover:text-purple-600 mb-12 transition-colors duration-200 font-medium group"
           >
-            <ArrowLeft className="mr-2 h-4 w-4" />
+            <ArrowLeft className="mr-2 h-4 w-4 transform group-hover:-translate-x-1 transition-transform" />
             Back to all posts
           </Link>
 
-          <div className="mb-8">
-            <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">{postData.title}</h1>
-
-            <div className="flex flex-wrap gap-4 items-center text-muted-foreground mb-6">
-              <div className="flex items-center">
+          <div className="mb-12 border-b border-slate-200 dark:border-slate-800 pb-12">
+            <div className="flex flex-wrap gap-4 items-center justify-center mb-6">
+              <Badge variant="outline" className="bg-purple-50 text-purple-700 border-purple-200 px-3 py-1 text-sm font-semibold rounded-full dark:bg-purple-900/30 dark:text-purple-300 dark:border-purple-800">
+                {postData.category}
+              </Badge>
+              <div className="flex items-center text-slate-500 dark:text-slate-400 text-sm font-medium">
                 <Calendar className="mr-2 h-4 w-4" />
                 <span>{postData.date}</span>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center text-slate-500 dark:text-slate-400 text-sm font-medium">
                 <User className="mr-2 h-4 w-4" />
                 <span>{postData.author}</span>
               </div>
-              <Badge variant="outline" className="bg-primary/5 border-primary/20">
-                {postData.category}
-              </Badge>
             </div>
 
-            <div className="aspect-video relative rounded-lg overflow-hidden mb-8">
-              <Image src={postData.image || "/placeholder.svg"} alt={postData.title} fill className="object-cover" />
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-slate-50 mb-8 leading-tight text-center">
+              {postData.title}
+            </h1>
+
+            <div className="w-full relative rounded-2xl overflow-hidden shadow-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+              <img
+                src={postData.image || "/placeholder.svg"}
+                alt={postData.title}
+                className="w-full h-auto rounded-2xl"
+              />
             </div>
           </div>
 
-          <div className="prose prose-purple max-w-none dark:prose-invert">
+          <div className="prose prose-lg prose-slate max-w-none dark:prose-invert prose-headings:font-bold prose-a:text-purple-600 prose-img:rounded-xl">
             <BlogContentRenderer content={postData.content} groupId={`blog-${postData.slug}`} />
           </div>
 
           {/* Image Gallery Section */}
           {postData.gallery && (
-            <div className="mt-12 mb-8">
-              <h2 className="text-2xl font-bold mb-6">Project Gallery</h2>
+            <div className="mt-16 mb-12">
+              <h2 className="text-3xl font-bold mb-8 text-slate-900 dark:text-slate-100 tracking-tight">Project Gallery</h2>
               <ImageGallery images={postData.gallery} />
             </div>
           )}
 
-          <div className="mt-8 pt-6 border-t">
-            <div className="flex items-center flex-wrap gap-2">
-              <Tag className="h-4 w-4 text-primary mr-2" />
+          <div className="mt-16 pt-8 border-t border-slate-200 dark:border-slate-800">
+            <div className="flex items-center flex-wrap gap-3">
+              <Tag className="h-5 w-5 text-purple-500 mr-2" />
               {postData.tags.map((tag, index) => (
-                <Badge key={index} variant="secondary" className="bg-primary/5">
+                <Badge key={index} variant="secondary" className="bg-slate-100 text-slate-700 hover:bg-slate-200 px-3 py-1 text-sm font-medium dark:bg-slate-800 dark:text-slate-300">
                   {tag}
                 </Badge>
               ))}

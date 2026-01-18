@@ -49,51 +49,52 @@ export function BlogContentRenderer({
         return `{{CYBER_TERMINAL:${encodeURIComponent(code)}:${encodeURIComponent(title)}}}`
       })
 
-      // Headers with proper spacing
-      .replace(/^### (.*$)/gim, '\n<h3 class="text-xl font-semibold mt-6 mb-3 text-gray-900 dark:text-gray-100">$1</h3>\n')
-      .replace(/^## (.*$)/gim, '\n<h2 class="text-2xl font-bold mt-8 mb-4 text-gray-900 dark:text-gray-100">$1</h2>\n')
-      .replace(/^# (.*$)/gim, '\n<h1 class="text-3xl font-bold mt-10 mb-6 text-gray-900 dark:text-gray-100">$1</h1>\n')
+      // Headers with proper spacing - Larger, bolder, more spacing
+      .replace(/^### (.*$)/gim, '\n<h3 class="text-2xl font-bold mt-10 mb-4 text-slate-900 dark:text-slate-100 tracking-tight">$1</h3>\n')
+      .replace(/^## (.*$)/gim, '\n<h2 class="text-3xl font-bold mt-14 mb-6 text-slate-900 dark:text-slate-100 tracking-tight">$1</h2>\n')
+      .replace(/^# (.*$)/gim, '\n<h1 class="text-4xl font-extrabold mt-16 mb-8 text-slate-900 dark:text-slate-100 tracking-tight">$1</h1>\n')
 
-      // Ensure all paragraph text has consistent colors
-      .replace(/^([^<\n].*)$/gm, '<p class="text-gray-900 dark:text-gray-100 mb-4">$1</p>')
+      // Ensure all paragraph text has consistent colors and sizing - Text-lg, leading-relaxed
+      .replace(/^([^<\n].*)$/gm, '<p class="text-lg text-slate-700 dark:text-slate-300 mb-8 leading-8">$1</p>')
 
       // Bold and italic
-      .replace(/\*\*(.*?)\*\*/g, '<strong class="font-semibold">$1</strong>')
+      .replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-slate-900 dark:text-slate-100">$1</strong>')
       .replace(/\*(.*?)\*/g, '<em class="italic">$1</em>')
 
       // Links with proper styling
-      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">$1</a>')
+      .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-purple-600 dark:text-purple-400 font-medium hover:underline decoration-2 underline-offset-2 transition-colors">$1</a>')
 
       // Force the specific write-up link FIRST (before general name replacement)
-      .replace(/\[Felix Boulet's Original Write-up\]\([^)]+\)/g, '<a href="https://blog.qwertysecurity.com/Articles/blog3.html" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Felix Boulet\'s Original Write-up</a>')
-      .replace(/Felix Boulet's Original Write-up/g, '<a href="https://blog.qwertysecurity.com/Articles/blog3.html" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Felix Boulet\'s Original Write-up</a>')
+      .replace(/\[Felix Boulet's Original Write-up\]\([^)]+\)/g, '<a href="https://blog.qwertysecurity.com/Articles/blog3.html" target="_blank" rel="noopener noreferrer" class="text-purple-600 dark:text-purple-400 font-medium hover:underline decoration-2 underline-offset-2">Felix Boulet\'s Original Write-up</a>')
+      .replace(/Felix Boulet's Original Write-up/g, '<a href="https://blog.qwertysecurity.com/Articles/blog3.html" target="_blank" rel="noopener noreferrer" class="text-purple-600 dark:text-purple-400 font-medium hover:underline decoration-2 underline-offset-2">Felix Boulet\'s Original Write-up</a>')
 
       // Specific name links (after the specific write-up link) - only replace standalone names, not within sentences
-      .replace(/\bFelix Boulet\b(?!'s Original Write-up)/g, '<a href="https://www.linkedin.com/in/felix-boulet/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Felix Boulet</a>')
-      .replace(/Philippe Dugre/g, '<a href="https://www.linkedin.com/in/zer0x64/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Philippe Dugre</a>')
+      .replace(/\bFelix Boulet\b(?!'s Original Write-up)/g, '<a href="https://www.linkedin.com/in/felix-boulet/" target="_blank" rel="noopener noreferrer" class="text-purple-600 dark:text-purple-400 font-medium hover:underline decoration-2 underline-offset-2">Felix Boulet</a>')
+      .replace(/Philippe Dugre/g, '<a href="https://www.linkedin.com/in/zer0x64/" target="_blank" rel="noopener noreferrer" class="text-purple-600 dark:text-purple-400 font-medium hover:underline decoration-2 underline-offset-2">Philippe Dugre</a>')
 
       // Terminal → format - make it display on separate lines (process before inline code)
       .replace(/\*\*Terminal →\*\*\s*\r?\n\s*\r?\n\s*`([^`]+)`/g, (match, command) => {
         console.log('TERMINAL MATCH FOUND:', { match: match.substring(0, 50), command: command.substring(0, 30) })
-        return '<div class="my-4"><div class="text-red-500 font-semibold mb-2">Terminal →</div><div class="bg-gray-900 text-gray-100 p-3 rounded-lg font-mono text-sm"><code>' + command + '</code></div></div>'
+        return '<div class="my-6"><div class="text-red-500 font-semibold mb-2 text-sm uppercase tracking-wider">Terminal →</div><div class="bg-gray-900 text-gray-100 p-4 rounded-lg font-mono text-sm leading-relaxed shadow-lg"><code>' + command + '</code></div></div>'
       })
 
       // Fallback: Replace any remaining Terminal → text
-      .replace(/Terminal →/g, '<div class="my-4"><div class="text-red-500 font-semibold mb-2">Terminal →</div></div>')
+      .replace(/Terminal →/g, '<div class="my-6"><div class="text-red-500 font-semibold mb-2 text-sm uppercase tracking-wider">Terminal →</div></div>')
 
       // Code blocks - style as italic text
       .replace(/```(\w+)?\n([\s\S]*?)```/g, (match, lang, code) => {
         const cleanCode = code.trim()
-        return `<pre class="italic font-normal bg-gray-50 dark:bg-gray-800 p-4 rounded-lg my-4 overflow-x-auto"><code>${cleanCode}</code></pre>`
+        return `<pre class="not-italic font-normal bg-gray-50 dark:bg-gray-800 p-6 rounded-lg my-8 overflow-x-auto border border-gray-200 dark:border-gray-700 shadow-sm"><code class="text-sm font-mono leading-relaxed text-gray-800 dark:text-gray-200">${cleanCode}</code></pre>`
       })
-      .replace(/`([^`]+)`/g, '<code class="bg-muted px-1 py-0.5 rounded text-sm font-mono">$1</code>')
+      .replace(/`([^`]+)`/g, '<code class="bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-sm font-mono text-purple-600 dark:text-purple-400 font-medium">$1</code>')
 
-      // Lists
-      .replace(/^\* (.*$)/gim, '<li class="ml-4">$1</li>')
-      .replace(/^- (.*$)/gim, '<li class="ml-4">$1</li>')
+      // Lists - Custom styling with divs to avoid ul nesting issues, using purple bullets
+      .replace(/^(\d+)\.\s+(.*$)/gim, '<div class="flex items-start mb-6 ml-2"><span class="mr-4 text-purple-600 text-lg font-bold mt-0.5">$1.</span><span class="text-lg text-slate-700 dark:text-slate-300 leading-8 flex-1">$2</span></div>')
+      .replace(/^\* (.*$)/gim, '<div class="flex items-start mb-4 ml-2"><span class="mr-3 text-purple-600 text-lg mt-0.5">•</span><span class="text-lg text-slate-700 dark:text-slate-300 leading-8 flex-1">$1</span></div>')
+      .replace(/^- (.*$)/gim, '<div class="flex items-start mb-4 ml-2"><span class="mr-3 text-purple-600 text-lg mt-0.5">•</span><span class="text-lg text-slate-700 dark:text-slate-300 leading-8 flex-1">$1</span></div>')
 
       // Paragraphs with proper spacing
-      .replace(/\n\n+/g, '</p>\n<p class="mb-4 leading-relaxed">')
+      .replace(/\n\n+/g, '</p>\n<p class="text-lg text-slate-700 dark:text-slate-300 mb-8 leading-8">')
 
       // Clean up empty paragraphs
       .replace(/<p><\/p>/g, '')
@@ -102,7 +103,7 @@ export function BlogContentRenderer({
 
     // Ensure content is wrapped in paragraphs
     if (!newContent.startsWith('<')) {
-      newContent = '<p class="mb-4 leading-relaxed">' + newContent
+      newContent = '<p class="text-lg text-slate-700 dark:text-slate-300 mb-8 leading-8">' + newContent
     }
     if (!newContent.endsWith('>')) {
       newContent = newContent + '</p>'
@@ -861,7 +862,10 @@ export function BlogContentRenderer({
         "/images/projects/project-6-4/15 – Linux Compliance - Host Audits.png"
       ],
       "linux-agent-export": [
-        "/images/projects/project-6-4/16 – Exporting Linux Scan Results.png"
+        "/images/projects/project-6-4/16 – Exporting Scan Results.png"
+      ],
+      "goshen-glance": [
+        "/images/blog/goshen-medical-breach/Incident at a glance.png"
       ]
     }
 
