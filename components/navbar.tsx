@@ -13,6 +13,7 @@ const navItems = [
   { href: "/blog", label: "Blog" },
   { href: "/projects", label: "Projects" },
   { href: "/portfolio", label: "Portfolio" },
+  { href: "/labs", label: "117 Labs" },
   { href: "/about", label: "About" },
 ]
 
@@ -38,9 +39,8 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 260, damping: 20 }}
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled ? "bg-background/90 backdrop-blur-md border-b border-border shadow-sm" : "bg-background"
-      }`}
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled ? "bg-background/90 backdrop-blur-md border-b border-border shadow-sm" : "bg-background"
+        }`}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex h-[4.8rem] md:h-[5.6rem] items-center justify-between">
@@ -48,6 +48,7 @@ export default function Navbar() {
             <Logo3D />
           </div>
 
+          {/* Desktop Navigation */}
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6 mx-auto">
             {navItems.map((item, index) => (

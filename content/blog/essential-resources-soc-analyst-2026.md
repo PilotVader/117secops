@@ -3,7 +3,7 @@ title: "Essential Resources Every SOC Analyst Should Be Using in 2026"
 date: "2026-01-26"
 excerpt: "A curated list of practical tools, frameworks, and intelligence sources that help SOC analysts distinguish signal from noise."
 author: "Samson Otori"
-category: "Incidents"
+category: "Resources"
 image: "/images/blog/soc-resources-2026/header.jpg"
 tags: ["SOC Resources", "Threat Intelligence", "Incident Response", "Blue Team", "Career Growth"]
 readTime: 8

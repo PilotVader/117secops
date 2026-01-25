@@ -27,6 +27,7 @@ export function CyberHeader() {
     { name: "Blog", href: "/blog" },
     { name: "Projects", href: "/projects" },
     { name: "Portfolio", href: "/portfolio" },
+    { name: "117 Labs", href: "/labs" },
     { name: "About", href: "/about" }
   ]
 
@@ -35,11 +36,10 @@ export function CyberHeader() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 260, damping: 20 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-cyber ${
-        isScrolled 
-          ? 'bg-background/80 backdrop-blur-lg cyber-border border-b' 
+      className={`fixed top-0 left-0 right-0 z-50 transition-cyber ${isScrolled
+          ? 'bg-background/80 backdrop-blur-lg cyber-border border-b'
           : 'bg-background/50 backdrop-blur-sm'
-      }`}
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
@@ -82,15 +82,15 @@ export function CyberHeader() {
             >
               <ModeToggle />
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.6 }}
             >
               <Link href="https://www.linkedin.com/in/otori-samson/" target="_blank" rel="noopener noreferrer">
-                <Button 
-                  size="sm" 
+                <Button
+                  size="sm"
                   className="cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white"
                 >
                   Contact Me
@@ -98,21 +98,21 @@ export function CyberHeader() {
               </Link>
             </motion.div>
 
-                                    <motion.div
-                          initial={{ opacity: 0, x: 20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: 0.7 }}
-                        >
-                          <Link href="/firewall">
-                            <Button 
-                              size="sm" 
-                              className="cyber-border bg-transparent text-foreground hover:bg-red-600 hover:text-white"
-                            >
-                              <Shield className="w-4 h-4 mr-2" />
-                              ReadMe
-                            </Button>
-                          </Link>
-                        </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.7 }}
+            >
+              <Link href="/firewall">
+                <Button
+                  size="sm"
+                  className="cyber-border bg-transparent text-foreground hover:bg-red-600 hover:text-white"
+                >
+                  <Shield className="w-4 h-4 mr-2" />
+                  ReadMe
+                </Button>
+              </Link>
+            </motion.div>
           </div>
 
           {/* Mobile menu button */}
@@ -178,30 +178,30 @@ export function CyberHeader() {
                     rel="noopener noreferrer"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    <Button 
-                      size="sm" 
+                    <Button
+                      size="sm"
                       className="w-full cyber-border bg-transparent text-foreground hover:bg-purple-600 hover:text-white"
                     >
                       Contact Me
                     </Button>
                   </Link>
                 </motion.div>
-                                            <motion.div
-                              initial={{ opacity: 0, y: 20 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              transition={{ delay: 0.6 }}
-                            >
-                              <Link href="/firewall">
-                                <Button
-                                  size="sm"
-                                  className="w-full cyber-border bg-transparent text-foreground hover:bg-red-600 hover:text-white"
-                                  onClick={() => setIsMobileMenuOpen(false)}
-                                >
-                                                                <Shield className="w-4 h-4 mr-2" />
-                              ReadMe
-                                </Button>
-                              </Link>
-                            </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6 }}
+                >
+                  <Link href="/firewall">
+                    <Button
+                      size="sm"
+                      className="w-full cyber-border bg-transparent text-foreground hover:bg-red-600 hover:text-white"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <Shield className="w-4 h-4 mr-2" />
+                      ReadMe
+                    </Button>
+                  </Link>
+                </motion.div>
               </div>
             </nav>
           </motion.div>
