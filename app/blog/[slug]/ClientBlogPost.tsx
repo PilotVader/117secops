@@ -34,7 +34,7 @@ export function ClientBlogPost({ postData }: { postData: BlogPost }) {
   return (
     <PageTransition>
       <div className="container mx-auto px-4 md:px-6 py-16 md:py-24">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-lg mx-auto">
           <Link
             href="/blog/"
             className="inline-flex items-center text-slate-500 hover:text-purple-600 mb-12 transition-colors duration-200 font-medium group"
