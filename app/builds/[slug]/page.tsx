@@ -3,9 +3,9 @@ import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import { ArrowLeft, Layers, Terminal } from "lucide-react"
 import { BlogContentRenderer } from "@/components/blog-content-renderer"
-import labsProjects from "@/public/data/labs-projects.json"
+import buildsProjects from "@/public/data/builds-projects.json"
 
-interface LabsProject {
+interface BuildProject {
     slug: string
     codename: string
     title: string
@@ -17,14 +17,14 @@ interface LabsProject {
 }
 
 export function generateStaticParams() {
-    return labsProjects.map((project: LabsProject) => ({
+    return buildsProjects.map((project: BuildProject) => ({
         slug: project.slug,
     }))
 }
 
-export default async function LabsProjectPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function BuildProjectPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params
-    const project = labsProjects.find((p: any) => p.slug === slug) as LabsProject | undefined
+    const project = buildsProjects.find((p: any) => p.slug === slug) as BuildProject | undefined
 
     if (!project) {
         notFound()
@@ -34,11 +34,11 @@ export default async function LabsProjectPage({ params }: { params: Promise<{ sl
         <div className="container mx-auto px-4 md:px-6 py-16 md:py-24">
             <div className="max-w-4xl mx-auto">
                 <Link
-                    href="/labs/"
+                    href="/builds/"
                     className="inline-flex items-center text-slate-500 hover:text-emerald-500 mb-12 transition-colors duration-200 font-mono text-sm group"
                 >
                     <ArrowLeft className="mr-2 h-4 w-4 transform group-hover:-translate-x-1 transition-transform" />
-                    ./return_to_labs
+                    ./return_to_builds
                 </Link>
 
                 {/* Header Section */}
@@ -93,7 +93,7 @@ export default async function LabsProjectPage({ params }: { params: Promise<{ sl
                         </div>
                     )}
 
-                    <BlogContentRenderer content={project.content} groupId={`labs-${project.slug}`} />
+                    <BlogContentRenderer content={project.content} groupId={`builds-${project.slug}`} />
                 </div>
             </div>
         </div>

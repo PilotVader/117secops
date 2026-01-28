@@ -1,0 +1,19 @@
+[
+  {
+    "slug": "rialwrites",
+    "codename": "RialWrites",
+    "title": "Multi-Tenant Digital Content Workspace",
+    "status": "Active Development",
+    "featured": true,
+    "image": "/images/builds/rialwrites/main.png",
+    "techStack": [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "Node.js"
+    ],
+    "summary": "A role-based platform for managing structured content requests and secure digital asset delivery.",
+    "content": "\r\n## The Mission\r\n\r\nA web-based platform designed to manage structured content requests and digital\r\nproduct distribution within a multi-user environment. The system provides\r\nauthenticated access, role-based interaction flows, and persistent data handling\r\nfor orders, revisions, and downloadable assets.\r\n\r\n## Technical Highlights\r\n\r\n- **Role-Based Access Control (RBAC)**: Implemented secure logic to separate\r\n  Client, Writer, and Admin interfaces, ensuring data isolation and workflow\r\n  integrity.\r\n- **Unified Data Model**: Designed a scalable schema in Supabase to handle\r\n  diverse transaction types—both service-based orders (dynamic status tracking)\r\n  and digital products (instant delivery).\r\n- **Secure Workflow Engine**: Built robust, authenticated pathways for order\r\n  submission, real-time tracking, and revision loops, minimizing friction while\r\n  maintaining audit trails.\r\n"
+  }
+]

@@ -27,7 +27,7 @@ export function CyberHeader() {
     { name: "Blog", href: "/blog" },
     { name: "Projects", href: "/projects" },
     { name: "Portfolio", href: "/portfolio" },
-    { name: "117 Labs", href: "/labs" },
+    { name: "Builds", href: "/builds" },
     { name: "About", href: "/about" }
   ]
 

@@ -1,18 +1,18 @@
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
-import { ArrowRight, Code, Server, Database, Lock, Cpu } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
-export default function LabsPage() {
-    const projects = require("@/public/data/labs-projects.json")
+export default function BuildsPage() {
+    const projects = require("@/public/data/builds-projects.json")
 
     return (
         <div className="container mx-auto px-4 md:px-6 py-16 md:py-24 max-w-7xl">
             <div className="mb-16 text-center max-w-3xl mx-auto">
                 <Badge variant="outline" className="mb-4 border-emerald-500/50 text-emerald-600 dark:text-emerald-400 font-mono tracking-wider">
-                    R&D / EXPERIMENTAL
+                    SIDE PROJECTS / R&D
                 </Badge>
-                <h1 className="text-4xl md:text-6xl font-black tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-cyan-600 dark:from-emerald-400 dark:to-cyan-400">
-                    117 LABS
+                <h1 className="text-4xl md:text-6xl font-black tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-cyan-600 dark:from-emerald-400 dark:to-cyan-400 uppercase">
+                    Builds
                 </h1>
                 <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 font-medium">
                     The engineering black box. A collection of experimental tools, SaaS prototypes, and side projects built to solve specific problems or test new architectures.
@@ -67,7 +67,7 @@ export default function LabsPage() {
                                 )}
                             </div>
 
-                            <Link href={`/labs/${project.slug}`} className="inline-flex items-center text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors mt-auto">
+                            <Link href={`/builds/${project.slug}/`} className="inline-flex items-center text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors mt-auto">
                                 Read Build Log <ArrowRight className="ml-2 h-4 w-4" />
                             </Link>
                         </div>
