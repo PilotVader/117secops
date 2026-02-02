@@ -28,7 +28,46 @@ export function BlogContentRenderer({
       return
     }
 
-    let newContent = content
+    // First, normalize paragraphs by merging consecutive non-empty lines
+    // This fixes the issue where each line becomes a separate <p> tag
+    const normalizedContent = content
+      .split('\n')
+      .reduce((acc, line, index, array) => {
+        const trimmedLine = line.trim()
+        
+        // Skip empty lines - they separate paragraphs
+        if (trimmedLine === '') {
+          acc.push('')
+          return acc
+        }
+        
+        // Check if line starts with markdown syntax (headers, lists, code blocks, HTML tags)
+        // BUT NOT inline links like [text](url) - only images ![alt](url) or reference links that start the line
+        const isSpecialLine = /^(#{1,6}\s|[-*+]\s|\d+\.\s|```|<|>|\||!\[)/.test(trimmedLine)
+        
+        // If it's a special line, add it as-is
+        if (isSpecialLine) {
+          acc.push(line)
+          return acc
+        }
+        
+        // Check if previous line exists and is not empty
+        const lastIndex = acc.length - 1
+        const prevLine = lastIndex >= 0 ? acc[lastIndex] : ''
+        const prevTrimmed = prevLine.trim()
+        
+        // If previous line is not empty and not special, merge with it
+        if (prevTrimmed !== '' && !/^(#{1,6}\s|[-*+]\s|\d+\.\s|```|<|>|\||!\[)/.test(prevTrimmed)) {
+          acc[lastIndex] = prevLine + ' ' + trimmedLine
+        } else {
+          acc.push(line)
+        }
+        
+        return acc
+      }, [] as string[])
+      .join('\n')
+
+    let newContent = normalizedContent
       // Process InlineGallery components first
       .replace(/<InlineGallery images=\{([^}]+)\} title="([^"]*)" \/>/g, '{{INLINE_COMPONENT:$1:$2}}')
       // Improved regex to handle multi-line attributes and different quote styles including JSX-like backticks
@@ -49,9 +88,15 @@ export function BlogContentRenderer({
         return `{{CYBER_TERMINAL:${encodeURIComponent(code)}:${encodeURIComponent(title)}}}`
       })
 
-      // Headers with proper spacing - Larger, bolder, more spacing
-      .replace(/^### (.*$)/gim, '\n<h3 class="text-2xl font-bold mt-10 mb-4 text-slate-900 dark:text-slate-100 tracking-tight">$1</h3>\n')
-      .replace(/^## (.*$)/gim, '\n<h2 class="text-3xl font-bold mt-14 mb-6 text-slate-900 dark:text-slate-100 tracking-tight">$1</h2>\n')
+      // Headers with proper spacing and IDs for TOC linking
+      .replace(/^### (.*$)/gim, (match, text) => {
+        const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+        return `\n<h3 id="${id}" class="text-2xl font-bold mt-10 mb-4 text-slate-900 dark:text-slate-100 tracking-tight">${text}</h3>\n`
+      })
+      .replace(/^## (.*$)/gim, (match, text) => {
+        const id = text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+        return `\n<h2 id="${id}" class="text-3xl font-bold mt-14 mb-6 text-slate-900 dark:text-slate-100 tracking-tight">${text}</h2>\n`
+      })
       .replace(/^# (.*$)/gim, '\n<h1 class="text-4xl font-extrabold mt-16 mb-8 text-slate-900 dark:text-slate-100 tracking-tight">$1</h1>\n')
 
       // Ensure all paragraph text has consistent colors and sizing - Text-lg, leading-relaxed

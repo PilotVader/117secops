@@ -1,5 +1,5 @@
 import { getBlogPostBySlug, getAllBlogPosts } from "@/lib/blog"
-import BlogPostPage from "@/components/blog/BlogPostPage"
+import { ClientBlogPost } from "./ClientBlogPost"
 import { notFound } from "next/navigation"
 import type { Metadata } from "next"
 
@@ -54,10 +54,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function BlogPostRoute({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const postData = getBlogPostBySlug(slug)
+  const allPosts = getAllBlogPosts()
 
   if (!postData) {
     notFound()
   }
 
-  return <BlogPostPage slug={slug} />
+  return <ClientBlogPost postData={postData} allPosts={allPosts} />
 }
