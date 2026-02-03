@@ -97,7 +97,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light" disableTransitionOnChange>
           <div className="flex min-h-screen flex-col">
             <CyberHeader />
-            <main className="flex-1 pt-16">{children}</main>
+            <main className="flex-1 pt-28">{children}</main>
             <Footer />
           </div>
         </ThemeProvider>

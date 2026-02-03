@@ -36,13 +36,13 @@ export function CyberHeader() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 260, damping: 20 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-cyber ${isScrolled
-          ? 'bg-background/80 backdrop-blur-lg cyber-border border-b'
-          : 'bg-background/50 backdrop-blur-sm'
-        }`}
+      className="fixed top-0 left-0 right-0 z-50 px-4 pt-4"
     >
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+      <div className={`max-w-7xl mx-auto rounded-2xl transition-all duration-300 ${isScrolled
+          ? 'bg-background/95 backdrop-blur-lg cyber-border border shadow-xl'
+          : 'bg-background/90 backdrop-blur-md border border-border/50 shadow-lg'
+        }`}>
+        <div className="flex items-center justify-between h-20 px-6">
           {/* Logo Section */}
           <div className="flex items-center gap-3">
             <div className="flex-shrink-0 -ml-2 perspective-1000 z-10">
@@ -129,7 +129,7 @@ export function CyberHeader() {
             )}
           </Button>
         </div>
-
+      </div>
         {/* Mobile menu */}
         {isMobileMenuOpen && (
           <motion.div
@@ -206,7 +206,6 @@ export function CyberHeader() {
             </nav>
           </motion.div>
         )}
-      </div>
     </motion.header>
   )
-} 
+}
