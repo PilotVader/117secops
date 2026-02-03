@@ -125,12 +125,12 @@ export function TableOfContents({ content }: { content: string }) {
         </div>
       </nav>
 
-      {/* Mobile TOC - Fixed at Bottom */}
+      {/* Mobile TOC - Fixed at Bottom with Preview */}
       <div className="xl:hidden fixed bottom-0 left-0 right-0 z-40 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 shadow-2xl">
-        {/* Always Visible Header with Progress */}
+        {/* Header with Progress - Always Visible */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="w-full p-4"
+          className="w-full p-4 pb-3"
         >
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center gap-2">
@@ -154,11 +154,40 @@ export function TableOfContents({ content }: { content: string }) {
           </div>
         </button>
 
-        {/* Expandable Content */}
-        {isOpen && (
-          <div className="max-h-[60vh] overflow-y-auto px-4 pb-4">
+        {/* Preview Items - Always Visible (First 3) */}
+        <div className="px-4 pb-3">
+          <ul className="space-y-1">
+            {headings.slice(0, 3).map((heading) => (
+              <li key={heading.id}>
+                <a
+                  href={`#${heading.id}`}
+                  className={cn(
+                    "block py-2 px-3 text-sm rounded-md transition-all",
+                    heading.level === 3 && "pl-6",
+                    activeId === heading.id
+                      ? "bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 font-semibold"
+                      : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800/50"
+                  )}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    document.getElementById(heading.id)?.scrollIntoView({
+                      behavior: "smooth",
+                      block: "start",
+                    })
+                  }}
+                >
+                  {heading.text}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Expandable Content - Remaining Items */}
+        {isOpen && headings.length > 3 && (
+          <div className="max-h-[50vh] overflow-y-auto px-4 pb-4 border-t border-slate-200 dark:border-slate-800 pt-3">
             <ul className="space-y-1">
-              {headings.map((heading) => (
+              {headings.slice(3).map((heading) => (
                 <li key={heading.id}>
                   <a
                     href={`#${heading.id}`}
@@ -188,7 +217,7 @@ export function TableOfContents({ content }: { content: string }) {
       </div>
 
       {/* Spacer for mobile to prevent content from being hidden behind fixed TOC */}
-      <div className="xl:hidden h-20" />
+      <div className="xl:hidden h-32" />
     </>
   )
 }

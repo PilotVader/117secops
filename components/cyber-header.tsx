@@ -48,9 +48,9 @@ export function CyberHeader() {
             <div className="flex-shrink-0 -ml-2 perspective-1000 z-10">
               <Logo3D />
             </div>
-            <div className="font-mono hidden sm:block">
-              <div className="text-lg font-bold">Samson's</div>
-              <div className="text-xs text-muted-foreground">Cybersecurity Portfolio</div>
+            <div className="font-mono">
+              <div className="text-sm md:text-lg font-bold leading-tight">Samson's</div>
+              <div className="text-[10px] md:text-xs text-muted-foreground leading-tight">Cybersecurity Portfolio</div>
             </div>
           </div>
 
@@ -115,19 +115,35 @@ export function CyberHeader() {
             </motion.div>
           </div>
 
-          {/* Mobile menu button */}
-          <Button
-            variant="ghost"
-            size="sm"
-            className="md:hidden"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? (
-              <X className="w-5 h-5" />
-            ) : (
-              <Menu className="w-5 h-5" />
-            )}
-          </Button>
+          {/* Mobile menu button with arrow hint */}
+          <div className="md:hidden flex items-center gap-2">
+            <motion.div
+              className="flex flex-col items-end"
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+            >
+              <motion.div
+                className="text-[10px] text-muted-foreground font-semibold uppercase tracking-wider"
+                animate={{ x: [0, 3, 0] }}
+                transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+              >
+                Options →
+              </motion.div>
+            </motion.div>
+            <Button
+              variant="ghost"
+              size="sm"
+              className="relative"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? (
+                <X className="w-5 h-5" />
+              ) : (
+                <Menu className="w-5 h-5" />
+              )}
+            </Button>
+          </div>
         </div>
       </div>
         {/* Mobile menu */}
