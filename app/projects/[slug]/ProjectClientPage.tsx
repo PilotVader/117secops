@@ -11,6 +11,7 @@ import { BlogContentRenderer } from "@/components/blog-content-renderer"
 import { ImageGallery } from "@/components/ui/image-gallery"
 import { ProjectSidebar } from "@/components/projects/ProjectSidebar"
 import { PostNavigator, type NavigatorItem } from "@/components/navigation/PostNavigator"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 
 import type { Project, ProjectNavigationItem } from "@/lib/project"
 
@@ -107,7 +108,18 @@ export default function ProjectClientPage({
 
   return (
     <PageTransition>
-      <div className="container mx-auto px-4 md:px-6 py-12">
+      <div className="px-4 pt-8">
+        <div className="max-w-7xl mx-auto px-6">
+        <Breadcrumbs
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Projects", href: "/projects" },
+            { label: project.title },
+          ]}
+        />
+        </div>
+      </div>
+      <div className="container mx-auto px-4 md:px-6 py-8">
         {/* Back Navigation */}
         <Link
           href="/projects/"

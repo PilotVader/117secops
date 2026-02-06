@@ -10,6 +10,7 @@ import Background3D from "@/components/3d-background"
 import { Card } from "@/components/ui/card"
 import { useMemo, useState } from "react"
 import { X } from "lucide-react"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 
 export default function PortfolioPage() {
   const [selectedCertificate, setSelectedCertificate] = useState<null | { name: string; image: string }>(null)
@@ -30,7 +31,12 @@ export default function PortfolioPage() {
   return (
     <PageTransition>
       <Background3D />
-      <div className="container mx-auto px-4 md:px-6 py-12">
+      <div className="px-4 pt-8">
+        <div className="max-w-7xl mx-auto px-6">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Portfolio" }]} />
+        </div>
+      </div>
+      <div className="container mx-auto px-4 md:px-6 py-8">
         <motion.div
           className="flex flex-col items-center text-center space-y-4 mb-12"
           variants={staggerContainer}

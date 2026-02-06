@@ -24,11 +24,17 @@ import { motion } from "framer-motion"
 import { fadeIn, staggerContainer } from "@/lib/animations"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Badge } from "@/components/ui/badge"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 
 export default function AboutPage() {
   return (
     <PageTransition>
       <div className="flex flex-col min-h-screen pt-20">
+        <div className="px-4 pt-4 mb-2">
+          <div className="max-w-7xl mx-auto px-6">
+            <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "About" }]} />
+          </div>
+        </div>
         {/* Hero Section */}
         <section className="bg-purple-600 text-white py-20 relative overflow-hidden">
           <motion.div

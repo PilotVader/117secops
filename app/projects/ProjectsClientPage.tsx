@@ -13,6 +13,7 @@ import { ProjectLightbox } from "@/components/project-lightbox"
 import { ProjectSeriesModal } from "@/components/project-series-modal"
 import type { Project } from "@/lib/project"
 import { Shield, Terminal, Zap, ArrowRight, Cloud } from "lucide-react"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 
 const ITEMS_PER_PAGE = 12
 
@@ -156,7 +157,12 @@ export default function ProjectsClientPage({ initialProjects }: { initialProject
 
   return (
     <PageTransition>
-      <div ref={topRef} className="container mx-auto px-4 md:px-6 py-12">
+      <div ref={topRef} className="px-4 pt-12">
+        <div className="max-w-7xl mx-auto px-6">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Projects" }]} />
+        </div>
+      </div>
+      <div className="container mx-auto px-4 md:px-6 py-8">
         <motion.div
           className="flex flex-col items-center text-center space-y-4 mb-12"
           variants={staggerContainer}

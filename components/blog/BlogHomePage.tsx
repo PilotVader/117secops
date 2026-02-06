@@ -9,6 +9,7 @@ import type { BlogPost } from "./BlogCard"
 import Link from "next/link"
 import { Calendar, Clock, ArrowRight } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 
 export function BlogHomePage() {
   const [selectedCategory, setSelectedCategory] = useState("All")
@@ -39,11 +40,14 @@ export function BlogHomePage() {
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <motion.section
-        className="relative py-20 px-4 md:px-6 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800"
+        className="relative py-12 px-4 md:px-6 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
+        <div className="max-w-7xl mx-auto px-6 mb-8">
+          <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Blog" }]} />
+        </div>
         <div className="container mx-auto text-center">
           <motion.h1
             className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent"

@@ -6,6 +6,7 @@ import Link from "next/link"
 import { Calendar, Clock, X as Twitter, Linkedin, Facebook } from "lucide-react"
 import { BlogContentRenderer } from "@/components/blog-content-renderer"
 import { TableOfContents } from "@/components/table-of-contents"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 import { AuthorBio } from "@/components/author-bio"
 import { RelatedPosts } from "@/components/related-posts"
 import type { BlogPost } from "@/components/blog/BlogCard"
@@ -43,6 +44,19 @@ export function ClientBlogPost({ postData, allPosts }: ClientBlogPostProps) {
     <>
       
       <article className="min-h-screen bg-white dark:bg-slate-950">
+        {/* Breadcrumbs Section */}
+        <div className="px-4 py-4">
+          <div className="max-w-7xl mx-auto px-6">
+            <Breadcrumbs
+              items={[
+                { label: "Home", href: "/" },
+                { label: "Blog", href: "/blog" },
+                { label: postData.title },
+              ]}
+            />
+          </div>
+        </div>
+
         {/* Hero Section */}
         <div className="bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-950 border-b border-slate-200 dark:border-slate-800">
           <div className="container mx-auto px-4 py-12 md:py-16 max-w-4xl">

@@ -1,12 +1,20 @@
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
+import { Breadcrumbs } from "@/components/breadcrumbs"
 
 export default function BuildsPage() {
     const projects = require("@/public/data/builds-projects.json")
 
     return (
-        <div className="container mx-auto px-4 md:px-6 py-16 md:py-24 max-w-7xl">
+        <>
+        <div className="px-4 pt-12">
+            <div className="max-w-7xl mx-auto px-6">
+                <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Builds" }]} />
+            </div>
+        </div>
+        <div className="container mx-auto px-4 md:px-6 py-12 max-w-7xl">
+
             <div className="mb-16 text-center max-w-3xl mx-auto">
                 <Badge variant="outline" className="mb-4 border-emerald-500/50 text-emerald-600 dark:text-emerald-400 font-mono tracking-wider">
                     SIDE PROJECTS / R&D
@@ -75,5 +83,6 @@ export default function BuildsPage() {
                 ))}
             </div>
         </div>
+        </>
     )
 }
