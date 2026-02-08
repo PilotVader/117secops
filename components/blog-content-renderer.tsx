@@ -31,6 +31,7 @@ export function BlogContentRenderer({
     // First, normalize paragraphs by merging consecutive non-empty lines
     // This fixes the issue where each line becomes a separate <p> tag
     const normalizedContent = content
+      .replace(/\r\n/g, '\n') // Normalize line endings
       .split('\n')
       .reduce((acc, line, index, array) => {
         const trimmedLine = line.trim()
@@ -43,10 +44,12 @@ export function BlogContentRenderer({
         
         // Check if line starts with markdown syntax (headers, lists, code blocks, HTML tags)
         // BUT NOT inline links like [text](url) - only images ![alt](url) or reference links that start the line
+        // Also check for leading spaces which indicate continuation of a list item
         const isSpecialLine = /^(#{1,6}\s|[-*+]\s|\d+\.\s|```|<|>|\||!\[)/.test(trimmedLine)
+        const isIndented = line.startsWith(' ') || line.startsWith('\t')
         
-        // If it's a special line, add it as-is
-        if (isSpecialLine) {
+        // If it's a special line AND NOT indented, add it as a new line
+        if (isSpecialLine && !isIndented) {
           acc.push(line)
           return acc
         }
@@ -56,8 +59,9 @@ export function BlogContentRenderer({
         const prevLine = lastIndex >= 0 ? acc[lastIndex] : ''
         const prevTrimmed = prevLine.trim()
         
-        // If previous line is not empty and not special, merge with it
-        if (prevTrimmed !== '' && !/^(#{1,6}\s|[-*+]\s|\d+\.\s|```|<|>|\||!\[)/.test(prevTrimmed)) {
+        // If previous line is not empty and not a header/code block start, merge with it
+        // We allow merging with list items to handle multi-line list content
+        if (prevTrimmed !== '' && !/^(#{1,6}\s|```|<|>|!\[)/.test(prevTrimmed)) {
           acc[lastIndex] = prevLine + ' ' + trimmedLine
         } else {
           acc.push(line)
@@ -103,8 +107,9 @@ export function BlogContentRenderer({
       .replace(/!\[([^\]]+)\]\(([^)]+)\)/g, '<div class="my-12 flex flex-col items-center"><img src="$2" alt="$1" class="rounded-2xl shadow-2xl border border-slate-100 dark:border-slate-800 max-w-full h-auto" /></div>')
 
 
-      // Ensure all paragraph text has consistent colors and sizing - Text-lg, leading-relaxed
-      .replace(/^([^<\n].*)$/gm, '<p class="text-lg text-slate-700 dark:text-slate-300 mb-8 leading-8">$1</p>')
+      // Ensure all text lines are wrapped in paragraphs, but avoid double-wrapping
+      // This regex matches lines that don't start with a tag or common markdown structures
+      .replace(/^(?![ \t]*<)(?![ \t]*#{1,6}\s)(?![ \t]*[-*+]\s)(?![ \t]*\d+\.\s)(.+)$/gm, '<p class="text-lg text-slate-700 dark:text-slate-300 mb-8 leading-8">$1</p>')
 
       // Bold and italic
       .replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-slate-900 dark:text-slate-100">$1</strong>')
