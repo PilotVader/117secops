@@ -6,11 +6,11 @@ author: "Samson Otori"
 category: "Security Insights"
 image: "/images/blog/identity-attacks-2026/header.jpg"
 tags: [
-    "Identity Security",
-    "ITDR",
-    "MFA",
-    "Detection Engineering",
-    "Zero Trust",
+   "Identity Security",
+   "ITDR",
+   "MFA",
+   "Detection Engineering",
+   "Zero Trust",
 ]
 readTime: 10
 ---
@@ -171,16 +171,3 @@ For security leaders and SOC teams, the path forward requires acknowledging that
 identity is now critical infrastructure. Defenders must focus on continuous
 verification, comprehensive logging, integrated behavioural analytics and
 identity-centric detection to keep pace with these attacks.
-
----
-
-### References:
-
-1. **Verizon Data Breach Investigations Report (DBIR)**:
-   [Read the Report](https://www.verizon.com/business/resources/reports/dbir.html)
-2. **Identity Threat Detection and Response (ITDR)**:
-   [Gartner Market Insights](https://www.gartner.com/reviews/market/identity-threat-detection-and-response-itdr)
-3. **Keydata Cyber / BeyondID**:
-   [How Stolen Identities Fuel Cybercrime](https://keydatacyber.com/news/new-report-from-beyondid-exposes-how-stolen-identities-fuel-the-global-cybercrime-economy)
-4. **Identity Defined Security Alliance (IDSA)**:
-   [Identity-Related Breach Trends Study](https://www.idsalliance.org/press-release/new-study-reveals-84-of-organizations-experienced-an-identity-related-breach-in-the-last-year)
