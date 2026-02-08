@@ -6,11 +6,11 @@ author: "Samson Otori"
 category: "Security Insights"
 image: "/images/blog/identity-attacks-2026/header.jpg"
 tags: [
-   "Identity Security",
-   "ITDR",
-   "MFA",
-   "Detection Engineering",
-   "Zero Trust",
+  "Identity Security",
+  "ITDR",
+  "MFA",
+  "Detection Engineering",
+  "Zero Trust",
 ]
 readTime: 10
 ---
@@ -173,4 +173,3 @@ verification, comprehensive logging, integrated behavioural analytics and
 identity-centric detection to keep pace with these attacks.
 
 ![Identity Attack Strategy Summary](/images/blog/identity-attacks-2026/post-summary.jpg)
-</content>
