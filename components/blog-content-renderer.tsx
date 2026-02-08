@@ -133,10 +133,14 @@ export function BlogContentRenderer({
       })
       .replace(/`([^`]+)`/g, '<code class="bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded text-sm font-mono text-purple-600 dark:text-purple-400 font-medium">$1</code>')
 
+
       // Lists - Custom styling with divs to avoid ul nesting issues, using purple bullets
       .replace(/^(\d+)\.\s+(.*$)/gim, '<div class="flex items-start mb-6 ml-2"><span class="mr-4 text-purple-600 text-lg font-bold mt-0.5">$1.</span><span class="text-lg text-slate-700 dark:text-slate-300 leading-8 flex-1">$2</span></div>')
       .replace(/^\* (.*$)/gim, '<div class="flex items-start mb-4 ml-2"><span class="mr-3 text-purple-600 text-lg mt-0.5">•</span><span class="text-lg text-slate-700 dark:text-slate-300 leading-8 flex-1">$1</span></div>')
       .replace(/^- (.*$)/gim, '<div class="flex items-start mb-4 ml-2"><span class="mr-3 text-purple-600 text-lg mt-0.5">•</span><span class="text-lg text-slate-700 dark:text-slate-300 leading-8 flex-1">$1</span></div>')
+
+      // Images - Standard Markdown syntax ![alt](url)
+      .replace(/!\[([^\]]+)\]\(([^)]+)\)/g, '<div class="my-10 flex flex-col items-center"><img src="$2" alt="$1" class="rounded-xl shadow-2xl border border-slate-200 dark:border-slate-800 max-w-full h-auto" /></div>')
 
       // Paragraphs with proper spacing
       .replace(/\n\n+/g, '</p>\n<p class="text-lg text-slate-700 dark:text-slate-300 mb-8 leading-8">')
