@@ -99,6 +99,10 @@ export function BlogContentRenderer({
       })
       .replace(/^# (.*$)/gim, '\n<h1 class="text-4xl font-extrabold mt-16 mb-8 text-slate-900 dark:text-slate-100 tracking-tight">$1</h1>\n')
 
+      // Images - Standard Markdown syntax ![alt](url) - handle before paragraph wrapping to avoid nesting div in p
+      .replace(/!\[([^\]]+)\]\(([^)]+)\)/g, '<div class="my-12 flex flex-col items-center"><img src="$2" alt="$1" class="rounded-2xl shadow-2xl border border-slate-100 dark:border-slate-800 max-w-full h-auto" /></div>')
+
+
       // Ensure all paragraph text has consistent colors and sizing - Text-lg, leading-relaxed
       .replace(/^([^<\n].*)$/gm, '<p class="text-lg text-slate-700 dark:text-slate-300 mb-8 leading-8">$1</p>')
 
@@ -139,8 +143,7 @@ export function BlogContentRenderer({
       .replace(/^\* (.*$)/gim, '<div class="flex items-start mb-4 ml-2"><span class="mr-3 text-purple-600 text-lg mt-0.5">•</span><span class="text-lg text-slate-700 dark:text-slate-300 leading-8 flex-1">$1</span></div>')
       .replace(/^- (.*$)/gim, '<div class="flex items-start mb-4 ml-2"><span class="mr-3 text-purple-600 text-lg mt-0.5">•</span><span class="text-lg text-slate-700 dark:text-slate-300 leading-8 flex-1">$1</span></div>')
 
-      // Images - Standard Markdown syntax ![alt](url)
-      .replace(/!\[([^\]]+)\]\(([^)]+)\)/g, '<div class="my-10 flex flex-col items-center"><img src="$2" alt="$1" class="rounded-xl shadow-2xl border border-slate-200 dark:border-slate-800 max-w-full h-auto" /></div>')
+
 
       // Paragraphs with proper spacing
       .replace(/\n\n+/g, '</p>\n<p class="text-lg text-slate-700 dark:text-slate-300 mb-8 leading-8">')

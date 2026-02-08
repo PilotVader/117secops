@@ -129,7 +129,7 @@ To combat this, security teams must pivot from network-centric to
 identity-centric defence. This requires a shift to a Zero Trust architecture,
 where trust is never granted implicitly based on a correct password.
 
-![Conditional Access Gateway Flow](/images/blog/identity-attacks-2026/conditional-access.png)
+![Identity-Based Breach Vector Shift](/images/blog/identity-attacks-2026/conditional-access.png)
 
 Defending against identity-based attacks requires fundamentally different
 approaches than traditional perimeter security or exploit prevention. Key
