@@ -35,9 +35,9 @@ identity-based attacks became the top threat vector in 2024, and research by the
 reported about 84% of organisations reported an identity-related breach in the
 past year.
 
-![Old vs New Breach Vectors](/images/blog/identity-attacks-2026/old-vs-new.png)
-_Figure 1: The structural shift from exploiting code vulnerabilities to abusing
-stolen credentials._
+<div align="center">
+  <img src="/images/blog/identity-attacks-2026/old-vs-new.png" alt="Old vs New Breach Vectors" width="100%" />
+</div>
 
 At its core, this shift reflects a fundamental truth of modern digital systems:
 identity has become the most consequential control plane for access. Identity
@@ -131,9 +131,9 @@ To combat this, security teams must pivot from network-centric to
 identity-centric defence. This requires a shift to a Zero Trust architecture,
 where trust is never granted implicitly based on a correct password.
 
-![Conditional Access Gateway Flow](/images/blog/identity-attacks-2026/conditional-access.png)
-_Figure 2: Implementing a Conditional Access Gateway to verify identity, device
-health, and location risk before granting access._
+<div align="center">
+  <img src="/images/blog/identity-attacks-2026/conditional-access.png" alt="Conditional Access Gateway Flow" width="100%" />
+</div>
 
 Defending against identity-based attacks requires fundamentally different
 approaches than traditional perimeter security or exploit prevention. Key
@@ -171,3 +171,6 @@ For security leaders and SOC teams, the path forward requires acknowledging that
 identity is now critical infrastructure. Defenders must focus on continuous
 verification, comprehensive logging, integrated behavioural analytics and
 identity-centric detection to keep pace with these attacks.
+
+![Identity Attack Strategy Summary](/images/blog/identity-attacks-2026/post-summary.jpg)
+</content>
