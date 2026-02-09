@@ -3,7 +3,7 @@ title: "Why Identity-Based Attacks Are Replacing Exploits as the Primary Breach 
 date: "2026-02-09"
 excerpt: "Modern attackers are moving from code exploits to credential abuse. Discover why identity is the new primary breach vector and how to defend against it."
 author: "Samson Otori"
-category: "Security Insights"
+category: "Insights"
 image: "/images/blog/identity-attacks-2026/header.png"
 tags: [
   "Identity Security",
