@@ -21,12 +21,13 @@ Security Operations Centres (SOCs) are overwhelmed, drowning in an overflow of
 data, and receiving thousands of security alerts daily, yet only a small
 fraction represent genuine threats.
 
-According to IBM, alert fatigue occurs when teams are exposed to excessive
-alerts, many of which are low-value, leading to desensitisation and slower
-response times. When faced with such scenarios, the common and instinctive
-response is to seek out better technology which could either be a more
-sophisticated SIEM, an AI-powered detection platform, or the latest extended
-detection and response (XDR) solution.
+According to [IBM](https://www.ibm.com/think/topics/alert-fatigue), alert
+fatigue occurs when teams are exposed to excessive alerts, many of which are
+low-value, leading to desensitisation and slower response times. When faced with
+such scenarios, the common and instinctive response is to seek out better
+technology which could either be a more sophisticated SIEM, an AI-powered
+detection platform, or the latest extended detection and response (XDR)
+solution.
 
 But the uncomfortable truth is that most organisations do not have a tool
 problem, but rather a workflow design problem.
