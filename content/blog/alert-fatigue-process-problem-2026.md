@@ -39,6 +39,8 @@ tooling limitation. We break down how misaligned performance metrics create
 operational overload, and outline what a process-first SOC must look like to
 restore clarity, reduce noise and improve security outcomes.
 
+![Data Deluge: The Unfiltered Influx](/images/blog/alert-fatigue-2026/data-deluge.png)
+
 ## What Alert Fatigue Actually Looks Like
 
 Alert fatigue is not simply too many notifications, it is a dangerous
