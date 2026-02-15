@@ -39,8 +39,6 @@ tooling limitation. We break down how misaligned performance metrics create
 operational overload, and outline what a process-first SOC must look like to
 restore clarity, reduce noise and improve security outcomes.
 
-![Data Deluge: The Unfiltered Influx](/images/blog/alert-fatigue-2026/data-deluge.png)
-
 ## What Alert Fatigue Actually Looks Like
 
 Alert fatigue is not simply too many notifications, it is a dangerous
@@ -94,8 +92,6 @@ threats to crown jewel assets go unnoticed.
 Time to Resolve (MTTR) without a quality check, analysts learn to clear the
 queue rather than solve the problem, and high alert volumes are tacitly
 encouraged to demonstrate productivity.
-
-![Process Failure: The Broken Alert Lifecycle](/images/blog/alert-fatigue-2026/process-failure.png)
 
 ## What a Process-First SOC Looks Like
 
