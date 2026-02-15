@@ -95,6 +95,8 @@ Time to Resolve (MTTR) without a quality check, analysts learn to clear the
 queue rather than solve the problem, and high alert volumes are tacitly
 encouraged to demonstrate productivity.
 
+![Process Failure: The Broken Alert Lifecycle](/images/blog/alert-fatigue-2026/process-failure.png)
+
 ## What a Process-First SOC Looks Like
 
 A workflow-centric security model redefines how alerts are managed.
