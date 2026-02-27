@@ -4,7 +4,7 @@ date: "2026-02-27"
 excerpt: "Security does not live in alerts; it lives in raw telemetry. Without deep log literacy, an SIEM is little more than a high-priced alarm clock. This is what every analyst must understand before they open that dashboard."
 author: "Samson Otori"
 category: "Foundations"
-image: "/images/blog/soc-analyst-logs-2026/header.png"
+image: "/images/blog/soc-analyst-logs-2026/header.jpg"
 tags: [
     "Log Analysis",
     "SIEM",
