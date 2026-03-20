@@ -120,7 +120,7 @@ export default function AboutPage() {
               >
                 <div className="w-full">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/smason.png-FkQLzPrsMUw5FqUFhBt4UZts1Y2bRz.jpeg"
+                    src="/samson.PNG"
                     alt="117SECOPS founder"
                     width={800}
                     height={600}
