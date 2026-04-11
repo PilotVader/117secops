@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
-import { Shield, TrendingUp, Lightbulb, BookOpen, AlertTriangle, Zap } from "lucide-react"
+import { Shield, TrendingUp, Lightbulb, BookOpen, AlertTriangle, Zap, Sparkles } from "lucide-react"
 
 export interface CategoryFilterProps {
   selectedCategory: string
@@ -17,6 +17,7 @@ const categories = [
   { id: "Trends", label: "Trends", icon: TrendingUp },
   { id: "Insights", label: "Insights", icon: Lightbulb },
   { id: "Resources", label: "Resources", icon: Zap },
+  { id: "AI & Automation", label: "AI & Automation", icon: Sparkles },
 ]
 
 export function CategoryFilter({ selectedCategory, onCategoryChange, categoryCounts }: CategoryFilterProps) {
@@ -41,6 +42,8 @@ export function CategoryFilter({ selectedCategory, onCategoryChange, categoryCou
         return "hover:bg-green-600/20 hover:text-green-400 hover:border-green-600/30"
       case "Resources":
         return "hover:bg-orange-600/20 hover:text-orange-400 hover:border-orange-600/30"
+      case "AI & Automation":
+        return "hover:bg-cyan-600/20 hover:text-cyan-400 hover:border-cyan-600/30"
       default:
         return "hover:bg-primary/20 hover:text-primary hover:border-primary/30"
     }
@@ -60,6 +63,8 @@ export function CategoryFilter({ selectedCategory, onCategoryChange, categoryCou
         return "bg-green-600/20 text-green-400 border-green-600/30"
       case "Resources":
         return "bg-orange-600/20 text-orange-400 border-orange-600/30"
+      case "AI & Automation":
+        return "bg-cyan-600/20 text-cyan-400 border-cyan-600/30"
       default:
         return "bg-primary/20 text-primary border-primary/30"
     }
